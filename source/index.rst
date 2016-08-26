@@ -11,6 +11,7 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
+   theory/theory.rst
    tutorials/tutorials.rst
    assignments/assignments.rst
 
