@@ -45,7 +45,7 @@ specified by a different language called CSS, which we will cover in a later cha
 
 
 Proper HTML Coding
-------------------
+^^^^^^^^^^^^^^^^^^
 
 Web clients (browsers) are designed to try and show the HTML
 even if there are mistakes in the HTML code. From the user's standpoint
@@ -74,7 +74,8 @@ There are several issues with bad HTML code:
   if you write bad HTML code.
 
 Parts of a URL
---------------
+^^^^^^^^^^^^^^
+
 Web addresses are called Uniform Resource Locators (URLs).
 The name of the HTML file that you create will be the last part
 of the URL. For example, in the URL below the filename
