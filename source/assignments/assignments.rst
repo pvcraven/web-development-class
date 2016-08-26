@@ -8,12 +8,35 @@ We will be working on building a website for a ficticious organization
 throughout the semeter. We will learn how to work on a website in groups.
 This is the start of that website.
 
-For this assignment, work on the assignment in pairs. One person
-works on the computer Monday, the other person on Wednesday. There may
-be ONE group of three. If you are in this group, please divide the time
-and pages up in thirds.
+How to Work in Pairs
+--------------------
 
-Friday we will cover how to turn in the assignment.
+A popular trend in programming is
+`pair programming <https://en.wikipedia.org/wiki/Pair_programming>`_.
+If done correctly, pair programming can:
+
+* Improve code quality
+* Improve job satisfaction
+* Give programmers more opportunities to learn
+* Build-in cross training so programmers can change jobs easier
+* Build team dynamics
+
+It is also possible to make pair programming a *bad* experience. Particularly
+if the observer pulls out his or her phone. Therefore, if someone pulls
+out their phone they will be asked to leave, and counted as absent.
+
+I will assign the pairs. It is my plan to keep switching pairs, so you'll
+get to work with several people in class.
+
+Schedule
+--------
+* One person will work on the computer Monday. One person will observe. You
+  should work to finish three pages. It may require the person at the computer
+  to work outside of class to finish those pages.
+* Wednesday, switch spots. Finish the other three pages.
+* There may be ONE group of three. If you are in this group, please divide the time
+  in thirds. Each person is still responsible for three pages.
+* Friday we will cover how to turn in the assignment. See `Turning in a website`_.
 
 If you are gone any of these days you will get half credit. If your phone is
 out, or you are on an unrelated website, you'll be counted as gone and asked
