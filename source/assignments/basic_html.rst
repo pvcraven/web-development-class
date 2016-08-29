@@ -28,15 +28,28 @@ out their phone they will be asked to leave, and counted as absent.
 I will assign the pairs. It is my plan to keep switching pairs, so you'll
 get to work with several people in class.
 
+When pair programming, you have a "driver" who is at the keyboard. You also
+have a "navigator" or "observer." I like the work "navigator" better.
+The "navigator" should be the one directing the coding. For example, if you
+are driving, you have one person telling the driver to go left or right.
+The driver worries about not hitting anyone.
+
+
 Schedule
 --------
-* One person will work on the computer Monday. One person will observe. You
-  should work to finish three pages. It may require the person at the computer
-  to work outside of class to finish those pages.
-* Wednesday, switch spots. Finish the other three pages.
+* This is the first year we are doing web development as two semesters. I may
+  need to fine-tune the schedule. Please listen for any schedule changes given
+  in class.
+* One person will "drive" and type on the computer for half the time.
+  One person will direct. Each person should work to finish three pages. It is
+  expected that some time will be spent outside of class to finish those pages.
+  Do the hard parts first, and save the easy parts for outside of class.
+* Thursday, switch spots. Try to divide out the time evenly, since we'll be
+  talking on Tuesday, but the full time on on Thursday will be spent working
+  on this assignment. Finish the other three pages.
 * There may be ONE group of three. If you are in this group, please divide the time
   in thirds. Each person is still responsible for three pages.
-* Friday we will cover how to turn in the assignment. See `Turning in a website`_.
+* Tuesday we will cover how to turn in the assignment. See `Turning in a website`_.
 
 If you are gone any of these days you will get half credit. If your phone is
 out, or you are on an unrelated website, you'll be counted as gone and asked
