@@ -221,8 +221,7 @@ can't load, this text will be displayed. If the user is blind, the screen
 reader will read back the alt text.<br />
 ``<img src="images/happy_face.png" alt="Happy Face" />``
 
-There are <a href="http://en.wikipedia.org/wiki/Image_file_formats">many
-types of image files</a>. Here's the abridged version:
+There are many `image file formats`_. Here's the abridged version:
 
   * .jpg: Use JPEG's for photos or photo-like images.
   * .png: Use PNG's for graphic art.
@@ -291,13 +290,6 @@ Each list item is surrounded by a ``li`` tag.
       <li>Item 2</li>
       <li>Item 3</li>
     </ul>
-    </pre>
-
-    <ul>
-      <li>Item 1
-      <li>Item 2
-      <li>Item 3
-    </ul>
 
 You can also have an ordered list, with the ``ol`` tag. Style sheets can
 change a ``ul`` into a ``ol``, but good practice is to use ``ol``
@@ -309,13 +301,6 @@ for numbered lists.
 	  <li>Item 1</li>
 	  <li>Item 2</li>
 	  <li>Item 3</li>
-	</ol>
-	</pre>
-
-	<ol>
-	  <li>Item 1
-	  <li>Item 2
-	  <li>Item 3
 	</ol>
 
 You can also have lists inside of lists. Notice how
@@ -336,21 +321,6 @@ the inside list closes.
 	  </li>
 	  <li>Item 4</li>
 	  <li>Item 5</li>
-	</ul>
-	</pre>
-
-	<ul>
-	  <li>Item 1
-	  <li>Item 2
-	  <li>Item 3
-	    <ul>
-	      <li>Sub item A
-	      <li>Sub item B
-	      <li>Sub item C
-	    </ul>
-
-	  <li>Item 4
-	  <li>Item 5
 	</ul>
 
 Tables
@@ -395,31 +365,6 @@ Tag          Description
 	  </tfoot>
 	</table>
 
-	</pre>
-
-	<table>
-	  <thead>
-	    <tr>
-	      <th>Column 1</th>
-	      <th>Column 2</th>
-	      <th>Column 3</th>
-	    </tr>
-	  </thead>
-	  <tbody>
-	    <tr>
-	      <td>Cell</td>
-	      <td>Cell</td>
-	      <td>Cell</td>
-	    </tr>
-	  </tbody>
-	  <tfoot>
-	    <tr>
-	      <td>Summary 1</td>
-	      <td>Summary 2</td>
-	      <td>Summary 3</td>
-	    </tr>
-	  </tfoot>
-	</table>
 
 More Information
 ----------------
@@ -477,3 +422,4 @@ work if you are on a budget.
 .. _CSE HTML Validator: http://www.htmlvalidator.com/
 .. _W3C: http://validator.w3.org/
 .. _Firebug: https://addons.mozilla.org/en-US/firefox/addon/firebug/
+.. _image file formats: http://en.wikipedia.org/wiki/Image_file_formats

@@ -4,8 +4,8 @@ Assignment 1 - Basic HTML
 Project Overview
 ----------------
 
-We will be working on building a website for a ficticious organization
-throughout the semeter. We will learn how to work on a website in groups.
+We will be working on building a website for a fictitious organization
+throughout the semester. We will learn how to work on a website in groups.
 This is the start of that website.
 
 How to Work in Pairs
