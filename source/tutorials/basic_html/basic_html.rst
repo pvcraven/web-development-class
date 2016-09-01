@@ -231,8 +231,8 @@ There are many `image file formats`_. Here's the abridged version:
   * .png: Use PNG's for graphic art.
   * .gif: Use GIF's for graphic art. These can be animated too.
   * .svg: Browser support for this is poor, but eventually this will let
-          you specify vector-graphics for graphic art. This will allow scaling of
-          line-art images to any resolution.
+    you specify vector-graphics for graphic art. This will allow scaling of
+    line-art images to any resolution.
 
 Normally the resolution of the image should match the resolution
 that you want it to appear on the screen. Otherwise you force the user's
