@@ -196,7 +196,8 @@ allows the developer to control if the new window opens up in a new window or ta
 
 But the official documentation is quite *dry*.
 Rather than use the official documentation,
-many people look it up on a website that is easier to navigate. For example w3schools:<br />
+many people look it up on a website that is easier to navigate. For example w3schools:
+
 ``<a href="http://www.w3schools.com/tags/tag_a.asp">http://www.w3schools.com/tags/tag_a.asp</a>``
 
 
@@ -208,17 +209,20 @@ Images
 
 In a manner similar to links, you can also load images in your web page.
 For this, we use the ``img`` tag, and the ``src`` attribute.
-For example this will load ``happy_face.png`` image off the server:<br />
+For example this will load ``happy_face.png`` image off the server:
+
 ``<img src="happy_face.png" />``
 
 
-It is good practice to keep images in a separate folder. For example:<br />
+It is good practice to keep images in a separate folder. For example:
+
 ``<img src="images/happy_face.png" />``
 
 
 Images can and should have ``alt`` text specified. If the image
 can't load, this text will be displayed. If the user is blind, the screen
-reader will read back the alt text.<br />
+reader will read back the alt text.
+
 ``<img src="images/happy_face.png" alt="Happy Face" />``
 
 There are many `image file formats`_. Here's the abridged version:

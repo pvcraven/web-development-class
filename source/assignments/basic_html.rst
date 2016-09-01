@@ -44,9 +44,10 @@ Schedule
   One person will direct. Each person should work to finish three pages. It is
   expected that some time will be spent outside of class to finish those pages.
   Do the hard parts first, and save the easy parts for outside of class.
-* Thursday, switch spots. Try to divide out the time evenly, since we'll be
-  talking on Tuesday, but the full time on on Thursday will be spent working
-  on this assignment. Finish the other three pages.
+* Thursday, spend about 15 minutes picking the topic, and figuring what pages
+  you will build.
+* Also on Thursday, split the rest of the time. One person navigates, one person
+  drives. Switch places
 * There may be ONE group of three. If you are in this group, please divide the time
   in thirds. Each person is still responsible for three pages.
 * Tuesday we will cover how to turn in the assignment. See `Turning in a website`_.
@@ -89,8 +90,11 @@ Required Components
 
 * Every page should have:
 
-  * HTML comment at the top with the person who is primarily responsible for the page. Each person should
-    have at least three pages they are responsible for, and will be graded on.
+  * HTML comment at the top with the person who is primarily responsible for the
+    page. This will be the page where you are the 'navigator.' The driver does
+    the typing and will not be primarily responsible for that page.
+    Each person should have at least three pages they are responsible for,
+    and will be graded on.
   * Web site title and graphic. Put in its own <div>
   * Web site footer. Put in its own <div>
   * Unordered list of all pages in the web site, that link to the web pages. Links must be relative.

@@ -27,7 +27,7 @@ Once IE had some competition, the browser race was back on. Soon both Google's C
 and Apple's Safari web browsers joined the race.
 
 An interactive time-line that describes the evolution of the web is available
-here with this gorgeous interactive website:<br />
+here with this gorgeous interactive website:
 http://evolutionofweb.appspot.com/
 
 A great video to watch is Robert X. Cringely's Nerds 2.0.1.
