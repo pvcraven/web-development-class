@@ -70,7 +70,7 @@ the subjects to ones that any student could work on.
 * Local Italian restaurant
 * Web page for a band that gets gigs, but isn't famous
 * Website with recipes for families that want to eat healthy
-* Cute/funny cat videos
+* Cute/funny cat photos or videos (you will need to take them yourself)
 * Information on the best mobile phone
 * Local business that sells shoes
 * Bed and breakfast
@@ -95,37 +95,67 @@ Required Components
     the typing and will not be primarily responsible for that page.
     Each person should have at least three pages they are responsible for,
     and will be graded on.
-  * Web site title and graphic. Put in its own <div>
-  * Web site footer. Put in its own <div>
-  * Unordered list of all pages in the web site, that link to the web pages. Links must be relative.
+  * Web site title and graphic. Put in its own ``<div>``. Or you can use the ``<header>``
+    tag instead.
+  * Web site footer. Put in its own ``<div>``. Or use the ``<footer>`` tag. What might
+    go in the footer? Anything that goes at the bottom of the page. For example,
+    the footer might have copyright information or contact information. See other
+    pages for ideas.
+  * Page names: All pages should end in ``.html``. Page names should be all lower
+    case. Page names should not have spaces. You can use underscores instead.
+  * Unordered list of all pages in the web site, that link to the web pages.
+    The link will be the page name. For example: ``<a href="about.html">About</a>``
+    Links must be relative. See the example out of the tutorial for how the list
+    should look. It should be inside a ``<nav>`` tag just like the example.
 
 * Two Required pages
 
-  * Main index page
-  * About page
+  * Main index page. The file name must be ``index.html``
+  * About page. This might have things like who created the website, or
+    info about your band, or your city, or company.
 
 * Optional pages. Must have at least four.
 
   * News page
   * Items for sale page
   * Hours, directions
-  * Page with video
+  * Page with video. Videos should be original. Please don't use other
+    people's videos. You can post on YouTube, Vimeo, etc. and link the video
+    in.
   * Pages with info on a subject
-  * Required placeholder pages. Just put in a title for now.
+
+* Required placeholder pages. See below. Just put in a title on these two pages
+  for now. We will show how to create forms later.
+
   * Login
   * Sign up, or some other 'enter information' page
 
 * Required HTML elements
 
   * HEAD section on all pages
-  * Table somewhere
-  * Linked in images
-  * HTML entities
-  * Headings
+  * At least one table. You don't need a table in all the pages, but you need
+    a table on at least one page. The table may look "squished." We'll show
+    how to style the table later.
+  * Linked in images. You may not copy the image off the web. Sketch something
+    in MS Paint, or Inkscape. Or take your own photo. It doesn't have to look good.
+  * HTML entities. Toss at least one somewhere on your six pages.
+  * Headings. Those <h1...6> tags.
   * Paragraphs
   * Tags must be lower case
   * Run a validation check on the HTML for each page. Make sure it is free of issues.
   * Check for spelling and grammar. It counts as part of the grade.
+
+
+Directory Structure
+-------------------
+
+For more information about directories and links with the web, see the
+:ref:`directories` page.
+
+For this assignment, create directories and set up your folders like this:
+
+.. image:: directory_structure.png
+    :width: 350px
 
 Turning in a website
 --------------------

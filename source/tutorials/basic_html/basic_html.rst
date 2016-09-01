@@ -6,12 +6,12 @@ First HTML Document
 
 *Note:* It is possible to do all the HTML and CSS experimentation on-line
 with live editors like liveweave_. For this book I will show development using
-a workflow that also works for doing PHP work, which isn't easy to do live.
+a workflow that also works for more advanced development, which isn't easy to do live.
 However, don't hesitate to experiment with HTML and CSS using websites like
 LiveWeave because you can save a lot of time that way.
-Create a directory inside your web server directory called ``chapter01``.
-Inside of that, create a file named ``index.php``. This file should
-be pulled by default when you go to ``localhost/chapter01/``.
+
+Create a directory on your computer called ``chapter01``.
+Inside of that, create a file named ``index.html``.
 
 Inside that document type a simple phrase like:
 
@@ -19,9 +19,8 @@ Inside that document type a simple phrase like:
 
     Hello there
 
-Make sure EasyPHP is running. Then type ``localhost`` in the address bar of
-your web browser and navigate to that web page. You should see something like
-this:
+Use a file browser to find the file. Then drag it to your web browser to open
+it up. You should see something like:
 
 .. image:: hello_there_1.png
     :width: 400px
@@ -29,7 +28,7 @@ this:
     :alt: First Web Page
 
 
-Try the following code:
+Now try the following code:
 
 .. code:: html
 
@@ -169,6 +168,11 @@ Tag           Description
 <u>           Underline
 ============= ===================
 
+One of the most popular tags is the <div> tag. This tag is used to define any
+sort of 'divisions' on your web page. Basically, anything you'd want to put
+in a box. Even other boxes. Because <div> is so generic, HTML5 added
+common elements like <article> <footer> <section> and <summary>. They act like
+<div> tags, but give a better description of their content.
 
 Tag Attributes
 --------------

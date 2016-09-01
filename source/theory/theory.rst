@@ -5,7 +5,7 @@ Theory
    :maxdepth: 1
 
    basic_html/basic_html.rst
+   directories/directories.rst
    dvcs/dvcs.rst
    scrum/scrum.rst
-   directories/directories.rst
    css/css.rst
