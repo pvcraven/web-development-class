@@ -75,5 +75,17 @@ How to resolve conflicts
 
 * We'll cover this in class
 
-How to read the history
-^^^^^^^^^^^^^^^^^^^^^^^
+Turn in Assignment 1
+^^^^^^^^^^^^^^^^^^^^
+
+To turn in assignment 1, copy the GitHub address for your project into the submission
+form on Scholar for assignment 1.
+
+* Make sure you submit your files, and your files only.
+* Make sure you submit any images that go with your files.
+* Make sure to add descriptive comments when submitting. (You can't edit them
+  later, so make sure you get them right the first time.)
+* Make sure your files have a comment with your name in them at the top.
+* Make sure HTML Validator returns all the files as free from errors or warnings.
+
+
