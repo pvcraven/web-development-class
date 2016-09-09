@@ -50,7 +50,7 @@ Schedule
   drives. Switch places
 * There may be ONE group of three. If you are in this group, please divide the time
   in thirds. Each person is still responsible for three pages.
-* Tuesday we will cover how to turn in the assignment. See `Turning in a website`_.
+* Later we will cover how to turn in the assignment.
 
 If you are gone any of these days you will get half credit. If your phone is
 out, or you are on an unrelated website, you'll be counted as gone and asked
@@ -150,17 +150,33 @@ Directory Structure
 -------------------
 
 For more information about directories and links with the web, see the
-:ref:`directories` page.
+:ref:`Directories` page.
 
 For this assignment, create directories and set up your folders like this:
 
 .. image:: directory_structure.png
     :width: 350px
 
-Turning in a website
---------------------
 
-Assignment 2 will involve how to turn in Assignment 1. And a bit more than that. We will
-be using a "Distributed Version Control System" (DVCS). So each person on the team
-should keep all the files. When we start going over how to do this in class, then you'll
-turn in the assignment.
+Turn in Assignment 1
+^^^^^^^^^^^^^^^^^^^^
+
+To turn in assignment 1, copy the GitHub address for your project into the submission
+form on Scholar for assignment 1. This will require you to complete Assignment 2.
+
+* Make sure you submit your files, and your files only.
+* Make sure you submit any images that go with your files.
+* Make sure to add descriptive comments when submitting. (You can't edit them
+  later, so make sure you get them right the first time.)
+* Make sure your files have a comment with your name in them at the top.
+* Make sure HTML Validator returns all the files as free from errors or warnings.
+* File names should be all lower case.
+* File names should not have any spaces. Use underscores instead.
+* The menu should be in an unordered list, and should appear on every page.
+* The footer should look something like this:
+
+.. code-block:: html
+
+  <footer>
+    Copyright 2016 by Pat
+  </footer>

@@ -181,6 +181,7 @@ Merging Changes
   hitting "close."
 * The other dialog is still open, so hit "Cancel"
 * Select "pull"
+* If you get an error, see below on "How to Resolve Conflicts"
 * Click "ok" on the pull dialog box
 * As long as there are no conflicts, the changes will be automatically
   merged together. You can see the two separate "streams" and where they merged.
@@ -192,23 +193,53 @@ Merging Changes
 
 * Now your items are on the server!
 
-How to resolve conflicts
+How to Resolve Conflicts
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-* We'll cover this in class
+* When two people both change the same lines of code, we can't automatically
+  merge the files together. We'll get an error that looks like this when we pull:
 
-Turn in Assignment 1
-^^^^^^^^^^^^^^^^^^^^
+.. image:: source_tree_commit_7.png
+    :width: 450px
 
-To turn in assignment 1, copy the GitHub address for your project into the submission
-form on Scholar for assignment 1.
+* At this point we **have** pulled the changes. They just aren't merged.
+* Hit 'Cancel'. Which is weird because the changes were already pulled.
+* Click uncommitted changes (point 1)
+* Right-click files with an exclamation point. These have conflicts. (point 2)
+* Select Resolve Conflicts (point 3)
+* Choose how to resolve the conflict. You can:
 
-* Make sure you submit your files, and your files only.
-* Make sure you submit any images that go with your files.
-* Make sure to add descriptive comments when submitting. (You can't edit them
-  later, so make sure you get them right the first time.)
-* Make sure your files have a comment with your name in them at the top.
-* Make sure HTML Validator returns all the files as free from errors or warnings.
+  * Ignore the stuff on the server, and use the copy you have on your computer.
+    "Resolve using **mine**" (point 4)
+  * Ignore the stuff on your computer, and go with what is on the server.
+    "Resolve using **theirs**" (point 5)
+  * Manually change the text. Then tell the computer everything is ok. Don't
+    select this option until you merge the text yourself. See below. (point 6)
+
+.. image:: source_tree_commit_8.png
+    :width: 500px
+
+* The first two options are the easiest. If you need to manually merge the files,
+  open the files and you'll see stuff like this:
+
+.. image:: source_tree_commit_9.png
+    :width: 500px
+
+* You have BOTH sets of changes. And some really weird divider lines. Edit this,
+  remove the extra junk added in:
+
+.. image:: source_tree_commit_10.png
+    :width: 500px
+
+* Then "Mark Resolved" from the step above.
+
+* Commit. The comment will be filled in for you.
+* Then push.
+
+
+
+
+
 
 
 .. _create an account with Atlassian: https://id.atlassian.com/signup?application=mac&continue=https%3A%2F%2Fmy.atlassian.com%2Fproducts%2Findex

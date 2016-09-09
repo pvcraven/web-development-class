@@ -1,3 +1,5 @@
+.. _Directories:
+
 Directories
 -----------
 
@@ -17,7 +19,7 @@ example of linking between two files in the same directory:
    :linenos:
    :caption: page1.html
 
-.. literalinclude:: v1/page2.html
+.. literalinclude:: ../../_static/directories/v1/page2.html
    :language: html
    :linenos:
    :caption: page2.html

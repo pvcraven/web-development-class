@@ -5,3 +5,4 @@ Assignments
    :maxdepth: 1
 
    basic_html/basic_html.rst
+   dvcs/dvcs.rst
