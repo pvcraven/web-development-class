@@ -65,14 +65,27 @@ After installing SourceTree, `create an account with GitHub`_. GitHub is where
 we will store the code that we write. It is a very popular web site for code
 management. Particularly open-source software.
 
+
 Creating Your Project
 ^^^^^^^^^^^^^^^^^^^^^
 
+One person, create a project. Include a 'readme'. Others can be left as default.
+
+.. image:: github_1.png
+    :width: 450px
+
+.. image:: github_2.png
+    :width: 450px
+
 Cloning
-=======
-* Create accounts on GitHub
-* One person, create a project. Include a 'readme'. Others can be left as default.
+^^^^^^^
+
 * Clone the project onto your computer.
+
+.. image:: github_3.png
+    :width: 450px
+
+
 
 Initial Project Setup
 ^^^^^^^^^^^^^^^^^^^^^
@@ -135,5 +148,3 @@ form on Scholar for assignment 1.
 .. _create an account with Atlassian: https://id.atlassian.com/signup?application=mac&continue=https%3A%2F%2Fmy.atlassian.com%2Fproducts%2Findex
 
 .. _create an account with GitHub: https://github.com/
-=======
->>>>>>> 37748a86f6f69975fbc14e53e418d4d0783f95dd
