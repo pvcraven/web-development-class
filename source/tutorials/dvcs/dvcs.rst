@@ -58,73 +58,139 @@ Then do the same thing with Mercurial:
     :width: 350px
 
 
-GitHub
-^^^^^^
+Getting Started with GitHub
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 After installing SourceTree, `create an account with GitHub`_. GitHub is where
 we will store the code that we write. It is a very popular web site for code
 management. Particularly open-source software.
 
 
-Creating Your Project
-^^^^^^^^^^^^^^^^^^^^^
+Creating Your Project in GitHub
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-One person, create a project. Include a 'readme'. Others can be left as default.
+* One person in your team should create a project. Don't create a project for each
+  person.
+* Give your project a name. All lower case. Separate words with underscores.
+  Do not use spaces. And don't *actually* call your project ``my_project_name``
+  because that would be silly.
+* Give a short one-sentence description of what your project is.
+* Include a 'readme' in your project. If you don't do this your project will
+  start as blank, and you'll get a really confusing screen.
+* The other options can be left as default..
 
 .. image:: github_1.png
-    :width: 450px
+    :width: 500px
+
+* After creating the project, invite the instructor (``pvcraven`` if it is
+  Dr. Craven) and your team mates. Do this by clicking Settings...Collaborators.
+  Then it will ask for your password. Then start entering usernames.
 
 .. image:: github_2.png
     :width: 450px
 
-Cloning
-^^^^^^^
+* Each user will receive an e-mail confirming he or she would like to be part
+  of the project. Click the confirmation link sent.
 
-* Clone the project onto your computer.
+Cloning Your GitHub Project on Your Computer
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* Clone the project onto your computer. First, copy the link from GitHub in your
+  web browser:
 
 .. image:: github_3.png
     :width: 450px
 
+* Then switch to SourceTree. Hit the "Clone / New" button.
+* Paste the URL you copied into Source Path / URL. See point 1 below.
+* Click into "Destination Path". When you do this, SourceTree will check your URL and
+  say "This is a Git repository." See point 2 below.
+* If you DON'T get that it is a Git repository, check your URL. If that is
+  correct, cancel out of this dialog box and go to the menu bar.
+  Click Tools...Options. Then select the
+  "Git" tab. Make sure Git is installed. If it isn't, then install it.
+* Find a place for your projects. Create a folder called ``web_server``. Then
+  create a folder that matches your project name. See point 3 below.
+* Click "Clone"
+
+.. image:: github_4.png
+    :width: 450px
+
+* Your repository should be cloned. You can see where your files are by looking
+  at the barely-legible text to the right of your project entry. Or you can just
+  right-click on the project and "Show in Explorer"
+
+.. image:: source_tree_setup_7.png
+    :width: 400px
 
 
-Initial Project Setup
-^^^^^^^^^^^^^^^^^^^^^
-
-To start with, one person on your team should have created your project on GitHub.
-That person should have "cloned" a copy of the project on your computer.
-
-For the person on your team that created your GitHub repository:
-
-* Log into GitHub website.
-* For the person that created the project, find it on GitHub.
-* Click "Settings" tab
-* Click "Collabrators"
-* You'll likely have to re-enter your password
-* Find your other team member(s) and add them as a collaborator. Also add my
-  account 'pvcraven'.
-
-For the other team members:
-
-* Log into GitHub website.
-* Find the project
-* Clone your own copy of the project
 
 Committing
 ^^^^^^^^^^
 
 * Create the directory structure as shown in the assignment
 * Add YOUR files, and your files only, to the project
-* Commit those files
-* Push them to the server
+* Go to SourceTree. You should see a line "Uncommitted Changes" appear.
+  Click that. See point 1 below if you can't find it.
+* Stage the files by clicking "Stage All". Point 2.
+
+.. image:: source_tree_commit_1.png
+    :width: 400px
+
+* Commit the files
+* Put in a comment about what you did. This is important, because it allows
+  other people (and you) to know what was done in the project.
+
+.. image:: source_tree_commit_2.png
+    :width: 400px
+
+* Once you've committed, you should see a line on your history with the comment
+  you made. You can click on that line to see what changed.
+* At this point SourceTree may ask you for your username, and your email address.
+  This is just what will appear next to the "commit" to say who did the committing.
+  Note that SourceTree might helpfully fill in something like ``SC\paul.craven``
+  as your name. This is not your name. Nor is something like ``paul.craven``. Your
+  name is something like ``Paul Craven``. And no, don't put in *my* name, but in
+  *your* name. Once stored, it won't ask you for this info again.
+* The "Push" button should have a number next to it. This is the number of change
+  sets that you've made on your computer, but that are not on the server.
+* Go ahead and click "Push" to push them to the server
+
+.. image:: source_tree_commit_3.png
+    :width: 400px
+
+* Another dialog box will pop up. Just click "Push" again.
+* We *still* haven't pushed. We need to log in:
+
+.. image:: source_tree_commit_4.png
+    :width: 400px
+
+* Great! Now your code is on the server. You can go to GitHub and see it.
 
 Merging Changes
 ^^^^^^^^^^^^^^^
 
 * If you push to the server, and someone else has already done so, your push
   will error out.
+
+.. image:: source_tree_commit_5.png
+    :width: 400px
+
+* We can't push our changes because we don't have the most recent changes from
+  the server. So we need to pull them first. Cancel out of this dialog box by
+  hitting "close."
+* The other dialog is still open, so hit "Cancel"
 * Select "pull"
-* Select "merge"
-* Select "push"
+* Click "ok" on the pull dialog box
+* As long as there are no conflicts, the changes will be automatically
+  merged together. You can see the two separate "streams" and where they merged.
+  See point 1.
+* Select "push". See point 2.
+
+.. image:: source_tree_commit_6.png
+    :width: 400px
+
+* Now your items are on the server!
 
 How to resolve conflicts
 ^^^^^^^^^^^^^^^^^^^^^^^^
