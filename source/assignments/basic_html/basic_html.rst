@@ -159,7 +159,7 @@ For this assignment, create directories and set up your folders like this:
 
 
 Turn in Assignment 1
-^^^^^^^^^^^^^^^^^^^^
+--------------------
 
 To turn in assignment 1, copy the GitHub address for your project into the submission
 form on Scholar for assignment 1. This will require you to complete Assignment 2.
