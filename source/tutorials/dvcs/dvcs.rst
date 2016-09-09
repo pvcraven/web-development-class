@@ -69,20 +69,71 @@ Creating Your Project
 ^^^^^^^^^^^^^^^^^^^^^
 
 Cloning
-^^^^^^^
+=======
+* Create accounts on GitHub
+* One person, create a project. Include a 'readme'. Others can be left as default.
+* Clone the project onto your computer.
 
-Committing Changes
-^^^^^^^^^^^^^^^^^^
+Initial Project Setup
+^^^^^^^^^^^^^^^^^^^^^
 
-Pushing Changes
-^^^^^^^^^^^^^^^
+To start with, one person on your team should have created your project on GitHub.
+That person should have "cloned" a copy of the project on your computer.
 
-Pulling Changes
-^^^^^^^^^^^^^^^
+For the person on your team that created your GitHub repository:
+
+* Log into GitHub website.
+* For the person that created the project, find it on GitHub.
+* Click "Settings" tab
+* Click "Collabrators"
+* You'll likely have to re-enter your password
+* Find your other team member(s) and add them as a collaborator. Also add my
+  account 'pvcraven'.
+
+For the other team members:
+
+* Log into GitHub website.
+* Find the project
+* Clone your own copy of the project
+
+Committing
+^^^^^^^^^^
+
+* Create the directory structure as shown in the assignment
+* Add YOUR files, and your files only, to the project
+* Commit those files
+* Push them to the server
 
 Merging Changes
 ^^^^^^^^^^^^^^^
 
+* If you push to the server, and someone else has already done so, your push
+  will error out.
+* Select "pull"
+* Select "merge"
+* Select "push"
+
+How to resolve conflicts
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+* We'll cover this in class
+
+Turn in Assignment 1
+^^^^^^^^^^^^^^^^^^^^
+
+To turn in assignment 1, copy the GitHub address for your project into the submission
+form on Scholar for assignment 1.
+
+* Make sure you submit your files, and your files only.
+* Make sure you submit any images that go with your files.
+* Make sure to add descriptive comments when submitting. (You can't edit them
+  later, so make sure you get them right the first time.)
+* Make sure your files have a comment with your name in them at the top.
+* Make sure HTML Validator returns all the files as free from errors or warnings.
+
+
 .. _create an account with Atlassian: https://id.atlassian.com/signup?application=mac&continue=https%3A%2F%2Fmy.atlassian.com%2Fproducts%2Findex
 
 .. _create an account with GitHub: https://github.com/
+=======
+>>>>>>> 37748a86f6f69975fbc14e53e418d4d0783f95dd
