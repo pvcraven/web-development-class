@@ -180,3 +180,8 @@ form on Scholar for assignment 1. This will require you to complete Assignment 2
   <footer>
     Copyright 2016 by Pat
   </footer>
+
+.. image:: rubric.png
+    :width: 500px
+    :align: center
+    :alt: alt
