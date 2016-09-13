@@ -95,9 +95,11 @@ Required Components
     the typing and will not be primarily responsible for that page.
     Each person should have at least three pages they are responsible for,
     and will be graded on.
-  * Web site title and graphic. Put in its own ``<div>``. Or you can use the ``<header>``
-    tag instead.
-  * Web site footer. Put in its own ``<div>``. Or use the ``<footer>`` tag. What might
+  * Web site title and graphic. Put in its own ``<header>`` tag.
+    (Many people also use the generic ``<div>`` tag instead, but please use
+    the ``<header>`` tag for this class.)
+  * Web site footer. Put in its own ``<footer>`` tag. (Again, many people
+    use ``<div>`` for this as well.) What might
     go in the footer? Anything that goes at the bottom of the page. For example,
     the footer might have copyright information or contact information. See other
     pages for ideas.
