@@ -10,8 +10,19 @@ desired theme.
 
 Originally the look and feel was mixed in with the HTML. For small pages, this
 was easier to code. But for large websites it quickly became unmanageable.
-Separating the style gives a developer the following advantages:
 
+For example, imagine you wanted to center a title. You used the old ``<center>``
+tag. If your web page had 100 titles, how many times would you have to use the
+``<center>`` tag? How could you make sure you did it consistently? And what if
+the Tim Gun of website design came, and said, "Centered titles are ugly. Today
+we make all titles left-aligned!" Now the poor developer has to change all 100
+files.
+
+But wait, what if there was just **one** file that said "center titles"? Then
+to update the entire website, you just changed that one file to say "left-align
+titles"? That's what we do with CSS.
+
+Separating the style into a CSS gives a developer the following advantages:
 
 * Separating the content from the style allows developers to update the theme of
   a 100 page website with just one style sheet.
@@ -22,6 +33,8 @@ Separating the style gives a developer the following advantages:
 * A graphic artist can work with the CSS file and change the look of the website
   while keeping their work completely separate from the content portion of the
   website.
+* Speeds website loading times, because we load a website's style information once
+  and then remember it for each page.
 
 For an example of CSS, take a look at `CSS Zen Garden`_.
 This is an old website, but each theme takes the same HTML and transforms it to a different
@@ -58,7 +71,7 @@ An example:
     }
     h2 {
           text-align: center;
-          font-size: 10px;
+          font-size: 18px;
     }
 
 The *selector* allows us to select which tags we want to apply
@@ -74,13 +87,17 @@ CSS can be included in a document one of three ways.
 2. Internal: In the ``head`` portion of the document.
 3. External: In a separate file.
 
-Most of the time, CSS should only be used externally. A web page style
-should be consistent. Also, the code for the content and the style should
-be separate. This makes it easier to program. It also makes the website
-faster if we don't have to reload the style for every document.
+Most of the time, CSS should only be used externally. A web's style
+should be consistent across multiple pages. It only makes sense to separate
+this out into one file.
+
+But we will show you the other two ways as well.
 
 In-line CSS
 ^^^^^^^^^^^
+
+You can use the ``style`` attribute in a tag. Then your can list all the
+styles for the tag, separated by semi-colons. See below:
 
 .. code:: html
 
@@ -88,6 +105,8 @@ In-line CSS
 
 Internal CSS
 ^^^^^^^^^^^^
+
+You can also specify the style in the ``<head>`` portion of a document:
 
 .. code:: html
 
@@ -104,11 +123,16 @@ Internal CSS
 External CSS
 ^^^^^^^^^^^^
 
+The best way is to link to a separate style sheet. The example below links
+will load a style sheet named ``stylesheet.css`` that is in the ``css`` directory.
+
 .. code:: html
 
     <head>
-      <link rel="stylesheet" type="text/css" href="stylesheet.css">
+      <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
     </head>
+
+Then your ``stylesheet.css`` file would look like this:
 
 .. code:: css
 
@@ -133,8 +157,8 @@ criteria. Some examples:
 We use these selectors to "select" what elements get a new
 style.
 
-Tags
-^^^^
+CSS Tag Selector
+^^^^^^^^^^^^^^^^
 
 Simple tag selectors start with the tag name. In the example below,
 all paragraph ``p`` tags will be set to have a font size of 14 pixels.
@@ -146,8 +170,8 @@ all paragraph ``p`` tags will be set to have a font size of 14 pixels.
     }
 
 
-IDs
-^^^
+CSS ID Selector
+^^^^^^^^^^^^^^^
 
 You can create tags with an ID. All IDs *must be unique*.
 For example:
@@ -167,8 +191,8 @@ You can select a specific ID using the pound sign (#):
         font-size: 14px;
     }
 
-Classes
-^^^^^^^
+CSS Class Selector
+^^^^^^^^^^^^^^^^^^
 
 Classes are used when you might have *multiple* tags
 that need the same style. That is, the tag may not be unique.
@@ -181,6 +205,7 @@ that need the same style. That is, the tag may not be unique.
     <p class="even">Generic paragraph.</p>
 
 .. code:: css
+
     .even {
         background-color: white;
     }
@@ -215,43 +240,26 @@ There are many other selectors. Here are some examples:
         /* Properties */
     }
 
-Check out this excellent reference from w3schools:
+Check out this excellent on advanced selectors from W3Schools:
 
 http://www.w3schools.com/cssref/css_selectors.asp
 
 CSS Properties and Values
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
+What kind of properties can you control with CSS? See this handy reference:
+
 http://www.w3schools.com/cssref/default.asp
 
-Generators:
-
-* <a href="http://css3generator.com/">CSS3 Generator</a>
-* <a href="http://www.cssmatic.com/box-shadow">Box Shadow</a>
-* <a href="http://www.hongkiat.com/blog/css3-button-tutorials/">Button Examples</a>
-* <a href="http://css-tricks.com/examples/ButtonMaker/">Button Maker</a>
-* <a href="http://html5up.net/">Downloadable Themes</a>
-* <a href="http://www.cssportal.com/layout-generator/">Layout Generator</a>
 
 Color Theory
-^^^^^^^^^^^^
+------------
 
-<ul>
-  <li>Introduce common color theory terms<br /></li>
-  <ul>
-    <li><a href="http://www.worqx.com/color/index.htm">http://www.worqx.com/color/index.htm</a></li>
-    <li><a href="http://en.wikipedia.org/wiki/Hue">Hue</a></li>
-    <li><a href="http://en.wikipedia.org/wiki/Colorfulness">Chroma/Colorfulness</a><br /></li>
-    <li>(Homework, read: <a href="http://www.smashingmagazine.com/2010/01/28/color-theory-for-designers-part-1-the-meaning-of-color/">http://www.smashingmagazine.com/2010/01/28/color-theory-for-designers-part-1-the-meaning-of-color/</a>)<br /></li>
-  </ul>
-  <li>See it in action:</li>
-  <ul>
-    <li><a href="http://colorschemedesigner.com/">http://colorschemedesigner.com/</a></li>
-  </ul>
-  <li>Browse schemes</li>
-  <ul>
-    <li><a href="http://kuler.adobe.com/">http://kuler.adobe.com</a></li>
-  </ul>
-</ul>
+* `Color Theory: Overview <http://www.worqx.com/color/index.htm>`_
+* `Hue <http://en.wikipedia.org/wiki/Hue>`_
+* `Chroma/Colorfulness <http://en.wikipedia.org/wiki/Colorfulness>`_
+* `Color Theory for Designers, Part 1: The Meaning of Color <http://www.smashingmagazine.com/2010/01/28/color-theory-for-designers-part-1-the-meaning-of-color/>`_
+* See it in action: `http://colorschemedesigner.com/ <http://colorschemedesigner.com/>`_
+* Browse schemes: `http://kuler.adobe.com/ <http://kuler.adobe.com/>`_
 
 .. _CSS Zen Garden: http://csszengarden.com/

@@ -7,5 +7,5 @@ Theory
    basic_html/basic_html.rst
    directories/directories.rst
    dvcs/dvcs.rst
-   scrum/scrum.rst
    css/css.rst
+   scrum/scrum.rst
