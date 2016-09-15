@@ -11,13 +11,26 @@ created styles. We will select the best one hunger-games style.
 To complete this project:
 
 * Find the project that you have been assigned.
-* Select a color scheme for your website
+* Find the owner, get yourself added as a contributer.
+* Clone it.
+* Look at it.
+* Create a branch of the project in SourceTree.
+* Double-check the project for HTML and link errors using HTML Validator.
+  Fix any issues. This is like real life, where you get stuck cleaning up other
+  people's messes.
+* Make sure no one checked in those temp files that CSE Validator creates. They
+  start with a tilde and look like ``~cse_wb_index.html``. Delete them if they
+  exist. Perhaps create a ``.ignore`` file so you don't accidentally add more.
+* Make sure all the file names are lower case, and have no spaces. Underscores
+  are ok. Go back and fix links to match the case.
+* Add a little bit more content to the site of your own creation. Seriously.
+  You'll be graded on this.
+* Delete those comments saying who owns the file. You own all the files now.
+* Select a color scheme for your website.
 
   * Use color theory and tools we talked about in class.
+  * Perhaps search through Adobe's Kuler_.
 
-* Create a branch of the project in SourceTree.
-* You may inherit a project with problems.
-  Like bad links. Spend some time looking over the project and clean it up as needed.
 * For index.html:
 
   * Apply one or more in-line styles
@@ -45,3 +58,5 @@ To complete this project:
   * Do not center blocks of text. That's very hard to read.
 
 * Finally, spend some time doing detail work. Make it look good.
+
+.. _Kuler: https://color.adobe.com/explore/most-popular/?time=all
