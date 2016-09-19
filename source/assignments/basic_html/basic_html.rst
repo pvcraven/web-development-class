@@ -192,6 +192,9 @@ form on Scholar for assignment 1. This will require you to complete Assignment 2
     Copyright 2016 by Pat
   </footer>
 
+* Copy the GitHub project URL
+* Submit on Scholar
+
 .. image:: rubric.png
     :width: 500px
     :align: center

@@ -8,3 +8,4 @@ Tutorials
    basic_html/basic_html.rst
    dvcs/dvcs.rst
    css/css.rst
+   branching/branching.rst

@@ -14,7 +14,7 @@ To complete this project:
 * Find the owner, get yourself added as a contributer.
 * Clone it.
 * Look at it.
-* Create a branch of the project in SourceTree.
+* Create a branch of the project in SourceTree. Follow the :ref:`branching-tutorial`.
 * Double-check the project for HTML and link errors using HTML Validator.
   Fix any issues. This is like real life, where you get stuck cleaning up other
   people's messes.
@@ -24,7 +24,8 @@ To complete this project:
 * Make sure all the file names are lower case, and have no spaces. Underscores
   are ok. Go back and fix links to match the case.
 * Add a little bit more content to the site of your own creation. Seriously.
-  You'll be graded on this.
+  You'll be graded on this. Add 10 or more items of new content. An item might
+  be a new paragraph, a new image, or something similar.
 * Delete those comments saying who owns the file. You own all the files now.
 * Select a color scheme for your website.
 
@@ -57,6 +58,15 @@ To complete this project:
     Use color for highlights or titles.
   * Do not center blocks of text. That's very hard to read.
 
-* Finally, spend some time doing detail work. Make it look good.
+* Spend some time doing detail work. Make it look good.
+* Revalidate with HTML Validator.
+* Commit
+* Push
+* Submit the assignment in Scholar. Paste in the link to the GitHub web site for the project.
+
+.. image:: rubric.png
+    :width: 500px
+    :align: center
+    :alt: Rubric
 
 .. _Kuler: https://color.adobe.com/explore/most-popular/?time=all
