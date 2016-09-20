@@ -5,31 +5,38 @@ Introduction to CSS
 ^^^^^^^^^^^^^^^^^^^
 
 CSS stands for *Cascading Style Sheets*. The "look and feel" of a website
-is specified by the CSS language. CSS takes the HTML and transforms it to the
-desired theme.
+is specified by the CSS language. CSS takes the HTML and transforms it to
+look the way the designer would like.
 
-Originally the look and feel was mixed in with the HTML. For small pages, this
+Originally the "look" of a website was mixed in with the HTML. For small pages, this
 was easier to code. But for large websites it quickly became unmanageable.
+Even for small websites, developers eventually realized it was the wrong way
 Separating the style gives a developer the following advantages:
 
 
 * Separating the content from the style allows developers to update the theme of
   a 100 page website with just one style sheet.
-* It allows a developer to add content without having to style the code to
-  match the theme.
-* It allows a website to easily change its look if it is being viewed on a smartphone,
+* It allows a developer to add additional content without having worry about
+  adding style code.
+* It allows a website to easily change its look if it is being viewed on a smart-phone,
   or if it is being printed.
 * A graphic artist can work with the CSS file and change the look of the website
   while keeping their work completely separate from the content portion of the
   website.
+* It allows a website to use a pre-built style library like `Bootstrap`_.
 
 For an example of CSS, take a look at `CSS Zen Garden`_.
-This is an old website, but each theme takes the same HTML and transforms it to a different
-style using a different CSS. Try it out. Use the "view source" and "inspect element"
+This is an old website, but it takes the *exact same HTML* and
+completely transforms the look by switching the CSS. Try it out.
+When looking at the website use the "view source" and "inspect element"
 options in your browser to view both the HTML and CSS.
 
-Many web browsers even let you modify the CSS live, and see the results. Use "Inspect
-Element" on your browser and try it yourself.
+I'll wait.
+
+Many web browsers even let you modify the CSS live, and see the results.
+In Chrome, or a similar web browser, right click on something that on a web
+page. Select "Inspect". In the lower right, will be all the style info.
+You can edit that info and the results show up on the main web page.
 
 CSS Language Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -226,32 +233,26 @@ http://www.w3schools.com/cssref/default.asp
 
 Generators:
 
-* <a href="http://css3generator.com/">CSS3 Generator</a>
-* <a href="http://www.cssmatic.com/box-shadow">Box Shadow</a>
-* <a href="http://www.hongkiat.com/blog/css3-button-tutorials/">Button Examples</a>
-* <a href="http://css-tricks.com/examples/ButtonMaker/">Button Maker</a>
-* <a href="http://html5up.net/">Downloadable Themes</a>
-* <a href="http://www.cssportal.com/layout-generator/">Layout Generator</a>
+* `CSS3 Generator <http://css3generator.com/>`_
+* `Box Shadow <http://www.cssmatic.com/box-shadow>`_
+* `Button Examples <http://www.hongkiat.com/blog/css3-button-tutorials/>`_
+* `Button Maker <http://css-tricks.com/examples/ButtonMaker/>`_
+* `Downloadable Themes <http://html5up.net/>`_
+* `Layout Generator <http://www.cssportal.com/layout-generator/>`_
 
 Color Theory
 ^^^^^^^^^^^^
 
-<ul>
-  <li>Introduce common color theory terms<br /></li>
-  <ul>
-    <li><a href="http://www.worqx.com/color/index.htm">http://www.worqx.com/color/index.htm</a></li>
-    <li><a href="http://en.wikipedia.org/wiki/Hue">Hue</a></li>
-    <li><a href="http://en.wikipedia.org/wiki/Colorfulness">Chroma/Colorfulness</a><br /></li>
-    <li>(Homework, read: <a href="http://www.smashingmagazine.com/2010/01/28/color-theory-for-designers-part-1-the-meaning-of-color/">http://www.smashingmagazine.com/2010/01/28/color-theory-for-designers-part-1-the-meaning-of-color/</a>)<br /></li>
-  </ul>
-  <li>See it in action:</li>
-  <ul>
-    <li><a href="http://colorschemedesigner.com/">http://colorschemedesigner.com/</a></li>
-  </ul>
-  <li>Browse schemes</li>
-  <ul>
-    <li><a href="http://kuler.adobe.com/">http://kuler.adobe.com</a></li>
-  </ul>
-</ul>
+* Introduce common color theory terms
+
+  * `http://www.worqx.com/color/index.htm <http://www.worqx.com/color/index.htm>`_
+  * `Hue <http://en.wikipedia.org/wiki/Hue>`_
+  * `Chroma/Colorfulness <http://en.wikipedia.org/wiki/Colorfulness>`_
+  * Read: `http://www.smashingmagazine.com/2010/01/28/color-theory-for-designers-part-1-the-meaning-of-color/ <http://www.smashingmagazine.com/2010/01/28/color-theory-for-designers-part-1-the-meaning-of-color>`_
+
+* See it in action: `http://colorschemedesigner.com/ <http://colorschemedesigner.com/>`_
+
+* Browse schemes `http://kuler.adobe.com <http://kuler.adobe.com>`_
 
 .. _CSS Zen Garden: http://csszengarden.com/
+.. _Bootstrap: http://getbootstrap.com/
