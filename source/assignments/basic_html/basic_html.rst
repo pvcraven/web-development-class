@@ -1,3 +1,7 @@
+.. For next year
+   Have student identify <student> 'page 1', 'page 2', 'page 3' for grading
+   Are files and links lower case, have no spaces, and no ' characters
+
 Assignment 1 - Basic HTML
 =========================
 
@@ -172,9 +176,14 @@ form on Scholar for assignment 1. This will require you to complete Assignment 2
   later, so make sure you get them right the first time.)
 * Make sure your files have a comment with your name in them at the top.
 * Make sure HTML Validator returns all the files as free from errors or warnings.
+* When validating, make sure to check for errors in the 'Links' tab as well.
 * File names should be all lower case.
 * File names should not have any spaces. Use underscores instead.
+* Don't check in any 'temp' file created by CSE Validator. These all start
+  with a tilde: '~'.
 * The menu should be in an unordered list, and should appear on every page.
+* Make sure to avoid extra spaces around tags. Don't do ``<title> About Page </title>`` instead do ``<title>About Page</title>``
+* Make sure you have a ``<header>`` somewhere. That is easy to overlook.
 * The footer should look something like this:
 
 .. code-block:: html
@@ -182,6 +191,9 @@ form on Scholar for assignment 1. This will require you to complete Assignment 2
   <footer>
     Copyright 2016 by Pat
   </footer>
+
+* Copy the GitHub project URL
+* Submit on Scholar
 
 .. image:: rubric.png
     :width: 500px

@@ -15,7 +15,7 @@ Turn in Assignment 2
 * One person will create a login form and check it in.
 * The other person will create a sign-up form.
 * If you have three people, dream up a third form.
-* Paste the GitHub URL for the website and submit Assignment 2.
+* Paste the GitHub URL for the website and submit Assignment 2 on Scholar.
 
 .. image:: rubric.png
     :width: 500px
