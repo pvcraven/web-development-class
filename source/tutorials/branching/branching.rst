@@ -71,7 +71,7 @@ Steps to successful branching.
     :alt: Branching
 
 * As long as you don't have any uncommitted changes, you can swap between
-  branches by double-clicking on a commit. SourcTree may just 'switch' the
+  branches by double-clicking on a commit. SourceTree may just 'switch' the
   branches with a double-click. Or you may get another dialog box that
   pops up, where you need to select "check out existing" branch.
 * Note: If you edit files on a revision without a branch label, you can lose

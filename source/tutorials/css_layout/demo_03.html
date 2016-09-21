@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Sample document for CSS layout</title>
+        <style>
+            .word_class {
+                border-style: solid;
+                border-width: 2px;
+                margin: 3px;
+                padding: 3px;
+
+                /* display defaults to 'block' */
+                display: inline;
+            }
+            #special {
+                position: relative;
+                left: 30px;
+                top: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <section>
+            <div class="word_class">This</div>
+            <div class="word_class">is</div>
+            <div class="word_class">a</div>
+            <div class="word_class">test</div>
+            <div class="word_class">document.</div>
+            <div id="special" class="word_class">I'm Special</div>
+        </section>
+    </body>
+</html>
