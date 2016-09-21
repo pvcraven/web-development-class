@@ -31,6 +31,37 @@ like text on a line. Try resizing the window so you get a line-wrap.
     :language: html
     :emphasize-lines: 10, 15
 
+Inspect Elements
+^^^^^^^^^^^^^^^^
+
+You can do some really amazing things with modern web browsers. Select an element
+on your page, and right-click on it. (Step 1 below.)
+
+Then, select "inspect." (Step 2 below.)
+
+.. image:: inspect_01.png
+    :width: 450px
+    :align: center
+    :alt: Alt
+
+Next, see that you'll get panels that open up with the page you see, the HTML,
+and the CSS that is applied. As you click on the HTML (Step 1 below.) Note
+that Chrome highlights the element on out page (Step 2 below.) It also shows
+you the applied style (Step 3 below.)
+
+.. image:: inspect_02.png
+    :width: 640px
+    :align: center
+    :alt: Alt
+
+You can double click on the style information and change it! But the changes
+are not saved in your document. They are only temporary.
+
+.. image:: inspect_03.png
+    :width: 200px
+    :align: center
+    :alt: Alt
+
 Position
 ^^^^^^^^
 
@@ -107,3 +138,8 @@ how the document is relative to the position of the ``<section>`` tag.
     :linenos:
     :language: html
 
+There are many limitations to the original CSS's layout options. Version 3 of
+CSS (CSS3) includes `flex box`_ which is supposed to help. There are other
+CSS libraries that have their own method of layout.
+
+.. _flex box: http://www.w3schools.com/css/css3_flexbox.asp
