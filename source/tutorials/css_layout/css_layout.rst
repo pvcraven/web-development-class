@@ -1,10 +1,16 @@
 CSS Layout Tutorial
 -------------------
 
+Layout is not easy in CSS. Let's go through some of the layout properties.
+
 Inline vs. Block
 ^^^^^^^^^^^^^^^^
 
-Default is ``block`` for a ``<div>`` tag. This is what a bunch of blocks
+One of the properties that can be set for a CSS element is the ``display``
+property.
+
+The display property defaults to different values depending on what tag
+is being used. For the ``<div>`` tag, it defaults to ``block``. This is what a bunch of blocks
 look like. Note that they take the whole width, and work their way down the
 page.
 
@@ -13,13 +19,20 @@ page.
     :align: center
     :alt: Alt
 
+Here is the code behind that web page. For simplicity, I'm putting the style in
+the ``<head>`` of the document. Normally styles would all go into a different
+style sheet.
+
 .. literalinclude:: demo_01.html
     :linenos:
     :language: html
     :emphasize-lines: 14
 
-With ``inline``, which is the default for a ``<span>`` tag, everything flows
-like text on a line. Try resizing the window so you get a line-wrap.
+Below we've switched from ``block`` to ``inline``.
+With ``inline`` everything flows like text on a line.
+For the ``<span>`` tag, ``inline`` is the default.
+
+If you resize a window with several ``inline`` elements, they will line-wrap.
 
 .. image:: demo_02.png
     :width: 270px
@@ -30,6 +43,9 @@ like text on a line. Try resizing the window so you get a line-wrap.
     :linenos:
     :language: html
     :emphasize-lines: 10, 15
+
+There are several other options for the ``display`` property. You can see them
+`here <http://www.w3schools.com/cssref/pr_class_display.asp>`_.
 
 Inspect Elements
 ^^^^^^^^^^^^^^^^
@@ -65,7 +81,11 @@ are not saved in your document. They are only temporary.
 Position
 ^^^^^^^^
 
-Looking to center or right align a block? It isn't intuitive. Here it is:
+Looking to center or right align a block? It isn't intuitive. To center, use
+the ``margin`` property, and set it to ``auto``. You can also right-align by
+setting the left margin to ``auto`` and the right margin to zero.
+
+Here it is:
 
 .. image:: demo_06.png
     :width: 550px
