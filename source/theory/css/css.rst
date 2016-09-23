@@ -257,29 +257,6 @@ What kind of properties can you control with CSS? See this handy reference:
 
 http://www.w3schools.com/cssref/default.asp
 
-<<<<<<< HEAD
-* `CSS3 Generator <http://css3generator.com/>`_
-* `Box Shadow <http://www.cssmatic.com/box-shadow>`_
-* `Button Examples <http://www.hongkiat.com/blog/css3-button-tutorials/>`_
-* `Button Maker <http://css-tricks.com/examples/ButtonMaker/>`_
-* `Downloadable Themes <http://html5up.net/>`_
-* `Layout Generator <http://www.cssportal.com/layout-generator/>`_
-
-Color Theory
-^^^^^^^^^^^^
-
-* Introduce common color theory terms
-
-  * `http://www.worqx.com/color/index.htm <http://www.worqx.com/color/index.htm>`_
-  * `Hue <http://en.wikipedia.org/wiki/Hue>`_
-  * `Chroma/Colorfulness <http://en.wikipedia.org/wiki/Colorfulness>`_
-  * Read: `http://www.smashingmagazine.com/2010/01/28/color-theory-for-designers-part-1-the-meaning-of-color/ <http://www.smashingmagazine.com/2010/01/28/color-theory-for-designers-part-1-the-meaning-of-color>`_
-
-* See it in action: `http://colorschemedesigner.com/ <http://colorschemedesigner.com/>`_
-
-* Browse schemes `http://kuler.adobe.com <http://kuler.adobe.com>`_
-=======
-
 Color Theory
 ------------
 
@@ -289,7 +266,6 @@ Color Theory
 * `Color Theory for Designers, Part 1: The Meaning of Color <http://www.smashingmagazine.com/2010/01/28/color-theory-for-designers-part-1-the-meaning-of-color/>`_
 * See it in action: `http://colorschemedesigner.com/ <http://colorschemedesigner.com/>`_
 * Browse schemes: `http://kuler.adobe.com/ <http://kuler.adobe.com/>`_
->>>>>>> origin/master
 
 .. _CSS Zen Garden: http://csszengarden.com/
 .. _Bootstrap: http://getbootstrap.com/
