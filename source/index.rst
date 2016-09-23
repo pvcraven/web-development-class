@@ -14,5 +14,5 @@ Contents:
    theory/theory.rst
    tutorials/tutorials.rst
    assignments/assignments.rst
-
+   about.rst
 
