@@ -8,5 +8,6 @@ Tutorials
    basic_html/basic_html.rst
    dvcs/dvcs.rst
    css/css.rst
-   css_layout/css_layout.rst
    branching/branching.rst
+   css_layout/css_layout.rst
+   bootstrap/bootstrap.rst

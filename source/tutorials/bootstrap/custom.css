@@ -1,0 +1,4 @@
+/* Move our main document below the menu */
+.below_menu_container {
+  padding-top: 50px;
+}
