@@ -3,7 +3,7 @@
 Bootstrap Tutorial
 ------------------
 
-Bootstrap is a CSS and JavaScript library that can help you build a great
+`Bootstrap`_ is a CSS and JavaScript library that can help you build a great
 looking website without having to create your styles from scratch.
 
 There are many libraries like Bootstrap available. We can't cover them all. But
@@ -51,3 +51,5 @@ To lean more about how to use Bootstrap:
 * Finally, look at their
   `grid system <http://getbootstrap.com/css/#grid>`_. It is a very important
   tool for layout.
+
+.. _Bootstrap: http://getbootstrap.com/

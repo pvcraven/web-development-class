@@ -85,7 +85,7 @@ Looking to center or right align a block? It isn't intuitive. To center, use
 the ``margin`` property, and set it to ``auto``. You can also right-align by
 setting the left margin to ``auto`` and the right margin to zero.
 
-Here it is:
+Here is an example:
 
 .. image:: demo_06.png
     :width: 550px
