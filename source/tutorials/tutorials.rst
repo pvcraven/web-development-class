@@ -11,3 +11,4 @@ Tutorials
    branching/branching.rst
    css_layout/css_layout.rst
    bootstrap/bootstrap.rst
+   bootstrap_grid/bootstrap_grid.rst
