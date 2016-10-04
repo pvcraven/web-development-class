@@ -8,7 +8,7 @@ How to keep people involved if they aren't the leader?
 `Stages of team formation <https://www.mindtools.com/pages/article/newLDR_86.htm>`_
 
 Methods to come to an agreement.
-(`Article <http://springboard.resourcefulhr.com/leadership-styles-decision-making/`_,
+(`Article <http://springboard.resourcefulhr.com/leadership-styles-decision-making/>`_,
 and `another <http://www.leadershipmanagement.com/html-files/decision.htm>`_ >)
 
   * Democratic (vote)
