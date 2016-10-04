@@ -14,6 +14,8 @@ Following this work, write up answers to these questions:
 
 * Who was on your team?
 * What project did you work on? (Paste in URL)
+* Link at least one issue you created on GitHub
+* Link at least one issue you closed on GitHub (can be same issue)
 
 Also answer these questions, which will form the basis for part of your grade:
 
@@ -23,13 +25,13 @@ Also answer these questions, which will form the basis for part of your grade:
 * How did they affect your work in collaborating on this website?
 * Which of these methods did you apply to come to agreement?
 
-  * Democratic
-  * Consensus
-  * Consultive
-  * Autocratic
-  * Delegation
+The last part of your grade will come from issues and code check-ins that are
+tagged with your name on GitHub.
 
-The last part of your grade will come from check ins that are tagged with your name.
+.. image:: rubric.png
+    :width: 500px
+    :align: center
+    :alt: Rubric
 
 * Stages of team formation
 

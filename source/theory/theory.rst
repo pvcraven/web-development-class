@@ -8,4 +8,5 @@ Theory
    directories/directories.rst
    dvcs/dvcs.rst
    css/css.rst
+   collaboration/collaboration.rst
    scrum/scrum.rst
