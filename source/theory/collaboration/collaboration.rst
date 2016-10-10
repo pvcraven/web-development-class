@@ -1,5 +1,5 @@
 Collaboration
-=============
+-------------
 
 How to select a leader? Should you even have a leader?
 `What qualities make for a good leader <https://www.entrepreneur.com/article/270486>`_?

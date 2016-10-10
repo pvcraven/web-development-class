@@ -12,3 +12,4 @@ Tutorials
    css_layout/css_layout.rst
    bootstrap/bootstrap.rst
    bootstrap_grid/bootstrap_grid.rst
+   web_server_setup/web_server_setup.rst
