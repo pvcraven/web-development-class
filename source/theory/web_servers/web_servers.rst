@@ -9,10 +9,10 @@ We don't want to copy our website to a flash drive and pass it around that way!
 
 We need to put our web pages on the Internet. To do this, we need three things:
 
-1. A server computer. This could be a small computer, or a big server in a
+1. A server computer. This could be a small computer, or a big computer in a
    server room. There does not have to be anything "special" about the computer
    to make it a server.
-2. The web pages we created stored in a folder on the server computer.
+2. The web pages for our website need to be stored in a folder on the server computer.
 3. Web server software. This software interfaces between the network, and the
    stored files that make up our website.
 
@@ -35,7 +35,11 @@ The web server will:
   file. For example:
   ``C:\Web Server\Web Development\en\latest\about.html``
 * Use the `Hyper Text Transfer Protocol`_ to send the content of the file over the
-  network.
+  network. (Note the curious: HTTP sends two parts. A "head" section and then
+  the HTML of your document. Confusingly, the "head" section is not the same
+  thing as the <head> section in your HTML document. So there is a "head" to the
+  HTTP, and the HTTP contains the HTML, which has its own head. Kind of like
+  a Russian Matryoshka doll.)
 
 A web server can do a lot more than this. But for now, let's stick to
 understanding this basic functionality. **The web server is a program that makes
