@@ -306,6 +306,9 @@ about adding a key, answer "yes" to that warning.
 
 See if your web pages are showing up now.
 
+You can also create something called a "webhook." When you push new code to the
+server, GitHub will automatically fetch a web page for you. So try this:
+
 .. image:: webhook.png
     :width: 600px
     :align: center
