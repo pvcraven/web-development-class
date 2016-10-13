@@ -141,6 +141,9 @@ see it start with "Initializing" and eventually say something like
 Setting Up The Server
 ---------------------
 
+Getting to the Server
+^^^^^^^^^^^^^^^^^^^^^
+
 Copy the Public DNS address we get from Amazon:
 
 .. image:: copy_address.png
@@ -162,11 +165,25 @@ Enter in the info needed to get access. The user name will always be
     :width: 600px
     :align: center
 
+Installing and Updating the Software
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 We are now in the server. We need to update the software. Enter these commands.
 You can copy/paste them if you like. Note that most terminal programs use
-shift-insert to paste, and not ctrl-v.
+shift-insert to paste, and not ctrl-v. Copy the commands one line at a time.
 
-Here's what the commands below mean:
+::
+
+	sudo apt-get update
+	sudo apt-get -y upgrade
+	sudo apt-get -y install apache2 php5 php5-mysql git
+
+
+The first line checks for software updates. The second line installs them.
+The third line installs those four new programs that we will need for our webserver.
+
+
+In detail, here's what the commands mean:
 
 * Line 1:
 	* ``sudo`` means "Substitute User Do". It allows us to run the next command
@@ -186,17 +203,16 @@ Here's what the commands below mean:
 	  application server, ``php5-mysql`` allows us to hook the application server
 	  to the database, and ``git`` is our version control software.
 
-The first line checks for software updates. The second line installs them.
-The third line installs those four new programs that we will need for our webserver.
-
-::
-
-	sudo apt-get update
-	sudo apt-get -y upgrade
-	sudo apt-get -y install apache2 php5 php5-mysql git
-
 Check to see if your web server is running by going to the DNS name of the
 server. You should get a default page.
+
+.. image:: default_web_page.png
+    :width: 600px
+    :align: center
+
+
+Installing an Encryption Key
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Next, we need a key/pair to handle the connection between our server and GitHub.
 Use these commands on the terminal, updating the e-mail address to your own.
@@ -239,34 +255,58 @@ In detail, here's how the commands break down:
 The last command will output your key to the screen. Highlight it. Copy it using
 ctrl-insert instead of ctrl-c. Don't save this key in your version control either!
 
-Go back to GitHub and add it as a deployment key.
-
-.. image:: add_deployment_key.png
+.. image:: copy_key.png
     :width: 600px
     :align: center
 
-.. image:: add_deployment_key_2.png
+Go back to GitHub and add it as a deployment key. Select your profile:
+
+.. image:: select_github_profile.png
+    :width: 200px
+    :align: center
+
+Edit your profile:
+
+.. image:: edit_github_profile.png
+    :width: 200px
+    :align: center
+
+Add in the key:
+
+.. image:: add_github_key.png
     :width: 600px
     :align: center
 
 Now we need to get the code set up. Enter the commands below. Replace
-cis_305_project with the name of your GitHub project. Replace pcraven with
+sample-web-project with the name of your GitHub project. Replace pvcraven with
 your own GitHub id. After you enter line four it will give you a warning
 about adding a key, answer "yes" to that warning.
 
 ::
 
 	cd /var/www
-	sudo mkdir cis_305_project
-	sudo chown -R www-data:www-data cis_305_project
-	sudo -u www-data hg clone ssh://hg:@bitbucket.org/pcraven/cis_305_project
+
+	# Update the next line with the name of your project, as shown in your
+	# GitHub's URL.
+	sudo mkdir sample-web-project
+	sudo chown -R www-data:www-data sample-web-project
+
+	# Update the next line with your GitHub id and GitHub project name.
+	# You will likely be asked a yes/no question. Go ahead and say 'yes'
+	sudo -u www-data git clone git@github.com:pvcraven/sample-web-project.git
+
 	cd /etc/apache2/sites-available
-	sudo sed -i 's/html/cis_305_project\/public_html/g' 000-default.conf
+
+	# Carefully update this line with your web project name. If you mess
+	# it up, you'll need to edit the file 000-default.conf and set the correct
+	# directory to serve files out of.
+	sudo sed -i 's/html/sample-web-project\/public_html/g' 000-default.conf
+
 	sudo /etc/init.d/apache2 restart
 
 See if your web pages are showing up now.
 
-.. image:: add_hook.png
+.. image:: webhook.png
     :width: 600px
     :align: center
 
