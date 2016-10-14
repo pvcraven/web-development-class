@@ -25,6 +25,10 @@ Also answer these questions, which will form the basis for part of your grade:
 * How did they affect your work in collaborating on this website?
 * Which of these methods did you apply to come to agreement?
 
+Note that a reasonable percent of your grade comes from your write-up. So
+don't do lots of work on the project, but short-change your grade by barely
+writing up anything. Check out the rubric.
+
 The last part of your grade will come from issues and code check-ins that are
 tagged with your name on GitHub.
 
