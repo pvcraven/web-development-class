@@ -10,4 +10,66 @@ Theory
    css/css.rst
    collaboration/collaboration.rst
    web_servers/web_servers.rst
-   scrum/scrum.rst
+
+Future Topics
+-------------
+
+Section
+
+* Vi
+* Command line
+* Manging deployments/builds
+
+Section
+
+* "include"
+
+Section
+
+* Stylesheets and size
+* Printing
+
+Section
+
+* Job scheduling
+* AWStats
+
+Section
+
+* Google analytics
+* Search services
+
+Section
+
+* DNS
+* Load balancers
+* Monitoring
+* Geolocation
+
+Section
+
+* Load testing
+* Batch testing CSE validator
+
+Section
+
+* Wordpress
+
+Section
+
+* Shopping cart
+
+Section
+
+* Web page optimization
+* CDN
+
+Images
+
+* Types (PNG, GIF, JPG)
+* Image resizing
+* SVG images
+
+Section
+
+* Scrum/Agile
