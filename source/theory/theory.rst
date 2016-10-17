@@ -16,9 +16,11 @@ Future Topics
 
 Section
 
+* AWS deployment
+* Manging deployments/builds
 * Vi
 * Command line
-* Manging deployments/builds
+* Understanding UNIX security
 
 Section
 
