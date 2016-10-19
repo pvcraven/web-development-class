@@ -86,12 +86,20 @@ This will always go to ``/home/craven`` no matter where you are.
 
 Typing ``cd /`` goes to the *root folder* where everything starts.
 
-Typing ``cd ~`` goes to your home directory. The tilde (~) is often used as a
+Typing ``cd ~`` or even just ``cd`` goes to your home directory.
+The tilde (~) is often used as a
 shortcut for your "home" directory. Usually your home directory is
 ``/home/my_account_name``.
 
 You can find your current directory with ``pwd``. That is short for Print
 Working Directory.
+
+Auto-Complete
+^^^^^^^^^^^^^
+
+When working with ``cd`` and other commands, you can often type the first
+few letters of a file and hit the "tab" key to auto-fill in the rest. If multiple
+files match, keep hitting "tab" until the right one shows up.
 
 Important directories
 ^^^^^^^^^^^^^^^^^^^^^
@@ -116,38 +124,97 @@ Making Directories
 ^^^^^^^^^^^^^^^^^^
 
 You can make a directory with the ``mkdir <directory name>`` command. For example
-``mkdir music`` will make a directory names ``music`` inside your current
+``mkdir music`` will make a directory named ``music`` inside your current
 directory.
 
 Copying Files
 ^^^^^^^^^^^^^
 
-The ``cp`` command will copy files. Here are some examples::
+The ``cp`` command will copy files. Here are some examples:
 
-    # Copy file1.txt into a new file called file2.txt
-    # UNLESS you have a directory named file2.txt, then it
-    # would copy file1.txt into that directory.
-    # (But file2.txt would be a strange directory name.)
+Copy file1.txt into a new file called file2.txt
+UNLESS you have a directory named file2.txt, then it
+would copy file1.txt into that directory.
+(But file2.txt would be a strange directory name.)::
+
     cp file1.txt file2.txt
 
-    # Copy file1.txt up one directory
+Copy file1.txt up one directory::
+
     cp file1.txt ..
 
-    # Copy all files in this directory into a directory named 'thumbnails'
+The asterisk (*) is a "wildcard" character. We can use it to copy all files in
+the current directory into another directory named 'thumbnails'::
+
     cp * thumbnails
 
 Moving and Renaming Files
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The ``mv`` command can move and/or rename files. For example::
+The ``mv`` command can move and/or rename files. For example:
 
-    # Rename file1.txt to file2.txt
+Rename file1.txt to file2.txt::
+
     mv file1.txt file2.txt
 
-    # Move file1 up one directory
+Move file1 up one directory::
+
     mv file1.txt ..
 
-    # Rename file1.txt to 'backup'
-    # OR if a directory named 'backup' exists,
-    # move file1 into the 'backup' directory.
+Rename file1.txt to 'backup'
+OR if a directory named 'backup' exists,
+move file1 into the 'backup' directory.::
+
     mv file1.txt backup
+
+Deleting Files
+^^^^^^^^^^^^^^
+
+You can delete a file with the ``rm`` command, which is short for "remove."
+
+This will delete file1.txt::
+
+    rm file1.txt
+
+Deleting Directories
+^^^^^^^^^^^^^^^^^^^^
+
+You can delete a directory with ``rmdir``. But the directory must be empty
+to do this. If you want to delete directories with files, you can do
+``rmdir -f
+
+Looking at Files
+----------------
+
+Editing Files
+-------------
+
+Restarting Services
+-------------------
+
+Understanding sudo
+------------------
+
+Installing Software
+-------------------
+
+Other
+-----
+
+* uptime
+* who
+* cat /proc/cpuinfo – CPU information
+* cat /proc/meminfo – Memory information
+* df -h – Show disk usage
+* uname -a
+* top
+* ps
+* ps -ef
+* more
+
+Advanced Command Line Example
+-----------------------------
+
+::
+
+    egrep -o "GET.* 404 " access.log | sort | uniq -c | sort -nr
