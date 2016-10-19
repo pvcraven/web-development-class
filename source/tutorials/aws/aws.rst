@@ -1,29 +1,56 @@
 Amazon Web Services
 ===================
 
-This chapter covers how to get a public web server up and running using AWS.
+This chapter covers how to get a public web server up and running using
+Amazon Web Services (AWS).
 We also connect the web server to our GitHub account so that it will
 automatically update with the code that we push to GitHub.
 
 Adding the Deploy Script
 ------------------------
 
-Assuming you have a directory structure created something like the image below:
+* Start with a project that you already have worked on. Probably your last
+  assignment.
+* You will want your own copy of the project. (If the project is currently
+  under your account, you can skip this step.) Go to the project and create a
+  "fork":
+
+.. image:: fork.png
+    :width: 600px
+    :align: center
+
+* At this point, you have a copy of the project under your name.
+  You will need to "clone" the new fork that you created. Clone it into a
+  new empty folder. Do not clone it into your copy of the original project.
+* We will assume you have a directory structure created something like the image
+  below. If not, adjust it now. The most common issue I've run into would be
+  people who have a ``public html`` folder instead of a ``public_html`` folder.
+  No spaces!
 
 .. image:: sample_directory_structure.png
     :width: 300px
     :align: center
 
-Create a new file in public_html named ``deploy_script.php``.
+* Create a new file in the public_html named ``deploy_script.php``.
+* Paste into ``deploy_script.php`` the following code listing.
+  This page, when accessed, will go to GitHub and update our website.
 
-Put in the code below. This page, when accessed, will go to GitHub and update
-our website.
+.. literalinclude:: deploy_script.php
+    :linenos:
+    :language: php
 
-You don't need to know how it work, but if you are curious, here is the explanation.
+You don't need to know how the code above works, but if you are curious,
+here is the explanation.
 
 The command ``shell_exec`` will run a command at the
-operating system level. We can chain several of these together by separating
-them with semi-colons. The command uses git to pull the
+operating system level. That is, it will be like if we typed in a command
+at the command prompt. But instead of us, it will be the web page that does
+the command entry.
+
+We can chain several of these commands together by separating
+them with semi-colons.
+
+The command uses ``git`` to pull the
 changes, and then update the files with the changes. The ``2>&1`` redirects both
 the standard output (stdout) and the error (stderr) to be captured into the
 $output variable. If you aren't familiar with standard input and output
@@ -31,12 +58,7 @@ streams, check out the
 `Wikipedia article <http://en.wikipedia.org/wiki/Standard_streams>`_ on
 the subject.
 
-.. literalinclude:: deploy_script.php
-    :linenos:
-    :language: php
-
-
-We eventually set GitHub up to call this web page when we push new code to
+We will eventually set GitHub up to call this web page when we push new code to
 the repository. For now, just create the file and add it to GitHub.
 
 Create a Server Instance
@@ -82,9 +104,26 @@ We need security. Hit "Edit Security Groups":
     :width: 550px
     :align: center
 
+Computers use numbered "ports" to sort web traffic. That way they can keep
+web traffic separate from e-mail, file sharing, etc.
+
+We want everyone to connect to our web server to get web pages. "HTTP"
+controls normal un-encrypted web page requests. It runs on port 80.
+
+HTTPS controls encrypted web traffic. It runs on port 443.
+
+SSH allows us to "shell" over to the machine and type in commands. That runs on
+port 22.
+
+For proper security, we want anyone to connect to our server via HTTP and HTTPS.
+We only want our own computer to connect via SSH, because that's what we use
+to administrate our accounts.
+
 Set up the security groups as shown. Your "My IP" will fill in automatically
 with your IP address when the drop-down box is selected. You'll need to add a
 SSH row for each computer IP you want to shell in from.
+
+
 
 .. image:: setup_security.png
     :width: 600px
