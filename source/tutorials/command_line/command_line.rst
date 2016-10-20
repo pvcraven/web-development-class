@@ -50,11 +50,22 @@ files. I often use ``ls -la``::
     drwxr-xr-x  2 root root  4096 Oct 13 15:06 sites-enabled
 
 
-The ``l`` gives a "long listing" format. The ``a`` shows "hidden files." You can
-hide files or directories by default if the name starts with a period (``.``).
+The ``l`` gives a "long listing" format. The ``a`` shows "hidden files."
 
-**Note:** file and directory names are case sensitive. ``Myfile.txt`` is a completely
+Hidden Files
+^^^^^^^^^^^^
+
+You can hide files or directories by default if the name starts with a period (``.``).
+
+Case Sensitivity
+^^^^^^^^^^^^^^^^
+
+File and directory names are case sensitive. ``Myfile.txt`` is a completely
 different file than ``myfile.txt``.
+
+On Windows, files are not case sensitive, so
+when people move to a Linux or Mac environment, links may break because the
+web page links to ``Index.html`` when the file name is actually ``index.html``.
 
 Directory Navigation
 ^^^^^^^^^^^^^^^^^^^^
@@ -143,10 +154,18 @@ Copy file1.txt up one directory::
 
     cp file1.txt ..
 
+Wildcard
+^^^^^^^^
+
 The asterisk (*) is a "wildcard" character. We can use it to copy all files in
 the current directory into another directory named 'thumbnails'::
 
     cp * thumbnails
+
+You can also use it to specify part of a file name. The following command will
+only copy ``.jpg`` files::
+
+    cp *.jpg thumbnails
 
 Moving and Renaming Files
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -181,36 +200,179 @@ Deleting Directories
 
 You can delete a directory with ``rmdir``. But the directory must be empty
 to do this. If you want to delete directories with files, you can do
-``rmdir -f
+``rmdir -rf``
 
 Looking at Files
 ----------------
 
+cat
+^^^
+
+You can display the contents of a file with the ``cat`` command. For example::
+
+    cat myfile.txt
+
+If the file is too big, just hit Ctrl-C to stop the listing.
+
+less
+^^^^
+
+The ``less`` command works a lot like ``cat``, but allows you to page through
+the file if it is long.
+
+head
+^^^^
+
+Sometimes cat displays *too* many lines. You only want to look at the first few
+lines. You can use the ``head`` command to look at any number of lines that are
+at the beginning. The default is 10.::
+
+    head myfile.txt
+
+tail
+^^^^
+
+The ``tail`` command lets you look at the last few lines of the file. For example::
+
+    tail myfile.txt
+
+One of the most useful features of ``tail`` is the ability to *follow* a file. As
+a file gets more lines added to it, you can see it update live. For example, if you
+want to see what is happening on your web server, live, use::
+
+    tail -f /var/log/apache2/access.log
+
+The ``-f`` tells the computer to "follow" the file, in this case the web access log.
+Run this command, and then start accessing your web server. You'll see new lines
+appear.
+
+Hit Ctrl-C to stop following.
+
 Editing Files
 -------------
+
+There are a lot of ways to edit files. The easiest editor built into most
+Linux systems is the ``nano`` editor. It is also slow and quickly frustrating.
+
+The ``vim`` editor is based off an older ``vi`` editor. Once you learn the key
+commands and get practiced using it, it is one of the fastest ways to
+edit text. Even if you are shelled to another computer and can't use the mouse,
+you'll still be faster than someone that has to use a mouse.
 
 Restarting Services
 -------------------
 
+There are multiple ways to restart services. The only one you'll really
+need to know for this class is::
+
+    sudo service apache2 restart
+
+This will restart the Apache web server. You can also do ``stop`` and
+``start``.
+
+All background services available on a UNIX style system are usually in
+the directory ``/etc/init.d``. The ``etc`` is the configuration directory.
+The ``init`` stands for *initialize* and the ``.d`` is for ``daemon``, which
+is the term for a background process.
+
+If you do the following::
+
+    cd /etc/init.d
+    ls -la
+
+You can see all the available processes. You can start/stop/restart any
+process by putting in the name of the process like this::
+
+    ./apache2 restart
+
 Understanding sudo
 ------------------
+
+In order to help protect the computer, certain risky changes to
+the computer's configuration requires "administrator" privileges.
+There are two ways to do this.
+
+First, a person can log in as
+an administrator. This is the "root" account on a Linux system.
+This is NOT the recommended way of doing things.
+
+Second, a person can be part of the "sudo" group that allows
+a normal account to perform administrator actions. You have to
+specifically ask for administrator privileges. You can
+do with with the "Super-User Do" command.
+
+For example this command will fail if you don't have admin
+privileges::
+
+    /etc/init.d/apache2 restart
+
+But this command will work:
+
+    sudo /etc/init.d/apache2 restart
+
+You can also execute any command as someone else with the ``-u``
+directive. The web server runs under a user account called
+``www-data``. So the following will run the command as if it was
+run by ``www-data``::
+
+    sudo -u www-data <my command here>
+
 
 Installing Software
 -------------------
 
+Updating and installing software on a Linux system is usually easy.
+The command ``apt-get`` controls adding, updating, and removing software
+packages.
+
+Before adding or updating software, you should get the list of what is
+available::
+
+    sudo apt-get update
+
+This is similar to Windows "check for updates." We have not updated
+anything, we've just seen what is out there.
+
+We can install updates with::
+
+    sudo apt-get upgrade
+
+This will get new software packages. Rarely do you need to restart
+your computer like you do with Windows. It is not unusual for
+Linux systems to go years without a reboot.
+
+If you want to install new software, you just have to find the
+name of the software and install it like this::
+
+    sudo apt-get install apache2
+
+You can list lots of packages on the same line if you like::
+
+    sudo apt-get install apache2 php
+
+You can see all the currently installed software on a system with::
+
+    apt --installed list
+
+The super-cool part of this, is that if you have a working server
+you can list all the packages installed with that command. Copy the
+list. Then install all those packages on a new server with one
+command. Try that on Windows.
+
 Other
 -----
 
-* uptime
-* who
-* cat /proc/cpuinfo – CPU information
-* cat /proc/meminfo – Memory information
-* df -h – Show disk usage
-* uname -a
-* top
-* ps
-* ps -ef
-* more
+Here are some other useful commands:
+
+* ``uptime`` - How long has this computer been up and running?
+* ``who`` - Who else is logged into the system?
+* ``cat /proc/cpuinfo`` – CPU information
+* ``cat /proc/meminfo`` – Memory information
+* ``df -h`` – Show disk usage
+* ``uname -a`` - Show info about the operating system.
+* ``top`` - Show a list processes that are taking up the most CPU
+* ``ps`` - Show a list of processes that are associated with your account
+* ``ps -ef`` - Show extended details about all processes running
 
 Advanced Command Line Example
 -----------------------------
