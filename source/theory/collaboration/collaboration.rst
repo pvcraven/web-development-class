@@ -23,3 +23,33 @@ How do you come to a decision when no one cares?
 How to delegate work and follow up with work? We will use an issue tracker. See
 (`creating an issue on GitHub <https://help.github.com/articles/creating-an-issue/>`_)
 
+Building a high performing team
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* Have everyone contribute equally? Ideal, but how do you get there? Does a coach
+  play everyone equally?
+* Only play the star performers?
+* How do we build a team and encourage more people to become high performing people?
+
+
+How to "present"
+* Take public speaking classes
+* Learn to "work a room"
+
+How to "organize"
+* List tasks
+* Prioritize
+* Follow up
+* Index/search
+
+How to deal with non-engaged team members
+
+How to deal with disruptive team members
+
+How to deal with unskilled team members
+
+Conflict - conflict avoidance.
+
+Perspective
+
+How to advertise yourself

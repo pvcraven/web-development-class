@@ -1,29 +1,56 @@
 Amazon Web Services
 ===================
 
-This chapter covers how to get a public web server up and running using AWS.
+This chapter covers how to get a public web server up and running using
+Amazon Web Services (AWS).
 We also connect the web server to our GitHub account so that it will
 automatically update with the code that we push to GitHub.
 
 Adding the Deploy Script
 ------------------------
 
-Assuming you have a directory structure created something like the image below:
+* Start with a project that you already have worked on. Probably your last
+  assignment.
+* You will want your own copy of the project. (If the project is currently
+  under your account, you can skip this step.) Go to the project and create a
+  "fork":
+
+.. image:: fork.png
+    :width: 600px
+    :align: center
+
+* At this point, you have a copy of the project under your name.
+  You will need to "clone" the new fork that you created. Clone it into a
+  new empty folder. Do not clone it into your copy of the original project.
+* We will assume you have a directory structure created something like the image
+  below. If not, adjust it now. The most common issue I've run into would be
+  people who have a ``public html`` folder instead of a ``public_html`` folder.
+  No spaces!
 
 .. image:: sample_directory_structure.png
     :width: 300px
     :align: center
 
-Create a new file in public_html named ``deploy_script.php``.
+* Create a new file in the public_html named ``deploy_script.php``.
+* Paste into ``deploy_script.php`` the following code listing.
+  This page, when accessed, will go to GitHub and update our website.
 
-Put in the code below. This page, when accessed, will go to GitHub and update
-our website.
+.. literalinclude:: deploy_script.php
+    :linenos:
+    :language: php
 
-You don't need to know how it work, but if you are curious, here is the explanation.
+You don't need to know how the code above works, but if you are curious,
+here is the explanation.
 
 The command ``shell_exec`` will run a command at the
-operating system level. We can chain several of these together by separating
-them with semi-colons. The command uses git to pull the
+operating system level. That is, it will be like if we typed in a command
+at the command prompt. But instead of us, it will be the web page that does
+the command entry.
+
+We can chain several of these commands together by separating
+them with semi-colons.
+
+The command uses ``git`` to pull the
 changes, and then update the files with the changes. The ``2>&1`` redirects both
 the standard output (stdout) and the error (stderr) to be captured into the
 $output variable. If you aren't familiar with standard input and output
@@ -31,16 +58,14 @@ streams, check out the
 `Wikipedia article <http://en.wikipedia.org/wiki/Standard_streams>`_ on
 the subject.
 
-.. literalinclude:: deploy_script.php
-    :linenos:
-    :language: php
-
-
-We eventually set GitHub up to call this web page when we push new code to
+We will eventually set GitHub up to call this web page when we push new code to
 the repository. For now, just create the file and add it to GitHub.
 
 Create a Server Instance
 ------------------------
+
+If you are being provide a server instance by your instructor, skip to the
+`Setting Up The Server`_ section.
 
 Sign up for a Amazon Web Services account, and access the AWS console at:
 
@@ -82,9 +107,26 @@ We need security. Hit "Edit Security Groups":
     :width: 550px
     :align: center
 
+Computers use numbered "ports" to sort web traffic. That way they can keep
+web traffic separate from e-mail, file sharing, etc.
+
+We want everyone to connect to our web server to get web pages. "HTTP"
+controls normal un-encrypted web page requests. It runs on port 80.
+
+HTTPS controls encrypted web traffic. It runs on port 443.
+
+SSH allows us to "shell" over to the machine and type in commands. That runs on
+port 22.
+
+For proper security, we want anyone to connect to our server via HTTP and HTTPS.
+We only want our own computer to connect via SSH, because that's what we use
+to administrate our accounts.
+
 Set up the security groups as shown. Your "My IP" will fill in automatically
 with your IP address when the drop-down box is selected. You'll need to add a
 SSH row for each computer IP you want to shell in from.
+
+
 
 .. image:: setup_security.png
     :width: 600px
@@ -144,7 +186,8 @@ Setting Up The Server
 Getting to the Server
 ^^^^^^^^^^^^^^^^^^^^^
 
-Copy the Public DNS address we get from Amazon:
+Copy the Public DNS address we get from Amazon, or that you got from your
+instructor if he set up the server for you.
 
 .. image:: copy_address.png
     :width: 600px
@@ -174,9 +217,9 @@ shift-insert to paste, and not ctrl-v. Copy the commands one line at a time.
 
 ::
 
-	sudo apt-get update
-	sudo apt-get -y upgrade
-	sudo apt-get -y install apache2 php5 php5-mysql git
+  sudo apt-get update
+  sudo apt-get -y upgrade
+  sudo apt-get -y install apache2 php5 php5-mysql git
 
 
 The first line checks for software updates. The second line installs them.
@@ -186,22 +229,25 @@ The third line installs those four new programs that we will need for our webser
 In detail, here's what the commands mean:
 
 * Line 1:
-	* ``sudo`` means "Substitute User Do". It allows us to run the next command
-	  as someone else. It defaults to the root (administrator).
-	* ``apt-get`` is the software manager.
-	* ``update`` is a apt-get directive that tells apt-get to go check for
-	  updated software. It doesn't update it, it just checks for updates.
+    * ``sudo`` means "Substitute User Do". It allows us to run the next command
+      as someone else. It defaults to the root (administrator).
+    * ``apt-get`` is the software manager.
+    * ``update`` is a apt-get directive that tells apt-get to go check for
+      updated software. It doesn't update it, it just checks for updates.
 * Line 2:
-	* ``apt-get`` is the software manager.
-	* ``-y`` tells apt-get that the answer is "yes" to any questions it asks.
-	* upgrade downloads any updated software we found in the prior step.
-	  Normally it would list out all the software packages and ask, but we
-	  already told it yes with the -y.
+    * ``apt-get`` is the software manager.
+    * ``-y`` tells apt-get that the answer is "yes" to any questions it asks.
+    * upgrade downloads any updated software we found in the prior step.
+      Normally it would list out all the software packages and ask, but we
+      already told it yes with the -y.
 * Line 3:
-	* ``install`` directive for apt-get asks to install new software. There are
-	  four software packages listed. ``apache2`` is the web server, ``php5`` is the
-	  application server, ``php5-mysql`` allows us to hook the application server
-	  to the database, and ``git`` is our version control software.
+    * ``install`` directive for apt-get asks to install new software. There are
+      four software packages listed. ``apache2`` is the web server, ``php5`` is the
+      application server, ``php5-mysql`` allows us to hook the application server
+      to the database, and ``git`` is our version control software.
+
+Check the Web Server
+^^^^^^^^^^^^^^^^^^^^
 
 Check to see if your web server is running by going to the DNS name of the
 server. You should get a default page.
@@ -212,7 +258,7 @@ server. You should get a default page.
 
 
 Installing an Encryption Key
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+----------------------------
 
 Next, we need a key/pair to handle the connection between our server and GitHub.
 Use these commands on the terminal, updating the e-mail address to your own.
@@ -229,34 +275,37 @@ In detail, here's how the commands break down:
   root, we need to change it to the owner of the apache process which is
   ``www-data``. We are changing both the user and the group, so that is why
   there is a colon and the user name twice.
-* Line 4: The sudo -u www-data tells the computer to run the next command as
+* Line 9: The ``sudo -u www-data`` tells the computer to run the next command as
   the www-data user. This is the user that Apache runs under. We want to create
   the key as the user Apache runs under, otherwise Apache won't be able to
   access it. The command ``ssh-keygen -t rsa -C "your.email@simpson.edu"``
   generates an RSA key/pair. By default they will be stored in the users ``.ssh``
   folder, which in this case is ``/var/.ssh``.
-* Line 5: ``ssh-agent -s`` starts a background process that manages the keys.
-* Line 6: This tells the background process to manage the key we just created.
-* Line 7: The cat command prints the contents of a file to the screen. We will
+* Line 10: ``ssh-agent -s`` starts a background process that manages the keys.
+* Line 11: The cat command prints the contents of a file to the screen. We will
   pass the contents of the id_rsa file to GitHub to finish the connection.
 
-::
+.. code-block:: bash
+    :linenos:
 
-	cd /var/www
-	sudo mkdir .ssh
-	sudo chown -R www-data:www-data .ssh
-	# Enter this next line by itself
-	# It will ask three questions. Hit 'enter' for
-	# each one.
-	sudo -u www-data ssh-keygen -t rsa -C "your.email@simpson.edu"
-	sudo -u www-data ssh-agent -s
-	cat .ssh/id_rsa.pub
+    cd /var/www
+    sudo mkdir .ssh
+    sudo chown -R www-data:www-data .ssh
+
+    # Stop! Enter this next line (below) by itself.
+    # It will ask three questions. Hit 'enter' for
+    # each one. Don't keep pasting the other lines
+    # in for each question. Also, update with your e-mail.
+    sudo -u www-data ssh-keygen -t rsa -C "your.email@simpson.edu"
+
+    sudo -u www-data ssh-agent -s
+    cat .ssh/id_rsa.pub
 
 The last command will output your key to the screen. Highlight it. Copy it using
 ctrl-insert instead of ctrl-c. Don't save this key in your version control either!
 
 .. image:: copy_key.png
-    :width: 600px
+    :width: 640px
     :align: center
 
 Go back to GitHub and add it as a deployment key. Select your profile:
@@ -277,6 +326,9 @@ Add in the key:
     :width: 600px
     :align: center
 
+Clone the Repository
+--------------------
+
 Now we need to get the code set up. Enter the commands below. Replace
 sample-web-project with the name of your GitHub project. Replace pvcraven with
 your own GitHub id. After you enter line four it will give you a warning
@@ -284,29 +336,82 @@ about adding a key, answer "yes" to that warning.
 
 ::
 
-	cd /var/www
+  cd /var/www
 
-	# Update the next line with the name of your project, as shown in your
-	# GitHub's URL.
-	sudo mkdir sample-web-project
-	sudo chown -R www-data:www-data sample-web-project
+  # Update the next line with the name of your project, as shown in your
+  # GitHub's URL.
+  sudo mkdir sample-web-project
+  sudo chown -R www-data:www-data sample-web-project
 
-	# Update the next line with your GitHub id and GitHub project name.
-	# You will likely be asked a yes/no question. Go ahead and say 'yes'
-	sudo -u www-data git clone git@github.com:pvcraven/sample-web-project.git
+  # Update the next line with your GitHub id and GitHub project name.
+  # You will likely be asked a yes/no question. Go ahead and say 'yes'
+  sudo -u www-data git clone git@github.com:pvcraven/sample-web-project.git
 
-	cd /etc/apache2/sites-available
+Point Apache Web Server to Our Files
+------------------------------------
 
-	# Carefully update this line with your web project name. If you mess
-	# it up, you'll need to edit the file 000-default.conf and set the correct
-	# directory to serve files out of.
-	sudo sed -i 's/html/sample-web-project\/public_html/g' 000-default.conf
+::
 
-	sudo /etc/init.d/apache2 restart
+  cd /etc/apache2/sites-available
+
+  # Use the 'nano' editor to edit this file
+  sudo nano 000-default.conf
+
+
+Update the file's ``DocumentRoot`` to point to the directory that holds your
+web site. See the highlighted line below that you should edit:
+
+.. code-block:: xml
+    :linenos:
+    :emphasize-lines: 12
+
+    <VirtualHost *:80>
+            # The ServerName directive sets the request scheme, hostname and port that
+            # the server uses to identify itself. This is used when creating
+            # redirection URLs. In the context of virtual hosts, the ServerName
+            # specifies what hostname must appear in the request's Host: header to
+            # match this virtual host. For the default virtual host (this file) this
+            # value is not decisive as it is used as a last resort host regardless.
+            # However, you must set it for any further virtual host explicitly.
+            #ServerName www.example.com
+
+            ServerAdmin webmaster@localhost
+            DocumentRoot /var/www/sample-web-project/public_html
+
+            # Available loglevels: trace8, ..., trace1, debug, info, notice, warn,
+            # error, crit, alert, emerg.
+            # It is also possible to configure the loglevel for particular
+            # modules, e.g.
+            #LogLevel info ssl:warn
+
+            ErrorLog ${APACHE_LOG_DIR}/error.log
+            CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+            # For most configuration files from conf-available/, which are
+            # enabled or disabled at a global level, it is possible to
+            # include a line for only one particular virtual host. For example the
+            # following line enables the CGI configuration for this host only
+            # after it has been globally disabled with "a2disconf".
+            #Include conf-available/serve-cgi-bin.conf
+    </VirtualHost>
+
+    # vim: syntax=apache ts=4 sw=4 sts=4 sr noet
+
+Restart the Web Server
+----------------------
+
+Great, now that you've edited the file, restart the web server.
+
+::
+
+  sudo service apache2 restart
 
 See if your web pages are showing up now.
 
-You can also create something called a "webhook." When you push new code to the
+Installing a Webhook
+--------------------
+
+Next, let's create a "webhook." When you push new code to the
 server, GitHub will automatically fetch a web page for you. So try this:
 
 .. image:: webhook.png
@@ -316,6 +421,9 @@ server, GitHub will automatically fetch a web page for you. So try this:
 Once you add the hook, GitHub will automatically call that web page when you
 push new code to the server. That web page will do an update, and your website
 will have the most current code.
+
+Test it out! Make a change to your web page, and push the change to GitHub.
+In a few seconds, you should see your web server update with the change.
 
 Even More Info
 --------------
