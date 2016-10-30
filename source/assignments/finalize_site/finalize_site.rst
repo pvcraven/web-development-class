@@ -23,11 +23,14 @@ Also answer these questions, which will form the basis for part of your grade:
 * How did you apply your strengths in collaborating on this project?
 * What are your weaknesses when working in a group?
 * How did they affect your work in collaborating on this website?
-* Which of these methods did you apply to come to agreement?
+* Which of these methods (consensus, autocratic, democratic, delegation,
+  consultive) did you apply to come to agreement?
+* Did you have issues where everyone "didn't care" what the decision was?
+  How did you come to a conclusion?
 
 Note that a reasonable percent of your grade comes from your write-up. So
 don't do lots of work on the project, but short-change your grade by barely
-writing up anything. Check out the rubric.
+writing up anything. Check out the rubric. You'll likely need 500 words at least.
 
 The last part of your grade will come from issues and code check-ins that are
 tagged with your name on GitHub.

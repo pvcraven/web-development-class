@@ -18,6 +18,8 @@ and `another <http://www.leadershipmanagement.com/html-files/decision.htm>`_ >)
   * Autocratic (make a decision without asking, fast and stupid)
   * Delegation (pass the buck)
 
+How do you come to a decision when no one cares?
+
 How to delegate work and follow up with work? We will use an issue tracker. See
 (`creating an issue on GitHub <https://help.github.com/articles/creating-an-issue/>`_)
 
