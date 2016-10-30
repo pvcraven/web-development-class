@@ -10,6 +10,8 @@ Theory
    css/css.rst
    collaboration/collaboration.rst
    web_servers/web_servers.rst
+   command_line/command_line.rst
+   application_server/application_server.rst
 
 Future Topics
 -------------
