@@ -159,6 +159,9 @@ version control keeps old versions. Deleting it won't remove the file.
 And once it hits GitHub every evil person will have it.
 You'll need to recreate your key.
 
+*Do* save the key somewhere safe. On a flash drive or network drive. If you
+lose the key file, you can't access your machine and you'll have to start over.
+
 .. image:: download_keypair.png
     :width: 600px
     :align: center
