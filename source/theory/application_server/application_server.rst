@@ -63,10 +63,20 @@ in a file called ``footer.php``.
     :linenos:
     :language: html
 
+The result, the application server will basically to a cut/paste of the
+``navigation.php`` and ``footer.php`` into the ``example_01.php`` file:
+
+.. image:: include_visual.png
+    :width: 640px
+    :align: center
+
 If you do a "view source" you will see the assembled HTML document, but not
 the ``include()`` statement. The ``include()`` never gets send to the user.
 The application server modifies the ``example_01.php`` before sending it
 to the user.
+
+While the page to the user looks the same, we now have just *one* place that
+has our navigation bar and footer. This is a lot easier to manage.
 
 Common Mistake
 ^^^^^^^^^^^^^^
@@ -84,6 +94,27 @@ from the disk. It never went through the web server. It never went through the
 application server. Without the application server involved, there was no
 piece of software to perform the ``include()``. In fact, you could do a
 "view source" and see the include statement still sitting there, unprocessed.
+
+Another Common Mistake
+^^^^^^^^^^^^^^^^^^^^^^
+
+Another common mistake is to run an HTML validation of the "part" pages.
+Of course, the validation will fail because it isn't a complete page. So,
+the developer fixes that by adding the other page parts:
+
+.. literalinclude:: footer_wrong.php
+    :caption: Bad example of a footer.php
+    :linenos:
+    :language: html
+
+But what happens when you include this into the main file? You get something
+like this:
+
+.. image:: example_01_bad.png
+    :width: 640px
+    :align: center
+
+There are mini-documents inside of documents! That's not valid at all!
 
 Better Directory Organization
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
