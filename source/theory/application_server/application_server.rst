@@ -116,6 +116,21 @@ like this:
 
 There are mini-documents inside of documents! That's not valid at all!
 
+If you really want to validate your documents (which you should), then you can
+have CSE Validator fetch the web page from the web, rather than a file:
+
+.. image:: validator.png
+    :width: 640px
+    :align: center
+
+You can paste in your web address for a localhost reference, or your AWS server.
+
+However! Realize while you *can* edit the file you download off the server,
+it *won't* change the original source file you have for your project. Anything
+you change will be lost. Make sure you edit your original source file, not
+the result.
+
+
 Better Directory Organization
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
