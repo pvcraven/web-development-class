@@ -10,3 +10,4 @@ Assignments
    bootstrap/bootstrap.rst
    finalize_site/finalize_site.rst
    php_include/php_include.rst
+   performance/performance.rst
