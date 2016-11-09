@@ -1,7 +1,7 @@
+.. _InstallWordpress:
+
 WordPress Tutorial
 ==================
-
-
 
 Installation
 ------------

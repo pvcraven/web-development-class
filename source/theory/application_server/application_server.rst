@@ -119,7 +119,7 @@ There are mini-documents inside of documents! That's not valid at all!
 If you really want to validate your documents (which you should), then you can
 have CSE Validator fetch the web page from the web, rather than a file:
 
-.. image:: validator.png
+.. image:: validation.png
     :width: 640px
     :align: center
 
