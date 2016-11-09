@@ -1,14 +1,7 @@
 WordPress Tutorial
 ==================
 
-Not all websites are created from scratch. In fact, many websites use a
-`Content Management System`_ (CMS). A CMS provides a friendly interface for
-adding, editing, and deleting content. It also provides a way to manage a
-website's style.
 
-There are many CMS out there. One of the more popular ones is WordPress_.
-(Drupal and Joomla are similar, and very popular as well.)
-This tutorial will take you through installing WordPress on our Amazon server.
 
 Installation
 ------------
@@ -133,7 +126,4 @@ While updating, if you get the following error:
 This means your file permissions are not set correctly. Don't do anything on
 this screen. You need to go to MobaXTerm and reset the file permissions. See
 above.
-
-.. _WordPress: https://en.wikipedia.org/wiki/WordPress
-.. _Content Management System: https://en.wikipedia.org/wiki/Content_management_system
 

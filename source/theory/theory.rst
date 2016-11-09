@@ -13,6 +13,7 @@ Theory
    command_line/command_line.rst
    application_server/application_server.rst
    performance/performance.rst
+   cms/cms.rst
 
 Future Topics
 -------------
