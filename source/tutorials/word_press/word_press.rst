@@ -1,17 +1,10 @@
+.. _InstallWordpress:
+
 WordPress Installation
 ======================
 
-Not all websites are created from scratch. In fact, many websites use a
-`Content Management System`_ (CMS). A CMS provides a friendly interface for
-adding, editing, and deleting content. It also provides a way to manage a
-website's style.
-
-There are many CMS out there. One of the more popular ones is WordPress_.
-(Drupal and Joomla are similar, and very popular as well.)
-This tutorial will take you through installing WordPress on our Amazon server.
-
-Install Supporting Software
----------------------------
+Install
+-------
 
 While there is a apt-get package called "wordpress", the way Ubuntu installs
 WordPress is terrible. I lost a lot of time trying to debug all the issues with
@@ -156,4 +149,3 @@ from the update screen:
 
 .. _WordPress: https://en.wikipedia.org/wiki/WordPress
 .. _Content Management System: https://en.wikipedia.org/wiki/Content_management_system
-
