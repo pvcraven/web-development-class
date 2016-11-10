@@ -1,5 +1,5 @@
-WordPress Tutorial
-==================
+WordPress Installation
+======================
 
 Not all websites are created from scratch. In fact, many websites use a
 `Content Management System`_ (CMS). A CMS provides a friendly interface for
@@ -10,8 +10,13 @@ There are many CMS out there. One of the more popular ones is WordPress_.
 (Drupal and Joomla are similar, and very popular as well.)
 This tutorial will take you through installing WordPress on our Amazon server.
 
-Installation
-------------
+Install Supporting Software
+---------------------------
+
+While there is a apt-get package called "wordpress", the way Ubuntu installs
+WordPress is terrible. I lost a lot of time trying to debug all the issues with
+their install. So we'll just install WordPress manually. But we some of the
+supporting software we'll use apt-get to install.
 
 First, use MobaXTerm to "shell" out to our Amazon server.
 
@@ -26,8 +31,8 @@ keep track of everything for us. Enter these commands one-by-one.
     # Update to the most current versions of the software
     sudo apt-get -y upgrade
 
-    # Get wordpress, and a database for it to run on
-    sudo apt-get -y install wordpress mysql-server
+    # Get the software WordPress needs to run on
+    sudo apt-get -y install php5 php5-mysql mysql-server
 
 The last step will ask you y/n if you want to continue and install all those
 packages. Hit 'y' and enter.
@@ -39,53 +44,80 @@ image below. Write down the password that you choose. Don't leave it blank.
     :width: 640px
     :align: center
 
-::
-
-    # NOTE: Change "sample-web-project" to the name of your project
-    sudo ln -s /usr/share/wordpress /var/www/sample-web-project/public_html/wordpress
-
-    # Unzip the setup script that comes with wordpress
-    sudo gzip -d /usr/share/doc/wordpress/examples/setup-mysql.gz
-
-    # Run the setup script. Replace XXXPUT_YOUR_SERVER_NAME_HEREXXX with your server
-    # name. Something like "ec2-35-161-159-182.us-west-2.compute.amazonaws.com"
-    sudo bash /usr/share/doc/wordpress/examples/setup-mysql -n wordpress XXXPUT_YOUR_SERVER_NAME_HEREXXX
-
-
-You can copy/paste all of these lines together:
+This next part creates the database and user for WordPress. Instead of
+``yourdbpassword`` please use the password you entered above for your
+database.
 
 ::
 
-    # Change permissions on the WordPress folders so they are "owned" by the
-    # web server:
-    sudo chown -R www-data:www-data /srv/www/wp-content/
-    sudo chown -R www-data:www-data /usr/share/wordpress/
-    sudo chown -R www-data:www-data /var/lib/wordpress/
+    # Create a database for WordPress.
 
-    sudo chmod -R 0755 /usr/share/wordpress/wp-content/
-    sudo chmod -R 0755 /var/lib/wordpress/
+    # Set the database so we can enter commands to it.
+    mysql -u root -p
 
-    sudo find /srv/www/wp-content/ -type d -exec chmod 755 {} \;
-    sudo find /usr/share/wordpress/ -type d -exec chmod 755 {} \;
-    sudo find /var/lib/wordpress/ -type d -exec chmod 755 {} \;
+    # Ok, at this point it should ask you to enter the database password, so
+    # do that.
+    yourdbserverpassword
 
-    sudo find /srv/www/wp-content/ -type f -exec chmod 644 {} \;
-    sudo find /usr/share/wordpress/ -type f -exec chmod 644 {} \;
-    sudo find /var/lib/wordpress/ -type f -exec chmod 644 {} \;
+    # Create a new user for your database called "wordpress-db"
+    CREATE USER 'wordpress-db'@'localhost' IDENTIFIED BY 'yourdbpassword';
 
+    # Create a new database, also called "wordpress-db"
+    CREATE DATABASE `wordpress-db`;
 
-Next, we need to edit the configuration file to tell WordPress that it is ok
-to update and install new software directly from our dashboard. (Otherwise
-we have to jump through a lot of hoops.)
+    # Say that the wordpress user can do everything with the wordpress database
+    GRANT ALL PRIVILEGES ON `wordpress-db`.* TO "wordpress-db"@"localhost";
+
+    # Commit our changes
+    FLUSH PRIVILEGES;
+
+    # Leave
+    exit
+
+Now we need to download and unzip WordPress.
 
 ::
 
-    sudo vim /usr/share/wordpress/wp-config.php
+    # --- Get WordPress
+    # Switch to the home directory
+    cd ~
 
-Add the following line on the second to last line in the file::
+    # Download WordPress from the Internet
+    wget https://wordpress.org/latest.tar.gz
 
-    define('FS_METHOD','direct');
+    # Unzip the file
+    tar -xzf latest.tar.gz
 
+Copy the sample configuration file and get it ready for editing::
+
+    # Change to the WordPress folder we just unzipped
+    cd wordpress/
+    # Copy sample config file as a template for our real config file
+    cp wp-config-sample.php wp-config.php
+
+
+Next, we need to edit the configuration file::
+
+    vim wp-config.php
+
+Replace the default with the database name ``wordpress-db`` and the database
+user, also ``wordpress-db``. Next, fill in the password. Then save the file.
+
+.. image:: wp-config.png
+    :width: 640px
+    :align: center
+
+::
+
+    # Go up a directory
+
+    cd ..
+
+    # Move the WordPress directory to a directory that the web server sees.
+    sudo mv wordpress /var/www/my_sample_project/public_html
+
+    # Change ownership to the apache process and group (www-data)
+    sudo chown -R www-data:www-data /var/www/html
 
 
 Now, go to your webserver. Because we created a "wordpress" subdirectory, you'll
@@ -121,18 +153,6 @@ from the update screen:
 .. image:: updating.png
     :width: 500px
     :align: center
-
-Go ahead and update WordPress and any plug-ins, if needed.
-
-While updating, if you get the following error:
-
-.. image:: update_error.png
-    :width: 500px
-    :align: center
-
-This means your file permissions are not set correctly. Don't do anything on
-this screen. You need to go to MobaXTerm and reset the file permissions. See
-above.
 
 .. _WordPress: https://en.wikipedia.org/wiki/WordPress
 .. _Content Management System: https://en.wikipedia.org/wiki/Content_management_system
