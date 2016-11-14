@@ -56,6 +56,10 @@ database.
     CREATE USER 'wordpress-db'@'localhost' IDENTIFIED BY 'yourdbpassword';
 
     # Create a new database, also called "wordpress-db"
+    # IMPORTANT IMPORTANT IMPORTANT
+    # This command and the next one contain back-ticks. Carefully note when
+    # the tutorial calls for you to use ` or '. Also watch what prints out
+    # and see if it prints an error.
     CREATE DATABASE `wordpress-db`;
 
     # Say that the wordpress user can do everything with the wordpress database

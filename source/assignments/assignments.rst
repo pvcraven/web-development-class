@@ -9,6 +9,7 @@ Assignments
    css/css.rst
    bootstrap/bootstrap.rst
    finalize_site/finalize_site.rst
+   aws_deployment/aws_deployment.rst
    php_include/php_include.rst
    performance/performance.rst
    install_wordpress/install_wordpress.rst

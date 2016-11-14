@@ -1,6 +1,12 @@
 Assignment 8 - DNS and Performance
 ==================================
 
+Turn in a document saved in MS Word format. Make sure you include name,
+date, and title at the top. Just like you should for any assignment for this
+class.
+
+Don't forget to use paragraphs. Don't give me a wall of text please.
+
 Part 1
 ------
 
