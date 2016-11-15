@@ -29,7 +29,8 @@ keep track of everything for us. Enter these commands one-by-one.
 
 If you are using Ubuntu 16, you'll need to do this for the last line::
 
-    sudo apt-get install libapache2-mod-php mysql-server apache2
+    sudo apt-get install libapache2-mod-php mysql-server php php-mysql apache2
+    sudo apt-get install php libapache2-mod-php php-mcrypt php-mysql
 
 The last step will ask you y/n if you want to continue and install all those
 packages. Hit 'y' and enter.

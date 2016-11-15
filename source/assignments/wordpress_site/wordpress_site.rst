@@ -29,3 +29,6 @@ Assignment 10 - WordPress Site
     * Create at least two posts and have them as part of a news feed.
 
 If you have time, play around with WordPress and figure out what you can do.
+
+.. image:: rubric.png
+    :width: 500px
