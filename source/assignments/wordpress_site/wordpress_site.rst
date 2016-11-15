@@ -31,4 +31,4 @@ Assignment 10 - WordPress Site
 If you have time, play around with WordPress and figure out what you can do.
 
 .. image:: rubric.png
-    :width: 500px
+    :width: 550px
