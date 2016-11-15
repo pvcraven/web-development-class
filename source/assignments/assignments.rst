@@ -13,3 +13,4 @@ Assignments
    php_include/php_include.rst
    performance/performance.rst
    install_wordpress/install_wordpress.rst
+   wordpress_site/wordpress_site.rst

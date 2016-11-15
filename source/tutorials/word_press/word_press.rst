@@ -27,6 +27,10 @@ keep track of everything for us. Enter these commands one-by-one.
     # Get the software WordPress needs to run on
     sudo apt-get -y install php5 php5-mysql mysql-server
 
+If you are using Ubuntu 16, you'll need to do this for the last line::
+
+    sudo apt-get install libapache2-mod-php mysql-server apache2
+
 The last step will ask you y/n if you want to continue and install all those
 packages. Hit 'y' and enter.
 
