@@ -119,7 +119,7 @@ user, also ``wordpress-db``. Next, fill in the password. Then save the file.
     sudo mv wordpress /var/www/my_sample_project/public_html
 
     # Change ownership to the apache process and group (www-data)
-    sudo chown -R www-data:www-data /var/www/html
+    sudo chown -R www-data:www-data /var/www
 
 
 Now, go to your webserver. Because we created a "wordpress" subdirectory, you'll
