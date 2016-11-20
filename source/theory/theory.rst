@@ -14,6 +14,7 @@ Theory
    application_server/application_server.rst
    performance/performance.rst
    cms/cms.rst
+   cloud/cloud.rst
 
 Future Topics
 -------------
