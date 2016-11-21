@@ -21,7 +21,7 @@ available. You should know about the following:
 
 .. raw:: html
 
-    <iframe width="420" height="315" src="https://www.youtube.com/embed/dNlibHYABLU" frameborder="0" allowfullscreen></iframe>
+    <iframe width="420" height="315" src="https://www.youtube.com/embed/dNlibHYABLU" frameborder="0" allowfullscreen></iframe><p></p>
 
 How to do DNS Round-Robin
 -------------------------
@@ -33,16 +33,19 @@ for the same DNS name. This allows you to distribute load across multiple server
 
     <iframe width="420" height="315" src="https://www.youtube.com/embed/c8T2UWu3k94" frameborder="0" allowfullscreen></iframe>
 
+How to do Weighted DNS Round-Robin
+----------------------------------
+
 What if you have a server that is faster than the other servers? You want twice
 as much traffic to go to the fast server as opposed to the slow server? No
 problem! You can set up **Weighted DNS Round-Robin** lookups.
 
-How to do Weighted DNS Round-Robin
-----------------------------------
-
 .. raw:: html
 
-    <iframe width="420" height="315" src="https://www.youtube.com/embed/yBhCrEnj9G8" frameborder="0" allowfullscreen></iframe>
+    <iframe width="420" height="315" src="https://www.youtube.com/embed/yBhCrEnj9G8" frameborder="0" allowfullscreen></iframe><p></p>
+
+How to do Geolocation with DNS
+------------------------------
 
 What if you have customers in Europe and in the US? Where do you put your servers?
 Why choose? You can put servers in both spots! Use **Geolocation DNS** to select
@@ -50,12 +53,9 @@ which DNS records to send based on the customer's location. So a client in Europ
 will go to your Ireland server and a client in the US will go to your
 Oregon server.
 
-How to do Geolocation with DNS
-------------------------------
-
 .. raw:: html
 
-    <iframe width="420" height="315" src="https://www.youtube.com/embed/_gP8k2PkpSc" frameborder="0" allowfullscreen></iframe>
+    <iframe width="420" height="315" src="https://www.youtube.com/embed/_gP8k2PkpSc" frameborder="0" allowfullscreen></iframe><p></p>
 
 You can also create **failover** record sets, that will make only send out
 DNS records for healthy servers. But since DNS entires are cached, it means
@@ -77,7 +77,7 @@ just the tip of the iceberg when looking at what you can do with a load balancer
 
 .. raw:: html
 
-    <iframe width="420" height="315" src="https://www.youtube.com/embed/DgMyvBszWUA" frameborder="0" allowfullscreen></iframe>
+    <iframe width="420" height="315" src="https://www.youtube.com/embed/DgMyvBszWUA" frameborder="0" allowfullscreen></iframe><p></p>
 
 
 Monitoring Services - CloudWatch
@@ -90,7 +90,7 @@ monitoring service.
 
 .. raw:: html
 
-    <iframe width="420" height="315" src="https://www.youtube.com/embed/9e6bnD37YWs" frameborder="0" allowfullscreen></iframe>
+    <iframe width="420" height="315" src="https://www.youtube.com/embed/9e6bnD37YWs" frameborder="0" allowfullscreen></iframe><p></p>
 
 
 Content Delivery Network
