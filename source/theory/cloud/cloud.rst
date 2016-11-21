@@ -23,6 +23,9 @@ available. You should know about the following:
 
     <iframe width="420" height="315" src="https://www.youtube.com/embed/dNlibHYABLU" frameborder="0" allowfullscreen></iframe>
 
+How to do DNS Round-Robin
+-------------------------
+
 Simple **DNS Round-Robin** entries allow you to specify multiple IP addresses
 for the same DNS name. This allows you to distribute load across multiple servers.
 
@@ -34,6 +37,8 @@ What if you have a server that is faster than the other servers? You want twice
 as much traffic to go to the fast server as opposed to the slow server? No
 problem! You can set up **Weighted DNS Round-Robin** lookups.
 
+How to do Weighted DNS Round-Robin
+----------------------------------
 
 .. raw:: html
 
@@ -44,6 +49,9 @@ Why choose? You can put servers in both spots! Use **Geolocation DNS** to select
 which DNS records to send based on the customer's location. So a client in Europe
 will go to your Ireland server and a client in the US will go to your
 Oregon server.
+
+How to do Geolocation with DNS
+------------------------------
 
 .. raw:: html
 
