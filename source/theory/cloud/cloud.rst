@@ -100,7 +100,9 @@ Do you have a lot of static files (files that don't change) that you want
 to serve over the web? Like videos, or images? Use a
 "**Content Delivery Network**." (CDN)
 
-With AWS, their branded term for CDN is "**CloudFront**."
+With AWS, their branded term for CDN is "**CloudFront**." Amazon also has a
+service for storing files. THis is the **S3** service. You can find this on
+your Amazon Console.
 
 This class's entire website is static and can be hosted over a CDN. This video
 shows how it is done.
