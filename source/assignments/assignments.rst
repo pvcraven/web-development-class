@@ -14,3 +14,4 @@ Assignments
    performance/performance.rst
    install_wordpress/install_wordpress.rst
    wordpress_site/wordpress_site.rst
+   static_content_generators/static_content_generators.rst
