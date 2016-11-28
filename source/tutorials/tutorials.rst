@@ -16,3 +16,4 @@ Tutorials
    aws/aws.rst
    command_line/command_line.rst
    word_press/word_press.rst
+   sphinx/sphinx.rst

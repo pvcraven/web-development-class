@@ -35,9 +35,9 @@ allow users to use markdown to format their posts.
 
 Static Content Generators usually work the following way:
 
-1. You edit text files in markdown (md) or restructured text (rst) format
+1. You edit **source** text files in markdown (md) or restructured text (rst) format
 2. You run the content generator
-3. You now have HTML/CSS files you can upload to your server
+3. You now have HTML/CSS **output** files you can upload to your server
 
 Version Control
 ---------------
@@ -82,6 +82,9 @@ will show you the raw text file.
 Markup Languages
 ----------------
 
+There are two main types of mark-up languages used with static content
+generators. They are reasonably similar.
+
 Markdown
 ^^^^^^^^
 
@@ -97,5 +100,6 @@ http://www.sphinx-doc.org/en/stable/rest.html
 Supporting Websites
 -------------------
 
-* GitHub
-* ReadTheDocs
+* GitHub <- GitHub supports automatic creation of Jekyll websites.
+* ReadTheDocs <- This site will automatically create Sphinx websites if pointed
+  to the GitHub project.
