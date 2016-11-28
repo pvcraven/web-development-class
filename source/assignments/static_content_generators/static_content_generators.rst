@@ -3,12 +3,39 @@ Assignment 11 - Static Content Generators
 
 This will be a group project. Grades will be individual.
 
+Getting together as a group
+---------------------------
+
 First you should get together and meet.
 
+* Introduce yourself.
+* Make sure that you know everyone else's name. Get confident enough to
+  say "hi" to each group member when you see them. Remember - taking the time
+  to know a person's name is a sign of respect.
+* Pause. List three things about yourself that you are good at. Share with the
+  rest of the group. Remember what those three things are with the other people.
+  Later on, ask follow-up questions about these things. Remember - every person's
+  favorite subject is himself/herself. Show you are interested enough in the
+  other people to remember what they are good at.
+* Pause. List one or two things related to this class you'd like to get better at.
+  Like HTML coding, or the ability to write for the web, or working as a group,
+  or trying to remember when the lab is open. Share with the rest of the group.
+  Pay attention to what other people would like to learn, and see if you can help
+  them out.
+
+
+Figure out your topic
+---------------------
+
+* Did you do the first part? If you didn't, go back and do that. I'll wait.
 * Choose a topic for the website. I'd suggest some kind of informational website.
   You can choose a business, a hobby, a historical event or place, etc. This
   will go on the web, at least temporarily, so I suggest making it fictional
-  or about a subject that won't care if you make up information about it.
+  or about a subject that won't care if you post information about it.
+  Like an information page on Catherine the Great.
+* Double-check to make sure that everyone is ok with the topic. Don't create
+  a page on knitting patterns when one of your group doesn't have an opinion if
+  stitch markers should be used or not.
 * Get approval of the topic from the professor.
 * Map out the website and what will be on it.
 
