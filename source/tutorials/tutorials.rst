@@ -1,6 +1,9 @@
 Tutorials
 =========
 
+Web Development (Semester 1)
+----------------------------
+
 .. toctree::
    :maxdepth: 1
 
@@ -17,3 +20,9 @@ Tutorials
    command_line/command_line.rst
    word_press/word_press.rst
    sphinx/sphinx.rst
+
+Advanced Web Development (Semester 2)
+-------------------------------------
+
+.. toctree::
+   :maxdepth: 1

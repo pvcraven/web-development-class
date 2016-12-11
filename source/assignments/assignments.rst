@@ -1,6 +1,9 @@
 Assignments
 ===========
 
+Web Development (Semester 1)
+----------------------------
+
 .. toctree::
    :maxdepth: 1
 
@@ -15,3 +18,10 @@ Assignments
    install_wordpress/install_wordpress.rst
    wordpress_site/wordpress_site.rst
    static_content_generators/static_content_generators.rst
+
+Advanced Web Development (Semester 2)
+-------------------------------------
+
+.. toctree::
+   :maxdepth: 1
+

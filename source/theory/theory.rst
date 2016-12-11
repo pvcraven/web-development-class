@@ -1,6 +1,9 @@
 Theory
 ======
 
+Web Development (Semester 1)
+----------------------------
+
 .. toctree::
    :maxdepth: 1
 
@@ -16,3 +19,11 @@ Theory
    cms/cms.rst
    cloud/cloud.rst
    static_content_generators/static_content_generators.rst
+
+Advanced Web Development (Semester 2)
+-------------------------------------
+
+.. toctree::
+   :maxdepth: 1
+
+   stacks/stacks.rst
