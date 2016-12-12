@@ -7,6 +7,10 @@ language will I use?"
 That is, if you even got to pick the language. (Evil professors might choose for
 you.)
 
+.. image:: stack.svg
+    :width: 130px
+    :align: center
+
 With mature technologies, there are commonly accepted ways of doing things. This
 is not case when developing for the web.
 What we have is a seven-course buffet of
@@ -65,15 +69,60 @@ are using Microsoft tools for development, then having your whole stack controll
 by Microsoft can be great when you need support. There is no other company for
 Microsoft to point its finger at when something goes wrong with the stack.
 
+Virtual Machines
+^^^^^^^^^^^^^^^^
 
-Cloud
-^^^^^
+What if you work on two projects? One requires Linux, and one requires Windows?
+Or one requires Tomcat, and one requires Microsoft .NET? Or even worse, what if
+one requires Tomcat 8, and one requires Tomcat 9?
+
+Installing a lot of different toolkits on your computer can lead to "pollution"
+where you have too much junk installed. And you aren't sure if you still use it.
+Plus, what if something works on your computer, but not another person's computer?\
+Why? Which of the 250 different software packages allow it to run? And what if
+there is software that doesn't let you install version 8 and 9 at the same time,
+but you have project that depend on both?
+
+A solution for this is to use a `virtual machine`_ (VM). We using software that
+*pretends* to be a computer. So we run a pretend computer on a real computer.
+Then we can start up a Linux machine on a Windows machine. We can have multiple
+Window computers, each with a different configuration.
+
+Oracle VirtualBox_ is a free software program that lets you run VMs. It is a great
+way to play around with Linux if you want, and not have to mess up your computer.
+
+.. _virtual machine: https://en.wikipedia.org/wiki/Virtual_machine
+.. _VirtualBox: https://www.virtualbox.org/
 
 Docker
 ^^^^^^
 
-Web Application Servers by Language
------------------------------------
+Virtual Machines have disadvantages. They are resource-hungry.
+The use acres of disk space and oodles of memory.
+If you want to run
+two Windows VMs on a Windows computer, you need three times the memory and disk
+space that a normal computer would have. And making copies of a virtual machine
+takes ages, because you are copying gigabytes, as you basically recreate the virtual
+hard drive of the VM.
+
+There needs to be a middle-ground. Where you could create a VM based off a Linux
+VM and then have one with an application server installed, and other with a
+database installed. But both share the same operating system install. Where it
+there is an ecosystem of common configurations to download and use. Where it takes
+less than a second to create a copy of a machine.
+
+And there is. Welcome to Docker_. The idea is that rather than a full VM, we have
+"shipping containers" which are smaller mid-sized units with common interfaces
+that we can put on a "container ship."
+
+.. raw:: html
+
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/Q5POuMHxW-0" frameborder="0" allowfullscreen></iframe>
+
+.. _Docker: https://www.docker.com/
+
+Web Application Servers
+-----------------------
 
 `application server`_
 Popular types of application servers:

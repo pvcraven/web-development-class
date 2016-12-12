@@ -26,3 +26,5 @@ Advanced Web Development (Semester 2)
 
 .. toctree::
    :maxdepth: 1
+
+   docker/docker.rst

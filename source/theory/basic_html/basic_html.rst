@@ -43,7 +43,6 @@ separate from the *content* of the document. Originally they were mixed
 together. That was more difficult to manage. The look and feel of a web page is
 specified by a different language called CSS, which we will cover in a later chapter.
 
-
 Proper HTML Coding
 ^^^^^^^^^^^^^^^^^^
 
@@ -149,8 +148,6 @@ being case-sensitive, but developers
 should treat everything as case sensitive. To
 make it easier for development and for people using the URLs, it is
 good practice to make the URLs all lower case, and without spaces.
-
-
 
 Not all URLs have paths. By default, most servers will look for files like
 ``index.html`` and ``index.php`` if no file is specified.
