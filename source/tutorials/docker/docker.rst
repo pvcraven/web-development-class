@@ -63,9 +63,34 @@ to us:
   server.
 * We need to start the server.
 
-We can accomplish the first with the ``-v`` option.
+We can accomplish the first with the ``-v`` option. Below we are mapping
+``c:\temp`` on our actual machine to ``/usr/local/tomcat/webapps/temp`` on the
+docker machine. You can adjust as needed.
 
 ::
 
     docker run -t -i -v c:/temp:/usr/local/tomcat/webapps/temp tomcat /bin/bash
-    docker run -v /temp:/usr/local/tomcat/webapps/temp -p 8080:8080 tomcat
+
+Also, you have to allow docker to access your C drive.
+
+.. image:: docker_shared_drives.png
+    :width: 640px
+    :align: center
+
+We can open port 8080 for access by adding ``-p 8080:8080`` to the command:
+
+::
+
+    docker run -t -i -v /temp:/usr/local/tomcat/webapps/temp -p 8080:8080 tomcat /bin/bash
+
+Then you could go in and manually start Tomcat by typing::
+
+    bin/catalina.sh run
+
+But wait! It can be even easier. That command runs by default if we don't tell
+docker to use ``/bin/bash``. And if we don't run need to interact with it,
+we can ditch the ``-t`` and ``-i``. So instead do the following:
+
+::
+
+    docker run -v c:/temp:/usr/local/tomcat/webapps/temp -p 8080:8080 tomcat
