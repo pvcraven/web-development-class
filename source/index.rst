@@ -16,3 +16,21 @@ Contents:
    assignments/assignments.rst
    about.rst
 
+Semester 2
+
+* Stacks
+* Managing an information server (Java)
+* CI
+* Text processing / scraping
+* CRUD app
+* Login
+* Understanding sessions and cookies
+* Protecting against SQL injection
+* Protecting against XSS/JavaScript injection
+* Front-end JavaScript
+* jQuery
+* Revisiting the CRUD app with JSON
+* Front-end JavaScript frameworks (Explore and do technical writing of something new)
+* Writing for the web
+* User interface design
+* Model View Controller
