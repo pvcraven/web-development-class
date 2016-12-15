@@ -54,6 +54,9 @@ Create web pages that have:
 * Table of Contents
 * Multiple types of styles
 
+Check for case issues. If you link baseball.jpg but name the image Baseball.jpg
+then it will work on your computer, but fail when deployed.
+
 Turn in a the following links. Please clearly label each link
 and follow the order below:
 

@@ -275,3 +275,13 @@ There is a line in there that allows you to change between different themes.
 `Here <http://www.sphinx-doc.org/en/1.4.8/theming.html>`_ are different built-in
 themes available. You can also download themes. For example, this website uses
 the "Read the Docs" theme.
+
+Sublime
+-------
+
+TODO: Add content on how to show a 80 character ruler, and don't let lines
+go more than 80 characters.
+
+TODO: Show how tables get messed up with tabs/spaces. Show how to fix on Sublime.
+
+TODO: Show how to create a build system to build with Sublime.
