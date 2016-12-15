@@ -16,7 +16,13 @@ Contents:
    assignments/assignments.rst
    about.rst
 
+Scratch work
+
 Semester 2
+----------
+
+Topics
+^^^^^^
 
 * Stacks
 * Managing an information server (Java)
@@ -34,3 +40,20 @@ Semester 2
 * Writing for the web
 * User interface design
 * Model View Controller
+
+Assignments
+^^^^^^^^^^^
+
+* Create your own stack (local dev environment, app server, GitHub, CI, server)
+* CRUD
+    * Create a servlet to accept a form
+    * Update servlet to validate information
+    * Create app to display records
+    * Create app to delete a record
+    * Create app to delete and update a record
+* Add a log-in
+* Enable upload of image and resizing
+* Research and write a plan for doing security testing for a website
+* Update the CRUD app to use JavaScript, jQuery, and JSON
+* Create an app that graphs something using D3 library
+* Explore a new technology. Write up a tutorial and how-to on using it.
