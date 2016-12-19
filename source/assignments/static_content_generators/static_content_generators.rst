@@ -48,11 +48,15 @@ Collaborate:
 Create web pages that have:
 
 * Headings
-* Images
+* Images. Properly size image. Do not squish a 4000 x 3000 pixel photo you took
+  into a 400x300 spot. Change the image. You'll make a faster web page and save
+  everyone money on bandwidth. Also, keep aspect ratios. Don't specify both
+  width and height at a different ratio that stretches the image. I just specify
+  width only and let the browser pick the right height.
 * Tables
 * Links
 * Table of Contents
-* Multiple types of styles
+* Multiple types of styles (Normally, don't change the style in a heading.)
 
 Check for case issues. If you link baseball.jpg but name the image Baseball.jpg
 then it will work on your computer, but fail when deployed.
