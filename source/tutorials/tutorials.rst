@@ -27,4 +27,5 @@ Advanced Web Development (Semester 2)
 .. toctree::
    :maxdepth: 1
 
+   java_environment/java_environment.rst
    docker/docker.rst
