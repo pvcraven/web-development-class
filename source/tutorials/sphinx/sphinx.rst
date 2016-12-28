@@ -285,3 +285,5 @@ go more than 80 characters.
 TODO: Show how tables get messed up with tabs/spaces. Show how to fix on Sublime.
 
 TODO: Show how to create a build system to build with Sublime.
+
+TODO: Show how to turn on spell check with sublime
