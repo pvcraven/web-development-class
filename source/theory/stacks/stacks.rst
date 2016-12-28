@@ -137,3 +137,9 @@ Popular types of application servers:
 .. _Tomcat: http://tomcat.apache.org/
 .. _Django: https://www.djangoproject.com/
 
+Tomcat
+^^^^^^
+
+* Talk about tomcat
+* Talk about pure servlet vs. JSP.
+* Talk about Apache vs. Tomcat
