@@ -25,3 +25,4 @@ Advanced Web Development (Semester 2)
 .. toctree::
    :maxdepth: 1
 
+   full_stack_setup/full_stack_setup.rst

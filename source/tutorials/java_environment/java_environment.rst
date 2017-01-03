@@ -1,3 +1,5 @@
+.. _java-environment-tutorial:
+
 Java Servlet Development Environment Setup
 ==========================================
 
