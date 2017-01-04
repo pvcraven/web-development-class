@@ -15,8 +15,8 @@ Complete
   servlets on your development computer.
 * Create a new project in GitHub
 
- Turn in
- -------
+Turn in
+-------
 
  * GitHub URL of your project
  * URL of your production server

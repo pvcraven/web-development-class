@@ -26,4 +26,5 @@ Advanced Web Development (Semester 2)
 .. toctree::
    :maxdepth: 1
 
+   crud_overview/crud_overview.rst
    stacks/stacks.rst

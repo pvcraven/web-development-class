@@ -38,7 +38,8 @@ a stack, along with examples of what choices you might have:
 * Build environment - Maven, Git, SourceTree, GitHub
 
 Some stacks have fancy names. Like **LAMP** stands for Linux, Apache, MySQL,
-and PHP.
+and PHP. A developer that is an expert in all those parts will call herself
+a "full-stack developer."
 
 Operating System
 ----------------
