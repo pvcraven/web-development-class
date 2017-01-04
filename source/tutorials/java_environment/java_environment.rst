@@ -10,16 +10,25 @@ Download and install Java_. You want to download the "Standard Edition" (SE).
 There is also a "Java Runtime Environment" (JRE). This doesn't let you compile
 ``.java`` files to ``.class``. So don't download that one.
 
+.. note::
+    If you are using a lab computer, Java is already installed in
+    ``C:\Program Files\Java\jdk1.8.0_101``
+
 .. _Java: http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
 
-Install Tomcat
---------------
+Install XAMPP
+-------------
 
-* To begin with,
-  `download Tomcat <http://tomcat.apache.org/download-90.cgi>`_.
-  There are a lot of versions, but I chose
-  Tomcat 9, the Windows "64-bit Windows zip" .zip file.
-* Expand the Tomcat zip file somewhere to work with.
+Download and install XAMPP_ for Windows, Mac, or Linux.
+XAMPP includes several programs, along with an easy to use control panel.
+XAMPP has our MySQL database and Tomcat program. We probably won't use Apache
+like we did last semester.
+
+.. note::
+    If you are using a lab computer, XAMPP is already installed in
+    ``C:\xampp``
+
+.. _XAMPP: https://www.apachefriends.org/index.html
 
 Get a Sample Tomcat Application Working
 ---------------------------------------
@@ -34,68 +43,109 @@ Otherwise, when things break, you don't have the skills to fix it.
 Get the server running
 ^^^^^^^^^^^^^^^^^^^^^^
 
-* Make sure you have Java installed. Use your file browser to find it. You are
-  looking for a folder that starts with ``jdk`` and **not** ``jre``. The
-  JDK allows you to compile, the JRE just allows you to run Java. For me it was
-  in ``C:\Program Files\Java\jdk1.8.0_31``. Create an environment variable called
-  ``JAVA_HOME`` and set it to this path. If you don't know how to set an environment
-  variable, then ask.
-* Make sure you have the ``bin`` directory in your path. For me it looks like
-  ``C:\Program Files\Java\jdk1.8.0_31\bin``. If you don't know how to add something
-  to your path, or what it does, please ask.
-* Next, to start Tomcat, open up a command prompt and change to the Tomcat
-  ``bin`` directory. Type ``catalina start``. This will open up a new window
-  with the running Tomcat. You can then direct your web browser to
-  ``http:\\localhost:8080`` and check to make sure it is running.
+Open up the XAMPP control panel and start Tomcat.
+
+.. image:: xampp.png
+    :width: 500px
+
+Then go to the following
+address to see if it works::
+
+    http://localhost:8080
+
+Note that Tomcat serves from port 8080 instead of the default web port of 80.
+This keeps it from getting confused with Apache. There's a lot more I could
+say about  this, but for now, just remember to go to ``http://localhost:8080``
+instead of ``http://localhost``.
+
+You should see something like this:
+
+.. image:: tomcat_running.png
+    :width: 400px
 
 Serving static files
 ^^^^^^^^^^^^^^^^^^^^
 
 * Ok, if it is running, let's create an app. Create a new directory under the
-  ``webapps`` folder in Tomcat. Keep it lower case and don't use spaces. Like
+  ``webapps`` folder in Tomcat. Depending on where you installed XAMPP, you might
+  find it in ``C:\xampp\tomcat\webapps``.
+  Keep the directory name lower case and don't use spaces. Like
   ``test-app``.
 * Create a test html file in that folder. I created ``webapps\test-app\test.html``
-* Restart Tomcat
 * Go to ``http://localhost:8080/test-app/test.html`` and you should be able to
   see the static file you created. This is where your static images, css, and
   other files that don't change go.
 
-Creating a servlet
-^^^^^^^^^^^^^^^^^^
+Creating a "Hello World" servlet
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* Create a ``WEB-INF`` folder in the ``test-app`` folder.
-* Create a ``classess`` folder in the ``WEB-INF`` folder.
-* Inside the ``WEB-INF`` folder make your Servlet. Here's a sample:
+* Create a ``WEB-INF`` folder in the ``test-app`` folder. Case matters.
+* Create a ``classes`` folder in the ``WEB-INF`` folder.
+* Inside the ``WEB-INF`` folder make your Servlet.
+  Call the file ``TestServlet.java``.
+  Don't put it in  the
+  ``classes`` folder, but in the ``WEB-INF`` folder. Here's a sample:
 
 .. literalinclude:: TestServlet.java
     :linenos:
     :language: java
 
-* Inside the ``WEB-INF`` folder create a file named ``web.xml``. Inside of
-  ``web.xml`` put the following::
+* Great. We've put in the code for the servlet, but we haven't told the computer
+  what URL maps to what Java Servlet class. To do this,
+  inside the ``WEB-INF`` folder create a file named ``web.xml``. Inside of
+  ``web.xml`` put the following:
 
-    <web-app>
-      <servlet>
-        <servlet-name>TestServlet</servlet-name>
-        <servlet-class>TestServlet</servlet-class>
-      </servlet>
-
-      <servlet-mapping>
-        <servlet-name>TestServlet</servlet-name>
-        <url-pattern>/test</url-pattern>
-      </servlet-mapping>
-    </web-app>
+.. literalinclude:: web.xml
+    :linenos:
+    :language: xml
 
 * Compile the code. You'll probably need something like ``javac TestServlet.java``
+
+.. image:: compile_javac_error.png
+    :width: 600px
+
+* Wait! It can't compile because the computer doesn't know the command ``javac``.
+  You have Java installed. Why can't it find it? Because it isn't in the "path."
+  The "path" is a list of directories that Windows (or Linux or Mac)
+  checks when you type in a command.
+
+* #1 Open up a file browser, and right-click on "Computer" and select
+  "Properties".
+* #2 Select "Advanced System Settings".
+* #3 Select "Environment Variables".
+* #4 Select "Path".
+* #5 Select "Edit".
+* #6 The path is a huge long line, separated with semicolons ``;`` stuffed
+  into a little box. Unless you are on the current version of Windows, which
+  has a better editor. Add a ``;`` to the end of the line, taking care not
+  to destroy anything in the line. Then paste the path to your ``javac.exe``.
+  For lab computers, this is ``C:\Program Files\Java\jdk1.8.0_101\bin``.
+  Make sure not to use a path with ``jre`` in it, and only use one with
+  ``jdk``.
+
+.. image:: edit_path.png
+    :width: 640px
+
+* Open a **new** command prompt. The old one still has the old settings.
+  Try ``javac TestServlet.java`` again:
+
+.. image:: compile_javac_error2.png
+    :width: 600px
+
 * Wait! You need to include a library to compile it. You'll need something like
-  ``javac -classpath ..\..\..\..\lib\servlet-api.jar TestServlet.java``
+  ``javac -classpath ..\..\..\lib\servlet-api.jar TestServlet.java``
+* Well, darn. It created ``TestServlet.class`` in the current folder. Not the
+  ``classes`` subfolder. That won't work. Move the file into that folder.
 * Restart Tomcat
 * Try your servlet: ``http://localhost:8080/test-app/test``
+
+.. image:: hello_world.png
+    :width: 500px
 
 Install IntelliJ
 ----------------
 
-Ok! That was too much work. Let's deploy our web applications using an IDE.
+Ok! That was *too much work*. Let's deploy our web applications using an IDE.
 
 Download and install IntelliJ_. You can get a student license for free. It is
 also possible to use Eclipse, but IntelliJ seems to be the better choice now.
