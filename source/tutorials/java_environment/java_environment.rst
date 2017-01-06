@@ -20,7 +20,7 @@ Install XAMPP
 -------------
 
 Download and install XAMPP_ for Windows, Mac, or Linux.
-XAMPP includes several programs, along with an easy to use control panel.
+XAMPP includes several programs, along with an easy-to-use control panel.
 XAMPP has our MySQL database and Tomcat program. We probably won't use Apache
 like we did last semester.
 
@@ -33,7 +33,7 @@ like we did last semester.
 Get a Sample Tomcat Application Working
 ---------------------------------------
 
-We will create and run our application from inside an IDE which will make
+We will normally create and run our application from inside an IDE which will make
 development a lot easier that what we are about to go through below.
 
 **But** you should run through this tutorial and be aware of the
@@ -147,7 +147,11 @@ Install IntelliJ
 
 Ok! That was *too much work*. Let's deploy our web applications using an IDE.
 
-Download and install IntelliJ_. You can get a student license for free. It is
+Download and install IntelliJ_. You can get a student license for free.
+We (Simpson) have a link where you can quickly get a license. See the
+Scholar website for that link.
+
+It is
 also possible to use Eclipse, but IntelliJ seems to be the better choice now.
 
 Go ahead and enable these options while installing:
@@ -190,7 +194,7 @@ See that we need to set up a configuration first:
     :align: center
 
 Then go ahead and create a "Tomcat" configuration and point it to the Tomcat
-directory you just installed.
+directory you just installed. Probably something like ``C:\xampp\tomcat``.
 
 .. image:: tomcat_configuration.png
     :width: 600px
@@ -245,3 +249,6 @@ boring. Let's edit the ``index.jsp`` code:
 .. literalinclude:: sample.jsp
     :linenos:
     :language: jsp
+
+Go ahead and give it a try. JSPs create mini-servlets for us. We won't use
+JSPs too much, we'll be creating the servlets ourselves.
