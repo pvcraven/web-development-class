@@ -28,4 +28,5 @@ Advanced Web Development (Semester 2)
    :maxdepth: 1
 
    java_environment/java_environment.rst
+   java_remote_environment/java_remote_environment.rst
    docker/docker.rst

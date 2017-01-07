@@ -1,7 +1,7 @@
 .. _java-environment-tutorial:
 
-Java Servlet Development Environment Setup
-==========================================
+Local Java Servlet Development Environment Setup
+================================================
 
 Install Java
 ------------
@@ -162,8 +162,8 @@ Go ahead and enable these options while installing:
 
 .. _IntelliJ: https://www.jetbrains.com/idea/#chooseYourEdition
 
-Make a Tomcat Project
-=====================
+Make a Java Servlet Project
+===========================
 
 Now you have Java, and an Integrated Development Environment (IDE) installed.
 Let's use the IDE to set up our first web project.
@@ -172,7 +172,11 @@ Let's use the IDE to set up our first web project.
     :width: 600px
     :align: center
 
-This opens to a confusingly blank window. Hit Alt-1 to open the project view
+Next, give the project a name. I chose ``CIS 320 First Project``:
+
+.. image:: new_project_name.png
+
+This might open to a confusingly blank window. Hit Alt-1 to open the project view
 and explore the project template. You can hit Alt-1 again to hide the window.
 Useful when you want more screen real-estate.
 
@@ -193,7 +197,7 @@ See that we need to set up a configuration first:
     :width: 150px
     :align: center
 
-Then go ahead and create a "Tomcat" configuration and point it to the Tomcat
+Then go ahead and create a "Tomcat" configuration for "local" and point it to the Tomcat
 directory you just installed. Probably something like ``C:\xampp\tomcat``.
 
 .. image:: tomcat_configuration.png

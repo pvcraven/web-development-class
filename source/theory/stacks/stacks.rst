@@ -125,22 +125,68 @@ that we can put on a "container ship."
 Web Application Servers
 -----------------------
 
-`application server`_
-Popular types of application servers:
+There are many types of popular types of `application servers`_. Some companies
+like to get everything from one vendor, software and support. This is possible
+with Microsoft (.NET) and Oracle (Java). Other companies like to put things
+together by their own choice, and pick something different.
 
-* Java-based servers such as Tomcat_, JBoss, Glassfish, Geronimo, WebLogic, WebSphere
-* .NET based servers from Microsoft, or Mono
-* PHP
+Currently popular application servers:
+
+* Java-based servers such as Tomcat_, JBoss_, GlassFish_, WebLogic_, WebSphere_
+* `.NET`_ based servers from Microsoft, or Mono_
+* PHP_
 * Python such as Django_
-* JavaScript - Node.js
+* JavaScript - `Node.js`_
 
-.. _application server: https://en.wikipedia.org/wiki/Application_server
+.. _application servers: https://en.wikipedia.org/wiki/Application_server
 .. _Tomcat: http://tomcat.apache.org/
 .. _Django: https://www.djangoproject.com/
+.. _JBoss: http://www.jboss.org/
+.. _GlassFish: https://glassfish.java.net/
+.. _WebLogic: http://www.oracle.com/technetwork/middleware/weblogic/overview/index-085209.html
+.. _WebSphere: http://www-03.ibm.com/software/products/en/appserv-was
+.. _.NET: https://www.microsoft.com/net
+.. _Mono: http://www.mono-project.com/
+.. _PHP: http://php.net/
+.. _Node.js: https://nodejs.org/en/
 
-Tomcat
-^^^^^^
+Tomcat and Java Application Servers
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* Talk about tomcat
-* Talk about pure servlet vs. JSP.
-* Talk about Apache vs. Tomcat
+For this class, we will use Tomcat, and Java as a development language. Servlets
+run under Tomcat could also be deployed to other application servers, such as
+WebSphere and JBoss. But Tomcat is free and will work great for our class.
+
+When doing development with Java, there are two main types of items you can
+create. You can create "Servlets" where you write programs that will "print" the
+output you want to send to the user.
+
+"In the beginning" so-to-speak, applications usually printed out HTML. This got
+to be old. Lots of print statements of HTML. So `Java Server Pages`_ (JSP)
+were created. These files looked like HTML, but you could add special delimiters
+or custom tags that would run your Java code. These JSP files were automatically
+turned into servlets, and saved the programmer from writing lots of print statements
+for HTML.
+
+But that's not how "modern" development is done now. Typically the HTML is
+static. There is JavaScript that makes requests to go get the data and fill
+it in on the web page. Instead we typically write pure Java Servlets that
+output the data in a simple text format called JSON_.
+
+For this class, we'll concentrate on modern development methods, even if you'll
+likely run into "old school" applications a lot.
+
+Tomcat can serve all types of web files. It can serve files like a Web Server
+like Apache can. You don't have to run Apache at all. So why have Apache?
+
+In a production environment, we usually still use a web server like Apache and
+IIS. Why? For files that don't change, Apache is faster than Tomcat. An
+efficient and high-performance web server will serve static files from Apache
+and changing files from Tomcat.
+
+In fact, really high performing websites will put static files "on the cloud" and
+just use an application server for interacting via JSON.
+
+.. _Java Server Pages: https://en.wikipedia.org/wiki/JavaServer_Pages
+.. _JSON: http://www.w3schools.com/js/js_json_intro.asp
+
