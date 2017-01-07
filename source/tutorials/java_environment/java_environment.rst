@@ -163,7 +163,7 @@ Go ahead and enable these options while installing:
 .. _IntelliJ: https://www.jetbrains.com/idea/#chooseYourEdition
 
 Make a Java Servlet Project
-===========================
+---------------------------
 
 Now you have Java, and an Integrated Development Environment (IDE) installed.
 Let's use the IDE to set up our first web project.
