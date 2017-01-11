@@ -147,12 +147,14 @@ Install IntelliJ
 
 Ok! That was *too much work*. Let's deploy our web applications using an IDE.
 
-Download and install IntelliJ_. You can get a student license for free.
-We (Simpson) have a link where you can quickly get a license. See the
-Scholar website for that link.
+Download and install IntelliJ_.
+We (Simpson) have a link where you can quickly get a license.
+See the Scholar website for that link.
+Or, you can get a `student license`_ with an e-mail that ends in ``.edu``.
+Just in case we run out, or you aren't a Simpson student.
 
-It is
-also possible to use Eclipse, but IntelliJ seems to be the better choice now.
+It is also possible to use Eclipse, but IntelliJ seems to be the better
+choice now.
 
 Go ahead and enable these options while installing:
 
@@ -161,6 +163,7 @@ Go ahead and enable these options while installing:
     :align: center
 
 .. _IntelliJ: https://www.jetbrains.com/idea/#chooseYourEdition
+.. _student license: https://www.jetbrains.com/student/
 
 Make a Java Servlet Project
 ---------------------------

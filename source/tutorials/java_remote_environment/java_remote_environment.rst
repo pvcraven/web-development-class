@@ -13,6 +13,8 @@ with.
 To begin with log into the `AWS Console`_. Then go to the "Elastic Beanstalk"
 panel. Select "Tomcat." **Don't** select "Java" like I did the first time.
 
+.. image:: launch_java_ebs.png
+
 .. note::
   Elastic Beanstalk Service (EBS) allows you to deploy applications like servlets
   (and other types)
@@ -20,12 +22,13 @@ panel. Select "Tomcat." **Don't** select "Java" like I did the first time.
   on load. Also, you don't have to maintain a full virtual machine, which is
   great.
 
-.. image:: launch_java_ebs.png
 
-The computer will work for a while getting the environment set up. After a
-while you'll see a screen like the following. It automatically deployed
-a sample app. You can click on the URL and see it. And we have a button to
+The computer will work for a while getting the environment set up.
+Next, you will see the screen shown below. AWS automatically deployed
+a sample application. You can click on the URL and see it. And we have a button to
 upload our application.
+
+.. image:: upload_our_app.png
 
 Since I messed up the first time while creating this tutorial, I noticed
 the next time I tried to deploy an application I was given the option to update
@@ -35,8 +38,6 @@ to a new interface. I did that. It looked like this when I created the app:
 
 Note that it is asking me to upload the application file right there, and didn't
 start with a sample application.
-
-.. image:: upload_our_app.png
 
 But we haven't yet created a deployment file to upload! How do we do that? We
 need to learn how to "Make WAR." This isn't a class for hippies.
