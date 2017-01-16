@@ -28,3 +28,5 @@ Advanced Web Development (Semester 2)
 
    crud_overview/crud_overview.rst
    stacks/stacks.rst
+   javascript/javascript.rst
+   jquery/jquery.rst

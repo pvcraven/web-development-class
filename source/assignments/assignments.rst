@@ -26,3 +26,4 @@ Advanced Web Development (Semester 2)
    :maxdepth: 1
 
    full_stack_setup/full_stack_setup.rst
+   first_javascript/first_javascript.rst
