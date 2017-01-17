@@ -33,10 +33,18 @@ function f4(event) {
 	    console.log("Ok");
 	} else {
 	    console.log("Bad "+v1);
-
 	}
 }
 
 var formButton4 = $('#button4');
 formButton4.on("click", f4);
 
+function f4(event) {
+	var v1 = $('#phoneField').val();
+	var reg = /^\d{3}-\d{3}-\d{4}$/;
+	if (reg.test(v1)) {
+	    console.log("Ok");
+	} else {
+	    console.log("Bad "+v1);
+	}
+}

@@ -25,5 +25,28 @@ function myUpdateFunction(event) {
     console.log(fieldValue);
 }
 
+// How to hide an item
 var formButton1 = $('#button1');
 formButton1.on("click", myUpdateFunction);
+
+// Attach an action to a button click
+function hideFunction(event) {
+    $("#hideme").hide(500);
+}
+
+var formButton2 = $('#button2');
+formButton2.on("click", hideFunction);
+
+// How to validate an item
+function validateFunction(event) {
+	var v1 = $('#validateMe').val();
+	var reg = /^[A-Za-z]{1,10}$/;
+	if (reg.test(v1)) {
+	    $('#result').text("Ok");
+	} else {
+	    $('#result').text("Bad");
+	}}
+
+var formButton2 = $('#button3');
+formButton2.on("click", validateFunction);
+
