@@ -6,6 +6,24 @@ file to complete the five parts. Please use jQuery where appropriate.
 
 Four points for each part.
 
+To get set up and turn it in:
+
+* Create a file called ``javascript_assignment.html`` in your IntelliJ project.
+* Copy the content below into the file.
+* Create a file called ``javascript_assignment.js`` in your IntelliJ project
+* Rather than go through the "redeploy" process, just open the original
+  source file in your web browser. When we working with the database we will
+  have to go through the run/deploy process. But since we are just doing JavaScript
+  we can skip that.
+* Write the JavaScript to solve all five parts.
+* Hover over the IntelliJ bar on the right side where there are little "suggestion"
+  and error lines. See if there are any improvements in style to make.
+* Build a WAR file.
+* Deploy it.
+* Confirm it still works. (You'll need to navigate directly to the file.)
+* Paste in a GitHub link to your JavaScript, and a link to your working application
+  on Amazon.
+
 Part 1
 ------
 Write an application that will print out "Hello" to the console every time
