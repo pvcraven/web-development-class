@@ -18,35 +18,70 @@ for(var i = 0; i < paragraphs.length; i++) {
     console.log(paragraphText);
 }
 
-// Attach an action to a button click
+// -- Add a row to the table based on a form field
+
+// Create a function to add a row to the table
 function myUpdateFunction(event) {
     var fieldValue = $('#myTextField').val();
     $("#tableName tbody").append("<tr><td>"+fieldValue+"</td></tr>");
     console.log(fieldValue);
 }
 
-// How to hide an item
+// Attach an the function to a button click
 var formButton1 = $('#button1');
 formButton1.on("click", myUpdateFunction);
 
-// Attach an action to a button click
+// -- How to hide an item based on a button click
+
+// Create a function to hide an item
 function hideFunction(event) {
     $("#hideme").hide(500);
 }
 
+// Attach an action to a button click
 var formButton2 = $('#button2');
 formButton2.on("click", hideFunction);
 
-// How to validate an item
+// -- How to validate an item
+
+// Function to validate
 function validateFunction(event) {
-	var v1 = $('#validateMe').val();
-	var reg = /^[A-Za-z]{1,10}$/;
-	if (reg.test(v1)) {
-	    $('#result').text("Ok");
-	} else {
-	    $('#result').text("Bad");
-	}}
+    // Get the field
+    var v1 = $('#validateMe').val();
 
-var formButton2 = $('#button3');
-formButton2.on("click", validateFunction);
+    // Create the regular expression
+    var reg = /^[A-Za-z]{1,10}$/;
 
+    // Test the regular expression to see if there is a match
+    if (reg.test(v1)) {
+        $('#result').text("Ok");
+    } else {
+        $('#result').text("Bad");
+    }}
+
+// Attach an action to a button click
+var formButton3 = $('#button3');
+formButton3.on("click", validateFunction);
+
+// -- JSON'ify a form
+// We'll use this a lot to interact with the back-end
+
+// Create function to JSON'ify
+function jsonFunction(event) {
+
+    // Create an empty object
+    var formObject = {};
+
+    // Set a field in the object to the value in this form field
+    formObject.myName = $('#myName').val();
+
+    // Build the JSON string based on that object's fields
+    var jsonString = JSON.stringify(formObject);
+
+    // Set a field to the JSON result so we can see it.
+    $('#jsonResult').text(jsonString);
+}
+
+// Attach an action to a button click
+var formButton4 = $('#button4');
+formButton4.on("click", jsonFunction);
