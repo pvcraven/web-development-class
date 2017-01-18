@@ -48,3 +48,15 @@ function f4(event) {
 	    console.log("Bad "+v1);
 	}
 }
+
+var formButton5 = $('#button5');
+formButton5.on("click", f5);
+
+function f5(event) {
+	var formObject = {};
+	formObject.firstName = $('#firstName').val();
+	formObject.lastName = $('#lastName').val();
+	formObject.email = $('#email').val();
+	var jsonString = JSON.stringify(formObject);
+	console.log(jsonString);
+}
