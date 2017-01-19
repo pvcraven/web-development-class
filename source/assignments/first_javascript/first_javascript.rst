@@ -8,7 +8,9 @@ Four points for each part.
 
 To get set up and turn it in:
 
-* Create a file called ``javascript_assignment.html`` in your IntelliJ project.
+* Create a file called ``javascript_assignment.html`` in the IntelliJ project
+  you created from our last assignment.
+  Put the HTML file in the "web" folder. **Don't** put it in the WEB-INF folder.
 * Copy the content below into the file.
 * Create a file called ``javascript_assignment.js`` in your IntelliJ project
 * Rather than go through the "redeploy" process, just open the original
