@@ -29,4 +29,5 @@ Advanced Web Development (Semester 2)
 
    java_environment/java_environment.rst
    java_remote_environment/java_remote_environment.rst
+   setup_amazon_db/setup_amazon_db.rst
    docker/docker.rst
