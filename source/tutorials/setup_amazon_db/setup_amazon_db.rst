@@ -53,53 +53,27 @@ Set Up MyPHPAdmin to Point to RDS
 ---------------------------------
 
 Ok. Now we have a database. But no way to administer the database. You know,
-create tables, see what's in it, run ad-hoc SQL. There is a great program in
-XAMPP that let's us to this. However, right now it is pointed to the database
-on your computer. We want to point to the Amazon web server.
+create tables, see what's in it, run ad-hoc SQL.
 
-Note: This will change things for everyone on the computer. So if you switch
-to another computer, your changes won't follow. You might even want to remove
-the settings when you are done to keep other people from messing up your
-database.
+Connect via `MySQL Workbench`_.
 
-Edit ``C:\xampp\phpMyAdmin\config.inc.php``
+.. _MySQL Workbench: https://www.mysql.com/products/workbench/
 
-Note your endpoint and your password from the server you set up on-line.
-Change the original file from::
+Once you've connected, let's create our table plus a couple records:
 
-    /* Authentication type and info */
-    $cfg['Servers'][$i]['auth_type'] = 'config';
-    $cfg['Servers'][$i]['user'] = 'root';
-    $cfg['Servers'][$i]['password'] = '';
-    $cfg['Servers'][$i]['extension'] = 'mysqli';
-    $cfg['Servers'][$i]['AllowNoPassword'] = true;
-    $cfg['Lang'] = '';
+.. code-block:: sql
 
-    /* Bind to the localhost ipv4 address and tcp */
-    $cfg['Servers'][$i]['host'] = '127.0.0.1';
-    $cfg['Servers'][$i]['connect_type'] = 'tcp';
+    CREATE TABLE `cis320`.`person` (
+      `id` INT NOT NULL AUTO_INCREMENT,
+      `first` VARCHAR(45) NULL,
+      `last` VARCHAR(45) NULL,
+      `email` VARCHAR(255) NULL,
+      `phone` VARCHAR(15) NULL,
+      `birthday` DATE NULL,
+      PRIMARY KEY (`id`));
 
-To the new settings of::
+    INSERT INTO `cis320`.`person` (`first`, `last`, `email`, `phone`, `birthday`) VALUES ('Paul', 'Craven', 'paul@simpson.edu', '5159611834', '1/1/1954');
+    INSERT INTO `cis320`.`person` (`first`, `last`, `email`, `phone`, `birthday`) VALUES (Sam', 'Simpson', 'sam@simpson.edu', '5159611212', '1/1/1903');
 
-	/* Authentication type and info */
-	$cfg['Servers'][$i]['auth_type'] = 'config';
-	$cfg['Servers'][$i]['user'] = 'cis320';
-	$cfg['Servers'][$i]['password'] = 'myverysecretrandompassword';
-	$cfg['Servers'][$i]['extension'] = 'mysqli';
-	$cfg['Servers'][$i]['AllowNoPassword'] = true;
-	$cfg['Lang'] = '';
 
-	/* Bind to the localhost ipv4 address and tcp */
-	$cfg['Servers'][$i]['host'] = 'cis320.cp6n5ccfdx2q.us-west-2.rds.amazonaws.com';
-	$cfg['Servers'][$i]['connect_type'] = 'tcp';
 
-Great! Now go to: ``http://localhost/phpmyadmin/``.
-
-.. image:: create_database.png
-
-Create a new table for our
-database. Make it look like:
-
-.. image:: create_table.png
-
-Then add a few new records.

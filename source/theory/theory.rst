@@ -30,3 +30,4 @@ Advanced Web Development (Semester 2)
    stacks/stacks.rst
    javascript/javascript.rst
    jquery/jquery.rst
+   db_connections/managing_database_connections.rst
