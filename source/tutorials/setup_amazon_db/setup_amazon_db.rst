@@ -49,17 +49,28 @@ Set the username and password.
     you've got somewhere else. Because we'll be putting the password in an
     insecure location.
 
-Set Up MyPHPAdmin to Point to RDS
----------------------------------
+Administer Database
+-------------------
 
 Ok. Now we have a database. But no way to administer the database. You know,
 create tables, see what's in it, run ad-hoc SQL.
 
-Connect via `MySQL Workbench`_.
+Originally I was going to use MyPHPAdmin. Which is a great tool and built
+into XAMPP. It worked for me the first time I tried it, but not the second time.
+
+So instead we are going to
+connect via `MySQL Workbench`_. If you are working on a lab computer, you'll
+need to have me install it because of the whole permissions thing.
+There is also a copy on our class web page for
+faster download.
 
 .. _MySQL Workbench: https://www.mysql.com/products/workbench/
 
-Once you've connected, let's create our table plus a couple records:
+Open up a new connection.
+You may need to create a database called "cis320".
+
+After that, run some SQL to
+create our table plus a couple records:
 
 .. code-block:: sql
 
@@ -76,4 +87,5 @@ Once you've connected, let's create our table plus a couple records:
     INSERT INTO `cis320`.`person` (`first`, `last`, `email`, `phone`, `birthday`) VALUES (Sam', 'Simpson', 'sam@simpson.edu', '5159611212', '1/1/1903');
 
 
-
+Yay! We are done with that setup. Next, time to learn how to do DB
+connections in Java.
