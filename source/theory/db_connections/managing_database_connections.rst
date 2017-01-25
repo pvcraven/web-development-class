@@ -224,3 +224,82 @@ JSON. I only print firstName and id, the other fields you can fill in:
             out.println("\r\n]");
         }
     }
+
+Setting Up The Project
+----------------------
+
+Ok! You want to create these classes. How?
+
+Creating a Package
+^^^^^^^^^^^^^^^^^^
+
+To start with, we normally put Java files into a package. Yes, Java
+doesn't *force* you to put classes in a package.
+With smaller assignments there isn't a reason to. But there's nothing small
+about web development, so we need to use packages.
+
+All our source goes into the ``src`` folder. So right-click on the ``src``
+folder and create a new package.
+
+.. image:: new_package.png
+
+Packages normally have a broad-to-specific format. Here are a couple examples:
+
+* ``edu.simpson.computerscience.datastructures.linkedlistproject``
+* ``com.wellsfargo.mortgage.coreproject.userinterface``
+
+Get the idea? This will define a folder structure for our files. So class files
+have to go in the following directories:
+
+* ``edu/simpson/computerscience/datastructures/linkedlistproject``
+* ``com/wellsfargo/mortgage/coreproject/userinterface``
+
+Simple and effective. When you create a package, you are just creating a
+set of directories.
+
+Creating a Class
+^^^^^^^^^^^^^^^^
+
+Once you have a package, create a new Java class. Right-click on the package
+and select a new Java class.
+
+.. image:: new_class.png
+
+If your class is called ``DBHelper``, then it *must* go into a file called
+``DBHelper.java``. If you rename the class, you have to rename the file.
+
+Furthermore, if ``DBHelper`` is in a package called
+``edu.simpson.computerscience.webdevelopment`` it must be stored in a
+directory path of:
+``edu/simpson/computerscience/webdevelopment``.
+
+Creating a Servlet
+^^^^^^^^^^^^^^^^^^
+
+Ok, we can create servlets the same way:
+
+.. image:: new_servlet.png
+
+You will also need to map the servlet to a URL. This maps
+``edu.simpson.webdevelopment.NameListGet`` to
+``/api/name_list_get``.
+
+.. code-block:: xml
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+             version="3.1">
+
+        <servlet>
+            <servlet-name>NameListGet</servlet-name>
+            <servlet-class>edu.simpson.webdevelopment.NameListGet</servlet-class>
+        </servlet>
+
+        <servlet-mapping>
+            <servlet-name>NameListGet</servlet-name>
+            <url-pattern>/api/name_list_get</url-pattern>
+        </servlet-mapping>
+
+    </web-app>
