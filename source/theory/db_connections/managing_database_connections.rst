@@ -1,3 +1,5 @@
+.. _manage-connections:
+
 Managing Database Connections
 =============================
 
@@ -303,3 +305,52 @@ You will also need to map the servlet to a URL. This maps
         </servlet-mapping>
 
     </web-app>
+
+
+The servlet itself will look like:
+
+.. code-block:: Java
+
+    package edu.simpson.craven;
+
+    import javax.servlet.ServletException;
+    import javax.servlet.annotation.WebServlet;
+    import javax.servlet.http.HttpServlet;
+    import javax.servlet.http.HttpServletRequest;
+    import javax.servlet.http.HttpServletResponse;
+    import java.io.IOException;
+    import java.io.PrintWriter;
+    import java.util.List;
+
+    @WebServlet(name = "NameListGet")
+    public class NameListGet extends HttpServlet {
+
+        protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+            response.setContentType("application/json");
+            PrintWriter out = response.getWriter();
+
+            // Replace the line below with your database code that will
+            // write out your JSON file.
+            out.print("{ \"Field\":\"Value\"}");
+
+        }
+    }
+
+Creating a JSON object manually can be a pain. Particularly with putting
+the commas in the right spot. You can use the `Google GSON library` to do it for
+you. I have a link to download the 'jar' file at the top of our Scholar website.
+Put the 'jar' file in the ``WEB-INF/lib`` folder for it to work.
+
+.. _Google GSON library: https://github.com/google/gson
+
+.. code-block:: Java
+
+   import com.google.gson.Gson;
+
+   // Blah, blah
+
+   Gson gson = new Gson();
+
+   // serializes target to Json
+   String json = gson.toJson(myObject);

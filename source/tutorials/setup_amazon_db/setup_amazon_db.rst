@@ -1,3 +1,5 @@
+.. _setup-amazon-db:
+
 Setup Amazon Database
 =====================
 
