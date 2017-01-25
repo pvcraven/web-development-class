@@ -51,7 +51,7 @@ Here is an example of what it should look like. Update as needed.
 
 Tomcat has built in classes to manage a `connection pool`_. It takes a long
 time to build a connection, so we reuse connections to the database between web
-requests. Comcat looks for this specific file in this specific directory
+requests. Tomcat looks for this specific file in this specific directory
 when it starts up. If it exists, it will read
 ``context.xml`` file and set up that pool.
 
@@ -142,7 +142,7 @@ is a function that gets a list of people:
             // stmt.setString(1, "1");
 
             // Execute the SQL and get the results
-            rs = stmt.executeQuery(sql);
+            rs = stmt.executeQuery();
 
             // Loop through each record
             while(rs.next()) {
