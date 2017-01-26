@@ -13,19 +13,23 @@ import com.google.gson.Gson;
 @WebServlet(name = "NameListGet")
 public class NameListGet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List <Person> peopleList = PersonDAO.getPeople();
 
+        // Get setup up to output JSON text
         response.setContentType("application/json");
         PrintWriter out = response.getWriter();
 
+        // Use our DAO to get a list of people
+        List <Person> peopleList = PersonDAO.getPeople();
+
+        // Create an instance of the Google class that can convert
+        // business object to JSON strings.
         Gson gson = new Gson();
 
-        // serializes target to Json
+        // Go ahead and turn peopleList into a JSON string
         String json = gson.toJson(peopleList);
 
+        // Write out that string
         out.println(json);
 
     }
-
-
 }
