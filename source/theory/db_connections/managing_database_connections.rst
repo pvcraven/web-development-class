@@ -49,6 +49,9 @@ Here is an example of what it should look like. Update as needed.
                   url="jdbc:mysql://cis320c.cp6n5ccfdx2q.us-west-2.rds.amazonaws.com:3306/cis320"
                   maxActive="15"
                   maxIdle="3"/>
+    <ResourceLink name="jdbc/cis320"
+                  global="jdbc/cis320"
+                  type="javax.sql.DataSource" />
     </Context>
 
 Tomcat has built in classes to manage a `connection pool`_. It takes a long
@@ -107,73 +110,12 @@ Querying the Database
 
 Typically, I created a "Data Access Object". Static methods for each action
 (Static - no need to create an instance of the object.) For example, here
-is a function that gets a list of people:
+is a the PersonDAO class that gets a list of people:
 
-.. code-block:: java
+.. literalinclude:: PersonDAO.java
+    :linenos:
+    :language: java
 
-    /**
-     * Get a list of the people in the database.
-     * @return Returns a list of instances of the People class.
-     */
-    public static List<Person> getPeople() {
-        log.log(Level.FINE, "Get people");
-
-        // Create an empty linked list to put the people we get from the database into.
-        List<Person> list = new LinkedList<Person>();
-
-        // Declare our variables
-        Connection conn = null;
-        PreparedStatement stmt = null;
-        ResultSet rs = null;
-
-        // Databases are unreliable. Use some exception handling
-        try {
-            // Get our database connection
-            conn = DBHelper.getConnection();
-
-            // This is a string that is our SQL query.
-            String sql = "select id, first, last from person";
-
-            // If you had parameters, it would look something like
-            // String sql = "select id, first, last, phone from person where id = ?";
-
-            // Create an object with all the info about our SQL statement to run.
-            stmt = conn.prepareStatement(sql);
-
-            // If you had parameters, they would be set wit something like:
-            // stmt.setString(1, "1");
-
-            // Execute the SQL and get the results
-            rs = stmt.executeQuery();
-
-            // Loop through each record
-            while(rs.next()) {
-                // Create a new instance of the Person object.
-                // You'll need to define that somewhere. Just a simple class with getters and setters on the
-                // fields.
-                Person person = new Person();
-
-                // Get the data from the result set, and copy it to the Person object
-                person.setId(rs.getInt("id"));
-                person.setFirst(rs.getString("first"));
-                person.setLast(rs.getString("last"));
-
-                // Add this person to the list so we can return it.
-                list.add(person);
-            }
-        } catch (SQLException se) {
-            log.log(Level.SEVERE, "SQL Error", se );
-        } catch (Exception e) {
-            log.log(Level.SEVERE, "Error", e );
-        } finally {
-            // Ok, close our result set, statement, and connection
-            try { rs.close(); } catch (Exception e) { log.log(Level.SEVERE, "Error", e ); }
-            try { stmt.close(); } catch (Exception e) { log.log(Level.SEVERE, "Error", e ); }
-            try { conn.close(); } catch (Exception e) { log.log(Level.SEVERE, "Error", e ); }
-        }
-        // Done! Return the results
-        return list;
-    }
 
 Writing the Servlet
 -------------------
