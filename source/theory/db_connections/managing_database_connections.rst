@@ -123,51 +123,9 @@ Writing the Servlet
 Here's a code sample for a servlet that chucks the list of people out over
 JSON. I only print firstName and id, the other fields you can fill in:
 
-.. code-block:: java
-
-    @WebServlet(name = "NameListGet")
-    public class NameListGet extends HttpServlet {
-        protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-            // Set the output type, and get the output stream
-            response.setContentType("application/json");
-            PrintWriter out = response.getWriter();
-
-            // Use the DAO to get a list of people
-            List <Person> peopleList = PersonDAO.getPeople();
-
-            // Start the JSON output. We'll have an array of people, so start with a "[" which signifies an array
-            out.print("[");
-
-            // Keep a boolean so we can figure out where to put the stupid commas.
-            boolean start = false;
-
-            // Loop through each person in the list.
-            for (Person person : peopleList) {
-
-                // Here we need to figure out if we should print a comma
-                if (!start) {
-                    start = true;
-                    out.println();
-                } else
-                    out.println(",");
-
-                // Start printing out field, name combinations.
-                out.print("{\"id\" : ");
-                out.print("\"");
-                out.print(person.getId());
-                out.print("\",");
-
-                out.print("\"firstName\" : ");
-                out.print("\"");
-                out.print(person.getFirst());
-                out.print("\"");
-
-                out.print("}");
-            }
-            out.println("\r\n]");
-        }
-    }
+.. literalinclude:: NameListGet.java
+    :linenos:
+    :language: java
 
 Setting Up The Project
 ----------------------
