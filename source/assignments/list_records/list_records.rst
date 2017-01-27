@@ -53,3 +53,30 @@ Turn in
   out JSON.
 * If you aren't able to get everything working, explain what you do have working
   so I don't have to search for it.
+
+Common Issues
+-------------
+
+* I don't know how to test my servlet - Run ``/index.jsp``. Change ``index.jsp`` on
+  your web browser to ``/api/name_list_get``. Test that link. Works on your
+  local server, or the AWS server.
+* IntelliJ can't import servlet classes - Go to file...project structure...libraries,
+  add the library ``/xamp/tomcat/lib/servlet-api.jar``
+* Can't import gson classes - Download the ``gson-2.8.0.jar`` file from the class
+  website. Put in
+  ``WEB-INF/lib`` directory. Add it to project structure.
+* I just get ``[]`` - Look at your server log. The first error your server
+  generates you can ignore. The second error is probably your issue. Errors you care about
+  will have a long stack trace. Practice reading the stack trace to figure out
+  the error.
+* Can't import mysql - Download the
+  ``mysql-connector-java-5.1.40-bin`` file. Put in
+  ``WEB-INF/lib`` directory. Add it to project structure.
+* Doesn't work on AWS. - You can download the last 100 lines of your log to get
+  a clue what is wrong. Search for the option.
+* AWS says something about the connection pool - Copy ``tomcat-dbcp.jar`` from
+  ``/xamp/tomcat/lib`` to your ``WEB-INF/lib`` folder. Redeploy. That jar file
+  has the connection pool code, which for some reason isn't included on Amazon.
+* Huge long pause when connecting - Can't get through your firewall. Just change
+  your security to accept connections from anywhere. That's totally the wrong
+  way to do it, but I haven't figured out the proper way yet.
