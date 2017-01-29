@@ -71,7 +71,7 @@ Common Issues
   the error.
 * Can't import mysql - Download the
   ``mysql-connector-java-5.1.40-bin`` file. Put in
-  ``WEB-INF/lib`` directory. Add it to project structure.
+  ``WEB-INF/lib`` directory. Also add it to ``xamp/tomcat/lib`` as well.
 * Doesn't work on AWS. - You can download the last 100 lines of your log to get
   a clue what is wrong. Search for the option.
 * AWS says something about the connection pool - Copy ``tomcat-dbcp.jar`` from
