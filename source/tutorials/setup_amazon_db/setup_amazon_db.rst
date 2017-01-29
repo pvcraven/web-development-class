@@ -51,6 +51,11 @@ Set the username and password.
     you've got somewhere else. Because we'll be putting the password in an
     insecure location.
 
+    **Also:** We will be storing the passwords in an XML file. If you use special symbols
+    like &, <, and >, then you'll have to encode those in your XML file. I'd
+    recommend just not using those symbols.
+
+
 Administer Database
 -------------------
 

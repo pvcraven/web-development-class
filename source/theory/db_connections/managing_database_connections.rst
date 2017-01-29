@@ -48,7 +48,9 @@ Here is an example of what it should look like. Update as needed.
                   driverClassName="com.mysql.jdbc.Driver"
                   url="jdbc:mysql://cis320c.cp6n5ccfdx2q.us-west-2.rds.amazonaws.com:3306/cis320"
                   maxActive="15"
-                  maxIdle="3"/>
+                  maxIdle="3"
+                  factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+                  />
     <ResourceLink name="jdbc/cis320"
                   global="jdbc/cis320"
                   type="javax.sql.DataSource" />
