@@ -90,8 +90,8 @@ create our table plus a couple records:
       `birthday` DATE NULL,
       PRIMARY KEY (`id`));
 
-    INSERT INTO `cis320`.`person` (`first`, `last`, `email`, `phone`, `birthday`) VALUES ('Paul', 'Craven', 'paul@simpson.edu', '5159611834', '1/1/1954');
-    INSERT INTO `cis320`.`person` (`first`, `last`, `email`, `phone`, `birthday`) VALUES ('Sam', 'Simpson', 'sam@simpson.edu', '5159611212', '1/1/1903');
+    INSERT INTO `cis320`.`person` (`first`, `last`, `email`, `phone`, `birthday`) VALUES ('Paul', 'Craven', 'paul@simpson.edu', '5159611834', '1954-01-02');
+    INSERT INTO `cis320`.`person` (`first`, `last`, `email`, `phone`, `birthday`) VALUES ('Sam', 'Simpson', 'sam@simpson.edu', '5159611212', '1903-01-01');
 
 
 Yay! We are done with that setup. Next, time to learn how to do DB
