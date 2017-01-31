@@ -50,6 +50,8 @@ Here is an example of what it should look like. Update as needed.
                   maxActive="15"
                   maxIdle="3"
                   factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+                  testOnBorrow="true"
+                  connection-test-query = "SELECT 1"
                   />
     <ResourceLink name="jdbc/cis320"
                   global="jdbc/cis320"

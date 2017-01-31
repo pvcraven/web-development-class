@@ -28,6 +28,15 @@ and file under the ``web`` folder in your project.
 Now, just write the code for the js file, and get it to work.
 See :ref:`make-json-calls` for more information.
 
+Make sure your table lists out the following:
+
+* id
+* First name
+* Last name
+* E-mail address
+* Phone number
+* Birthday
+
 Turn in:
 
 * GitHub URL to the .js file
