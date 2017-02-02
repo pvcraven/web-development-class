@@ -123,6 +123,58 @@ Then in the code I can just do:
 
     conn = DBHelper.getConnection();
 
+Oh wait! This might have something you don't know, or forgot.
+
+Normally, when I call a method on a class, I have to have an instance, right?
+I can't do this:
+
+.. code-block:: java
+
+    Dog.bark();
+
+I can't do the code above, because what dog do I want to have bark? I have
+to create an *instance*. Like the following:
+
+.. code-block:: java
+
+    spot = Dog();
+    fluffy = Dog();
+
+    spot.sit();
+    fluffy.bark();
+
+Great, that makes sense. I need to associate a method with what object it is
+operating on. But not all functions should have an object. What about sine
+and cosine function? We don't want to do this:
+
+.. code-block:: java
+
+    my_math = Math();
+    answer = my_math.sin(angle);
+
+That code's just dumb. What is the point of ``my_math``? Conceptually there is
+no object. Why can't I just do:
+
+.. code-block:: java
+
+    answer = sin(angle);
+
+I can't, because everything has to be in a class. To make a middle-ground, Java
+and other languages have *static methods*. Methods that don't use instance
+variables, and can be called just like a function. A function where you don't
+need to create an instance first:
+
+.. code-block:: java
+
+    answer = Math.sin(angle);
+
+How do you create such a method? Use the ``static`` keyword.
+
+.. code-block:: java
+
+    public static double sin(double angle) {
+
+
 Querying the Database
 ---------------------
 
