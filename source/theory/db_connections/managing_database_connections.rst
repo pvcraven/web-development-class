@@ -94,6 +94,20 @@ looks like this.
     // Hey, now we've got a datasource for connections. Let's get a connection.
     Connection conn = ds.getConnection();
 
+What Java classes are we using here?
+
+* InitialContext - Used to get information from our context.xml file. Comes from
+  the javax.naming package.
+* Context - This is a base class for InitialContext. It is just a more general
+  version of the InitalContext class.
+* DataSource - This class manages our database connections. We get database
+  connections from this class.
+* Connection - This class holds the information about our database connection.
+
+So, ``InitialContext``/``Context`` is used to figure out our ``DataSource``,
+password, and other items in ``context.xml``. We get connections from the
+``DataSource``, and the connection itself is managed by ``Connection``.
+
 I hate putting in all that code when I want a database connection. Plus what if
 I change a name? I don't want to go through my entire program replacing
 "jdbc/cis320" with something new. So I typically put this in a helper class
