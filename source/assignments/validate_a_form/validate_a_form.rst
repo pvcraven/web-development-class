@@ -9,6 +9,10 @@ Learn to do front-side validation of a form using JavaScript.
 Steps
 -----
 
+Step 1 - Get the hidden form to pop up
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
 First, we need something to happen when we click the "Add Item" button on
 the form. Let's have it call a JavaScript function:
 
@@ -41,5 +45,14 @@ we have.
         $('#myModal').modal('show');
     }
 
+Test it out. You should click on the Add Item button and see the form pop up.
+
+Step 2 - Associate a function with the "Save Changes" button
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 Next, in that hidden form is a button with the id of "saveChanges". Associate
 a new JavaScript function called ``saveChanges`` with that button.
+
+Have the function print something, and test it.
+
+
