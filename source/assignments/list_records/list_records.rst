@@ -45,6 +45,15 @@ Complete
 
 .. _JSON Lint: http://jsonlint.com/
 
+Make sure you list out for each record:
+
+* id
+* First name
+* Last name
+* E-mail address
+* Phone number
+* Birthday
+
 Turn in
 -------
 

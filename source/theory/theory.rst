@@ -31,3 +31,5 @@ Advanced Web Development (Semester 2)
    javascript/javascript.rst
    jquery/jquery.rst
    db_connections/managing_database_connections.rst
+   making_json_calls/making_json_calls.rst
+   build_process/build_process.rst

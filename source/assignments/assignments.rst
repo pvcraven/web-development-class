@@ -28,5 +28,7 @@ Advanced Web Development (Semester 2)
    full_stack_setup/full_stack_setup.rst
    first_javascript/first_javascript.rst
    list_records/list_records.rst
+   list_records_final/list_records_final.rst
+   validate_a_form/validate_a_form
 
 
