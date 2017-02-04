@@ -1,3 +1,5 @@
+.. _jquery:
+
 jQuery
 ======
 
