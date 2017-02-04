@@ -38,23 +38,32 @@ Here is an example of what it should look like. Update as needed.
 
 .. code-block:: xml
 
-    <?xml version="1.0" encoding="UTF-8"?>
-    <Context>
-        <Resource name="jdbc/cis320"
-                  auth="Container"
-                  type="javax.sql.DataSource"
-                  username="cis320"
-                  password="mysecretpassword"
-                  driverClassName="com.mysql.jdbc.Driver"
-                  url="jdbc:mysql://cis320c.cp6n5ccfdx2q.us-west-2.rds.amazonaws.com:3306/cis320"
-                  maxActive="15"
-                  maxIdle="3"
-                  factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
-                  />
-    <ResourceLink name="jdbc/cis320"
-                  global="jdbc/cis320"
-                  type="javax.sql.DataSource" />
-    </Context>
+  <?xml version="1.0" encoding="UTF-8"?>
+  <Context>
+      <Resource name="jdbc/cis320"
+                auth="Container"
+                type="javax.sql.DataSource"
+                maxTotal="50"
+                maxWaitMillis="-1"
+                username="cis320"
+                password="PUT_PASSWORD_HERE"
+                driverClassName="com.mysql.jdbc.Driver"
+                url="jdbc:mysql://PUT_SERVER_NAME_HERE:3306/cis320"
+                maxActive="15"
+                maxIdle="3"
+                testOnBorrow="true"
+                removeAbandoned="true"
+                removeAbandonedTimeout="55"
+                validationQuery="SELECT 1"
+                validationInterval="34000"
+                timeBetweenEvictionRunsMillis="34000"
+                minEvictableIdleTimeMillis="55000"
+                factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+      />
+      <ResourceLink name="jdbc/cis320"
+                    global="jdbc/cis320"
+                    type="javax.sql.DataSource" />
+  </Context>
 
 Tomcat has built in classes to manage a `connection pool`_. It takes a long
 time to build a connection, so we reuse connections to the database between web
