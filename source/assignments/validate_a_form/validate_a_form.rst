@@ -9,7 +9,16 @@ Learn to do front-side validation of a form using JavaScript.
 Steps
 -----
 
-Step 1 - Get the hidden form to pop up
+Step 1 - Format phone number
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Our last lab had the phone numbers listed like ``5159611212``. That
+doesn't look good. Write JavaScript to format the numbers like
+``515-961-1212``. You can use the JavaScript substring command::
+
+    mysting = mystring.substring(0,2) + "-" + ...
+
+Step 2 - Get the hidden form to pop up
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
@@ -47,7 +56,7 @@ we have.
 
 Test it out. You should click on the Add Item button and see the form pop up.
 
-Step 2 - Associate a function with the "Save Changes" button
+Step 3 - Associate a function with the "Save Changes" button
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Next, in that hidden form is a button with the id of "saveChanges". Associate
