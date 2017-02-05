@@ -33,3 +33,4 @@ Advanced Web Development (Semester 2)
    db_connections/managing_database_connections.rst
    making_json_calls/making_json_calls.rst
    build_process/build_process.rst
+   getting_form_data/getting_form_data.rst
