@@ -152,3 +152,9 @@ the first name field is valid:
         $('firstNameStatus').val("(success)");
 
 Adjust this template for the other fields, both success and failure.
+
+Step 8 - Clear Form
+^^^^^^^^^^^^^^^^^^^
+
+Make sure that if you close the window, and then re-open it, the form is
+cleared and doesn't show green or red fields.
