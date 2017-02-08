@@ -179,4 +179,11 @@ get the file:
 .. literalinclude:: FormTestFileServlet.java
     :linenos:
     :language: java
-    :caption: FormTestFileServlet.java
+    :caption: FormTestFileServlet.java\
+
+Drag and Drop
+^^^^^^^^^^^^^
+
+If you use a library, making your website support drag/drop uploading isn't
+hard. In the example I use the same servlet, but use a "DropZone" library I
+found (and CSS) to help process the request.

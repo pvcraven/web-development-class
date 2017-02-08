@@ -28,7 +28,7 @@ function jqueryPostButtonAction() {
 var jqueryPostButton = $('#jqueryPostButton');
 jqueryPostButton.on("click", jqueryPostButtonAction);
 
-<!-- Post JSON data -->
+<!-- AJAX Post using JSON data -->
 function jqueryPostJSONButtonAction() {
 
     var url = "api/form_test_json_servlet";
@@ -48,3 +48,11 @@ function jqueryPostJSONButtonAction() {
 }
 var jqueryPostJSONButton = $('#jqueryPostJSONButton');
 jqueryPostJSONButton.on("click", jqueryPostJSONButtonAction);
+
+Dropzone.options.myDropzone = {
+    init: function() {
+        this.on("success", function(file, response) {
+            console.log(response);
+        });
+    }
+};
