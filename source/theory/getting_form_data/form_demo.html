@@ -48,6 +48,15 @@
     <input type="submit">
 </form>
 
+
+<h3>Using "get" method as a link</h3>
+<form action="api/form_test_servlet" method="get">
+    <ul>
+        <li><a href="api/form_test_servlet?fieldname=a">Field a</a></li>
+        <li><a href="api/form_test_servlet?fieldname=b">Field b</a></li>
+    </ul>
+</form>
+
 <h3>Classic form submission using "post" method</h3>
 <form action="api/form_test_servlet" method="post">
     <input name="fieldname" type="text" />
@@ -73,11 +82,22 @@
 </form>
 
 <h3>Checkboxes</h3>
-<p>TBD</p>
+
+    <form action="api/form_test_checkbox_servlet">
+        <input type="checkbox" name="vehicle" value="Skateboard">Skateboard<br/>
+        <input type="checkbox" name="vehicle" value="Bike">Bike<br/>
+        <input type="checkbox" name="vehicle" value="Car">Car<br/>
+        <input type="checkbox" name="vehicle" value="Balloon">Balloon<br/>
+        <input type="submit">
+    </form>
+
 
 <h3>Files</h3>
-<p>TBD</p>
-
+    <form action="api/form_test_file_servlet" method="post" enctype="multipart/form-data">
+        <input type="text" name="description" placeholder = "File description"/>
+        <input type="file" name="file">
+        <input type="submit">
+    </form>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>

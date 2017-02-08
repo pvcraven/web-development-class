@@ -113,6 +113,7 @@ Here's how we get the JSON data.
 
 Servlet
 ^^^^^^^
+
 .. literalinclude:: FormTestJSONServlet.java
     :linenos:
     :language: java
@@ -121,9 +122,61 @@ Servlet
 Checkboxes
 ----------
 
-Checkboxes on forms are weird. They deserve their own section. (TBD)
+Checkboxes on forms are weird. They deserve their own section. A URL with
+all checkboxes checked could look like::
+
+    http://localhost:8080/api/form_test_checkbox_servlet?vehicle=Skateboard&vehicle=Bike&vehicle=Car&vehicle=Balloon
+
+See how "vehicle" appears multiple times? And if none of them are checked::
+
+    http://localhost:8080/api/form_test_checkbox_servlet
+
+Nothing appears at all. Like it wasn't even there on the form. Here's an example
+how to process them:
+
+.. literalinclude:: FormTestCheckboxServlet.java
+    :linenos:
+    :language: java
+    :caption: FormTestCheckboxServlet.java
 
 Files
 -----
 
-File handling requires a multi-part upload. (TBD)
+File handling requires a multi-part upload. Not only do you have to write
+servlet code to handle it, you need to specify this in your ``web.xml`` servlet
+mapping.
+
+* location: An absolute path to a directory on the file system. The location
+  attribute does not support a path relative to the application context. This
+  location is used to store files temporarily while the parts are processed or
+  when the size of the file exceeds the specified fileSizeThreshold setting.
+  The default location is "".
+* file-size-threshold: The file size in bytes after which the file will be
+  temporarily stored on disk. The default size is 0 bytes.
+* max-file-size: The maximum size allowed for uploaded files, in bytes. If the
+  size of any uploaded file is greater than this size, the web container will
+  throw an exception (IllegalStateException). The default size is unlimited.
+* max-request-size: The maximum size allowed for a multipart/form-data request,
+  in bytes. The web container will throw an exception if the overall size of
+  all uploaded files exceeds this threshold. The default size is unlimited.
+
+.. code-block:: xml
+
+    <servlet>
+        <servlet-name>FormTestFileServlet</servlet-name>
+        <servlet-class>edu.simpson.craven.FormTestFileServlet</servlet-class>
+        <multipart-config>
+            <max-file-size>50000</max-file-size>
+            <max-request-size>50000</max-request-size>
+            <file-size-threshold>0</file-size-threshold>
+        </multipart-config>
+    </servlet>
+
+If you don't add this to your servlet, you'll find that you can't pull the fields
+and you'll get no error. It is an annoying error to chase down. Here's how to
+get the file:
+
+.. literalinclude:: FormTestFileServlet.java
+    :linenos:
+    :language: java
+    :caption: FormTestFileServlet.java
