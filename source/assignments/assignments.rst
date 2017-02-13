@@ -30,5 +30,6 @@ Advanced Web Development (Semester 2)
    list_records/list_records.rst
    list_records_final/list_records_final.rst
    validate_a_form/validate_a_form
-
+   save_form_data/save_form_data
+   security/security
 
