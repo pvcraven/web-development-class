@@ -54,6 +54,8 @@ Step 4 - Insert the Data
 ^^^^^^^^^^^^^^^^^^^^^^^^
 * Look at the code you have to get the records from the database. Adapt it to
   insert a new record.
+* After the record is inserted, make sure your JavaScript calls the function
+  to update the table so that you can see the new record.
 * Test.
 
 Turn it in
