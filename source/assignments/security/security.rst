@@ -9,12 +9,12 @@ Write a report detailing application security.
 Attack Vectors
 ^^^^^^^^^^^^^^
 
-* Directory Traversal
+* Directory Traversal / Poisoned File Upload
 * SQL Injection
 * Cross-site scripting / HTML injection
 * Denial-of-Service
-* Distributed Denial-of-Service
-* Brute Force
+* Distributed Denial-of-Service - cite that book
+* Brute Force Password Attack, or other parameters
 * Unvalidated Redirects and Forwards
 * Known Vulnerabilities
 * Social Engineering

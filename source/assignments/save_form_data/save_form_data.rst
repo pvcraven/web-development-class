@@ -54,6 +54,17 @@ Step 4 - Insert the Data
 ^^^^^^^^^^^^^^^^^^^^^^^^
 * Look at the code you have to get the records from the database. Adapt it to
   insert a new record.
+* You will need to know how to set fields in a SQL statement. It looks
+  something like:
+
+.. code-block:: java
+
+  String sql = "select id, first, last, phone from person where id = ?";
+  stmt = conn.prepareStatement(sql);
+  stmt.setString(1, "1");
+
+* The way we set up the database, the table will auto-create the id field. You
+  do not want to insert a value for id.
 * After the record is inserted, make sure your JavaScript calls the function
   to update the table so that you can see the new record.
 * Test.
