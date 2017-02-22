@@ -12,11 +12,11 @@ Attack Vectors
 * Directory Traversal / Poisoned File Upload
 * SQL Injection
 * Cross-site scripting / HTML injection
-* Denial-of-Service
-* Distributed Denial-of-Service - cite that book
+* Denial-of-Service (Don't talk about DDOS)
+* Distributed Denial-of-Service  (You can assume DOS is understood)
 * Brute Force Password Attack, or other parameters
 * Unvalidated Redirects and Forwards
-* Known Vulnerabilities
+* Known Vulnerabilities (using known vulnerabilities, scanning sites for unpatched machines)
 * Social Engineering
 
 How to Secure
@@ -28,7 +28,7 @@ How to Secure
 * Server certificates
 * Running process security
 * Data validation
-* Data encoding
+* Data encoding (Base64, SQL encoding, URL encoding, HTML encoding, JSON encoding)
 * Two-Factor Authentication
 * Encryption
 * Hashing
