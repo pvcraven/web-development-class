@@ -45,9 +45,9 @@ Step 2 - Submit the Data
 
 Step 3 - Receive the Data
 ^^^^^^^^^^^^^^^^^^^^^^^^^
+* Create a new servlet called ``NameListEdit``.
 * Update web.xml to map a new servlet ``NameListEdit`` to ``/api/name_list_edit``
-* Create a new servlet called ``NameListEdit``. Have it log something. Test to
-  make sure it runs.
+* Have your servlet log something. Test to make sure it runs.
 * Update your new servlet to fetch the data, and then log it. Test.
 
 Step 4 - Insert the Data

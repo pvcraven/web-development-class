@@ -158,3 +158,9 @@ Step 8 - Clear Form
 
 Make sure that if you close the window, and then re-open it, the form is
 cleared and doesn't show green or red fields.
+
+Tip
+---
+
+Learn how to use `AutoHotKey <https://autohotkey.com/>`_ so you don't have to type in your form over and
+over.

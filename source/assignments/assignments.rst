@@ -32,4 +32,5 @@ Advanced Web Development (Semester 2)
    validate_a_form/validate_a_form
    save_form_data/save_form_data
    security/security
+   delete_record/delete_record.rst
 
