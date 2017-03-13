@@ -33,4 +33,5 @@ Advanced Web Development (Semester 2)
    save_form_data/save_form_data
    security/security
    delete_record/delete_record.rst
+   edit_record/edit_record.rst
 
