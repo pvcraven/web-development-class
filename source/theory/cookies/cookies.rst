@@ -7,6 +7,13 @@ How do you look at cookies from the browser
 * Chrome: F12, find "Application" tab. Look on left side for cookies.
 * Edge: F12, find "Debugger" tab. Look on left side for cookies.
 
+How are cookies really set and transmitted?
+-------------------------------------------
+
+.. image:: cookie_trace_1.png
+
+.. image:: cookie_trace_2.png
+
 Cookie Demo
 -----------
 
