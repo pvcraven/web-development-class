@@ -35,3 +35,5 @@ Advanced Web Development (Semester 2)
    build_process/build_process.rst
    getting_form_data/getting_form_data.rst
    validate_backend/validate_backend.rst
+   cookies/cookies
+   sessions/sessions
