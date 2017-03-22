@@ -34,4 +34,4 @@ Advanced Web Development (Semester 2)
    security/security
    delete_record/delete_record.rst
    edit_record/edit_record.rst
-
+   login_lab/login_lab
