@@ -37,3 +37,4 @@ Advanced Web Development (Semester 2)
    validate_backend/validate_backend.rst
    cookies/cookies
    sessions/sessions
+   local_storage/local_storage
