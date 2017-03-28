@@ -52,3 +52,14 @@ Here is our example JavaScript
     :linenos:
     :language: Java
     :caption: SetCookieServlet.java
+
+Cookie Limits
+-------------
+
+Cookies (both keys and values) are limited to about
+4000 bytes. This limit is TOTAL per domain. So if
+you have two cookies, together they can't have
+more than 4000 bytes. For more information see
+`cookie limits`_.
+
+.. _cookie limits: http://stackoverflow.com/questions/640938/what-is-the-maximum-size-of-a-web-browsers-cookies-key
