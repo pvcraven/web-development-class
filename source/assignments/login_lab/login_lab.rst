@@ -14,7 +14,7 @@ Assignment 10 - Login Lab
 6.  Create a ``LoginServlet`` class in Java. Use the code out of
     :ref:`SetSessionServlet` to start.
 7.  Create ``login_servlet`` in ``web.xml`` and map it to the
-    ``SetLoginServlet`` class you just created.
+    ``LoginServlet`` class you just created.
 8.  Update the JavaScript file to use these new names. Use ``login`` instead
     of ``setSessionJava`` and ``getLogin`` instead of ``getSessionJava``. Update
     button names to something that matches as well.
