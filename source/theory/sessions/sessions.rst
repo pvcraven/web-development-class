@@ -40,3 +40,11 @@ GetSessionServlet
     :linenos:
     :language: java
     :caption: GetSessionServlet.java
+
+InvalidateSessionServlet
+------------------------
+
+.. literalinclude:: InvalidateSessionServlet.java
+    :linenos:
+    :language: java
+    :caption: InvalidateSessionServlet.java
