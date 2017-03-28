@@ -11,11 +11,10 @@ import java.io.IOException;
 @WebServlet(name = "InvalidateSessionServlet")
 public class InvalidateSessionServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // Get the session
         HttpSession session = request.getSession();
+
+        // Invalidate it
         session.invalidate();
-    }
-
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
     }
 }
