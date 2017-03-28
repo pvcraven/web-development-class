@@ -25,7 +25,10 @@ Assignment 10 - Login Lab
      Update the JavaScript to just send the login id. Update the servlet to just
      take the login id.
      Always use ``loginId`` in your Java file as the session key.
+     (For some reason people find this more difficult than it is. Instead of
+     ``sessionKey`` use ``"loginId"``. Don't use a variable, use a string.)
      Test to make sure it works.
+
 
 .. image:: login.png
 
@@ -40,7 +43,14 @@ Assignment 10 - Login Lab
 
 .. image:: get_login_info.png
 
-13. Automatically call the 'get session' part on page load
+13. Automatically call the 'get session' part on page load. At the end of your
+    ``login.js`` script, just call the function.
 14. Automatically call the 'get session' part when the user logs in.
 15. Automatically call the 'get session' part when the user logs out.
-16. Hide the logout section if the user isn't logged in.
+16. Hide the logout section if the user isn't logged in. At the end of your
+    get session function, check the result and see if you should show or hide
+    the logout section. Note that the info you get back from the servlet will
+    be a string. If it returns a ``null`` then it will be a string ``"null"``
+    not the value ``null``. Also, the string may have extra carriage returns
+    and/or spaces so you really get back ``null[space][cr]``. You might need
+    to trim the string.
