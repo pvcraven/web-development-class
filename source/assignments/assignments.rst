@@ -35,3 +35,4 @@ Advanced Web Development (Semester 2)
    delete_record/delete_record.rst
    edit_record/edit_record.rst
    login_lab/login_lab
+   research_project/research_project
