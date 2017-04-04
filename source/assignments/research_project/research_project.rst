@@ -141,5 +141,4 @@ Grading
 50 points
 
 
-
-Citing sources, copying
+Rubric to be posted.
