@@ -18,6 +18,7 @@ Web Development (Semester 1)
    install_wordpress/install_wordpress.rst
    wordpress_site/wordpress_site.rst
    static_content_generators/static_content_generators.rst
+   collaborative_reflection/collaborative_reflection
 
 Advanced Web Development (Semester 2)
 -------------------------------------
