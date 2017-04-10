@@ -38,3 +38,4 @@ Advanced Web Development (Semester 2)
    cookies/cookies
    sessions/sessions
    local_storage/local_storage
+   encryption/encryption
