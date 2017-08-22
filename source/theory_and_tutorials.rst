@@ -1,5 +1,5 @@
-Theory
-======
+Theory and Tutorials
+====================
 
 Web Development (Semester 1)
 ----------------------------
