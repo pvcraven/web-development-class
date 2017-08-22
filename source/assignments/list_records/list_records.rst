@@ -91,4 +91,4 @@ Common Issues
   way to do it, but I haven't figured out the proper way yet.
 * Doesn't like the log function - Don't forget to create the logger::
 
-private final static Logger log = Logger.getLogger(MyClassHere.class.getName());
+    private final static Logger log = Logger.getLogger(MyClassHere.class.getName());
