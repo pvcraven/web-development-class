@@ -171,6 +171,7 @@ To turn in assignment 1, copy the GitHub address for your project into the submi
 form on Scholar for assignment 1. This will require you to complete Assignment 2.
 
 * Make sure you submit your files, and your files only.
+* Make your your files are identified by a comment.
 * Make sure you submit any images that go with your files.
 * Make sure to add descriptive comments when submitting. (You can't edit them
   later, so make sure you get them right the first time.)
@@ -183,7 +184,8 @@ form on Scholar for assignment 1. This will require you to complete Assignment 2
   with a tilde: '~'.
 * The menu should be in an unordered list, and should appear on every page.
 * Make sure to avoid extra spaces around tags. Don't do ``<title> About Page </title>`` instead do ``<title>About Page</title>``
-* Make sure you have a ``<header>`` somewhere. That is easy to overlook.
+* Make sure you have a ``<header>`` somewhere. That is easy to overlook. Also remember that ``<head>`` and ``<header>``
+  are completely different.
 * The footer should look something like this:
 
 .. code-block:: html
@@ -194,6 +196,7 @@ form on Scholar for assignment 1. This will require you to complete Assignment 2
 
 * Copy the GitHub project URL
 * Submit on Scholar
+* Here's the rubric it will be graded on. Review.
 
 .. image:: rubric.png
     :width: 500px
