@@ -1,5 +1,5 @@
-Basic HTML
-==========
+HTML Tutorial
+=============
 
 First HTML Document
 -------------------

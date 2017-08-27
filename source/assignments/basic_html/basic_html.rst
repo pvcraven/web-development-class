@@ -41,9 +41,6 @@ The driver worries about not hitting anyone.
 
 Schedule
 --------
-* This is the first year we are doing web development as two semesters. I may
-  need to fine-tune the schedule. Please listen for any schedule changes given
-  in class.
 * One person will "drive" and type on the computer for half the time.
   One person will direct. Each person should work to finish three pages. It is
   expected that some time will be spent outside of class to finish those pages.
@@ -191,7 +188,7 @@ form on Scholar for assignment 1. This will require you to complete Assignment 2
 .. code-block:: html
 
   <footer>
-    Copyright 2016 by Pat
+    Copyright 2017 by Pat
   </footer>
 
 * Copy the GitHub project URL

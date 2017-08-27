@@ -116,6 +116,32 @@ Communicate
 * Try to avoid 1st/2nd person references.
 * Use citations.
 * Must be at least 1,500 words.
+* I recommend writing your introduction last. Make sure you include a
+  clear thesis statement. Anyone reading it should be able to find it and
+  underline it. Make very sure there aren't typos or grammatical errors in
+  the first paragraph. That's what sets the tone. Don't put a quote and
+  definitely don't put a quote of a definition in your introduction.
+* Make sure the conclusion brings in specific parts of your paper. Don't let it
+  be so generic you could put your conclusion at the end of someone else's paper
+  and still have it work.
+* Most paragraphs should have a Purpose. Followed by Information. Followed by an
+  Explanation. (PIE) Avoid large walls of text.
+* Learn how to include code samples in restructured text.
+  Don't include code samples by using an image. People can't copy/paste your
+  sample and it won't be picked up by search engines.
+* If you screen shot a window, resize it so you don't have 90% whitespace.
+* Size images according to the size of the text on the page. Don't have your
+  image be huge because you don't bother to size it correctly.
+* With bulleted lists in restructured text, you have to indent each following
+  line to match the bullet. For example:
+
+.. code-block:: text
+
+  * Test text.
+    And more text part of the bullet.
+  * But this won't work because
+  the next line isn't indented to match.
+
 
 Review
 ^^^^^^

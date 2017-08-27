@@ -53,6 +53,7 @@ I've got a better ``context.xml`` file. Try this on your local and remote server
                     global="jdbc/cis320"
                     type="javax.sql.DataSource" />
   </Context>
+
 Step 3 - Get the hidden form to pop up
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

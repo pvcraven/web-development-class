@@ -1,5 +1,5 @@
-Introduction to HTML
---------------------
+What Is HTML And Where Did It Come From?
+----------------------------------------
 
 .. image:: mosaic.jpg
     :width: 500px
