@@ -291,11 +291,6 @@ error using HTML Validator:
     :linenos:
     :language: html
 
-A slightly more complex example:
-
-.. literalinclude:: simple_web_document.html
-    :linenos:
-    :language: html
 
 Lists
 -----
@@ -307,7 +302,7 @@ menus are often done with lists.
 Here is an example list. The main list is surrounded by an unordered list tag ``ul``.
 Each list item is surrounded by a ``li`` tag.
 
-.. code:: html
+.. code-block:: html
 
     <ul>
       <li>Item 1</li>
@@ -319,34 +314,41 @@ You can also have an ordered list, with the ``ol`` tag. Style sheets can
 change a ``ul`` into a ``ol``, but good practice is to use ``ol``
 for numbered lists.
 
-.. code:: html
+.. code-block:: html
 
-	<ol>
-	  <li>Item 1</li>
-	  <li>Item 2</li>
-	  <li>Item 3</li>
-	</ol>
+    <ol>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ol>
 
 
 You can also have lists inside of lists. Notice how
 Item 3's ``li`` tag does not end until *after*
 the inside list closes.
 
-.. code:: html
+.. code-block:: html
 
-	<ul>
-	  <li>Item 1</li>
-	  <li>Item 2</li>
-	  <li>Item 3
-	    <ul>
-	      <li>Sub item A</li>
-	      <li>Sub item B</li>
-	      <li>Sub item C</li>
-	    </ul>
-	  </li>
-	  <li>Item 4</li>
-	  <li>Item 5</li>
-	</ul>
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3
+        <ul>
+          <li>Sub item A</li>
+          <li>Sub item B</li>
+          <li>Sub item C</li>
+        </ul>
+      </li>
+      <li>Item 4</li>
+      <li>Item 5</li>
+    </ul>
+
+
+Here is a slightly more complex HTML5 example that has some lists:
+
+.. literalinclude:: simple_web_document.html
+    :linenos:
+    :language: html
 
 Tables
 ------
@@ -364,31 +366,31 @@ Tag          Description
 ============ =============
 
 
-.. code:: html
+.. code-block:: html
 
-	<table>
-	  <thead>
-	    <tr>
-	      <th>Column 1</th>
-	      <th>Column 2</th>
-	      <th>Column 3</th>
-	    </tr>
-	  </thead>
-	  <tbody>
-	    <tr>
-	      <td>Cell</td>
-	      <td>Cell</td>
-	      <td>Cell</td>
-	    </tr>
-	  </tbody>
-	  <tfoot>
-	    <tr>
-	      <td>Summary 1</td>
-	      <td>Summary 2</td>
-	      <td>Summary 3</td>
-	    </tr>
-	  </tfoot>
-	</table>
+    <table>
+      <thead>
+        <tr>
+          <th>Column 1</th>
+          <th>Column 2</th>
+          <th>Column 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>Summary 1</td>
+          <td>Summary 2</td>
+          <td>Summary 3</td>
+        </tr>
+      </tfoot>
+    </table>
 
 
 More Information
@@ -438,16 +440,10 @@ and then paste it into Introduce `W3C`_ for validation.
 This isn't as convenient, and you'll lose time compared to HTML Validator, but it does
 work if you are on a budget.
 
+One Last HTML Sample Document
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 .. literalinclude:: basic_html.html
-    :linenos:
-    :language: html
-
-
-.. literalinclude:: base_web_document.html
-    :linenos:
-    :language: html
-
-.. literalinclude:: simple_web_document.html
     :linenos:
     :language: html
 
