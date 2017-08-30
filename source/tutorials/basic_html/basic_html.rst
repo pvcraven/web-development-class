@@ -64,18 +64,18 @@ tag. It looks like this:
     :align: center
     :alt: First Web Page
 
-All tags are enclosed in less than and greater than symbols, like <tag>.
+All tags are enclosed in less than and greater than symbols, like ``<tag>``.
 In this case, ``<p>`` is the paragraph tag. The p stands
 for paragraph.
 
 The content for the tag goes in between the open and close tags. All close
-tags have a / before the tag name. In this case, we used </p> to
+tags have a ``/`` before the tag name. In this case, we used ``</p>`` to
 close the paragraph.
 
 Tags can be nested. But you have to close inside tags before closing
 outside tags. For example:
 
-.. code:: html
+.. code-block:: html
 
     <p>I have started a paragraph tag. I will open
     a tag signifying <em>emphasis</em>.</p>
@@ -106,7 +106,7 @@ will tell you what is wrong:
 Some tags don't have content. They begin and end at the same time.
 For example, the break-line tag does not have content.
 
-.. code:: html
+.. code-block:: html
 
     <p>This is a new tag that doesn't start a new
     paragraph, it just goes to a<br />new line.</p>
@@ -124,7 +124,7 @@ able to read.
 
 You can add headings. There are six "levels" to the headings, using tags h1...h6. For example:
 
-.. code:: html
+.. code-block:: html
 
     <h1>First level heading</h1>
     <p>Paragraph.</p>
@@ -184,11 +184,11 @@ Tag           Description
 <u>           Underline
 ============= ===================
 
-One of the most popular tags is the <div> tag. This tag is used to define any
+One of the most popular tags is the ``<div>`` tag. This tag is used to define any
 sort of 'divisions' on your web page. Basically, anything you'd want to put
-in a box. Even other boxes. Because <div> is so generic, HTML5 added
-common elements like <article> <footer> <section> and <summary>. They act like
-<div> tags, but give a better description of their content.
+in a box. Even other boxes. Because ``<div>`` is so generic, HTML5 added
+common elements like ``<article>`` ``<footer>`` ``<section>`` and ``<summary>``. They act like
+``<div>`` tags, but give a better description of their content.
 
 Tag Attributes
 --------------
@@ -206,9 +206,9 @@ We can specify not only the link text, but where the link goes:
 ``<a href="http://webdev.training">My link</a>``
 
 How do we know what attributes we can use? Or even what tags? The official
-documentation for the HTML5 <a> tag is here:
+documentation for the HTML5 ``<a>`` tag is here:
 
-``http://www.w3.org/TR/2014/REC-html5-20141028/text-level-semantics.html#the-a-element <http://www.w3.org/TR/2014/REC-html5-20141028/text-level-semantics.html#the-a-element>``
+`http://www.w3.org/TR/2014/REC-html5-20141028/text-level-semantics.html#the-a-element <http://www.w3.org/TR/2014/REC-html5-20141028/text-level-semantics.html#the-a-element>`_
 
 
 From that document, we can see other interesting attributes. For example ``target``
@@ -218,8 +218,7 @@ But the official documentation is quite *dry*.
 Rather than use the official documentation,
 many people look it up on a website that is easier to navigate. For example w3schools:
 
-``<a href="http://www.w3schools.com/tags/tag_a.asp">http://www.w3schools.com/tags/tag_a.asp</a>``
-
+http://www.w3schools.com/tags/tag_a.asp
 
 Tags and tag attributes are not case sensitive. Code can use either.
 But for the sake of the developer's sanity, you should only use lower case.
@@ -233,11 +232,9 @@ For example this will load ``happy_face.png`` image off the server:
 
 ``<img src="happy_face.png" />``
 
-
 It is good practice to keep images in a separate folder. For example:
 
 ``<img src="images/happy_face.png" />``
-
 
 Images can and should have ``alt`` text specified. If the image
 can't load, this text will be displayed. If the user is blind, the screen
