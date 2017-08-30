@@ -122,6 +122,22 @@ can do a "View Source" in a web browser and see the comments. Therefore
 don't write comments that you wouldn't want everyone in the web to be
 able to read.
 
+You can add headings. There are six "levels" to the headings, using tags h1...h6. For example:
+
+.. code:: html
+
+    <h1>First level heading</h1>
+    <p>Paragraph.</p>
+
+    <h2>Second level heading</h2>
+    <p>Paragraph.</p>
+
+    <h2>Another second level heading</h2>
+    <p>Paragraph.</p>
+
+    <h1>Back to first level heading</h1>
+    <p>Paragraph.</p>
+
 Here is a list of some of the most commonly used tags:
 
 ============= ===================
@@ -234,8 +250,10 @@ There are many `image file formats`_. Here's the abridged version:
   * .jpg: Use JPEG's for photos or photo-like images.
   * .png: Use PNG's for graphic art.
   * .gif: Use GIF's for graphic art. These can be animated too.
-  * .svg: Browser support used to be poor, but is getting better.
-    See `SVG Can Do That`_?
+  * .svg: Browser support for svg used to be poor, but is getting better.
+    See `SVG Can Do That`_? SVG can scale to any resolution because it does
+    not store "dots" that make up the image, but instead stores the drawing
+    commands used to draw the image.
 
 .. _SVG Can Do That: http://slides.com/sdrasner/svg-can-do-that
 
@@ -423,7 +441,18 @@ and then paste it into Introduce `W3C`_ for validation.
 This isn't as convenient, and you'll lose time compared to HTML Validator, but it does
 work if you are on a budget.
 
+.. literalinclude:: basic_html.html
+    :linenos:
+    :language: html
 
+
+.. literalinclude:: base_web_document.html
+    :linenos:
+    :language: html
+
+.. literalinclude:: simple_web_document.html
+    :linenos:
+    :language: html
 
 .. _liveweave: http://liveweave.com/
 .. _HTML Escape Characters: http://dev.w3.org/html5/html-author/charref
