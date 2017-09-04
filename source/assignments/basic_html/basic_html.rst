@@ -179,7 +179,8 @@ form on Scholar for assignment 1. This will require you to complete Assignment 2
 * File names should not have any spaces. Use underscores instead.
 * Don't check in any 'temp' file created by CSE Validator. These all start
   with a tilde: '~'.
-* The menu should be in an unordered list, and should appear on every page.
+* The menu should be in an unordered list, and should appear on every page. Don't try to make it fancy or in a table.
+  We will add formatting in a later assignment.
 * Make sure to avoid extra spaces around tags. Don't do ``<title> About Page </title>`` instead do ``<title>About Page</title>``
 * Make sure you have a ``<header>`` somewhere. That is easy to overlook. Also remember that ``<head>`` and ``<header>``
   are completely different.
