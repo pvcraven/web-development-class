@@ -8,6 +8,7 @@ Web Development (Semester 1)
    :maxdepth: 1
 
    tutorials/text_editors/text_editors.rst
+   tutorials/view_file_extensions/view_file_extensions.rst
    theory/basic_html/basic_html.rst
    tutorials/basic_html/basic_html.rst
    theory/directories/directories.rst
