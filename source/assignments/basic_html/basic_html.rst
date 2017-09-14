@@ -169,6 +169,8 @@ form on Scholar for assignment 1. This will require you to complete Assignment 2
 
 * Make sure you submit your files, and your files only.
 * Make your your files are identified by a comment.
+* This is to be a serious website. Don't make it a joke. If someone hired you to create a website
+  with this subject, do the best job that you can at it.
 * Make sure you submit any images that go with your files.
 * Make sure to add descriptive comments when submitting. (You can't edit them
   later, so make sure you get them right the first time.)
