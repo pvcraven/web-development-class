@@ -181,11 +181,15 @@ form on Scholar for assignment 1. This will require you to complete Assignment 2
 * File names should not have any spaces. Use underscores instead.
 * Don't check in any 'temp' file created by CSE Validator. These all start
   with a tilde: '~'.
-* The menu should be in an unordered list, and should appear on every page. Put the list at the top of the page because that's where the nav bar will go. Don't try to make it fancy or in a table.
+* The menu should be in an unordered list, and should appear on every page. 
+  Put the list at the top of the page because that's where the nav bar will go. 
+  Don't try to make it fancy or in a table.
   We will add formatting in a later assignment.
 * Make sure to avoid extra spaces around tags. Don't do ``<title> About Page </title>`` instead do ``<title>About Page</title>``
-* Don't make your lines really long. If your paragraph is longer than 80 characters, use a return and break it up. Yes, the
-  web page will ignore it, but it is hard to edit a file if your text extends way off the screen to the right.
+* Don't make your lines really long. If your paragraph is longer 
+  than 80 characters, use a return and break it up. Yes, the
+  web page will ignore it, but it is hard to edit a file if 
+  your text extends way off the screen to the right.
 * Include a character set in the ``<head>``.
 * Your ``<title>`` should be descriptive. It might mirror the ``<h1>`` content.
 * Make sure you have a ``<header>`` somewhere. That is easy to overlook. Also remember that ``<head>`` and ``<header>``
