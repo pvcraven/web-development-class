@@ -15,6 +15,9 @@ To complete this project:
 * Clone it.
 * Look at it.
 * Create a branch of the project in SourceTree. Follow the :ref:`branching-tutorial`.
+* You will be changing the files that are already there. Do NOT create your own folder with your
+  own set of files. You can correct mistakenly named files. You can reorganize poorly organized
+  files. But don't let there be two copies of the website in the project.
 * Double-check the project for HTML and link errors using HTML Validator.
   Fix any issues. This is like real life, where you get stuck cleaning up other
   people's messes.
@@ -42,6 +45,8 @@ To complete this project:
   * Apply a stylesheet that you've created
   * Make sure the stylesheet is a subdirectory named "css"
   * Most of your styles should be in this page
+  * Only create one stylesheet. Don't create a stylesheet for each html page. The idea
+    of a stylesheet is to apply the same style across multiple pages.
 
 * Create styles with a tag selector
 * Create styles with an id selector (feel free to update HTML with ids and classes as needed)
@@ -59,7 +64,8 @@ To complete this project:
   * Do not center blocks of text. That's very hard to read.
 
 * Spend some time doing detail work. Make it look good.
-* Revalidate with HTML Validator.
+* Revalidate with HTML Validator. Don't forget to validate your css file. I'll likely look at the main index
+  and the css file when I grade.
 * Commit
 * Push
 * Submit the assignment in Scholar. Paste in the link to the GitHub web site for the project.
