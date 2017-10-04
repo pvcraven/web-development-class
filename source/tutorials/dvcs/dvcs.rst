@@ -82,7 +82,7 @@ Creating Your Project in GitHub
 .. image:: github_1.png
     :width: 500px
 
-* After creating the project, invite the instructor (``pvcraven`` if it is
+* After creating the project, invite the instructor (``pcraven`` if it is
   Dr. Craven) and your team mates. Do this by clicking Settings...Collaborators.
   Then it will ask for your password. Then start entering usernames.
 

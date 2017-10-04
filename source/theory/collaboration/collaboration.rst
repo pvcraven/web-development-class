@@ -33,23 +33,22 @@ Building a high performing team
 
 
 How to "present"
+
 * Take public speaking classes
 * Learn to "work a room"
 
 How to "organize"
+
 * List tasks
 * Prioritize
 * Follow up
 * Index/search
 
-How to deal with non-engaged team members
+Other
 
-How to deal with disruptive team members
-
-How to deal with unskilled team members
-
-Conflict - conflict avoidance.
-
-Perspective
-
-How to advertise yourself
+* How to deal with non-engaged team members
+* How to deal with disruptive team members
+* How to deal with unskilled team members
+* Conflict - conflict avoidance.
+* Perspective
+* How to advertise yourself

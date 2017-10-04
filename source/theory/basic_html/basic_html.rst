@@ -72,6 +72,14 @@ There are several issues with bad HTML code:
 * And most importantly: other developers will make fun of you
   if you write bad HTML code.
 
+Who Makes HTML Standards
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+The `World Wide Web Consortium`_ (W3C) is an international group that works with member organizations
+to come up with the standards for HTML.
+
+.. _World Wide Web Consortium: https://www.w3.org/
+
 Parts of a URL
 ^^^^^^^^^^^^^^
 

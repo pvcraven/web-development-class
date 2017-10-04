@@ -169,6 +169,8 @@ form on Scholar for assignment 1. This will require you to complete Assignment 2
 
 * Make sure you submit your files, and your files only.
 * Make your your files are identified by a comment.
+* This is to be a serious website. Don't make it a joke. If someone hired you to create a website
+  with this subject, do the best job that you can at it.
 * Make sure you submit any images that go with your files.
 * Make sure to add descriptive comments when submitting. (You can't edit them
   later, so make sure you get them right the first time.)
@@ -179,8 +181,17 @@ form on Scholar for assignment 1. This will require you to complete Assignment 2
 * File names should not have any spaces. Use underscores instead.
 * Don't check in any 'temp' file created by CSE Validator. These all start
   with a tilde: '~'.
-* The menu should be in an unordered list, and should appear on every page.
+* The menu should be in an unordered list, and should appear on every page. 
+  Put the list at the top of the page because that's where the nav bar will go. 
+  Don't try to make it fancy or in a table.
+  We will add formatting in a later assignment.
 * Make sure to avoid extra spaces around tags. Don't do ``<title> About Page </title>`` instead do ``<title>About Page</title>``
+* Don't make your lines really long. If your paragraph is longer 
+  than 80 characters, use a return and break it up. Yes, the
+  web page will ignore it, but it is hard to edit a file if 
+  your text extends way off the screen to the right.
+* Include a character set in the ``<head>``.
+* Your ``<title>`` should be descriptive. It might mirror the ``<h1>`` content.
 * Make sure you have a ``<header>`` somewhere. That is easy to overlook. Also remember that ``<head>`` and ``<header>``
   are completely different.
 * The footer should look something like this:

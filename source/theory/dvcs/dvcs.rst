@@ -42,10 +42,8 @@ Additional Information
 ^^^^^^^^^^^^^^^^^^^^^^
 
 * `Atlassian Tutorials`_
-* `Hg Command Line`_
 
 .. _Subversion: http://en.wikipedia.org/wiki/Apache_Subversion
 .. _Git: http://en.wikipedia.org/wiki/Git_(software)
 .. _Mercurial: http://en.wikipedia.org/wiki/Mercurial
 .. _Atlassian Tutorials: https://www.atlassian.com/git/tutorials/
-.. _Hg Command Line: http://hginit.com/01.html

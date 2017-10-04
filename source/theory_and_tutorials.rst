@@ -8,6 +8,7 @@ Web Development (Semester 1)
    :maxdepth: 1
 
    tutorials/text_editors/text_editors.rst
+   tutorials/view_file_extensions/view_file_extensions.rst
    theory/basic_html/basic_html.rst
    tutorials/basic_html/basic_html.rst
    theory/directories/directories.rst
@@ -17,6 +18,8 @@ Web Development (Semester 1)
    theory/css/css.rst
    tutorials/css/css.rst
    tutorials/css_layout/css_layout.rst
+   tutorials/bootstrap/bootstrap.rst
+   tutorials/bootstrap_grid/bootstrap_grid.rst
    theory/collaboration/collaboration.rst
    theory/web_servers/web_servers.rst
    theory/command_line/command_line.rst
@@ -25,8 +28,6 @@ Web Development (Semester 1)
    theory/cms/cms.rst
    theory/cloud/cloud.rst
    theory/static_content_generators/static_content_generators.rst
-   tutorials/bootstrap/bootstrap.rst
-   tutorials/bootstrap_grid/bootstrap_grid.rst
    tutorials/web_server_setup/web_server_setup.rst
    tutorials/aws/aws.rst
    tutorials/command_line/command_line.rst
