@@ -1,3 +1,5 @@
+.. _aws_setup:
+
 Amazon Web Services
 ===================
 
@@ -364,7 +366,7 @@ Point Apache Web Server to Our Files
 Update the file's ``DocumentRoot`` to point to the directory that holds your
 web site. See the highlighted line below that you should edit:
 
-.. code-block:: xml
+.. code-block:: text
     :linenos:
     :emphasize-lines: 12
 

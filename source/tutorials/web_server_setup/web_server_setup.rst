@@ -6,7 +6,7 @@ XAMPP Web Server Setup
 Installing XAMPP
 ^^^^^^^^^^^^^^^^
 
-We are going to use XAMPP. XAMPP is a bundle of free software that contains
+We are going to use a software program called "XAMPP". XAMPP is a bundle of free software that contains
 the Apache Web Server, and some other applications. The name comes from:
 
 * X - Cross platform (Works on Windows, Mac and Linux)
