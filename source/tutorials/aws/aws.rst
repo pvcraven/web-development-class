@@ -146,15 +146,18 @@ Save it somewhere safe. You can't download it again, so if you lose that
 file you lose access to your servers. You can use the same key/pair for
 many servers if you want.
 
-DO NOT SAVE YOUR PEM KEY IN THE HTML FOLDER OR ALLOW IT TO BE CHECKED INTO
-VERSION CONTROL.
+.. attention::
+    **Do not save your PEM key into the HTML folder or allow it to be
+    checked into version control.**
 
 Seriously. Make sure you didn't save this in the same folder as all your web stuff.
 Do not risk it being checked into version control. Go make sure. I'll wait.
 
 Did you make sure?
 
-Really, DO NOT ALLOW THIS FILE INTO VERSION CONTROL.
+.. danger::
+
+    **Really, DO NOT ALLOW THIS FILE INTO VERSION CONTROL.**
 
 If you do this, you are giving everyone access to all your stuff. Also,
 version control keeps old versions. Deleting it won't remove the file.
