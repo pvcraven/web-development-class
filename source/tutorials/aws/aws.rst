@@ -24,6 +24,7 @@ Adding the Deploy Script
 * At this point, you have a copy of the project under your name.
   You will need to "clone" the new fork that you created. Clone it into a
   new empty folder. Do not clone it into your copy of the original project.
+* Use SourceTree to select the branch that you want to work on.
 * We will assume you have a directory structure created something like the image
   below. If not, adjust it now. The most common issue I've run into would be
   people who have a ``public html`` folder instead of a ``public_html`` folder.
@@ -62,6 +63,9 @@ the subject.
 
 We will eventually set GitHub up to call this web page when we push new code to
 the repository. For now, just create the file and add it to GitHub.
+
+.. attention::
+    Make sure your are on the proper branch. Add the file. Commit. Push.
 
 Create a Server Instance
 ------------------------
@@ -227,7 +231,7 @@ shift-insert to paste, and not ctrl-v. Copy the commands one line at a time.
 
   sudo apt-get update
   sudo apt-get -y upgrade
-  sudo apt-get -y install apache2 php5 php5-mysql git
+  sudo apt-get -y install apache2 git php7.0 libapache2-mod-php7.0
 
 
 The first line checks for software updates. The second line installs them.
@@ -303,7 +307,8 @@ In detail, here's how the commands break down:
     # Stop! Enter this next line (below) by itself.
     # It will ask three questions. Hit 'enter' for
     # each one. Don't keep pasting the other lines
-    # in for each question. Also, update with your e-mail.
+    # in for each question. You can update with your
+    # e-mail but it isn't necessary.
     sudo -u www-data ssh-keygen -t rsa -C "your.email@simpson.edu"
 
     sudo -u www-data ssh-agent -s
@@ -342,6 +347,11 @@ sample-web-project with the name of your GitHub project. Replace pvcraven with
 your own GitHub id. After you enter line four it will give you a warning
 about adding a key, answer "yes" to that warning.
 
+.. attention::
+    Don't blindly copy/paste. Don't use "sample-web-project", use the name of your project as it
+    exists on the GitHub URL. There are **three** places you need to do so in the script
+    below. Also, replace ``the_brach_i_want`` with the branch that you want to be shown.
+
 ::
 
   cd /var/www
@@ -354,6 +364,8 @@ about adding a key, answer "yes" to that warning.
   # Update the next line with your GitHub id and GitHub project name.
   # You will likely be asked a yes/no question. Go ahead and say 'yes'
   sudo -u www-data git clone git@github.com:pvcraven/sample-web-project.git
+  sudo -u www-data git checkout the_branch_i_want
+
 
 Point Apache Web Server to Our Files
 ------------------------------------
@@ -368,6 +380,12 @@ Point Apache Web Server to Our Files
 
 Update the file's ``DocumentRoot`` to point to the directory that holds your
 web site. See the highlighted line below that you should edit:
+
+..attention::
+
+    Don't use the mouse in nano. Use the arrow keys on your keyboard to move around.
+    To exit out of the "nano" editor, hit "ctrl-x", hit "yes" to save, and then "enter"
+    to save as the same file name.
 
 .. code-block:: text
     :linenos:
