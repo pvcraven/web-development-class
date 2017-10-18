@@ -230,6 +230,8 @@ shift-insert to paste, and not ctrl-v. Copy the commands one line at a time.
 ::
 
   sudo apt-get update
+
+  # For the next two, if you are asked questions during the update/install, just hit 'enter' for the default
   sudo apt-get -y upgrade
   sudo apt-get -y install apache2 git php7.0 libapache2-mod-php7.0
 
@@ -381,7 +383,7 @@ Point Apache Web Server to Our Files
 Update the file's ``DocumentRoot`` to point to the directory that holds your
 web site. See the highlighted line below that you should edit:
 
-..attention::
+.. attention::
 
     Don't use the mouse in nano. Use the arrow keys on your keyboard to move around.
     To exit out of the "nano" editor, hit "ctrl-x", hit "yes" to save, and then "enter"
