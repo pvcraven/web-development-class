@@ -11,6 +11,10 @@ automatically update with the code that we push to GitHub.
 Adding the Deploy Script
 ------------------------
 
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/AYhqDJLufzg" frameborder="0" allowfullscreen></iframe>
+
 * Start with a project that you already have worked on. Probably your last
   assignment.
 * You will want your own copy of the project. (If the project is currently
@@ -70,6 +74,10 @@ the repository. For now, just create the file and add it to GitHub.
 
 Create a Server Instance
 ------------------------
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/pqiDL0lxU0s" frameborder="0" allowfullscreen></iframe>
 
 If you are being provide a server instance by your instructor, skip to the
 `Setting Up The Server`_ section.
@@ -238,6 +246,11 @@ type "yes". You'll only get that question once.
 Connecting With Windows
 ~~~~~~~~~~~~~~~~~~~~~~~
 
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/suWI9jIXDMQ" frameborder="0" allowfullscreen></iframe>
+
+
 Download and run the free version of `MobaXTerm <https://mobaxterm.mobatek.net/download.html>`_.
 
 .. image:: moba_1.png
@@ -253,6 +266,10 @@ Enter in the info needed to get access. The user name will always be
 
 Installing and Updating the Software
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/y-CK4zzoBM0" frameborder="0" allowfullscreen></iframe>
 
 We are now in the server. We need to update the software. Enter these commands.
 You can copy/paste them if you like. Note that most terminal programs use
@@ -305,6 +322,10 @@ server. You should get a default page.
 
 Installing an Encryption Key
 ----------------------------
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Kj0-lA68skw" frameborder="0" allowfullscreen></iframe>
 
 Next, we need a key/pair to handle the connection between our server and GitHub.
 Use these commands on the terminal, updating the e-mail address to your own.
