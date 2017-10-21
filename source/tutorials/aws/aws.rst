@@ -24,7 +24,8 @@ Adding the Deploy Script
 * At this point, you have a copy of the project under your name.
   You will need to "clone" the new fork that you created. Clone it into a
   new empty folder. Do not clone it into your copy of the original project.
-* Use SourceTree to select the branch that you want to work on.
+* Use SourceTree to select the branch that you want to work on. It will default to
+  the ``master`` branch if you don't specify one.
 * We will assume you have a directory structure created something like the image
   below. If not, adjust it now. The most common issue I've run into would be
   people who have a ``public html`` folder instead of a ``public_html`` folder.
@@ -83,7 +84,13 @@ Select EC2:
     :width: 640px
     :align: center
 
-Launch a new instance:
+Launch a new instance.
+
+.. attention::
+
+    If you are restarting this tutorial, you probably want
+    to shut down any other instances you are running. If you run more than one
+    instance you will get charged money from Amazon.
 
 .. image:: launch_instance_1.png
     :width: 550px
@@ -132,7 +139,8 @@ Set up the security groups as shown. Your "My IP" will fill in automatically
 with your IP address when the drop-down box is selected. You'll need to add a
 SSH row for each computer IP you want to shell in from.
 
-
+(If you've been through this step before, you can "Select an existing security group" and
+not do this again.)
 
 .. image:: setup_security.png
     :width: 600px
@@ -151,8 +159,9 @@ file you lose access to your servers. You can use the same key/pair for
 many servers if you want.
 
 .. attention::
-    **Do not save your PEM key into the HTML folder or allow it to be
-    checked into version control.**
+
+    Do not save your PEM key into the HTML folder or allow it to be
+    checked into version control.
 
 Seriously. Make sure you didn't save this in the same folder as all your web stuff.
 Do not risk it being checked into version control. Go make sure. I'll wait.
@@ -165,8 +174,10 @@ Did you make sure?
 
 If you do this, you are giving everyone access to all your stuff. Also,
 version control keeps old versions. Deleting it won't remove the file.
-And once it hits GitHub every evil person will have it.
-You'll need to recreate your key.
+And once it hits GitHub every evil person will have it. Seriously. People
+have programs that scan all of GitHub for people that check in keys.
+If you ever check in a key, you'll need to recreate your key and assume
+everything accessible by that key has been compromised.
 
 *Do* save the key somewhere safe. On a flash drive or network drive. If you
 lose the key file, you can't access your machine and you'll have to start over.
@@ -205,9 +216,23 @@ instructor if he set up the server for you.
     :width: 600px
     :align: center
 
-Use that address and the key to get a command shell on the new server. I'm
-using MobaXTerm for access, you could also use PuTTY, or the "Terminal" on
-the Mac. I'm not sure how to get the Mac to work off-hand.
+Use that address and the key to get a command shell on the new server.
+
+Connecting With a Mac
+~~~~~~~~~~~~~~~~~~~~~
+
+To use the Terminal on the Mac, search for and run the "Terminal" program.
+Find where your key is that you downloaded. Then type::
+
+    ssh -i my_key.pem ubuntu@myservername.com
+
+You may get a question about the "authenticity" of the host. If so, just
+type "yes". You'll only get that question once.
+
+Connecting With Windows
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Download and run the free version of `MobaXTerm <https://mobaxterm.mobatek.net/download.html>`_.
 
 .. image:: moba_1.png
     :width: 600px
@@ -352,7 +377,7 @@ about adding a key, answer "yes" to that warning.
 .. attention::
     Don't blindly copy/paste. Don't use "sample-web-project", use the name of your project as it
     exists on the GitHub URL. There are **three** places you need to do so in the script
-    below. Also, replace ``the_brach_i_want`` with the branch that you want to be shown.
+    below. Also, replace ``the_branch_i_want`` with the branch that you want to be shown.
 
 ::
 
@@ -366,14 +391,21 @@ about adding a key, answer "yes" to that warning.
   # Update the next line with your GitHub id and GitHub project name.
   # You will likely be asked a yes/no question. Go ahead and say 'yes'
   sudo -u www-data git clone git@github.com:pvcraven/sample-web-project.git
+
+  # If you are using any branch but "master", then select the branch below:
   sudo -u www-data git checkout the_branch_i_want
 
 
 Point Apache Web Server to Our Files
 ------------------------------------
 
+Apache saves all of its setup information in text files. Exactly where these
+files are and what they are named is not exactly intuitive. With some Googling
+you can find this. Or just read below:
+
 ::
 
+  # Change to the directory with the configuration information
   cd /etc/apache2/sites-available
 
   # Use the 'nano' editor to edit this file
@@ -425,16 +457,62 @@ web site. See the highlighted line below that you should edit:
 
     # vim: syntax=apache ts=4 sw=4 sts=4 sr noet
 
+To exit the editor hit "ctrl-x". Then after that, it will ask if you want
+to save the file. Hit "y" for yes. Then it will ask you what file name.
+Hit the "enter" key to just accept the same file name that you loaded.
+
 Restart the Web Server
 ----------------------
 
-Great, now that you've edited the file, restart the web server.
+Great, now that you've edited the file, restart the web server. Make sure
+you are no longer in the text editor, and at the command prompt. Type:
 
 ::
 
   sudo service apache2 restart
 
 See if your web pages are showing up now.
+
+If your web pages are **not** showing up, then you need check to make sure that
+you have the correct directory specified.
+
+Try typing:
+
+::
+
+    # Change to the /var/www directory:
+    cd /var/www
+
+    # List the files in the directory:
+    ls
+
+At that point, see if you spot a directory that should have your files. Then type:
+
+::
+
+    # Change to sample-web-project
+    cd sample-web-project
+
+    # List the files in the directory:
+    ls
+
+    # If there is a public_html or some other directory that has your files:
+    cd public_html
+
+    # Once you've found your files, Print the Working Directory with the pwd commmand:
+    pwd
+
+    # Copy this, and go back up and re-edit the Apache config file and
+    # restart Apache again.
+
+Does your website show up? Excellent! Copy the URL. This is part of your assignment.
+
+Check Deployment Script
+-----------------------
+
+Right now, if you update your website and push more code, your server
+won't update. We could update it by
+
 
 Installing a Webhook
 --------------------

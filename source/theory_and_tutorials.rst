@@ -22,6 +22,7 @@ Web Development (Semester 1)
    tutorials/bootstrap_grid/bootstrap_grid.rst
    theory/collaboration/collaboration.rst
    theory/web_servers/web_servers.rst
+   tutorials/aws/aws.rst
    theory/command_line/command_line.rst
    theory/application_server/application_server.rst
    theory/performance/performance.rst
@@ -29,7 +30,6 @@ Web Development (Semester 1)
    theory/cloud/cloud.rst
    theory/static_content_generators/static_content_generators.rst
    tutorials/web_server_setup/web_server_setup.rst
-   tutorials/aws/aws.rst
    tutorials/command_line/command_line.rst
    tutorials/word_press/word_press.rst
    tutorials/sphinx/sphinx.rst
