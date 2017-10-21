@@ -96,6 +96,12 @@ Launch a new instance.
     :width: 550px
     :align: center
 
+We are going to create our own server. But the server will not be running Microsoft Windows
+or MacOS. We are going to use a version of the Linux Operating System called Ubuntu.
+
+Ubuntu is free. You can run it without a graphical user interface, which is great
+for a small cheap server. And it isn't hard to administer remotely.
+
 Select Ubuntu:
 
 .. image:: select_ubuntu.png
@@ -269,7 +275,8 @@ In detail, here's what the commands mean:
 
 * Line 1:
     * ``sudo`` means "Substitute User Do". It allows us to run the next command
-      as someone else. It defaults to the root (administrator).
+      as someone else. It defaults to the root (administrator). Since we are
+      installing new software, we need to do it as the administrator.
     * ``apt-get`` is the software manager.
     * ``update`` is a apt-get directive that tells apt-get to go check for
       updated software. It doesn't update it, it just checks for updates.
@@ -311,7 +318,7 @@ In detail, here's how the commands break down:
   public/private keys are stored. In the case of the apache process, the home
   directory is ``/var/www`` so we put the ``.ssh`` folder here.
 * Line 3: ``chown`` changes the ownership of a file. Because we created .ssh as
-  root, we need to change it to the owner of the apache process which is
+  root, we need to change it to the owner of the Apache web server process which is
   ``www-data``. We are changing both the user and the group, so that is why
   there is a colon and the user name twice.
 * Line 9: The ``sudo -u www-data`` tells the computer to run the next command as
@@ -381,6 +388,7 @@ about adding a key, answer "yes" to that warning.
 
 ::
 
+  # Change to the directory (cd) that has our web files: /var/www
   cd /var/www
 
   # Update the next line with the name of your project, as shown in your
