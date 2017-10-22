@@ -376,15 +376,10 @@ ctrl-insert instead of ctrl-c. Don't save this key in your version control eithe
     :width: 640px
     :align: center
 
-Go back to GitHub and add it as a deployment key. Select your profile:
+Go back to GitHub and add it as a deployment key. Select your profile icon in the upper right of the
+screen and then select "settings":
 
 .. image:: select_github_profile.png
-    :width: 200px
-    :align: center
-
-Edit your profile:
-
-.. image:: edit_github_profile.png
     :width: 200px
     :align: center
 
