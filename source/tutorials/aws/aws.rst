@@ -539,6 +539,10 @@ Does your website show up? Excellent! Copy the URL. This is part of your assignm
 Check Deployment Script
 -----------------------
 
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Iv2m2XwcFTw" frameborder="0" allowfullscreen></iframe>
+
 Right now, if you update your website and push more code, your server
 won't update. We could update it by
 
