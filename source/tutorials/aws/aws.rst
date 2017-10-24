@@ -417,6 +417,7 @@ about adding a key, answer "yes" to that warning.
   sudo -u www-data git clone git@github.com:pvcraven/sample-web-project.git
 
   # If you are using any branch but "master", then select the branch below:
+  cd sample-web-project
   sudo -u www-data git checkout the_branch_i_want
 
 
