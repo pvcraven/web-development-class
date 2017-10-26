@@ -271,7 +271,7 @@ Installing and Updating the Software
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/y-CK4zzoBM0" frameborder="0" allowfullscreen></iframe>
 
-We are now in the server. We need to update the software. Enter these commands.
+We are now in the server. We need to update the software, and install new software. Enter these commands.
 You can copy/paste them if you like. Note that most terminal programs use
 shift-insert to paste, and not ctrl-v. Copy the commands one line at a time.
 
@@ -308,6 +308,22 @@ In detail, here's what the commands mean:
       four software packages listed. ``apache2`` is the web server, ``php5`` is the
       application server, ``php5-mysql`` allows us to hook the application server
       to the database, and ``git`` is our version control software.
+
+.. note::
+
+    Terms people often confuse:
+
+    "git" is the software we use for version control.
+    "GitHub" is the web site we use to store our git code. "SourceTree" is a graphical user interface
+    that sits on top of "git".
+
+    "Apache" (version 2) is our web server software. Not EC2 (which is the Amazon service to make machines) or
+    AWS (which is all of Amazon's services.)
+
+    "apt-get" is our software manager. MobaXTerm is software we use to use SSH and shell over to
+    our server to type commands.
+
+
 
 Check the Web Server
 ^^^^^^^^^^^^^^^^^^^^
