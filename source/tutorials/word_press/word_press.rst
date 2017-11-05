@@ -24,16 +24,9 @@ keep track of everything for us. Enter these commands one-by-one.
     # Update to the most current versions of the software
     sudo apt-get -y upgrade
 
-    # Get the software WordPress needs to run on
-    sudo apt-get -y install php5 php5-mysql mysql-server
-
 If you are using Ubuntu 16, you'll need to do this for the last line::
 
-    sudo apt-get install libapache2-mod-php mysql-server php php-mysql apache2
-    sudo apt-get install php libapache2-mod-php php-mcrypt php-mysql
-
-The last step will ask you y/n if you want to continue and install all those
-packages. Hit 'y' and enter.
+    sudo apt-get -y install mysql-server
 
 Next, when it installs the database server, you'll get a screen that looks like the
 image below. Write down the password that you choose. Don't leave it blank.
@@ -41,6 +34,11 @@ image below. Write down the password that you choose. Don't leave it blank.
 .. image:: my_sql_password.png
     :width: 640px
     :align: center
+
+Next, install these software packages::
+
+    sudo apt-get -y install php7.0 libapache2-mod-php7.0 php-mcrypt php-mysql
+
 
 This next part creates the database and user for WordPress. Instead of
 ``yourdbpassword`` please use the password you entered above for your
@@ -58,6 +56,9 @@ database.
     yourdbserverpassword
 
     # Create a new user for your database called "wordpress-db"
+    # You need to create a password for the wordpress user that will manage your
+    # wordpress database. This is different than the 'root' user/password that was
+    # the admin user for the whole database server.
     CREATE USER 'wordpress-db'@'localhost' IDENTIFIED BY 'yourdbpassword';
 
     # Create a new database, also called "wordpress-db"
