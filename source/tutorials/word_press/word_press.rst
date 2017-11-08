@@ -29,20 +29,55 @@ If you are using Ubuntu 16, you'll need to do this for the last line::
     sudo apt-get -y install mysql-server
 
 Next, when it installs the database server, you'll get a screen that looks like the
-image below. Write down the password that you choose. Don't leave it blank.
+image below. Store the password that you choose. Don't leave it blank.
+
+This install will have you create three passwords:
+
+* Password for the database server (a server can have multiple databases)
+* Password for the WordPress database
+* Password for the WordPress administrator
+
+This one is for the **database server**.
 
 .. image:: my_sql_password.png
     :width: 640px
     :align: center
 
+.. attention::
+
+    Wait! Use a good password. You are going to be working on systems that will
+    have programs that automatically are trying to gain access to your system
+    every minute. Literally.
+
+    Don't use a common password. Leaks like the Adobe one of 150 million passwords
+    show most people pick terrible passwords. Here is a
+    `list of the 1000 most common passwords used at the Adobe site`_. Take a minute,
+    read through those. Ever use one of these passwords?
+
+    If you haven't already, use a password program like KeePass_ to generate random
+    passwords and store them.
+
+    Use an entire sentence as a password to protect that password database. I use KeePass, Google
+    Drive, and an app on my phone so I can always get to these passwords and have them
+    synchronized. Yes, I memorize a password with over 25 characters to it, but that is
+    the _only_ password I have to remember.
+
+
+
+.. _KeePass: https://keepass.info/
+.. _list of the 1000 most common passwords used at the Adobe site: https://github.com/danielmiessler/SecLists/blob/master/Passwords/10_million_password_list_top_1000.txt
+
 Next, install these software packages::
 
     sudo apt-get -y install php7.0 libapache2-mod-php7.0 php-mcrypt php-mysql
 
-
 This next part creates the database and user for WordPress. Instead of
-``yourdbpassword`` please use the password you entered above for your
+``yourdbserverpassword`` please use the password you entered above for your
 database.
+
+You will also see that there is a ``yourdbpassword``. This is different than
+the ``yourdbserverpassword``. It is the password for just the WordPress database.
+Make up a new password for ``yourdbpassword``.
 
 ::
 
@@ -101,19 +136,27 @@ Copy the sample configuration file and get it ready for editing::
 
 Next, we need to edit the configuration file::
 
-    vim wp-config.php
+    nano wp-config.php
 
 Replace the default with the database name ``wordpress-db`` and the database
-user, also ``wordpress-db``. Next, fill in the password. Then save the file.
+user, also ``wordpress-db``. Next, fill in the password ``yourdbpassword``.
+This is the password for the WordPress database, **not** the password for the
+database server.
+Then save the file.
 
 .. image:: wp-config.png
     :width: 640px
     :align: center
 
+In the example below, instead of ``my_sample_project``, please replace that with the
+directory of your actual project. If you didn't use ``public_html``, then you'll need
+to adjust the path appropriately. Don't just blindly copy that line and hope it works.
+Use ``cd`` and ``ls`` commands to make sure that ``wordpress`` goes into the correct
+directory.
+
 ::
 
     # Go up a directory
-
     cd ..
 
     # Move the WordPress directory to a directory that the web server sees.
@@ -145,6 +188,11 @@ add, and delete content.
 .. image:: dashboard.png
     :width: 640px
     :align: center
+
+Play around with WordPress at least enough that you can figure out how to put your
+name on the main page. Our next assignment will involve putting more content
+on the page. We just need enough here that you can turn in a URL that shows
+you have WordPress up and running. But feel free to explore WordPress and learn.
 
 Updating
 --------

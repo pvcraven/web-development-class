@@ -7,9 +7,12 @@ adding, editing, and deleting content. It also provides a way to manage a
 web site's style.
 
 There are many CMS out there. One of the more popular ones is WordPress_.
-Other popular CMS are Drupal and Joomla.
+Other popular CMS are Drupal_ and Joomla_.
 WordPress was started back in 2003, and is the one we'll cover in this class.
 Many of the concepts translate well to other CMS though.
+
+.. _Drupal: https://www.drupal.org/
+.. _Joomla: https://www.joomla.org/
 
 By default, a CMS like WordPress can allow anyone to create their own website
 without coding or even understanding HTML. Even if you understand how to code

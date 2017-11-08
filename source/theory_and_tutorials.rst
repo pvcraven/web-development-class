@@ -25,14 +25,14 @@ Web Development (Semester 1)
    tutorials/aws/aws.rst
    tutorials/command_line/command_line.rst
    theory/command_line/command_line.rst
+   tutorials/web_server_setup/web_server_setup.rst
    theory/application_server/application_server.rst
    theory/performance/performance.rst
    theory/cms/cms.rst
-   theory/cloud/cloud.rst
-   theory/static_content_generators/static_content_generators.rst
-   tutorials/web_server_setup/web_server_setup.rst
    tutorials/word_press/word_press.rst
+   theory/static_content_generators/static_content_generators.rst
    tutorials/sphinx/sphinx.rst
+   theory/cloud/cloud.rst
 
 Advanced Web Development (Semester 2)
 -------------------------------------

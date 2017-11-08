@@ -1,7 +1,7 @@
 Assignment 10 - WordPress Site
 ==============================
 
-* Edit your website. You can usually get to the dashboad by adding
+* Edit your website. You can usually get to the dashboard by adding
   ``/wordpress/wp-admin/`` to the end of your URL.
 * Select a theme, other than the default theme.
     * Select Appearance...themes from the dashboard.
