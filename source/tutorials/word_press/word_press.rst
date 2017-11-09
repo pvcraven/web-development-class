@@ -286,7 +286,7 @@ Now start mysql again:
 
     sudo service mysql start
 
-You should be able to now log in with ``mysql -u root -p`` and contiue the tutorial.
+You should be able to now log in with ``mysql -u root -p`` and continue the tutorial.
 
 Resetting The Wordpress Database User Password
 ----------------------------------------------
