@@ -25,9 +25,10 @@ Assignment 10 - WordPress Site
       if you want. EXCEPT don't create one for index.html.
     * Just put in the title for now.
     * Visit your site, confirm the pages are showing up in the navigation bar.
-    * Add at least new page (or reorganize a page that exists) and give it a
+    * Try adding at least new page (or reorganize a page that exists) and give it a
       "parent" page. You can do this on the right side while editing a page.
-    * Verify you now have a drop-down menu with the pages.
+    * Verify you now have a drop-down menu with the pages. (This doesn't work with all
+      themes.)
 
 * Fill in page content
 
