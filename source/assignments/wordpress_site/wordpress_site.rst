@@ -27,8 +27,16 @@ Assignment 10 - WordPress Site
       can also click a "text" tab and edit the HTML directly.
 * Create at least two posts
     * Create at least two posts and have them as part of a news feed.
+* Turn in:
+    * URL/link to your website
+    * Detail what you did with selecting a theme
+    * Summarize theme customization you did.
+    * Briefly summarize the pages that you created.
+    * Briefly point out the posts that you created.
+    * Tell me where you uploaded at least one image to a post or page
 
-If you have time, play around with WordPress and figure out what you can do.
+If you have time, play around with WordPress and figure out more about what you can do.
+Working with a CMS is a very useful skill.
 
 .. image:: rubric.png
     :width: 550px
