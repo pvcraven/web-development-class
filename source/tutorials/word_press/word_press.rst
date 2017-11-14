@@ -166,6 +166,10 @@ directory.
     cd ..
 
     # Move the WordPress directory to a directory that the web server sees.
+    # WAIT! Make sure you have the right directory before doing this, or you'll
+    # mess everything up. Try 'ls /var/www' and then keep going from there until
+    # you find your public_html folder. Then use that path below instead of what
+    # I have which is totally not what you want.
     sudo mv wordpress /var/www/my_sample_project/public_html
 
     # Change ownership to the apache process and group (www-data)
@@ -177,8 +181,12 @@ need to add that to your URL. It will look something like::
 
     http://XXXPUT_YOUR_SERVER_NAME_HEREXXX/wordpress/
 
-What is XXXPUT_YOUR_SERVER_NAME_HEREXXX? That's your servername. What you typed in to get to your web pages. That
-you got off the Amazon Web Services console. Usually looks like "ec2-34-211-33-140.us-west-2.compute.amazonaws.com".
+.. attention::
+
+    What is XXXPUT_YOUR_SERVER_NAME_HEREXXX? That's your servername. What you typed in to get to your web pages. That
+    you got off the Amazon Web Services console. Usually looks like "ec2-34-211-33-140.us-west-2.compute.amazonaws.com".
+
+    Also, this is NOT a command you type into your terminal. This is a URL link you put in your browser.
 
 Then you should end up with a WordPress installation screen, which should be
 rather straight-forward.

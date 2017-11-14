@@ -20,8 +20,9 @@ Assignment 10 - WordPress Site
 * Add pages
 
     * Add pages. Do this by by clicking "Pages" and then "Add New". For your
-      new website, create a new page for each page in your old website. EXCEPT
-      don't create one for index.html.
+      new website, create a new page for each page in your old website. Or
+      at least two of them. You can also create a new website from scratch
+      if you want. EXCEPT don't create one for index.html.
     * Just put in the title for now.
     * Visit your site, confirm the pages are showing up in the navigation bar.
     * Add at least new page (or reorganize a page that exists) and give it a
