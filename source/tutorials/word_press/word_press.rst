@@ -226,18 +226,13 @@ is bad, you'll need to reset it.
 
 To reset the password you need to start the MySQL database in 'safe' mode. Unfortunately our distribution of
 Linux doesn't let us do that easily, because MySQL expects a directory to exist in same mode that doesn't exist
-by default with AWS's Ubuntu distribution. So we need to create it:
-
-.. code-block:: text
-
-    sudo mkdir /var/run/mysqld
-    sudo chown mysql:mysql /var/run/mysqld
-
-Great, now stop the database and start it in safe mode:
+by default with AWS's Ubuntu distribution. So we need to create it, stop the database and start it in safe mode:
 
 .. code-block:: text
 
     sudo service mysql stop
+    sudo mkdir /var/run/mysqld
+    sudo chown mysql:mysql /var/run/mysqld
     sudo mysqld_safe --skip-grant-tables &
     # Hit <enter> to get a command prompt again
 
@@ -287,6 +282,10 @@ Now start mysql again:
     sudo service mysql start
 
 You should be able to now log in with ``mysql -u root -p`` and continue the tutorial.
+
+If that doesn't work, you can try reinstalling mysql from scratch:
+
+https://askubuntu.com/questions/640899/how-do-i-uninstall-mysql-completely
 
 Resetting The Wordpress Database User Password
 ----------------------------------------------
