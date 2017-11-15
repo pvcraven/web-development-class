@@ -1,7 +1,10 @@
+.. sectnum::
+    :start: 5
+
 .. _Directories:
 
-Directories
------------
+Managing Directories
+--------------------
 
 Relative Directories
 ^^^^^^^^^^^^^^^^^^^^

@@ -1,5 +1,8 @@
-Understanding and Choosing Text Editors
-=======================================
+.. sectnum::
+    :start: 1
+
+Text Editors
+============
 
 We will be using a **text editor** in class. A text editor is like a word
 processor, in that you can use it to type things up. But a text editor doesn't have features
@@ -26,6 +29,9 @@ Text Editors
 CSE Validator
 ^^^^^^^^^^^^^
 
+.. image:: cse_validator.png
+    :width: 50%
+
 `CSE Validator`_ is one of my favorite tools. While it is a decent
 text editor, it isn't a great one. The key feature that makes it
 stand out that it can check your websites for mistakes.
@@ -47,12 +53,15 @@ CSE Validator isn't quite as good at editing text as some other options. So
 if I do much writing, I will usually open files in different program. Then
 test the file later in CSE Validator.
 
-We have CSE Validator in the lab. I'll expect you to "validate" your 
+We have CSE Validator in the lab. I'll expect you to "validate" your
 websites before turning them in. This will make sure you get all the
 points for writing valid HTML and CSS code.
 
 Sublime
 ^^^^^^^
+
+.. image:: sublime.png
+    :width: 50%
 
 This is my favorite text editor. You can try it out for free, but to get rid
 of the nag-screens you need to pay money. The money is totally worth it.
@@ -111,6 +120,9 @@ Integrated Development Environments
 
 JetBrains
 ^^^^^^^^^
+
+.. image:: intellij.png
+    :width: 50%
 
 The company JetBrains makes an IDE, but it comes in many "flavors." In my opinion, they have the best IDE out
 there right now. As a student, you can get a `free student license <https://www.jetbrains.com/student/>`_ for all

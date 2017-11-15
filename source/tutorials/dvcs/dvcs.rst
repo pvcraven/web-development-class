@@ -1,5 +1,17 @@
+.. sectnum::
+    :start: 7
+
 Distributed Version Control System Tutorial
 -------------------------------------------
+
+.. image:: git_tutorial.png
+    :width: 50%
+
+First, go through this interactive tutorial to learn how to use git on the command line:
+
+https://try.github.io/
+
+You can also use a GUI so you don't have to type in all those commands.
 
 Installing SourceTree
 ^^^^^^^^^^^^^^^^^^^^^

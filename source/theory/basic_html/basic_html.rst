@@ -1,5 +1,8 @@
-What Is HTML And Where Did It Come From?
-----------------------------------------
+.. sectnum::
+    :start: 3
+
+What Is HTML?
+-------------
 
 .. image:: mosaic.jpg
     :width: 500px
