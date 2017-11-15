@@ -13,6 +13,24 @@ https://try.github.io/
 
 You can also use a GUI so you don't have to type in all those commands.
 
+Make sure you understand what each of these commands do.
+
+::
+
+    git init
+    git fetch
+    git pull
+    git add
+    git commit
+    git status
+    git clone
+    git log
+    git remote
+    git branch
+    git merge
+    git checkout
+    git push
+
 Installing SourceTree
 ^^^^^^^^^^^^^^^^^^^^^
 
