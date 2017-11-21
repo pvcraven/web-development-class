@@ -14,6 +14,7 @@ Summarize what the DNS is, how to register a domain, and how a domain name
 is resolved.
 
 I'll go over this in class, so if you take good notes, you'll have part 1 done.
+A good explanation will likely run about one page, double-spaced.
 
 Part 2
 ------
@@ -25,6 +26,9 @@ Use `WebPageTest <https://www.webpagetest.org/>`_ on two different web pages.
   a fast website like Google's search page.
 
 Explain what WebPageTest shows, and also talk about how to improve the performance.
+Spend some time with this. Figure out what is making the website slow.
+How would you improve it? It will probably take at least one page. I've had people
+take six pages.
 
 I'll do this in class with Hy-Vee. Your assignment is to do it with two more web
 pages.
