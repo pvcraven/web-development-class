@@ -25,7 +25,13 @@ You'll see something like this, plus a lot more::
       Downloading Sphinx-1.4.9-py2.py3-none-any.whl (1.6MB)
         100% |################################| 1.6MB 675kB/s
 
-Great! Now we are ready to start our site.
+Did it work? Great! Now we are ready to start our site.
+
+Did it not work? You might need to start the command prompt as an admin:
+
+.. image:: command_as_admin.png
+
+Then try running the command.
 
 Create the initial project
 --------------------------
@@ -278,6 +284,8 @@ the "Read the Docs" theme.
 
 Sublime
 -------
+
+.. image:: sublime_options.png
 
 TODO: Add content on how to show a 80 character ruler, and don't let lines
 go more than 80 characters.
