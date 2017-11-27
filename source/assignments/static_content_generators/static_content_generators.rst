@@ -1,7 +1,7 @@
 Assignment 11 - Static Content Generators
 =========================================
 
-This will be a group project. Grades will be individual.
+This will be a group project. However, grades will be individual.
 
 Getting together as a group
 ---------------------------
@@ -32,23 +32,37 @@ Figure out your topic
   You can choose a business, a hobby, a historical event or place, etc. This
   will go on the web, at least temporarily, so I suggest making it fictional
   or about a subject that won't care if you post information about it.
-  Like an information page on Catherine the Great.
+  Like an information page on Catherine the Great. Don't make this a joke though,
+  treat it as something you'd be willing to show a prospective employer.
 * Double-check to make sure that everyone is ok with the topic. Don't create
   a page on knitting patterns when one of your group doesn't have an opinion if
   stitch markers should be used or not.
+* Each of you will need to create four pages on the website. Each with at least 200
+  words. You'll need to include images and tables. See if that seems feasable with
+  your topic.
 * Get approval of the topic from the professor.
 * Map out the website and what will be on it.
 
-Collaborate:
+Collaborate
+-----------
 
-* Choose pages for each person to create.
-* Assign pages in GitHub.
-* Choose (different) pages for each person to review and proof-read.
+* Choose at least four pages for each person to create.
+* Create a template for your project.
+* Put the template in GitHub.
+* Add each person to the project in GitHub.
+* Use GitHub's issue manager. Create an issue for each page, and assign it
+  to each person.
+* Choose (different) pages for each person to review and proof-read. Proof-read
+  from different authors. It isn't unusual for to have someone that doesn't turn in
+  anything.
+
+Make The Web Pages
+------------------
 
 Create web pages that have:
 
 * Headings
-* Images. Properly size image. Do not squish a 4000 x 3000 pixel photo you took
+* Images. Properly sized images. Do not squish a 4000 x 3000 pixel photo you took
   into a 400x300 spot. Change the image. You'll make a faster web page and save
   everyone money on bandwidth. Also, keep aspect ratios. Don't specify both
   width and height at a different ratio that stretches the image. I just specify
@@ -58,7 +72,7 @@ Create web pages that have:
 * Table of Contents
 * Multiple types of styles (Normally, don't change the style in a heading.)
 
-Check for case issues. If you link baseball.jpg but name the image Baseball.jpg
+Check for upper/lower case issues. If you link baseball.jpg but name the image Baseball.jpg
 then it will work on your computer, but fail when deployed.
 
 Turn in a the following links. Please clearly label each link
@@ -75,6 +89,8 @@ and follow the order below:
 
 Rubric
 ------
+
+This is a preliminary rubric. I might add some things to it.
 
 .. image:: rubric.png
     :width: 600px
