@@ -37,7 +37,7 @@ Figure out your topic
 * Double-check to make sure that everyone is ok with the topic. Don't create
   a page on knitting patterns when one of your group doesn't have an opinion if
   stitch markers should be used or not.
-* Each of you will need to create four pages on the website. Each with at least 200
+* Each of you will need to create four pages on the website. Each with at least 180
   words. You'll need to include images and tables. See if that seems feasable with
   your topic.
 * Get approval of the topic from the professor.
@@ -90,10 +90,22 @@ and follow the order below:
 Rubric
 ------
 
-This is a preliminary rubric. I might add some things to it.
-
 .. image:: rubric.png
     :width: 600px
+
+Turn In
+-------
+
+* GitHub URLs of the four pages you created.
+* GitHub URLs of GitHub issues you worked on.
+* Cloud/S3/or GitHub URL of your page with a working image
+* Cloud/S3/or GitHub URL of your page with a table
+* Cloud/S3/or GitHub URL of your page with a link
+* Cloud/S3/or GitHub URL of your page with a bullet list
+* Cloud/S3/or GitHub URL of your page with a multiple styles
+* Link to your group's S3 bucket
+* Link to your group's Cloud
+
 
 Important End of Term Reminder
 ==============================
