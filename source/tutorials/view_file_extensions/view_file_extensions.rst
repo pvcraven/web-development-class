@@ -1,6 +1,3 @@
-.. sectnum::
-    :start: 2
-
 Viewing File Extensions
 =======================
 

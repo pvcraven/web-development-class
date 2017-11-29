@@ -1,6 +1,3 @@
-.. sectnum::
-    :start: 6
-
 Distributed Version Control Systems
 -----------------------------------
 

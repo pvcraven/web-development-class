@@ -1,6 +1,3 @@
-.. sectnum::
-    :start: 4
-
 HTML Tutorial
 =============
 
