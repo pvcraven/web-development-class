@@ -1,6 +1,3 @@
-.. sectnum::
-    :start: 7
-
 Distributed Version Control System Tutorial
 -------------------------------------------
 

@@ -10,9 +10,12 @@ It should look something like::
 
 	http://myserver.com/wordpress/
 
-It is not unusual to get a "Database Connection Error" if the installation
-tutorial does not go your way. Make sure to schedule your work to allow time
-to drop by and ask questions if you run into this issue.
+It is not unusual to run into password issues when doing the installation
+of WordPress. There are instructions at the end of the tutorial on how
+to get around this. It takes time, so make sure you do this early enough
+you can drop by the professor's office if things don't work.
 
-Full credit if the assignment is turned in on time. Half credit if 24 hours
-late. No credit for late assignments.
+This assignment is necessary to get the next assignment done.
+
+Seriously, please be sure to allocate time to drop by the professor's office if needed to get things
+working.

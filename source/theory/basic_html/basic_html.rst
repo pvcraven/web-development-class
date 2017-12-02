@@ -1,6 +1,3 @@
-.. sectnum::
-    :start: 3
-
 What Is HTML?
 -------------
 

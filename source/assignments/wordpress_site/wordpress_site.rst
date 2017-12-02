@@ -1,7 +1,7 @@
 Assignment 10 - WordPress Site
 ==============================
 
-* First step, get ito the dashboard of your website.
+* First step, get into the dashboard of your website.
   You can usually get to the dashboard by adding
   ``/wordpress/wp-admin/`` to the end of your URL.
 
@@ -50,6 +50,9 @@ Assignment 10 - WordPress Site
     * Briefly summarize the pages that you created.
     * Briefly point out the posts that you created.
     * Tell me where you uploaded at least one image to a post or page
+
+The write-up is important. Please don't give me just a sentence or two. "A" work usually involves at least 3/4
+of a page showing me how you hit all the points of the rubric.
 
 If you have time, play around with WordPress and figure out more about what you can do.
 Working with a CMS is a very useful skill.
