@@ -5,3 +5,4 @@ Cloud Hosting
    :maxdepth: 2
 
    theory/cloud/cloud.rst
+   theory/cloud_tutorial/index.rst
