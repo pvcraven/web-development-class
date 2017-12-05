@@ -148,7 +148,7 @@ Your stuff will start getting distributed to the cloud. Go back and click on the
 
 .. image:: click_on_cloudfront_id.png
 
-From here, you can find your cloudfront address:
+From here, you can find your CloudFront address:
 
 .. image:: get_cloudfront_domain_name.png
 
