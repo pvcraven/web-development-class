@@ -140,7 +140,7 @@ get a pull-down of all your S3 buckets and can just select it.
 
 The computer will fill in a default Origin ID, you can just keep that.
 
-For "Default Root Object" you should enter "/index.html"
+For "Default Root Object" you should enter "index.html"
 
 All the other defaults are fine.
 
