@@ -1,10 +1,15 @@
 Collaborative Leadership Reflection
 ===================================
 
+Please include name, date, and title at the top. Label your answers so that it
+is easy to see what question you are answering.
+
 1. What skills are often required to achieve a team's shared goal? Explain why
-   those skills are important and how they add value.
+   those skills are important and how they add value. Don't just list out skills
+   like "teamwork" and "communication" without explaining exactly what skills help
+   foster teamwork and communication, and how exactly it helps.
 2. What dispositions (qualities of mind and character) help achieve a shared
-   goal?
+   goal? Why? How do dispositions differe from skills?
 3. For your project, describe how these skills were applied as part of the
    project. Be specific. What skill, and how was it applied.
 4. As different people have different strengths and weaknesses, describe how
