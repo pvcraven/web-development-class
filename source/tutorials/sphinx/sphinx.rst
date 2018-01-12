@@ -383,12 +383,12 @@ Below I have a quick demo that gives some examples of what you can do:
     ============ =================
     Fruit        Review
     ============ =================
-    Apple	     ``***``
-    Pomegranite  ``*****``
-    Grapes       ``***``
-    Pears        ``****``
-    Orange       ``**``
-    Cherries     ``*``
+    Apple	     3 stars
+    Pomegranite  5 stars
+    Grapes       3 stars
+    Pears        4 stars
+    Orange       2 stars
+    Cherries     1 star
     ============ =================
 
     There are several ways of doing sample tables. The most frequent issue

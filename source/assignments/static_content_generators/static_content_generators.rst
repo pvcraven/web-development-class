@@ -69,42 +69,47 @@ Create web pages that have:
   width only and let the browser pick the right height.
 * Tables
 * Links
-* Table of Contents
+* A table of contents (don't put one on each page)
+* Paragraphs. Don't give me a wall of text.
+* Cite any images that you use that aren't your own.
 * Multiple types of styles (Normally, don't change the style in a heading.)
+* Name your pages and directories according to their content. This helps their
+  ranking in Google, as well as helping you keep things straight.
+  So, for example, ``xbox_360.rst`` is a much better name for a page about the
+  XBox 360 than a page named ``page4.rst``.
+* When you've deployed to S3 and CloudFront, check and make sure your images
+  work and your links. Amazon cares about the case of your file names, and if
+  you've ignored my advice at making everything lower case, it may haunt you
+  here.
 
-Check for upper/lower case issues. If you link baseball.jpg but name the image Baseball.jpg
-then it will work on your computer, but fail when deployed.
+Turn In
+-------
 
-Turn in a the following links. Please clearly label each link
-and follow the order below:
+Clearly label and turn in the following links.
+
+By saying "Cloud/S3/Github URL" I mean that I prefer the cloud URL. If you
+can't get that working give me the S3 URL. If you can't get that working, get
+me the GitHub URL.
 
 * Link to the GitHub project page.
   This should be the same for every person in the group.
 * Link to each GitHub page that you created.
   Do not link pages that show someone else checking in this page.
-  Clearly label which page shows you demonstrating the use headings, images,
-  tables, and links.
-* Link to the final website via S3
-* Link to the final website via CloudFront
-
-Rubric
-------
-
-.. image:: rubric.png
-    :width: 600px
-
-Turn In
--------
-
-* GitHub URLs of the four pages you created.
+  Please link to the source file, not the commit.
 * GitHub URLs of GitHub issues you worked on.
 * Cloud/S3/or GitHub URL of your page with a working image
 * Cloud/S3/or GitHub URL of your page with a table
 * Cloud/S3/or GitHub URL of your page with a link
 * Cloud/S3/or GitHub URL of your page with a bullet list
 * Cloud/S3/or GitHub URL of your page with a multiple styles
-* Link to your group's S3 bucket
-* Link to your group's Cloud
+* Link to your group's S3 bucket website
+* Link to your group's Cloud page
+
+Rubric
+------
+
+.. image:: rubric.png
+    :width: 600px
 
 
 Important End of Term Reminder
@@ -117,6 +122,8 @@ After grades are posted for this class, remember to:
 * Remove your S3 bucket.
 * Remove your CloudFront link.
 
+Or, just terminate your account once everything is graded. Please don't terminate
+it before I grade your projects.
+
 This will help make sure that you don't get any unexpected fees charged to your
 credit card.
-
