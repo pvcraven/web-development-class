@@ -9,7 +9,7 @@ is easy to see what question you are answering.
    like "teamwork" and "communication" without explaining exactly what skills help
    foster teamwork and communication, and how exactly it helps.
 2. What dispositions (qualities of mind and character) help achieve a shared
-   goal? Why? How do dispositions differe from skills?
+   goal? Why? How do dispositions differ from skills?
 3. For your project, describe how these skills were applied as part of the
    project. Be specific. What skill, and how was it applied.
 4. As different people have different strengths and weaknesses, describe how
