@@ -1,4 +1,4 @@
-p {
+p, li {
     font-size: 18px;
     line-height: 33px;
 }
@@ -14,10 +14,10 @@ body {
     line-height: 1.5;
 }
 code, .rst-content tt, .rst-content code {
-    border: none;
-    font-size: 90%;
+	border: none;
+	font-size: 90%;
     color: black;
-    font-weight: heavy;
+    font-weight: bold;
     padding: 0px;
     border: none;
     background: transparent;
@@ -34,7 +34,7 @@ div[class^='highlight'] pre {
     color: #404040;
 }
 .rst-content code.literal {
-    color: black;
+	color: black;
     font-weight: bold;
 }
 .wy-menu-vertical a {
@@ -43,11 +43,20 @@ div[class^='highlight'] pre {
 .wy-nav-content-wrap {
     background: #fff;
 }
-.wy-side-nav-search {
-    background-color: #931a2a;
+.wy-nav-content {
+    padding: 1.5em;
 }
-.wy-side-nav-search > div.version {
-    color: #FFF;
+
+.toctree-wrapper .toctree-l1 {
+    list-style-type: none;
+    margin-left: 18px;
+}
+
+.toctree-wrapper .toctree-l2 {
+    list-style-type: none;
+}
+.wy-side-nav-search, .wy-nav-top {
+    background-color: #931a2a;
 }
 .wy-menu-vertical {
     font-family: "Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
@@ -59,4 +68,8 @@ div[class^='highlight'] pre {
 }
 .wy-table-responsive table td, .wy-table-responsive table th {
     white-space: normal;
+}
+
+.footnote {
+    line-height: 21px;
 }

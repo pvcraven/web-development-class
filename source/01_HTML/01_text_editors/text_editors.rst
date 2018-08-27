@@ -74,6 +74,9 @@ https://leveluptutorials.com/tutorials/sublime-text-tutorials
 Spending an hour doing tutorials on Sublime can save you many hours down the road.
 Learning how to use multiple cursors can make life much better.
 
+Sublime is currently the 'stylish' choice that will earn you respect amongst
+your programming peers.
+
 
 Atom
 ^^^^
@@ -87,13 +90,14 @@ A lot of people like Notepad++ as an editor:
 
 https://notepad-plus-plus.org/
 
-
+It is free, and also a safe no-brainer choice. Think of it as the Wal-Mart
+or Target in text-editors.
 
 Vim
 ^^^
 
-If you want a real challenge, learn to use `Vim`_. It is built-in to most Linux computers
-and is great if you want to edit text on a remote computer.
+If you want a real challenge, learn to use `Vim`_. It is built-in to most Linux
+computers and is great if you want to edit text on a remote computer.
 
 Notepad
 ^^^^^^^
@@ -104,8 +108,9 @@ it comes with Windows, so I guess it has that going for it.
 IDLE
 ^^^^
 
-IDLE comes with a computer language called Python. If you take a Python course you might be familiar with IDLE.
-IDLE is a terrible text editor, and there is no reason to use it when there are so many free options available.
+IDLE comes with a computer language called Python. If you take a Python course
+you might be familiar with IDLE. IDLE is a terrible text editor, and there is
+no reason to use it when there are so many free options available.
 
 Microsoft Word
 ^^^^^^^^^^^^^^
@@ -136,8 +141,9 @@ For this class, if you want to use JetBrains, I'd recommend IntelliJ or WebStorm
 Eclipse
 ^^^^^^^
 
-Eclipse_ used to be the standard IDE most people used. Unfortunately it has become kind of slow and bloated with
-too many features now. It is free and open-source however.
+Eclipse_ used to be the standard IDE most people used. Unfortunately it has
+become kind of slow and bloated with too many features now. It is free and
+open-source however.
 
 Visual Studio
 ^^^^^^^^^^^^^
