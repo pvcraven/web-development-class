@@ -27,7 +27,7 @@ Assignments
 .. toctree::
    :maxdepth: 1
 
-   assignments/basic_html/basic_html.rst
+   assignments/01_basic_html/basic_html.rst
    assignments/dvcs/dvcs.rst
    assignments/css/css.rst
    assignments/bootstrap/bootstrap.rst
