@@ -83,13 +83,25 @@ to come up with the standards for HTML.
 Parts of a URL
 ^^^^^^^^^^^^^^
 
-Web addresses are called Uniform Resource Locators (URLs).
+HTTP stands for `Hypertext Transport Protocol`_. The acronym is similar to,
+but different than HTML. HTML is how you format a web document. HTTP is how
+you take that web document and put it on the network to be transferred from
+one computer to another.
+
+.. _Hypertext Transport Protocol: https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol
+
+You can use HTML without HTTP if all the web documents you want are already on
+your computer. That is rarely the case though! So remember. HTML - how to format
+your document. HTTP - how to transfer it over the Internet.
+
+Time for another acronym.
+Links to web pages are called Uniform Resource Locators (URLs).
 The name of the HTML file that you create will be the last part
 of the URL. For example, in the URL below the filename
 would be ``test.html``, located in a ``chapter01``
-directory:
+directory on the server ``webdev.training``:
 
-http://webdev.training/chapter01/test.html
+``http://webdev.training/chapter01/test.html``
 
 
 There are many parts to a URL:
@@ -100,13 +112,11 @@ There are many parts to a URL:
     :alt: Parts of a URL
 
 Let's break it down. The first part is the *protocol*. In this case, the
-protocol for moving the data is HyperText Transfer Protocol (HTTP). (HTTP and HTML
-are related, but different. HTTP is the "car" that moves the data, and HTML is one type
-of data the car can move.) Other common protocols are ``https`` for encrypted data
+protocol for moving the data is HyperText Transfer Protocol (HTTP).
+Other common protocols are ``https`` for encrypted data
 and ``ftp`` for old-school file transfer.
 
 ``http://``
-
 
 Next is either the `domain name`_,
 or the IP address. Because this is covered in detail in our Networking class,
@@ -124,7 +134,8 @@ case, port 8080 is specified.
 ``http://webdev.training:8080``
 
 
-Next might come the path. If web files are in subdirectories on the host
+Next might come the path. The path is the set of folders your file is in.
+If web files are in subdirectories on the host
 computer, you may see path names. Path names are separated by forward slashes,
 even though on windows path names are separated by back slashes. In this example
 we have two subdirectories, ``directory`` and ``d2``.
@@ -136,6 +147,8 @@ Next up might come the file name. This usually corresponds to a file name
 on the server computer. In this case, the server will look for ``file.php``
 in the ``directory/d2/`` path.
 
+
+``http://webdev.training:8080/directory/d2/file.php``
 
 The default HTML file extension is ``.html``.
 
@@ -151,17 +164,19 @@ others. In our case, we can get used to using the ``.php`` extension.
 
 
 The directory and filename part of a URL are case sensitive.
-here are some exceptions in regards to Windows servers not
+There are some exceptions in regards to Windows servers not
 being case-sensitive, but developers
 should treat everything as case sensitive. To
 make it easier for development and for people using the URLs, it is
 good practice to make the URLs all lower case, and without spaces.
 
+.. note::
+    To make things easier, name your files and directories all lower case.
+    Also, use underscores instead of spaces.
+
 Not all URLs have paths. By default, most servers will look for files like
-``index.html`` and ``index.php`` if no file is specified.
-
-``http://webdev.training:8080/directory/d2/file.php``
-
+``index.html`` and ``index.php`` if no file is specified. That means
+every directory should have an ``index.html`` file as a "landing" page.
 
 Next up, *parameters*. These are variables that are passed to the
 file. A question mark separates the beginning part of the URL with

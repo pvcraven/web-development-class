@@ -91,9 +91,9 @@ Required Components
 
 * Every page should have:
 
-  * HTML comment at the top with the person who is primarily responsible for the
-    page. This will be the page where you are the 'navigator.' The driver does
-    the typing and will not be primarily responsible for that page.
+  * An HTML comment at the top with who is primarily responsible for the page.
+    The 'driver' in pair programming does
+    the typing and will *not* be primarily responsible for that page.
     Each person should have at least three pages they are responsible for,
     and will be graded on.
   * Web site title and graphic. Put in its own ``<header>`` tag.
@@ -199,7 +199,7 @@ form on Scholar for assignment 1. This will require you to complete Assignment 2
 .. code-block:: html
 
   <footer>
-    Copyright 2017 by Pat
+    Copyright 2018 by Pat
   </footer>
 
 * Copy the GitHub project URL

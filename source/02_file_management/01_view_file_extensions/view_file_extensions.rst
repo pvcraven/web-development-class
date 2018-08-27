@@ -19,4 +19,5 @@ known file types.""
 For Windows 8 and 10, bring up a file explorer by hitting the Windows-E key.
 Then click the "view" tab and make sure “File name extensions” has been checked.
 
-Great! Now let's make our first program with.
+.. image:: win_10.png
+    :width: 650px
