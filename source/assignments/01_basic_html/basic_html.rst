@@ -57,6 +57,14 @@ If you are gone any of these days you will get half credit. If your phone is
 out, or you are on an unrelated website, you'll be counted as gone and asked
 to leave for the day.
 
+**Remember:** The goal of this assignment is to learn. Most people get this, but
+in the past I've had just a few students who "take over" a project and devalue
+other's contributions. If you consider yourself an expert already, then take this
+as an opportunity to learn how to help and instruct other people. It is a
+"teach someone to fish" type of thing. By yourself you can only catch so many
+fish. But if you teach someone else how to fish, then the two of you can catch
+twice as many fish. Same principal for web development.
+
 Website Subject
 ---------------
 
@@ -85,6 +93,7 @@ All web pages must have text. Please create real, actual, content.
 Text must be original and not copied.
 Images should be original as well, with a few exceptions. If you want
 an exception, please see me for information on how to cite and link it.
+Images that you took yourself with a phone or camera are ok.
 
 Required Components
 -------------------
@@ -110,6 +119,9 @@ Required Components
     The link will be the page name. For example: ``<a href="about.html">About</a>``
     Links must be relative. See the example out of the tutorial for how the list
     should look. It should be inside a ``<nav>`` tag just like the example.
+    **Note:** This will look terrible, and you might be tempted to put it in a
+    table. Don't. In the CSS assignment we will make it look
+    like a menu bar.
 
 * Two Required pages
 
@@ -127,12 +139,6 @@ Required Components
     in.
   * Pages with info on a subject
 
-* Required placeholder pages. See below. Just put in a title on these two pages
-  for now. We will show how to create forms later.
-
-  * Login
-  * Sign up, or some other 'enter information' page
-
 * Required HTML elements
 
   * HEAD section on all pages
@@ -141,13 +147,13 @@ Required Components
     how to style the table later.
   * Linked in images. You may not copy the image off the web. Sketch something
     in MS Paint, or Inkscape. Or take your own photo. It doesn't have to look good.
-  * HTML entities. Toss at least one somewhere on your six pages.
+  * HTML entities. Toss at least a few on your pages. Try not to make them too
+    hard to find please.
   * Headings. Those <h1...6> tags.
   * Paragraphs
   * Tags must be lower case
   * Run a validation check on the HTML for each page. Make sure it is free of issues.
   * Check for spelling and grammar. It counts as part of the grade.
-
 
 Directory Structure
 -------------------
