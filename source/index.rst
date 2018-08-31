@@ -11,10 +11,10 @@ Topics and Tutorials
    :maxdepth: 2
    :numbered:
 
-   html
-   file_management
-   dvcs
-   css
+   01_HTML/html
+   02_file_management/file_management
+   03_distributed_version_control/dvcs
+   04_css/css
    collaboration
    server_management
    cms
@@ -28,9 +28,9 @@ Assignments
    :maxdepth: 1
 
    assignments/01_basic_html/basic_html.rst
-   assignments/dvcs/dvcs.rst
-   assignments/css/css.rst
-   assignments/bootstrap/bootstrap.rst
+   assignments/02_dvcs/dvcs.rst
+   assignments/03_css/css.rst
+   assignments/04_bootstrap/bootstrap.rst
    assignments/finalize_site/finalize_site.rst
    assignments/aws_deployment/aws_deployment.rst
    assignments/php_include/php_include.rst
