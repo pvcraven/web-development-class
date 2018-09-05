@@ -18,6 +18,26 @@ We are going to show you how to create a repository with that folder,
 push it out to a server, and then keep the changes between multiple people
 in sync. To do this, we will use a program called ``git``.
 
+Quick Reference
+---------------
+
+Commit and Upload
+^^^^^^^^^^^^^^^^^
+
+Do this whenever you are done with a session of programming:
+
+1. Open "command prompt" on Windows, or "terminal" on MacOS.
+2. Type ``cd mydirectoryname`` where the name of the directory will be the same as the name of your repository on
+   BitBucket. You can usually type in the first few letters and hit <tab> to fill in the rest of the directory name.
+3. Type ``git pull`` to get all the latest changes.
+4. Do your changes.
+5. Type ``git add *``
+6. Type ``git commit -m "Work on lab 1"`` Update the comment between the quotes
+   to whatever you did.
+7. Type ``git push``
+
+If you get an error while pushing, see :ref:`cant-push`
+
 The Terminal
 ------------
 
@@ -178,8 +198,19 @@ Review:
 Pushing
 ^^^^^^^
 
+.. image:: git_commit.png
+    :width: 400px
+
 Pulling
 ^^^^^^^
+
+.. image:: git_pull.png
+    :width: 400px
+
+.. image:: git_pull_error.png
+    :width: 400px
+
+
 
 What If You Can't Push?
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -375,9 +406,9 @@ capture most of what students need to do.
 +------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
 | ``grep -r "<< HEAD" *``                        | Search all files to see if there is merge error text. Do this before committing                                         |
 +------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
-| ``git checkout --ours "myfile.txt"``           | Toss your changes in a merge, use theirs                                                                                |
+| ``git checkout --ours "myfile.txt"``           | Toss your changes in a merge, use theirs. Add your change when done.                                                    |
 +------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
-| ``git checkout --theirs "myfile.txt"``         | Toss their changes, use yours                                                                                           |
+| ``git checkout --theirs "myfile.txt"``         | Toss their changes, use yours.  Add your change when done.                                                              |
 +------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
 | ``git checkout -- .``                          | Remove all your changes, go back to what was last committed. Untracked files are kept.                                  |
 +------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
