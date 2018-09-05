@@ -38,12 +38,7 @@ is the symbol for Mercury. Either Git or Hg works fine, but for this tutorial we
 standardize on Git.
 
 
-Additional Information
-^^^^^^^^^^^^^^^^^^^^^^
-
-* `Atlassian Tutorials`_
-
 .. _Subversion: http://en.wikipedia.org/wiki/Apache_Subversion
 .. _Git: http://en.wikipedia.org/wiki/Git_(software)
 .. _Mercurial: http://en.wikipedia.org/wiki/Mercurial
-.. _Atlassian Tutorials: https://www.atlassian.com/git/tutorials/
+

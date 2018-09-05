@@ -153,6 +153,6 @@ Microsoft's `Visual Studio`_ is very popular in places that standardize on a set
 .. _Visual Studio: https://www.visualstudio.com/
 .. _Eclipse: http://www.eclipse.org/
 .. _CSE Validator: https://www.htmlvalidator.com/
-.. _academic discount: https://www.htmlvalidator.com/buy/orderinfodiscount.html
+.. _academic discount: https://www.htmlvalidator.com/buy/academic/
 .. _Atom: https://atom.io/
 .. _Vim: http://www.vim.org/download.php
