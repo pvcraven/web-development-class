@@ -38,8 +38,11 @@ Do this whenever you are done with a session of programming:
 
 If you get an error while pushing, see :ref:`cant-push`
 
+Creating And Committing To The Repository
+-----------------------------------------
+
 The Terminal
-------------
+^^^^^^^^^^^^
 
 First, if you are on your own computer, install ``git``. (Skip this step if you
 are on a lab computer.) The ``git`` program has a lot of dialog boxes that
@@ -55,32 +58,83 @@ let you run ``git`` commands, however in my experience it is *harder* to learn
 If you are on a Mac, open up the "Terminal" program. If you are on Windows,
 open the command prompt.
 
+Directory
+^^^^^^^^^
+
 When you are working on a command prompt, you are in something called a
 "working directory." All your commands will operate on the current directory.
-Sometimes, the terminal will print the directory you are in, but if it doesn't
-you can type in ``pwd`` which is short for "Print Working Directory".
+On Windows, the command prompt will print the directory you are in.
+
+To get the full directory you are in on the Mac, type
+``pwd`` which is short for "Print Working Directory".
 
 .. image:: pwd.png
     :width: 550px
 
-Change Directory
-----------------
+You can see the files that are in the folder by typing in ``dir`` on Windows and
+``ls`` on the Mac.
 
-.. image:: copy_directory_path.png
+.. image:: dir.png
     :width: 550px
 
+Change Directory
+^^^^^^^^^^^^^^^^
+
+We need to change our working directory to the same directory that has the
+project.
+
+If you are on a Windows machine, and you have your work on a flash drive or some
+other drive, you can switch to that drive by typing the drive letter and
+a colon. For example: ``e:``. If your work is on the ``c:`` drive, or you are
+on a Mac, you can skip this.
+
+If your work is on the desktop, type ``cd Desktop``. Then type ``dir`` to see
+if you can see your project folder. Then type something like ``cd my_project``.
 
 .. image:: cd_to_directory.png
     :width: 550px
 
+
+If you need to go *up* a directory, type ``cd ..``.
+
+If you can't figure out exactly what directory you need, you can copy
+the path from the file explorer window. Just right click on the path
+and hit copy:
+
+.. image:: copy_directory_path.png
+    :width: 550px
+
+Tips For Fast Typing
+^^^^^^^^^^^^^^^^^^^^
+
+When typing in file names, you can usually type the first few letters and then
+hit the <tab> key. If you typed in enough letters, the computer will fill in the
+rest for you.
+
+You can hit the "up" arrow to get commands you previously typed in.
+
 Initialize Repository
----------------------
+^^^^^^^^^^^^^^^^^^^^^
+
+Once you are in your project folder, you should be able do type ``dir`` (or ``ls`` on the Mac)
+and see your ``public_html`` folder.
+
+We need to create our repository. You'll only do this **once** for this project, and only
+by **one** person on your team. Otherwise you'll have multiple projects and that will
+just be confusing.
+
+To create the repository type ``git init``:
 
 .. image:: git_init.png
     :width: 550px
 
 Add Changes
------------
+^^^^^^^^^^^
+
+Now that you've created the repository, we need to add all your files to it.
+You can add them individually by ``git add <filename>``. For example ``git add index.html``.
+But if you want *every* file. (And we do.) You can use the asterisk as
+a wild-card character. So type ``git add *``:
 
 .. image:: git_add.png
     :width: 550px
@@ -88,25 +142,76 @@ Add Changes
 .. _commit:
 
 Commit Changes
---------------
+^^^^^^^^^^^^^^
+
+Now that we've added the files to the repository, we need to commit them.
+This will freeze the changes and let us go back in time if needed.
+
+We need the ``git commit`` command. You also need to include a message
+that describes what you did. These messages are important, particularly
+when you work with other people.
+
+You can add the message by the ``-m`` parameter. The message must go in
+quotes. For example, ``git commit -m "First check-in of project."``
+
 
 .. image:: git_commit.png
     :width: 550px
 
+There are two things that commonly go wrong at this point. If you forgot
+the message, you might get a window that looks something like:
+
+.. image:: vi.png
+    :width: 550px
+
+This is "vi", a text editor that you can use to enter your comments that
+you forgot. But vi is hard to learn. So we just want to exit out and try
+again. To exit, hit the "Escape" key. Then hold down shift, and type ``ZZ``.
+Then, just do your commit again, but add the message.
+
+The first time you commit, you might get an error like:
+
+.. code-block:: text
+
+    19:00:28: *** Please tell me who you are.
+
+    Run
+
+      git config --global user.email "you@example.com"
+      git config --global user.name "Your Name"
+
+If this is the case, you need to run these two commands, and then
+do your commit again. In my case, I would do:
+
+.. code-block:: text
+
+      git config --global user.email "paul.craven@simpson.edu"
+      git config --global user.name "Paul Craven"
+
+But you need to use your name and e-mail. Don't use mine.
+
 Git Log
--------
+^^^^^^^
+
+The ``git log`` command will list all the recent commits:
 
 .. image:: git_log.png
     :width: 550px
 
 Gitk
-----
+^^^^
+
+The ``gitk`` commmand opens a window that has a nice graphical
+UI showing what is happening with the repository.
 
 .. image:: gitk.png
     :width: 650px
 
 Git Status
-----------
+^^^^^^^^^^
+
+You can see what files changed since the last commit with
+``git status``.
 
 .. image:: git_status.png
     :width: 550px
@@ -135,12 +240,26 @@ These are other commands we'll cover in a bit
     git pull
     git clone
 
+Using GitHub To Sync Code
+-------------------------
+
+Right now, our repository only exists on our computer. We are going to
+use the website "GitHub" as a central place to store our changes.
+
+When you have new changes to share, you will "push" the changes to
+GitHub. When you want to get changes other people have made, you'll
+"pull" those changes.
+
 Getting Started with GitHub
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-After installing gIT, `create an account with GitHub`_. GitHub is where
-we will store the code that we write. It is a very popular web site for code
-management. Particularly open-source software.
+First, `create an account with GitHub`_.
+It is a very popular web site for code
+management. Particularly open-source software, where people
+share code with each other.
+In fact, if you are applying for jobs,
+some companies will ask your GitHub account name
+to see what kind of work you do.
 
 
 Creating Your Project in GitHub
@@ -171,22 +290,51 @@ Creating Your Project in GitHub
 Pushing Code To GitHub For The First Time
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Now we need to tell the computer where the server is that we can push the
+code. Thankfully Github makes this easy by giving us the exact commands
+we need. Make sure you have "https" selected, then copy the two commands
+into the command prompt, one-by-one:
+
 .. image:: add_remote.png
     :width: 550px
 
 .. image:: add_remote_2.png
     :width: 550px
 
-
 Cloning Your GitHub Project on Your Computer
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Ok, we have one person on your team that has a copy of the project, and
+synced to GitHub. We want *everyone* on the team to have a copy.
+
+We want to take the project we already have, and create a *clone* of it
+on each other team member's computer.
+
+First, go to Github, and click "code", and then "Clone or download". Then
+copy the text in the field:
+
+.. image:: github_copy_clone.png
+    :width: 550px
+
+Next, open a command prompt. If you are on Windows,
+I suggest switching to the desktop
+and put your files there with a ``cd Desktop``.
+
+Then, type ``git clone `` and paste the text you copied from the website
+to clone:
 
 .. image:: git_clone.png
     :width: 550px
 
+Great! Now you can open the website and make changes.
 
-Committing
-^^^^^^^^^^
+Adding and Committing
+^^^^^^^^^^^^^^^^^^^^^
+
+When you are done making changes, commit by typeing:
+
+* ``git add *``
+* ``git commit -m "My comment goes here."``
 
 Review:
 
@@ -196,11 +344,15 @@ Review:
 Pushing
 ^^^^^^^
 
+To get your changes onto the server, type ``git push``:
+
 .. image:: git_commit.png
     :width: 550px
 
 Pulling
 ^^^^^^^
+
+To pull changes, type ``git pull``:
 
 .. image:: git_pull.png
     :width: 550px
