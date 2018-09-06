@@ -61,53 +61,55 @@ Sometimes, the terminal will print the directory you are in, but if it doesn't
 you can type in ``pwd`` which is short for "Print Working Directory".
 
 .. image:: pwd.png
-    :width: 400px
+    :width: 550px
 
 Change Directory
 ----------------
 
 .. image:: copy_directory_path.png
-    :width: 400px
+    :width: 550px
 
 
 .. image:: cd_to_directory.png
-    :width: 400px
+    :width: 550px
 
 Initialize Repository
 ---------------------
 
 .. image:: git_init.png
-    :width: 400px
+    :width: 550px
 
 Add Changes
 -----------
 
 .. image:: git_add.png
-    :width: 400px
+    :width: 550px
+
+.. _commit:
 
 Commit Changes
 --------------
 
 .. image:: git_commit.png
-    :width: 400px
+    :width: 550px
 
 Git Log
 -------
 
 .. image:: git_log.png
-    :width: 400px
+    :width: 550px
 
 Gitk
 ----
 
 .. image:: gitk.png
-    :width: 400px
+    :width: 650px
 
 Git Status
 ----------
 
 .. image:: git_status.png
-    :width: 400px
+    :width: 550px
 
 
 Make sure you understand what each of these commands do.
@@ -133,13 +135,10 @@ These are other commands we'll cover in a bit
     git pull
     git clone
 
-
-
-
 Getting Started with GitHub
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-After installing SourceTree, `create an account with GitHub`_. GitHub is where
+After installing gIT, `create an account with GitHub`_. GitHub is where
 we will store the code that we write. It is a very popular web site for code
 management. Particularly open-source software.
 
@@ -153,19 +152,18 @@ Creating Your Project in GitHub
   Do not use spaces. And don't *actually* call your project ``my_project_name``
   because that would be silly.
 * Give a short one-sentence description of what your project is.
-* Include a 'readme' in your project. If you don't do this your project will
-  start as blank, and you'll get a really confusing screen.
-* The other options can be left as default..
+* Do NOT include a 'readme' in your project.
+* The other options can be left as default.
 
 .. image:: github_1.png
-    :width: 500px
+    :width: 600px
 
-* After creating the project, invite the instructor (``pcraven`` if it is
+* After creating the project, invite the instructor (``pvcraven`` if it is
   Dr. Craven) and your team mates. Do this by clicking Settings...Collaborators.
   Then it will ask for your password. Then start entering usernames.
 
 .. image:: github_2.png
-    :width: 450px
+    :width: 550px
 
 * Each user will receive an e-mail confirming he or she would like to be part
   of the project. Click the confirmation link sent.
@@ -174,17 +172,17 @@ Pushing Code To GitHub For The First Time
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. image:: add_remote.png
-    :width: 450px
+    :width: 550px
 
 .. image:: add_remote_2.png
-    :width: 450px
+    :width: 550px
 
 
 Cloning Your GitHub Project on Your Computer
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. image:: git_clone.png
-    :width: 450px
+    :width: 550px
 
 
 Committing
@@ -193,24 +191,23 @@ Committing
 Review:
 
 .. image:: git_commit.png
-    :width: 400px
+    :width: 550px
 
 Pushing
 ^^^^^^^
 
 .. image:: git_commit.png
-    :width: 400px
+    :width: 550px
 
 Pulling
 ^^^^^^^
 
 .. image:: git_pull.png
-    :width: 400px
-
-.. image:: git_pull_error.png
-    :width: 400px
+    :width: 550px
 
 
+
+.. _cant-push:
 
 What If You Can't Push?
 ^^^^^^^^^^^^^^^^^^^^^^^
