@@ -1,6 +1,13 @@
 Distributed Version Control System Tutorial
 ===========================================
 
+Learning version control, and Git, is one of the hardest parts of this
+class. It confuses even experienced programmers. So DON'T PANIC!
+Ask questions when you get stuck. It is normal even for those with
+years of experience.
+
+.. image:: https://imgs.xkcd.com/comics/git_2x.png
+
 .. Note::
 
   Git Cheat Sheet
@@ -190,6 +197,10 @@ do your commit again. In my case, I would do:
 
 But you need to use your name and e-mail. Don't use mine.
 
+Make good commit messages. But yes, everyone has been here:
+
+.. image:: https://imgs.xkcd.com/comics/git_commit_2x.png
+
 Git Log
 ^^^^^^^
 
@@ -320,7 +331,7 @@ Next, open a command prompt. If you are on Windows,
 I suggest switching to the desktop
 and put your files there with a ``cd Desktop``.
 
-Then, type ``git clone `` and paste the text you copied from the website
+Then, type ``git clone`` and paste the text you copied from the website
 to clone:
 
 .. image:: git_clone.png
