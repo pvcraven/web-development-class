@@ -422,6 +422,8 @@ Pull changes from the server:
 Normally, this will work fine and you'll be done. But if you have other computers
 that you are coding on, the computer will automatically try to merge.
 
+.. _git_merging:
+
 Step 2A: Merging
 ~~~~~~~~~~~~~~~~
 
