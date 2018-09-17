@@ -20,8 +20,8 @@ Creating a Branch
 * Get started. Make a change to your files.
 * Open a command prompt
 * ``cd`` to your project directory
-* Type ``git checkout -b test_firstname_lastname``. Obviously, use your name,
-  not firstname, lastname.
+* Type ``git checkout -b my_new_branch``. Obviously, don't use ``my_new_branch`` but
+  give the branch its own name.
 
 Switching Branches
 ^^^^^^^^^^^^^^^^^^
@@ -54,10 +54,15 @@ Merge a Branch Back To Master
     git pull
     git merge --no-ff --no-commit test
 
+At this point, type:
 
 ``git status``
 
+Then see if there are any conflicts. If so, take care of them. Once you've
+done that, type:
+
 ::
 
+    git add *
     git commit -m 'merge test branch'
     git push
