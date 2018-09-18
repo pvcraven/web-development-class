@@ -15,8 +15,8 @@ Topics and Tutorials
    02_file_management/file_management
    03_distributed_version_control/dvcs
    04_css/css
-   collaboration
-   server_management
+   05_collaboration/collaboration
+   06_server_management/server_management
    cms
    static
    cloud
@@ -31,7 +31,7 @@ Assignments
    assignments/02_dvcs/dvcs.rst
    assignments/03_css/css.rst
    assignments/04_bootstrap/bootstrap.rst
-   assignments/finalize_site/finalize_site.rst
+   assignments/05_finalize_site/finalize_site.rst
    assignments/aws_deployment/aws_deployment.rst
    assignments/php_include/php_include.rst
    assignments/performance/performance.rst
