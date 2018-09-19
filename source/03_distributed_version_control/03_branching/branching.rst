@@ -10,7 +10,7 @@ Quick Summary
 * ``git checkout -b my_new_branch`` Creates a new branch, and switches to that branch.
 * ``git checkout my_branch`` Switches to an already existing branch.
 * ``git branch -d my_branch`` Deletes a branch.
-* ``git push --new-upstream my_branch`` Push a new branch to the server for the first time.
+* ``git push --set-upstream origin my_branch`` Push a new branch to the server for the first time.
 
 Creating a Branch
 ^^^^^^^^^^^^^^^^^
