@@ -4,4 +4,4 @@ Collaboration
 .. toctree::
    :maxdepth: 2
 
-   theory/collaboration/collaboration.rst
+   collaboration/collaboration.rst
