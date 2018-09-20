@@ -46,7 +46,7 @@ First Push Of New Branch To Remote Server
 Merge a Branch Back To Master
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-::
+.. code-block:: text
 
     git checkout test
     git pull
@@ -61,7 +61,7 @@ At this point, type:
 Then see if there are any conflicts. If so, take care of them. Once you've
 done that, type:
 
-::
+.. code-block:: text
 
     git add *
     git commit -m 'merge test branch'
