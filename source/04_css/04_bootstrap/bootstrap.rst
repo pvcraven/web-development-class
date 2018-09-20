@@ -15,7 +15,7 @@ even easier to understand.
 Our first page will have a simple menu, and some text:
 
 .. image:: example_01_wide.png
-    :width: 600px
+    :width: 700px
     :alt: First Web Page
 
 Bootstrap is great at being *responsive*. It will scale and easily work on
@@ -34,11 +34,6 @@ Here is the code behind that template:
     :linenos:
     :language: html
 
-And a little bit of custom HTML:
-
-.. literalinclude:: custom.css
-    :linenos:
-    :language: css
 
 To lean more about how to use Bootstrap:
 
@@ -51,8 +46,10 @@ To lean more about how to use Bootstrap:
 * Then look at their section on
   `Components <https://getbootstrap.com/docs/4.1/components/alerts/>`_
   to know how to use it for components. Try those out.
+* Do you want an image with a caption? Checkout `Content...Figures <http://getbootstrap.com/docs/4.1/content/figures/>`_
+* Need to style a table? Check out `Content...Tables <http://getbootstrap.com/docs/4.1/content/tables/>`_
 * Finally, look at their
-  `flex box system <https://getbootstrap.com/docs/4.1/utilities/flex/>`_. It is a very important
+  `grid system <http://getbootstrap.com/docs/4.1/layout/grid/>`_. It is a very important
   tool for layout.
 
 .. _Bootstrap: http://getbootstrap.com/
