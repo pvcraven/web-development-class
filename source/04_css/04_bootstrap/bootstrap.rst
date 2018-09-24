@@ -9,8 +9,8 @@ looking website without having to create your styles from scratch.
 There are many libraries like Bootstrap available. We can't cover them all. But
 we can use Bootstrap to give you the idea of what these libraries can do.
 
-The Bootstrap website is great, except I think we can make the "first web page"
-even easier to understand.
+The Bootstrap website is great. For our purposes, here's an example document to
+get started with.
 
 Our first page will have a simple menu, and some text:
 
