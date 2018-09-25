@@ -4,7 +4,7 @@ Assignment 4 - Bootstrap
 Getting set up:
 
 * Open the project you were assigned.
-* Go back before you started adding CSS. Do this by double-clicking on the project at that check-in.
+* Make sure you've got everything committed and pushed from the last assignment.
 * Create a new branch of your project called ``bootstrap_firstname_lastname``.
 
 Do the following:
