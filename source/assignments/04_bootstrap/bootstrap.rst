@@ -16,8 +16,8 @@ Do the following:
 * "Style buttons with Bootstrap" Style all the buttons (there has to be at
   least one) with Bootstrap. Leave no button unstyled.
 * "Use 12 column layout" Pick at least page, and make it into a responsive multi-column
-  layout using Bootstrap. Use the full power of the 12 column layout to get
-  full points.
+  layout using Bootstrap. Don't simply make a container with just one column, it
+  is hard to get a sense of using the layout functions with such a simple example.
 * "Use Bootstrap menu bar" Put a Bootstrap menu bar on all your pages.
 * "Use a Bootstrap alert" Put at least one Bootstrap alert somewhere on your page.
 * "Use a Bootstrap Jumbotron" Properly use a Jumbotron at least once. Don't make
