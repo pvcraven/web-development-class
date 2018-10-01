@@ -3,11 +3,12 @@ Assignment 5 - Finalize Site
 
 You will be assigned a team of people. As part of this team you need to:
 
-* Select a project. Only one team per project.
-* Select a branch of the project to finalize.
-* Merge that branch in to the master branch.
+* Select a project. It can be one you worked on before, or not.
+* It is ok if someone else is working on the same project.
 * Look at all branches of the project and select the best material out of them.
+* Create a branch of the project to finalize. Call it something like ``finalize_first1_first2``
 * Assign everyone parts of the site to improve.
+* Create GitHub issues for each thing you will improve.
 * Follow up to make sure those assignments were done.
 
 Following this work, write up answers to these questions:
