@@ -3,76 +3,66 @@
 Branching Tutorial
 ------------------
 
-Steps to successful branching.
+Quick Summary
+^^^^^^^^^^^^^
+
+* ``git branch`` Lists all branches. The starred branch is your current branch.
+* ``git checkout -b my_new_branch`` Creates a new branch, and switches to that branch.
+* ``git checkout my_branch`` Switches to an already existing branch.
+* ``git branch -d my_branch`` Deletes a branch.
+* ``git push --set-upstream origin my_branch`` Push a new branch to the server for the first time.
+
+Creating a Branch
+^^^^^^^^^^^^^^^^^
 
 * Make sure you have permission as a "collaborator" with the project.
 * Make sure you have an up-to-date clone of the repository.
 * Get started. Make a change to your files.
-* Switch to SourceTree
-* Select branch (step 1)
-* Type in the name of your branch. For our first CSS assignment use
-  ``css_firstname_lastname``. Obviously, replace first name and last name
-  with your actual name. (step 2)
-* Click "Create Branch" (step 3)
+* Open a command prompt
+* ``cd`` to your project directory
+* Type ``git checkout -b my_new_branch``. Obviously, don't use ``my_new_branch`` but
+  give the branch its own name.
 
-.. image:: branch_1.png
-    :width: 600px
-    :align: center
-    :alt: Branching
+Switching Branches
+^^^^^^^^^^^^^^^^^^
 
-* At this point, you should be able to see that you have your branch selected
-  (see point 1 below)
-* You should also be able to see your branch name (see point 2)
+* Use ``git branch`` to see all the branches, and which one you are currently on.
+* Use ``git checkout`` without the ``-b`` to practice switching between branches.
 
-.. image:: branch_5.png
-    :width: 500px
-    :align: center
-    :alt: Branching
+Changing a Branch
+^^^^^^^^^^^^^^^^^
 
-* Commit your files. Look at the image below. You should be able to see the tag
-  for your branch. (point 1 below) You should also see that the 'master' tag
-  does *not* move forward with your code.
-* Congratulations! You now have a branch. It may not look like a branch, but
-  keep in mind that a tree trunk with only one branch coming out the top of
-  it still looks an awful lot like one tree trunk. It will look like a branch
-  in a soon.
+* Switch to your personal branch. Change some files.
+* Do a ``git add`` and ``git commit`` on your changes.
+* Switch between the ``master`` branch and your branch. See how the file changes.
+* Type ``gitk`` to graphically see both branches.
 
-.. image:: branch_6.png
-    :width: 500px
-    :align: center
-    :alt: Branching
+First Push Of New Branch To Remote Server
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* Push your files. When you push, select the new branch that you created
-  (step 1) and then click push (step 2).
+* If the branch has not yet been pushed to the remote server, type ``git push --new-upstream test_firstname_lastname``
+* If it has been pushed already, just switch to the branch and type ``git push``.
 
-.. image:: branch_2.png
-    :width: 500px
-    :align: center
-    :alt: Branching
+Merge a Branch Back To Master
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* You can now pull your branch, and even other people's branches. You may need
-  to first hit "refresh" (step 1) to get the branches on the server. Then select
-  the branch (step 2), then select "ok" (step 3).
+.. code-block:: text
 
-.. image:: branch_3.png
-    :width: 600px
-    :align: center
-    :alt: Branching
+    git checkout test
+    git pull
+    git checkout master
+    git pull
+    git merge --no-ff --no-commit test
 
-* If you pull other branches, then your code will start looking like it has
-  branches. You can switch between branches as well.
-* You can see what version is current by looking for the hollowed out circle
-  on your list of revisions. (step 1) Your branch of code may be on the left
-  or the right. It doesn't really matter.
+At this point, type:
 
-.. image:: branch_4.png
-    :width: 500px
-    :align: center
-    :alt: Branching
+``git status``
 
-* As long as you don't have any uncommitted changes, you can swap between
-  branches by double-clicking on a commit. SourceTree may just 'switch' the
-  branches with a double-click. Or you may get another dialog box that
-  pops up, where you need to select "check out existing" branch.
-* Note: If you edit files on a revision without a branch label, you can lose
-  the changes. They are there, but without a label they are hard to find.
+Then see if there are any conflicts. If so, take care of them. Once you've
+done that, type:
+
+.. code-block:: text
+
+    git add *
+    git commit -m 'merge test branch'
+    git push

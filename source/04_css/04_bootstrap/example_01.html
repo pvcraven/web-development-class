@@ -7,15 +7,15 @@
 
     <!-- This says our CSS is compatible with phones, and phones
          don't need to scale it strangely. -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Main CSS styles for Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 
     <!-- Optional theme add-on -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.3/sandstone/bootstrap.min.css">
 
-    <!-- If you don't like how 04_bootstrap looks, go here and see other themes
+    <!-- If you don't like how sandstone looks, go here and see other themes
          that are available:
          https://bootswatch.com/
 
@@ -24,52 +24,58 @@
          https://www.bootstrapcdn.com/bootswatch/
     -->
 
-    <!-- Our custom stylesheet that WE write. We need this to not have our
-         text appear under the nav bar. -->
-    <link rel="stylesheet" href="custom.css">
-
   </head>
 
   <body>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Simpson College</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-            <!-- Three line "hamburger" icon for the collapsed navigation -->
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-          <!-- Title on nav bar -->
-          <a class="navbar-brand" href="#">Bootstrap</a>
-        </div>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
 
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="example_01.html">Example 1</a></li>
-            <li><a href="example_02.html">Example 2</a></li>
-            <li><a href="example_03.html">Example 3</a></li>
-          </ul>
-        </div>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="location.html">Location</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Students
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="scconnect.html">SC Connect</a>
+              <a class="dropdown-item" href="registrar_forms.html">Registrar Forms</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="menu.html">Lunch Menu</a>
+            </div>
+          </li>
+        </ul>
+
       </div>
     </nav>
 
     <!-- Main content -->
     <div class="container">
-      <!-- This container moves below the menu bar -->
-      <div class="below_menu_container">
         <h1>Example Bootstrap Document</h1>
         <p>This is a test of Bootstrap.</p>
-      </div>
     </div>
 
-    <!-- Scripts required to make Bootstrap work better. -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
   </body>
 </html>

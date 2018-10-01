@@ -15,6 +15,7 @@ To complete this project:
 * Clone it.
 * Look at it.
 * Create a branch of the project in SourceTree. Follow the :ref:`branching-tutorial`.
+  Call your branch ``css_lastname_firstname``. (Obviously, use your name.)
 * You will be changing the files that are already there. Do NOT create your own folder with your
   own set of files. You can correct mistakenly named files. You can reorganize poorly organized
   files. But don't let there be two copies of the website in the project.
@@ -23,7 +24,7 @@ To complete this project:
   people's messes.
 * Make sure no one checked in those temp files that CSE Validator creates. They
   start with a tilde and look like ``~cse_wb_index.html``. Delete them if they
-  exist. Perhaps create a ``.ignore`` file so you don't accidentally add more.
+  exist.
 * Make sure all the file names are lower case, and have no spaces. Underscores
   are ok. Go back and fix links to match the case.
 * Add a little bit more content to the site of your own creation. Seriously.
@@ -37,10 +38,10 @@ To complete this project:
 
 * For index.html:
 
-  * Apply one or more in-line styles
-  * Apply one or more styles in the <head>
+  * Apply one or more in-line styles.
+  * Apply one or more styles in the ``<head>``
 
-* For all pages:
+* For all other pages:
 
   * Apply a stylesheet that you've created
   * Make sure the stylesheet is a subdirectory named "css"

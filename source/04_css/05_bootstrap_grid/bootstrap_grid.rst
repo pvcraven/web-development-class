@@ -6,13 +6,16 @@
 By now you should have:
 
 * Look at the
-  `Bootstrap Examples <http://getbootstrap.com/getting-started/#examples-framework>`_
+  `Bootstrap Examples <https://getbootstrap.com/docs/4.0/examples/>`_
   to see what is possible.
-* Then look at their
-  `CSS Documentation <http://getbootstrap.com/css/>`_
-  to know how to use it.
+* Get started by using their
+  `Bootstrap Quick Start <https://getbootstrap.com/docs/4.1/getting-started/introduction/>`_,
+  or the example above.
+* Then look at their section on
+  `Components <https://getbootstrap.com/docs/4.1/components/alerts/>`_
+  to know how to use it for components. Try those out.
 * Finally, look at their
-  `grid system <http://getbootstrap.com/css/#grid>`_. It is a very important
+  `grid system <http://getbootstrap.com/docs/4.1/layout/grid/>`_. It is a very important
   tool for layout.
 
 However those grid examples are complex.
@@ -68,6 +71,7 @@ Example 5
 
 This example has sidebar that goes away when the screen is extra
 small.
+This uses Bootstrap's `Display Utilities <http://getbootstrap.com/docs/4.1/utilities/display/>`_.
 
 .. literalinclude:: example_05.html
     :linenos:
