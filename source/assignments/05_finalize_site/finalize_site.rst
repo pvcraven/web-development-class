@@ -15,8 +15,10 @@ You will be assigned a team of people. As part of this team you need to:
 * Assign everyone parts of the site to improve.
 * Create GitHub issues for each thing you will improve.
 * Follow up to make sure those assignments were done.
+* Feel free to set up a meeting time / text chat / discord / or something else to coordinate work through
+* Get the work done by Thursday.
 
-Following this work, write up answers to these questions:
+Following this work (after Thursday), write up answers to these questions:
 
 * Who was on your team?
 * What project did you work on? (Paste in URL)
