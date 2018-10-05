@@ -31,6 +31,14 @@ Here is a diagram:
     :width: 500px
     :align: center
 
+There are several different competing software programs
+out there that can act as a web server. The most
+popular ones:
+
+* Apache (This is the one we will use.)
+* nginx
+* IIS (Internet Information Server by Microsoft)
+
 What Does The Web Server Do?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -58,15 +66,18 @@ understanding this basic functionality. **The web server is a program that makes
 the HTML, CSS, and image files you've saved on your computer available on the
 network.**
 
+In addition to web server software, people often combine it with software like
+a database server to store information, and an application server to make
+pages dynamic and interface with the database.
+
 How Do I Set Up My Own Web Server?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-From here, we'll first set up your own web server
-on your own computer using the :ref:`web_server_setup`. This is ok for
-development and learning how web servers work, but likely won't
-work for a "real" web server. You aren't likely to
-have your computer up all the time, nor do you want "just anyone" to  be
-able to hook up to your home computer. For this, we'll next need to
-set up a "real" web server using :ref:`aws_setup`.
+We will use the Apache web server for this class. For the machines we program
+on, we'll use XAMPP. XAMPP will install both Apache, a database, an application
+server, and help us manage them.
+
+The next section, :ref:`web_server_setup`, will get a server set up on your
+local machine.
 
 .. _Hyper Text Transfer Protocol: https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol
