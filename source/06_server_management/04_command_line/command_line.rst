@@ -10,7 +10,7 @@ Below is a list of commands you should know. We'll go over them in class:
 +---------------------------+------------------------------------------------------+
 | ``ls``                    | Directory listing for the current working directory  |
 +---------------------------+------------------------------------------------------+
-| ``ls \*.py``              | List all files ending in .py                         |
+| ``ls *.py``               | List all files ending in .py                         |
 +---------------------------+------------------------------------------------------+
 | ``ls -la``                | Directory listing with details and hidden files      |
 +---------------------------+------------------------------------------------------+
@@ -59,7 +59,7 @@ Below is a list of commands you should know. We'll go over them in class:
 |                           | 'backup' or put 'file1' in the directory 'backup' if |
 |                           | it already exists.                                   |
 +---------------------------+------------------------------------------------------+
-| ``cp \* ../backup``       | Copy every file in the current directory up one      |
+| ``cp * ../backup``        | Copy every file in the current directory up one      |
 |                           | directory, and then down into a directory named      |
 |                           | 'backup'. This does NOT recurse into subdirectories. |
 +---------------------------+------------------------------------------------------+

@@ -1,6 +1,14 @@
 Command Line Tutorial
 =====================
 
+Managing a server via command-line can be better than using a graphical interface
+with windows and menus. Why?
+
+* It is faster to send text than graphics.
+* Commands are reproducable and scriptable. If you document the 45 commands
+  (or whatever) you need to set up your server, you can put those 45 commands
+  in a script. Then run the script and your server is all set up!
+
 Command Prompt
 --------------
 
