@@ -11,7 +11,7 @@ the Apache Web Server, and some other applications. The name comes from:
 
 * X - Cross platform (Works on Windows, Mac and Linux)
 * A - Apache (Web server)
-* M - MySQL (Database)
+* M - MariaDB (Database, they used to use MySQL)
 * P - PHP (Back-end server language)
 * P - Perl (Back-end server language)
 

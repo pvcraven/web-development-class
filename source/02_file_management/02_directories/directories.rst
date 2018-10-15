@@ -24,7 +24,7 @@ example of linking between two files in the same directory:
    :linenos:
    :caption: page2.html
 
-Try it out: `here <../../_static/directories/v1/page1.html>`_
+Try it out: `Example 1 <../../_static/directories/v1/page1.html>`_
 
 This next example adds a new page, named ``page3.html``
 in a new subdirectory, named ``subdir``. Note that the links in
@@ -48,7 +48,7 @@ directory.
    :linenos:
    :caption: subdir/page3.html
 
-Try it out: `here <../../_static/directories/v2/page1.html>`_
+Try it out: `Example 2 <../../_static/directories/v2/page1.html>`_
 
 The next example shows how to extend the same concept to link into
 nested directories:
@@ -68,7 +68,7 @@ nested directories:
    :linenos:
    :caption: subdir/supersub/page4.html
 
-Try it out: `here <../../_static/directories/v3/page1.html>`_
+Try it out: `Example 3 <../../_static/directories/v3/page1.html>`_
 
 Absolute vs. Relative References
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -98,7 +98,7 @@ name and not have to also update the link.
    :linenos:
    :caption: page1.html
 
-Try it out: `here <../../_static/directories/v4/page1.html>`_
+Try it out: `Example 4 <../../_static/directories/v4/page1.html>`_
 
 Remember, if a website links to a directory but not a file, the web server will
 look for an index file, such as ``index.html`` or ``index.php``.
