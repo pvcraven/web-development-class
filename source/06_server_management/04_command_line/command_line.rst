@@ -371,6 +371,11 @@ you can list all the packages installed with that command. Copy the
 list. Then install all those packages on a new server with one
 command. Try that on Windows.
 
+Log Out
+-------
+
+To log out of the server, type `exit`.
+
 Other
 -----
 
