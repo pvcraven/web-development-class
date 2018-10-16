@@ -157,6 +157,17 @@ Setting Up The Server
 Getting to the Server
 ^^^^^^^^^^^^^^^^^^^^^
 
+We are going to open a "shell" to our new Amazon server using an encrypted network protocol called
+"ssh". (Short for Secure Socket Shell.)
+
+You will see people talk about typing in commands to a "command prompt",
+"terminal window", "terminal", "shell", "ssh", "bash", and "telnet". There are some
+slight differences in the meanings of these words, but for our purposes
+they all mean we are typing in commands to a computer.
+
+Get The Server Address
+~~~~~~~~~~~~~~~~~~~~~~
+
 Copy the Public DNS address we get from Amazon, or that you got from your
 instructor if he set up the server for you.
 
@@ -170,11 +181,17 @@ Connecting With a Mac
 ~~~~~~~~~~~~~~~~~~~~~
 
 To use the Terminal on the Mac, search for and run the "Terminal" program.
-Find where your key is that you downloaded. Then type:
+Copy your key to the Mac's desktop. What you will type will look *kind* of like:
 
 .. code-block:: text
 
+    cd Desktop
     ssh -i my_key.pem ubuntu@myservername.com
+
+Replace `my_key.pem` with the file name of the key that you downloaded from Amazon.
+
+Replace `myservername.com` with the really long public DNS name of the server you copied from the
+Amazon console.
 
 You may get a question about the "authenticity" of the host. If so, just
 type "yes". You'll only get that question once.

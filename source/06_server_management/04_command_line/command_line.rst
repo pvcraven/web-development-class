@@ -24,6 +24,10 @@ named ``ip-172-31-39-218`` and my current directory is
 I am also logged in as a "normal user" because I have a ``$`` as a command
 prompt. If I was an administrator, I would see a ``#``.
 
+It is easy to get confused with terminal windows, and start typing in commands
+that are going to a different machine than you expected. Be careful, it is easy
+to delete files on a "production" server instead of your own local computer if
+you mix up windows.
 
 Directories and Files
 ---------------------
