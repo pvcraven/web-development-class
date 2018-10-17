@@ -137,23 +137,22 @@ In detail, here's what the commands mean:
       already told it yes with the -y.
 * Line 3:
     * ``install`` directive for apt-get asks to install new software. There are
-      four software packages listed. ``apache2`` is the web server, ``php5`` is the
-      application server, ``php5-mysql`` allows us to hook the application server
-      to the database, and ``git`` is our version control software.
+      four software packages listed. ``apache2`` is the web server, ``php`` is the
+      application server, and ``git`` is our version control software.
 
 .. note::
 
     Terms people often confuse:
 
     "git" is the software we use for version control.
-    "GitHub" is the web site we use to store our git code. "SourceTree" is a graphical user interface
-    that sits on top of "git".
+    "GitHub" is the web site we use to store our git code.
 
     "Apache" (version 2) is our web server software. Not EC2 (which is the Amazon service to make machines) or
     AWS (which is all of Amazon's services.)
 
     "apt-get" is our software manager. MobaXTerm is software we use to use SSH and shell over to
-    our server to type commands.
+    our server to type commands. MobaXTerm does nothing but allow you to type
+    commands on that other server.
 
 
 
@@ -388,7 +387,7 @@ Check Deployment Script
     <iframe width="560" height="315" src="https://www.youtube.com/embed/Iv2m2XwcFTw" frameborder="0" allowfullscreen></iframe>
 
 Right now, if you update your website and push more code, your server
-won't update. We could update it by
+won't update. We want to update it automatically by "installing a webhook."
 
 
 Installing a Webhook
