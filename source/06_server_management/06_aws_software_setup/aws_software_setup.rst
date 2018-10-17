@@ -29,9 +29,25 @@ Do do this, we will create a "deploy script."
 
 * At this point, you have a copy of the project under your name.
   You will need to "clone" the new fork that you created. Clone it into a
-  new empty folder. Do not clone it into your copy of the original project.
-* Use SourceTree to select the branch that you want to work on. It will default to
+  new folder on your computer. Remember, to clone your project, you'll use
+  a command like the one below, except with your link. Not mine.
+
+.. code-block:: bash
+
+    cd Desktop
+    git clone git@github.com:pvcraven/arcade.git
+
+* If it says you already have a folder with that name, just rename the old
+  folder and try again.
+* Select the branch that you want to work on. It will default to
   the ``master`` branch if you don't specify one.
+  Remember, to list the branches and check out the one you want:
+
+.. code-block:: bash
+
+    git branch -a
+    git checkout name_of_my_branch
+
 * We will assume you have a directory structure created something like the image
   below. If not, adjust it now. The most common issue I've run into would be
   people who have a ``public html`` folder instead of a ``public_html`` folder.
@@ -72,7 +88,7 @@ We will eventually set GitHub up to call this web page when we push new code to
 the repository. For now, just create the file and add it to GitHub.
 
 .. attention::
-    Make sure your are on the proper branch. Add the file. Commit. Push.
+    Make sure your are on the proper branch. Add the deploy.php file. Commit. Push.
 
 Installing and Updating the Software
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -81,7 +97,9 @@ Installing and Updating the Software
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/y-CK4zzoBM0" frameborder="0" allowfullscreen></iframe>
 
-We are now in the server. We need to update the software, and install new software. Enter these commands.
+Connect to your server via SSH using the Mac's Terminal program or the MobaXTerm program.
+
+We need to update the software on the server, and install new software. Enter these commands.
 You can copy/paste them if you like. Note that most terminal programs use
 shift-insert to paste, and not ctrl-v.
 
