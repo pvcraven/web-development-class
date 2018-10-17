@@ -1,8 +1,17 @@
 AWS Software Setup
 ------------------
 
+Now we have our server up and running. We also know our way around the command
+prompt. Let's set up our web server.
+
 Adding the Deploy Script
 ^^^^^^^^^^^^^^^^^^^^^^^^
+
+We'd like to have our server automatically grab the latest code from GitHub
+each time we push new code up to the repository. That way we don't have to
+log into our web server each time there is a change.
+
+Do do this, we will create a "deploy script."
 
 .. raw:: html
 
@@ -74,7 +83,11 @@ Installing and Updating the Software
 
 We are now in the server. We need to update the software, and install new software. Enter these commands.
 You can copy/paste them if you like. Note that most terminal programs use
-shift-insert to paste, and not ctrl-v. Copy the commands one line at a time.
+shift-insert to paste, and not ctrl-v.
+
+.. attention::
+
+    Copy the commands one line at a time.
 
 .. code-block:: text
 
@@ -82,7 +95,7 @@ shift-insert to paste, and not ctrl-v. Copy the commands one line at a time.
 
   # For the next two, if you are asked questions during the update/install, just hit 'enter' for the default
   sudo apt-get -y upgrade
-  sudo apt-get -y install apache2 git php7.0 libapache2-mod-php7.0
+  sudo apt-get -y install apache2 git php
 
 
 The first line checks for software updates. The second line installs them.
@@ -181,7 +194,7 @@ In detail, here's how the commands break down:
     # each one. Don't keep pasting the other lines
     # in for each question. You can update with your
     # e-mail but it isn't necessary.
-    sudo -u www-data ssh-keygen -t rsa -C "your.email@simpson.edu"
+    sudo -u www-data ssh-keygen -t rsa -C "your.email@my.simpson.edu"
 
     sudo -u www-data ssh-agent -s
     cat .ssh/id_rsa.pub
