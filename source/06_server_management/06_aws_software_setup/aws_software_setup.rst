@@ -1,8 +1,22 @@
 AWS Software Setup
 ------------------
 
-Now we have our server up and running. We also know our way around the command
-prompt. Let's set up our web server.
+Now we have our server up and running. As a review:
+
+* We created our own server using Amazon's "EC2" cloud service. There are other
+  companies that also do cloud computing, like Microsoft. Eventually we'll use
+  the "S3" service from Amazon as well.
+* Our server is running the "Ubuntu" operating system. Ubuntu is a name-brand
+  version of a operating system called "Linux". Basically, Ubuntu is Linux with
+  a bunch of stuff added on to it, making it easy to use.
+* Linux is based off another operating system called UNIX. So is the operating
+  system for the Mac. The commands we type at the terminal are all very similar
+  between the types of operating systems. Windows isn't based on UNIX and is
+  a bit different.
+
+
+We also know our way around the command
+prompt. Let's use this knowledge to set up our web server.
 
 Adding the Deploy Script
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -249,7 +263,8 @@ about adding a key, answer "yes" to that warning.
     exists on the GitHub URL. There are **three** places you need to do so in the script
     below. Also, replace ``the_branch_i_want`` with the branch that you want to be shown.
 
-::
+.. code-block:: bash
+    :linenos:
 
   # Change to the directory (cd) that has our web files: /var/www
   cd /var/www
@@ -275,7 +290,7 @@ Apache saves all of its setup information in text files. Exactly where these
 files are and what they are named is not exactly intuitive. With some Googling
 you can find this. Or just read below:
 
-::
+.. code-block:: bash
 
   # Change to the directory with the configuration information
   cd /etc/apache2/sites-available
@@ -283,6 +298,12 @@ you can find this. Or just read below:
   # Use the 'nano' editor to edit this file
   sudo nano 000-default.conf
 
+Alternatively, we can use Vim to edit the file instead of nano:
+
+.. code-block:: bash
+
+  # Use the 'vim' editor to edit this file
+  sudo vim 000-default.conf
 
 Update the file's ``DocumentRoot`` to point to the directory that holds your
 web site. See the highlighted line below that you should edit:
