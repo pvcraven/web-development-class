@@ -263,8 +263,7 @@ about adding a key, answer "yes" to that warning.
     exists on the GitHub URL. There are **three** places you need to do so in the script
     below. Also, replace ``the_branch_i_want`` with the branch that you want to be shown.
 
-.. code-block:: bash
-    :linenos:
+::
 
   # Change to the directory (cd) that has our web files: /var/www
   cd /var/www
