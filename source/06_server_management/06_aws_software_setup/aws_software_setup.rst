@@ -19,7 +19,7 @@ We also know our way around the command
 prompt. Let's use this knowledge to set up our web server.
 
 Adding the Deploy Script
-^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------
 
 We'd like to have our server automatically grab the latest code from GitHub
 each time we push new code up to the repository. That way we don't have to
@@ -106,7 +106,7 @@ the repository. For now, just create the file and add it to GitHub.
     Make sure your are on the proper branch. Add the deploy.php file. Commit. Push.
 
 Installing and Updating the Software
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------------------
 
 .. raw:: html
 
@@ -172,7 +172,7 @@ In detail, here's what the commands mean:
 
 
 Check the Web Server
-^^^^^^^^^^^^^^^^^^^^
+--------------------
 
 Check to see if your web server is running by going to the DNS name of the
 server. Remember, you can get the address here:
@@ -256,8 +256,8 @@ Add in the key:
     :width: 600px
     :align: center
 
-Clone the Repository
---------------------
+Clone the Repository On The Server
+----------------------------------
 
 Now we need to get the code set up. Enter the commands below. Replace
 sample-web-project with the name of your GitHub project. Replace pvcraven with
