@@ -350,9 +350,13 @@ web site. See the highlighted line below that you should edit:
 
     # vim: syntax=apache ts=4 sw=4 sts=4 sr noet
 
-To exit the editor hit "ctrl-x". Then after that, it will ask if you want
+To exit the nano editor hit "ctrl-x". Then after that, it will ask if you want
 to save the file. Hit "y" for yes. Then it will ask you what file name.
 Hit the "enter" key to just accept the same file name that you loaded.
+
+To exit vim, type escape, followed by two upper case ``Z``'s to save and exit.
+(Or type ``:wq``)
+
 
 Restart the Web Server
 ----------------------
