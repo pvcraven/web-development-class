@@ -1,5 +1,5 @@
 AWS Software Setup
-------------------
+==================
 
 Now we have our server up and running. As a review:
 
@@ -25,11 +25,7 @@ We'd like to have our server automatically grab the latest code from GitHub
 each time we push new code up to the repository. That way we don't have to
 log into our web server each time there is a change.
 
-Do do this, we will create a "deploy script."
-
-.. raw:: html
-
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/AYhqDJLufzg" frameborder="0" allowfullscreen></iframe>
+To do this, we will create a "deploy script."
 
 * Start with a project that you already have worked on. Probably your last
   assignment.
@@ -44,12 +40,13 @@ Do do this, we will create a "deploy script."
 * At this point, you have a copy of the project under your name.
   You will need to "clone" the new fork that you created. Clone it into a
   new folder on your computer. Remember, to clone your project, you'll use
-  a command like the one below, except with your link. Not mine.
+  a command like the one below, except with your link. Not mine. Use the
+  "https" method of closing and not "ssh".
 
 .. code-block:: bash
 
     cd Desktop
-    git clone git@github.com:pvcraven/arcade.git
+    git clone https://github.com/pvcraven/cis_bakery.git
 
 * If it says you already have a folder with that name, just rename the old
   folder and try again.
@@ -74,6 +71,10 @@ Do do this, we will create a "deploy script."
 * Create a new file in the public_html named ``deploy_script.php``.
 * Paste into ``deploy_script.php`` the following code listing.
   This page, when accessed, will go to GitHub and update our website.
+
+.. attention::
+
+    Where the file says "Put your name here", please actually put your name there.
 
 .. literalinclude:: deploy_script.php
     :linenos:
@@ -174,7 +175,12 @@ Check the Web Server
 ^^^^^^^^^^^^^^^^^^^^
 
 Check to see if your web server is running by going to the DNS name of the
-server. You should get a default page.
+server. Remember, you can get the address here:
+
+.. image:: copy_address.png
+    :width: 500px
+
+Then paste it in the web browser. You should get a default page like:
 
 .. image:: default_web_page.png
     :width: 600px
@@ -263,23 +269,28 @@ about adding a key, answer "yes" to that warning.
     exists on the GitHub URL. There are **three** places you need to do so in the script
     below. Also, replace ``the_branch_i_want`` with the branch that you want to be shown.
 
-::
 
-  # Change to the directory (cd) that has our web files: /var/www
-  cd /var/www
+.. code-block:: bash
+    :linenos:
 
-  # Update the next line with the name of your project, as shown in your
-  # GitHub's URL.
-  sudo mkdir sample-web-project
-  sudo chown -R www-data:www-data sample-web-project
+    # Change to the directory (cd) that has our web files: /var/www
+    cd /var/www
 
-  # Update the next line with your GitHub id and GitHub project name.
-  # You will likely be asked a yes/no question. Go ahead and say 'yes'
-  sudo -u www-data git clone git@github.com:pvcraven/sample-web-project.git
+    # Update the next line with the name of your project, as shown in your
+    # GitHub's URL.
+    sudo mkdir sample-web-project
+    sudo chown -R www-data:www-data sample-web-project
 
-  # If you are using any branch but "master", then select the branch below:
-  cd sample-web-project
-  sudo -u www-data git checkout the_branch_i_want
+    # Update "pcraven" in the next line with your GitHub id
+    # Update "sample-web-project" with your web project
+    # (You can also copy from the 'clone' button on GitHub if you select
+    # SSH type of cloning.)
+    # You will likely be asked a yes/no question. Go ahead and type 'yes'
+    sudo -u www-data git clone git@github.com:pvcraven/sample-web-project.git
+
+    # If you are using any branch but "master", then select the branch below:
+    cd sample-web-project
+    sudo -u www-data git checkout the_branch_i_want
 
 
 Point Apache Web Server to Our Files
@@ -363,9 +374,9 @@ Restart the Web Server
 Great, now that you've edited the file, restart the web server. Make sure
 you are no longer in the text editor, and at the command prompt. Type:
 
-::
+.. code-block:: bash
 
-  sudo service apache2 restart
+    sudo service apache2 restart
 
 See if your web pages are showing up now.
 
@@ -374,7 +385,7 @@ you have the correct directory specified.
 
 Try typing:
 
-::
+.. code-block:: bash
 
     # Change to the /var/www directory:
     cd /var/www
@@ -384,7 +395,7 @@ Try typing:
 
 At that point, see if you spot a directory that should have your files. Then type:
 
-::
+.. code-block:: bash
 
     # Change to sample-web-project
     cd sample-web-project
@@ -410,8 +421,25 @@ Check Deployment Script
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/Iv2m2XwcFTw" frameborder="0" allowfullscreen></iframe>
 
-Right now, if you update your website and push more code, your server
-won't update. We want to update it automatically by "installing a webhook."
+We created a web page that will automatically run ``git pull`` for us if we access
+it. This is way easier than having to shell to the server every time we update.
+
+Let's see if it works. Go to your web address, but instead of ``index.html`` go
+to the deployment script. It should look like:
+
+.. code-block:: text
+
+    http://ec2-34-220-32-180.us-west-2.compute.amazonaws.com/deploy_script.php
+
+Make sure to use your ec2 server address instead of mine. Just add the ``deploy_script.php``
+to the end of yours.
+
+If you get a 404 file not found error, then something went wrong. Ask your instructor
+for help debugging.
+
+If it works, then we can access that page anytime we want to update our server
+to the current code. But we can make it even easier by having GitHub to that
+step for us by "installing a webhook."
 
 
 Installing a Webhook
