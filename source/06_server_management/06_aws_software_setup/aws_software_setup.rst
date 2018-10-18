@@ -434,6 +434,10 @@ to the deployment script. It should look like:
 Make sure to use your ec2 server address instead of mine. Just add the ``deploy_script.php``
 to the end of yours.
 
+Your page should look like:
+
+.. image:: deploy_script.png
+
 If you get a 404 file not found error, then something went wrong. Ask your instructor
 for help debugging.
 
