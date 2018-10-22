@@ -25,11 +25,26 @@ Often, we change the file ending to show that they should be processed
 by the application engine. We'll use PHP, and all PHP files end in
 ``.php`` instead of ``.html``.
 
+Telling Time With PHP
+^^^^^^^^^^^^^^^^^^^^^
+
+Create this file in a directory that you can pull up via XAMPP.
+
+.. literalinclude:: php_time_test.php
+    :caption: php_time_test.php
+    :linenos:
+    :language: html
+
+Once you've created it, pull it up via the web browser, and directly by dragging it onto your
+web browser. Do a "view source." Notice how PHP changes the HTML.
+
+You can read more about the `PHP Date function <http://php.net/manual/en/function.date.php>`_ here.
+
 The Include Statement
 ^^^^^^^^^^^^^^^^^^^^^
 
 We won't do *that* much with application servers during this semester.
-However, I do want to introduce *one* thing you can do with an application
+However, I do want to introduce one main thing you can do with an application
 server. Include other files.
 
 Say you have a web page like this:
