@@ -1,12 +1,31 @@
 AWS Software Setup
-------------------
+==================
+
+Now we have our server up and running. As a review:
+
+* We created our own server using Amazon's "EC2" cloud service. There are other
+  companies that also do cloud computing, like Microsoft. Eventually we'll use
+  the "S3" service from Amazon as well.
+* Our server is running the "Ubuntu" operating system. Ubuntu is a name-brand
+  version of a operating system called "Linux". Basically, Ubuntu is Linux with
+  a bunch of stuff added on to it, making it easy to use.
+* Linux is based off another operating system called UNIX. So is the operating
+  system for the Mac. The commands we type at the terminal are all very similar
+  between the types of operating systems. Windows isn't based on UNIX and is
+  a bit different.
+
+
+We also know our way around the command
+prompt. Let's use this knowledge to set up our web server.
 
 Adding the Deploy Script
-^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------
 
-.. raw:: html
+We'd like to have our server automatically grab the latest code from GitHub
+each time we push new code up to the repository. That way we don't have to
+log into our web server each time there is a change.
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/AYhqDJLufzg" frameborder="0" allowfullscreen></iframe>
+To do this, we will create a "deploy script."
 
 * Start with a project that you already have worked on. Probably your last
   assignment.
@@ -20,9 +39,26 @@ Adding the Deploy Script
 
 * At this point, you have a copy of the project under your name.
   You will need to "clone" the new fork that you created. Clone it into a
-  new empty folder. Do not clone it into your copy of the original project.
-* Use SourceTree to select the branch that you want to work on. It will default to
+  new folder on your computer. Remember, to clone your project, you'll use
+  a command like the one below, except with your link. Not mine. Use the
+  "https" method of closing and not "ssh".
+
+.. code-block:: bash
+
+    cd Desktop
+    git clone https://github.com/pvcraven/cis_bakery.git
+
+* If it says you already have a folder with that name, just rename the old
+  folder and try again.
+* Select the branch that you want to work on. It will default to
   the ``master`` branch if you don't specify one.
+  Remember, to list the branches and check out the one you want:
+
+.. code-block:: bash
+
+    git branch -a
+    git checkout name_of_my_branch
+
 * We will assume you have a directory structure created something like the image
   below. If not, adjust it now. The most common issue I've run into would be
   people who have a ``public html`` folder instead of a ``public_html`` folder.
@@ -35,6 +71,10 @@ Adding the Deploy Script
 * Create a new file in the public_html named ``deploy_script.php``.
 * Paste into ``deploy_script.php`` the following code listing.
   This page, when accessed, will go to GitHub and update our website.
+
+.. attention::
+
+    Where the file says "Put your name here", please actually put your name there.
 
 .. literalinclude:: deploy_script.php
     :linenos:
@@ -63,18 +103,24 @@ We will eventually set GitHub up to call this web page when we push new code to
 the repository. For now, just create the file and add it to GitHub.
 
 .. attention::
-    Make sure your are on the proper branch. Add the file. Commit. Push.
+    Make sure your are on the proper branch. Add the deploy.php file. Commit. Push.
 
 Installing and Updating the Software
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------------------
 
 .. raw:: html
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/y-CK4zzoBM0" frameborder="0" allowfullscreen></iframe>
 
-We are now in the server. We need to update the software, and install new software. Enter these commands.
+Connect to your server via SSH using the Mac's Terminal program or the MobaXTerm program.
+
+We need to update the software on the server, and install new software. Enter these commands.
 You can copy/paste them if you like. Note that most terminal programs use
-shift-insert to paste, and not ctrl-v. Copy the commands one line at a time.
+shift-insert to paste, and not ctrl-v.
+
+.. attention::
+
+    Copy the commands one line at a time.
 
 .. code-block:: text
 
@@ -82,7 +128,7 @@ shift-insert to paste, and not ctrl-v. Copy the commands one line at a time.
 
   # For the next two, if you are asked questions during the update/install, just hit 'enter' for the default
   sudo apt-get -y upgrade
-  sudo apt-get -y install apache2 git php7.0 libapache2-mod-php7.0
+  sudo apt-get -y install apache2 git php
 
 
 The first line checks for software updates. The second line installs them.
@@ -106,31 +152,35 @@ In detail, here's what the commands mean:
       already told it yes with the -y.
 * Line 3:
     * ``install`` directive for apt-get asks to install new software. There are
-      four software packages listed. ``apache2`` is the web server, ``php5`` is the
-      application server, ``php5-mysql`` allows us to hook the application server
-      to the database, and ``git`` is our version control software.
+      four software packages listed. ``apache2`` is the web server, ``php`` is the
+      application server, and ``git`` is our version control software.
 
 .. note::
 
     Terms people often confuse:
 
     "git" is the software we use for version control.
-    "GitHub" is the web site we use to store our git code. "SourceTree" is a graphical user interface
-    that sits on top of "git".
+    "GitHub" is the web site we use to store our git code.
 
     "Apache" (version 2) is our web server software. Not EC2 (which is the Amazon service to make machines) or
     AWS (which is all of Amazon's services.)
 
     "apt-get" is our software manager. MobaXTerm is software we use to use SSH and shell over to
-    our server to type commands.
+    our server to type commands. MobaXTerm does nothing but allow you to type
+    commands on that other server.
 
 
 
 Check the Web Server
-^^^^^^^^^^^^^^^^^^^^
+--------------------
 
 Check to see if your web server is running by going to the DNS name of the
-server. You should get a default page.
+server. Remember, you can get the address here:
+
+.. image:: copy_address.png
+    :width: 500px
+
+Then paste it in the web browser. You should get a default page like:
 
 .. image:: default_web_page.png
     :width: 600px
@@ -181,7 +231,7 @@ In detail, here's how the commands break down:
     # each one. Don't keep pasting the other lines
     # in for each question. You can update with your
     # e-mail but it isn't necessary.
-    sudo -u www-data ssh-keygen -t rsa -C "your.email@simpson.edu"
+    sudo -u www-data ssh-keygen -t rsa -C "your.email@my.simpson.edu"
 
     sudo -u www-data ssh-agent -s
     cat .ssh/id_rsa.pub
@@ -206,8 +256,8 @@ Add in the key:
     :width: 600px
     :align: center
 
-Clone the Repository
---------------------
+Clone the Repository On The Server
+----------------------------------
 
 Now we need to get the code set up. Enter the commands below. Replace
 sample-web-project with the name of your GitHub project. Replace pvcraven with
@@ -219,23 +269,28 @@ about adding a key, answer "yes" to that warning.
     exists on the GitHub URL. There are **three** places you need to do so in the script
     below. Also, replace ``the_branch_i_want`` with the branch that you want to be shown.
 
-::
 
-  # Change to the directory (cd) that has our web files: /var/www
-  cd /var/www
+.. code-block:: bash
+    :linenos:
 
-  # Update the next line with the name of your project, as shown in your
-  # GitHub's URL.
-  sudo mkdir sample-web-project
-  sudo chown -R www-data:www-data sample-web-project
+    # Change to the directory (cd) that has our web files: /var/www
+    cd /var/www
 
-  # Update the next line with your GitHub id and GitHub project name.
-  # You will likely be asked a yes/no question. Go ahead and say 'yes'
-  sudo -u www-data git clone git@github.com:pvcraven/sample-web-project.git
+    # Update the next line with the name of your project, as shown in your
+    # GitHub's URL.
+    sudo mkdir sample-web-project
+    sudo chown -R www-data:www-data sample-web-project
 
-  # If you are using any branch but "master", then select the branch below:
-  cd sample-web-project
-  sudo -u www-data git checkout the_branch_i_want
+    # Update "pcraven" in the next line with your GitHub id
+    # Update "sample-web-project" with your web project
+    # (You can also copy from the 'clone' button on GitHub if you select
+    # SSH type of cloning.)
+    # You will likely be asked a yes/no question. Go ahead and type 'yes'
+    sudo -u www-data git clone git@github.com:pvcraven/sample-web-project.git
+
+    # If you are using any branch but "master", then select the branch below:
+    cd sample-web-project
+    sudo -u www-data git checkout the_branch_i_want
 
 
 Point Apache Web Server to Our Files
@@ -245,7 +300,7 @@ Apache saves all of its setup information in text files. Exactly where these
 files are and what they are named is not exactly intuitive. With some Googling
 you can find this. Or just read below:
 
-::
+.. code-block:: bash
 
   # Change to the directory with the configuration information
   cd /etc/apache2/sites-available
@@ -253,6 +308,12 @@ you can find this. Or just read below:
   # Use the 'nano' editor to edit this file
   sudo nano 000-default.conf
 
+Alternatively, we can use Vim to edit the file instead of nano:
+
+.. code-block:: bash
+
+  # Use the 'vim' editor to edit this file
+  sudo vim 000-default.conf
 
 Update the file's ``DocumentRoot`` to point to the directory that holds your
 web site. See the highlighted line below that you should edit:
@@ -299,9 +360,13 @@ web site. See the highlighted line below that you should edit:
 
     # vim: syntax=apache ts=4 sw=4 sts=4 sr noet
 
-To exit the editor hit "ctrl-x". Then after that, it will ask if you want
+To exit the nano editor hit "ctrl-x". Then after that, it will ask if you want
 to save the file. Hit "y" for yes. Then it will ask you what file name.
 Hit the "enter" key to just accept the same file name that you loaded.
+
+To exit vim, type escape, followed by two upper case ``Z``'s to save and exit.
+(Or type ``:wq``)
+
 
 Restart the Web Server
 ----------------------
@@ -309,9 +374,9 @@ Restart the Web Server
 Great, now that you've edited the file, restart the web server. Make sure
 you are no longer in the text editor, and at the command prompt. Type:
 
-::
+.. code-block:: bash
 
-  sudo service apache2 restart
+    sudo service apache2 restart
 
 See if your web pages are showing up now.
 
@@ -320,7 +385,7 @@ you have the correct directory specified.
 
 Try typing:
 
-::
+.. code-block:: bash
 
     # Change to the /var/www directory:
     cd /var/www
@@ -330,7 +395,7 @@ Try typing:
 
 At that point, see if you spot a directory that should have your files. Then type:
 
-::
+.. code-block:: bash
 
     # Change to sample-web-project
     cd sample-web-project
@@ -356,8 +421,29 @@ Check Deployment Script
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/Iv2m2XwcFTw" frameborder="0" allowfullscreen></iframe>
 
-Right now, if you update your website and push more code, your server
-won't update. We could update it by
+We created a web page that will automatically run ``git pull`` for us if we access
+it. This is way easier than having to shell to the server every time we update.
+
+Let's see if it works. Go to your web address, but instead of ``index.html`` go
+to the deployment script. It should look like:
+
+.. code-block:: text
+
+    http://ec2-34-220-32-180.us-west-2.compute.amazonaws.com/deploy_script.php
+
+Make sure to use your ec2 server address instead of mine. Just add the ``deploy_script.php``
+to the end of yours.
+
+Your page should look like:
+
+.. image:: deploy_script.png
+
+If you get a 404 file not found error, then something went wrong. Ask your instructor
+for help debugging.
+
+If it works, then we can access that page anytime we want to update our server
+to the current code. But we can make it even easier by having GitHub to that
+step for us by "installing a webhook."
 
 
 Installing a Webhook
