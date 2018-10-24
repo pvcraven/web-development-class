@@ -196,6 +196,14 @@ Amazon console.
 You may get a question about the "authenticity" of the host. If so, just
 type "yes". You'll only get that question once.
 
+If you get an error about permissions, you might need to make the key so that
+only you can read it on the Mac. The command for this is:
+
+.. code-block:: text
+
+    chmod 400 my_key.pem
+
+
 Connecting With Windows
 ~~~~~~~~~~~~~~~~~~~~~~~
 
