@@ -290,6 +290,11 @@ about adding a key, answer "yes" to that warning.
 
     # If you are using any branch but "master", then select the branch below:
     cd sample-web-project
+
+    # List branches
+    sudo -u www-data git branch -a
+
+    # Select the branch
     sudo -u www-data git checkout the_branch_i_want
 
 
