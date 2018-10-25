@@ -9,9 +9,13 @@ include statement.
 2. Put the navigation in a common file. Reference the navigation file from all the
    main pages that need it. You'll need to change files like ``index.html`` to
    ``index.php`` for the PHP ``include`` to work.
-3. Put the footer in a common file. Reference the footer file from all the
+3. Update the navigation code to link to ``.php`` and not ``.html``. When testing
+   your pages, force a refresh the page by holding down the shift key while
+   hitting refresh on your browser. Otherwise you may just get a cached copy
+   and not go to the server for a fresh copy.
+4. Put the footer in a common file. Reference the footer file from all the
    main pages that need it.
-4. Use CSE Validator to check your entire website. Do *not* check your individual
+5. Use CSE Validator to check your entire website. Do *not* check your individual
    files as they exist on the disk. Check your actual web site.
 
 Turn in:
