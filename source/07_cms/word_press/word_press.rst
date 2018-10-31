@@ -11,37 +11,39 @@ WordPress is terrible. I lost a lot of time trying to debug all the issues with
 their install. So we'll just install WordPress manually. But we some of the
 supporting software we'll use apt-get to install.
 
+This install will have you create two passwords:
+
+* Password for the WordPress database
+* Password for the WordPress administrator
+
+Create a document or file to keep track of these. **Don't** check this file
+into GitHub!!!
+
+
 First, use MobaXTerm to "shell" out to our Amazon server.
 
 Next, we need to install WordPress and a database. The database will help
 keep track of everything for us. Enter these commands one-by-one.
 
-::
+.. code-block:: bash
+    :linenos:
 
     # Update the list of software we can get
     sudo apt-get update
 
     # Update to the most current versions of the software
+    # If you get any questions, just take the default answer
     sudo apt-get -y upgrade
 
-If you are using Ubuntu 16, you'll need to do this for the last line::
-
+    # Install the database server
     sudo apt-get -y install mysql-server
 
-Next, when it installs the database server, you'll get a screen that looks like the
-image below. Store the password that you choose. Don't leave it blank.
+Next, we need to configure a password for the and the security
+for the **database server**.
 
-This install will have you create three passwords:
+Go through the following. Remember, when you type in passwords you won't
+see anything on the screen, but the computer is listening.
 
-* Password for the database server (a server can have multiple databases)
-* Password for the WordPress database
-* Password for the WordPress administrator
-
-This one is for the **database server**.
-
-.. image:: my_sql_password.png
-    :width: 640px
-    :align: center
 
 .. attention::
 
@@ -70,31 +72,27 @@ This one is for the **database server**.
 
 
 .. _KeePass: https://keepass.info/
-.. _list of the 1000 most common passwords used at the Adobe site: https://github.com/danielmiessler/SecLists/blob/master/Passwords/10_million_password_list_top_1000.txt
+.. _list of the 1000 most common passwords used at the Adobe site: https://github.com/danielmiessler/SecLists/blob/master/Passwords/darkweb2017-top1000.txt
 
 Next, install these software packages and restart the webserver::
 
-    sudo apt-get -y install php7.0 libapache2-mod-php7.0 php-mcrypt php-mysql
+    # Make sure PHP application serverhas the code that can connect to a database
+    sudo apt-get -y install php libapache2-mod-php php-mysql
+
+    # Restart the web server to apply the changes
     sudo service apache2 restart
 
-This next part creates the database and user for WordPress. Instead of
-``yourdbserverpassword`` please use the password you entered above for your
-database.
+This next part creates the database and user for WordPress.
+You will see that there is a ``yourdbpassword``.
+Make up a new password for ``yourdbpassword``, don't use ``yourdbpassword``.
 
-You will also see that there is a ``yourdbpassword``. This is different than
-the ``yourdbserverpassword``. It is the password for just the WordPress database.
-Make up a new password for ``yourdbpassword``.
-
-::
+.. code-block:: bash
+    :linenos:
 
     # Create a database for WordPress.
 
     # Set the database so we can enter commands to it.
-    mysql -u root -p
-
-    # Ok, at this point it should ask you to enter the database password, so
-    # do that.
-    yourdbserverpassword
+    sudo mysql -u root
 
     # Create a new user for your database called "wordpress-db"
     # You need to create a password for the wordpress user that will manage your
@@ -120,7 +118,8 @@ Make up a new password for ``yourdbpassword``.
 
 Now we need to download and unzip WordPress.
 
-::
+.. code-block:: bash
+    :linenos:
 
     # --- Get WordPress
     # Switch to the home directory
@@ -136,13 +135,18 @@ Copy the sample configuration file and get it ready for editing::
 
     # Change to the WordPress folder we just unzipped
     cd wordpress/
+
     # Copy sample config file as a template for our real config file
     cp wp-config-sample.php wp-config.php
 
 
-Next, we need to edit the configuration file::
+Next, we need to edit the configuration file:
+
+.. code-block:: bash
 
     nano wp-config.php
+
+(Or use ``vim``.)
 
 Replace the default with the database name ``wordpress-db`` and the database
 user, also ``wordpress-db``. Next, fill in the password ``yourdbpassword``.
@@ -160,7 +164,8 @@ to adjust the path appropriately. Don't just blindly copy that line and hope it 
 Use ``cd`` and ``ls`` commands to make sure that ``wordpress`` goes into the correct
 directory.
 
-::
+.. code-block:: bash
+    :linenos:
 
     # Go up a directory
     cd ..
@@ -170,7 +175,7 @@ directory.
     # mess everything up. Try 'ls /var/www' and then keep going from there until
     # you find your public_html folder. Then use that path below instead of what
     # I have which is totally not what you want.
-    sudo mv wordpress /var/www/my_sample_project/public_html
+    sudo mv wordpress /var/www/my_sample_project/public_html/wordpress
 
     # Change ownership to the apache process and group (www-data)
     sudo chown -R www-data:www-data /var/www
@@ -236,7 +241,8 @@ To reset the password you need to start the MySQL database in 'safe' mode. Unfor
 Linux doesn't let us do that easily, because MySQL expects a directory to exist in same mode that doesn't exist
 by default with AWS's Ubuntu distribution. So we need to create it, stop the database and start it in safe mode:
 
-.. code-block:: text
+.. code-block:: bash
+    :linenos:
 
     sudo service mysql stop
     sudo mkdir /var/run/mysqld
@@ -246,7 +252,8 @@ by default with AWS's Ubuntu distribution. So we need to create it, stop the dat
 
 Now, go into the database and reset the password:
 
-.. code-block:: text
+.. code-block:: bash
+    :linenos:
 
     sudo mysql -u root mysql
 
@@ -257,20 +264,20 @@ Now, go into the database and reset the password:
 
 Now we have to stop MySQL to get it out of safe mode, and restart it in normal mode. We should be able to do this:
 
-.. code-block:: text
+.. code-block:: bash
 
     sudo service mysql stop
 
 But that doesn't work. I tried a lot of options and couldn't get a "clean" shutdown. We need to kill the process.
 To list all the running processes, type the following:
 
-.. code-block:: text
+.. code-block:: bash
 
     ps -ef
 
 You should find some processes that look like this, that have the keyword "mysqld" in them:
 
-.. code-block:: text
+.. code-block:: bash
 
     root     14406 11814  0 18:57 pts/1    00:00:00 sudo mysqld_safe --skip-grant-tables --port=3306
     root     14407 14406  0 18:57 pts/1    00:00:00 /bin/sh /usr/bin/mysqld_safe --skip-grant-tables --port=3306
@@ -279,13 +286,15 @@ You should find some processes that look like this, that have the keyword "mysql
 See the first numbers 14406, 14407, 14783? You'll have different numbers. Use those numbers with the ``kill`` command
 to terminate the processes. We'll do it as the root user, and we'll add a ``-9`` that tells it to kill the process immediately:
 
-.. code-block:: text
+.. code-block:: bash
+    :linenos:
 
     sudo kill -9 14406 14407 14783
 
 Now start mysql again:
 
-.. code-block:: text
+.. code-block:: bash
+    :linenos:
 
     sudo service mysql start
 
@@ -305,13 +314,13 @@ what the database expects, and what is in your configuration file.
 First, change to the directory that has your WordPress. You'll need to adjust the command below because you'll have a
 different directory name:
 
-.. code-block:: text
+.. code-block:: bash
 
     cd /var/www/my_sample_project/public_html/wordpress
 
 Then, edit the file:
 
-.. code-block:: text
+.. code-block:: bash
 
     sudo nano wp-config.php
 
@@ -323,7 +332,8 @@ Adjust the password if needed.
 Save (Ctrl-x, y for yes, and 'enter' to accept the file name). Then see if you can connect. If you can't, then
 do the following:
 
-.. code-block:: text
+.. code-block:: bash
+    :linenos:
 
     # Set the database so we can enter commands to it.
     mysql -u root -p
@@ -340,19 +350,19 @@ do the following:
 
 If you get an error that says something like:
 
-.. code-block:: text
+.. code-block:: bash
 
     ERROR 1396 (HY000): Operation CREATE USER failed for 'wordpress-db'@'localhost'
 
 That means the user exists. Great. So to change the password do the following:
 
-.. code-block:: text
+.. code-block:: sql
 
     ALTER USER 'wordpress-db'@'localhost' IDENTIFIED BY 'yourdbpassword';
 
 Then type:
 
-.. code-block:: text
+.. code-block:: bash
 
     quit;
 

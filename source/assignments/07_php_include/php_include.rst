@@ -23,7 +23,7 @@ Turn in:
 
 * A link to your web site's AWS server where this is working. Don't give me
   a "localhost" or "file" link, obviously.
-* A link to the GitHub project on the web, showing the index.php file
-  . (A link to the web page,
+* A link to the GitHub project on the web, showing the index.php file.
+  (A link to the web page,
   not a link to clone it.) Make sure it is a link to YOUR GitHub, not
   someone else's.
