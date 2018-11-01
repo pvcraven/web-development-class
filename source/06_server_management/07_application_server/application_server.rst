@@ -40,6 +40,8 @@ web browser. Do a "view source." Notice how PHP changes the HTML.
 
 You can read more about the `PHP Date function <http://php.net/manual/en/function.date.php>`_ here.
 
+.. _include_statement:
+
 The Include Statement
 ^^^^^^^^^^^^^^^^^^^^^
 

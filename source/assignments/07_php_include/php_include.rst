@@ -6,9 +6,12 @@ include statement.
 
 1. Get your own copy of the project, from the last assignment, working on your
    computer under XAMPP. You should be able to get to it from ``http://localhost``
-2. Put the navigation in a common file. Reference the navigation file from all the
+2. Put the navigation in a common file as shown in
+   :ref:`include_statement`. Reference the navigation file from all the
    main pages that need it. You'll need to change files like ``index.html`` to
-   ``index.php`` for the PHP ``include`` to work.
+   ``index.php`` for the PHP ``include`` to work. Also, pull the navigation out
+   of your project. Don't use the example navigation from the class example, because
+   you'll lose all your styles.
 3. Update the navigation code to link to ``.php`` and not ``.html``. When testing
    your pages, force a refresh the page by holding down the shift key while
    hitting refresh on your browser. Otherwise you may just get a cached copy
