@@ -17,6 +17,11 @@ include statement.
    main pages that need it.
 5. Use CSE Validator to check your entire website. Do *not* check your individual
    files as they exist on the disk. Check your actual web site.
+6. Commit and push your code.
+7. Make sure your Amazon web server is updated with the new code. If you can
+   click through your navigation and see that the files end in ``.php`` then
+   you are probably ok. If you didn't get the webhook installed, you might need
+   to manually go to ``deploy_script.php`` to update the server.
 
 
 Turn in:
