@@ -5,7 +5,8 @@ Take the project you have on your own web server, and modify it to use the PHP
 include statement.
 
 1. Get your own copy of the project, from the last assignment, working on your
-   computer under XAMPP. You should be able to get to it from ``http://localhost``
+   computer under XAMPP. You should be able to get to it from ``http://localhost``.
+   Work off a recent branch that looks decent, not an early one with no styling.
 2. Put the navigation in a common file as shown in
    :ref:`include_statement`. Reference the navigation file from all the
    main pages that need it. You'll need to change files like ``index.html`` to
@@ -34,4 +35,4 @@ Turn in:
 * A link to the GitHub project on the web, showing the index.php file.
   (A link to the web page,
   not a link to clone it.) Make sure it is a link to YOUR GitHub, not
-  someone else's.
+  someone else's. Make sure you link the branch that you updated.

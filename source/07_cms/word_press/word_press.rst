@@ -177,6 +177,10 @@ directory.
     # I have which is totally not what you want.
     sudo mv wordpress /var/www/my_sample_project/public_html/wordpress
 
+    # If the command above didn't work, you probably moved out of the home
+    # directory which is where "wordpress" is. Go back by typing "cd ~" and
+    # try again.
+
     # Change ownership to the apache process and group (www-data)
     sudo chown -R www-data:www-data /var/www
 
@@ -336,11 +340,7 @@ do the following:
     :linenos:
 
     # Set the database so we can enter commands to it.
-    mysql -u root -p
-
-    # Ok, at this point it should ask you to enter the database password, so
-    # do that.
-    yourdbserverpassword
+    sudo mysql -u root
 
     # Create a new user for your database called "wordpress-db"
     # You need to create a password for the wordpress user that will manage your
