@@ -62,19 +62,70 @@ Another way to specify shape properties is with the by using the ``style`` param
 The code below produces the same exact thing we had before. Note the format is just
 like CSS styles.
 
+Rectangles
+----------
+
 .. code-block:: html
 
-    <svg width="170" height="100">
-      <circle cx="50" cy="50" r="40" style="stroke:black;stroke-width:4;fill:blue;" />
-      <circle cx="150" cy="50" r="40" style="fill:green" />
-      <circle cx="100" cy="50" r="40" style="stroke:black;stroke-width:4;fill:None;" />
+    <svg width="400" height="180">
+      <rect x="10" y="10" width="300" height="100" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+      <rect x="50" y="20" rx="20" ry="20" width="150" height="150" style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
     </svg>
-
-
 
 .. raw:: html
 
-    <svg width="400" height="410">
-      <rect width="300" height="100" style="fill:rgb(0,0,255);stroke-width:13;stroke:rgb(0,0,0)" />
-      <rect x="50" y="20" width="150" height="150" style="fill:blue;stroke:pink;stroke-width:15;fill-opacity:0.1;stroke-opacity:0.9" />
+    <svg width="400" height="180">
+      <rect x="10" y="10" width="300" height="100" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+      <rect x="50" y="20" rx="20" ry="20" width="150" height="150" style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
+    </svg>
+
+Ellipses
+--------
+
+.. code-block:: html
+
+    <svg width="230" height="200">
+      <ellipse cx="120" cy="70" rx="100" ry="50" style="fill:yellow;stroke:black;stroke-width:5" />
+      <ellipse cx="90" cy="50" rx="7" ry="15" style="fill:None;stroke:black;stroke-width:2" />
+      <ellipse cx="150" cy="50" rx="7" ry="15" style="fill:None;stroke:black;stroke-width:2" />
+    </svg>
+
+.. raw:: html
+
+    <svg width="230" height="200">
+      <ellipse cx="120" cy="70" rx="100" ry="50" style="fill:yellow;stroke:black;stroke-width:5" />
+      <ellipse cx="90" cy="50" rx="7" ry="15" style="fill:None;stroke:black;stroke-width:2" />
+      <ellipse cx="150" cy="50" rx="7" ry="15" style="fill:None;stroke:black;stroke-width:2" />
+    </svg>
+
+
+Transforms
+----------
+
+Putting a ``<g>`` tag around your shape allows us to transform things. This is a bit
+complex. Here, I'm rotating 10 degrees. But the next two numbers are the centerpoint
+of that rotation. If my box has an upper left of 80, 80,  and dimensions of 100, 50
+then we need to calculate the center point:
+
+* 80 + (100 / 2) = 130
+* 80 + (50 / 2) = 105
+
+.. code-block:: html
+
+    <svg width="200" height="200">
+      <rect x="80" y="80" width="100" height="50" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+
+      <g transform = "rotate(10 130 105)">
+        <rect x="80" y="80" width="100" height="50" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+      </g>
+    </svg>
+
+.. raw:: html
+
+    <svg width="200" height="200">
+      <rect x="80" y="80" width="100" height="50" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+
+      <g transform = "rotate(10 130 105)">
+        <rect x="80" y="80" width="100" height="50" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+      </g>
     </svg>
