@@ -1,4 +1,4 @@
-Assignment 11 - Static Content Generators
+Assignment 12 - Static Content Generators
 =========================================
 
 This will be a group project. However, grades will be individual.
