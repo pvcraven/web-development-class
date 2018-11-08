@@ -17,9 +17,9 @@ Topics and Tutorials
    04_css/css
    05_collaboration/collaboration
    06_server_management/server_management
-   cms
-   static
-   cloud
+   07_cms/cms
+   08_static/static
+   09_cloud/cloud
 
 Assignments
 ~~~~~~~~~~~
@@ -32,13 +32,13 @@ Assignments
    assignments/03_css/css.rst
    assignments/04_bootstrap/bootstrap.rst
    assignments/05_finalize_site/finalize_site.rst
-   assignments/aws_deployment/aws_deployment.rst
-   assignments/php_include/php_include.rst
-   assignments/performance/performance.rst
-   assignments/install_wordpress/install_wordpress.rst
-   assignments/wordpress_site/wordpress_site.rst
-   assignments/static_content_generators/static_content_generators.rst
-   assignments/collaborative_reflection/collaborative_reflection
+   assignments/06_aws_deployment/aws_deployment.rst
+   assignments/07_php_include/php_include.rst
+   assignments/08_performance/performance.rst
+   assignments/09_install_wordpress/install_wordpress.rst
+   assignments/10_wordpress_site/wordpress_site.rst
+   assignments/11_static_content_generators/static_content_generators.rst
+   assignments/12_collaborative_reflection/collaborative_reflection
 
 Advanced Web Development (Semester 2)
 -------------------------------------

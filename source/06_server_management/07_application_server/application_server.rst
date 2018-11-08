@@ -40,6 +40,8 @@ web browser. Do a "view source." Notice how PHP changes the HTML.
 
 You can read more about the `PHP Date function <http://php.net/manual/en/function.date.php>`_ here.
 
+.. _include_statement:
+
 The Include Statement
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -67,6 +69,11 @@ in a file called ``footer.php``.
     :linenos:
     :emphasize-lines: 12, 21
     :language: php
+
+.. attention::
+
+   Notice in the navigation file below, how we now need to link to ``.php``
+   files instead of the original ``.html`` files.
 
 .. literalinclude:: navigation.php
     :caption: navigation.php
@@ -162,7 +169,7 @@ You can fix this by putting the page-parts into their own directory. Specificall
 one that isn't in ``public_html``. Because if it isn't in ``public_html`` the
 user can't get directly to it. Here's a better directory structure
 
-::
+.. code-block:: text
 
     my_project
         public_html

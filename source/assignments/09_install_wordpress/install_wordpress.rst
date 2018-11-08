@@ -5,6 +5,9 @@ Using your AWS server, follow the :ref:`InstallWordpress`.
 
 Name your site the same as the project you already have on AWS.
 
+Put your first name somewhere on the front page so I know this is your
+WordPress and not someone else's.
+
 Turn in a URL of your working WordPress site.
 It should look something like::
 
