@@ -42,7 +42,8 @@ Assignment 10 - WordPress Site
     * Create at least two posts and have them as part of a news feed.
     * Work at creating categories.
 
-* Create a table using WordPress's editor
+* Create a table using WordPress's editor. You may need to install a table editor
+  plug-in.
 
 * Turn in a document:
 
@@ -61,6 +62,8 @@ Assignment 10 - WordPress Site
 
 The write-up is important. Please don't give me just a sentence or two. "A" work usually involves at least 3/4
 of a page showing me how you hit all the points of the rubric.
+
+Use paragraphs. Use topic sentences. Organize it. Don't give me a wall of text.
 
 If you have time, play around with WordPress and figure out more about what you can do.
 Working with a CMS is a very useful skill.
