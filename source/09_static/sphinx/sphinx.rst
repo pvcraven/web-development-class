@@ -60,6 +60,10 @@ Then, open a command prompt and navigate to that directory. Remember to use
 the ``cd`` command to change directories. Make sure you are in this new directory
 you've created before you continue. Otherwise you'll have a mess.
 
+.. danger::
+
+    Make sure you switch to the new directory!
+
 Then, type in ``sphinx-quickstart``. You'll be led through a list of questions
 to start your project. Unfortunately the current version is bugged on Windows
 and rather than outputting the questions in fancy colors you just see a bunch
@@ -69,14 +73,13 @@ hit "enter."
 
 .. code-block:: text
 
-    C:\Users\craven\sample_sphinx_project>sphinx-quickstart
-    Welcome to the Sphinx 1.6.3 quickstart utility.
+    C:\Web Server\sphinx_test_project>sphinx-quickstart
+    Welcome to the Sphinx 1.8.1 quickstart utility.
 
     Please enter values for the following settings (just press Enter to
     accept a default value, if one is given in brackets).
 
-    Enter the root path for documentation.
-    > Root path for the documentation [.]:
+    Selected root path: .
 
     You have two options for placing the build directory for Sphinx output.
     Either, you use a directory "_build" within the root path, or you separate
@@ -89,15 +92,8 @@ hit "enter."
     > Name prefix for templates and static dir [_]:
 
     The project name will occur in several places in the built documentation.
-    > Project name: My Sample Project
+    > Project name: My Test Project
     > Author name(s): Paul Craven
-
-    Sphinx has the notion of a "version" and a "release" for the
-    software. Each version can have multiple releases. For example, for
-    Python the version is something like 2.5 or 3.0, while the release is
-    something like 2.5.1 or 3.0a1.  If you don't need this dual structure,
-    just set both to the same value.
-    > Project version []:
     > Project release []:
 
     If the documents are to be written in a language other than English,
@@ -117,21 +113,17 @@ hit "enter."
     of the documents. Normally, this is "index", but if your "index"
     document is a custom template, you can also set this to another filename.
     > Name of your master document (without suffix) [index]:
-
-    Sphinx can also add configuration for epub output:
-    > Do you want to use the epub builder (y/n) [n]: y
-
-    Please indicate if you want to use one of the following Sphinx extensions:
+    Indicate which of the following Sphinx extensions should be enabled:
     > autodoc: automatically insert docstrings from modules (y/n) [n]:
     > doctest: automatically test code snippets in doctest blocks (y/n) [n]:
     > intersphinx: link between Sphinx documentation of different projects (y/n) [n]:
     > todo: write "todo" entries that can be shown or hidden on build (y/n) [n]:
     > coverage: checks for documentation coverage (y/n) [n]:
     > imgmath: include math, rendered as PNG or SVG images (y/n) [n]:
-    > mathjax: include math, rendered in the browser by MathJax (y/n) [n]: y
+    > mathjax: include math, rendered in the browser by MathJax (y/n) [n]:
     > ifconfig: conditional inclusion of content based on config values (y/n) [n]:
     > viewcode: include links to the source code of documented Python objects (y/n) [n]:
-    > githubpages: create .nojekyll file to publish the document on GitHub pages (y/n) [n]: y
+    > githubpages: create .nojekyll file to publish the document on GitHub pages (y/n) [n]:
 
     A Makefile and a Windows command file can be generated for you so that you
     only have to run e.g. `make html' instead of invoking sphinx-build
@@ -326,7 +318,7 @@ Below I have a quick demo that gives some examples of what you can do:
     no blank
     line.
 
-    Here I use *one* paire of asterisks for italics.
+    Here I use *one* pair of asterisks for italics.
 
     I can use **two** pairs of asterisks for bold.
 
@@ -383,7 +375,7 @@ Below I have a quick demo that gives some examples of what you can do:
     ============ =================
     Fruit        Review
     ============ =================
-    Apple	     3 stars
+    Apple        3 stars
     Pomegranite  5 stars
     Grapes       3 stars
     Pears        4 stars
@@ -479,6 +471,94 @@ and I have to look it up anytime I want to add it, but it looks like this:
 Putting The Project In GitHub
 -----------------------------
 
+Create Git Repository
+~~~~~~~~~~~~~~~~~~~~~
+
+To make this a git repository, open a command prompt and make **sure** you are
+at the top level of your project directory. I can see that I am by my command
+prompt below:
+
+.. code-block:: text
+
+    C:\Web Server\sphinx_test_project>
+
+Next, type ``git init``:
+
+.. code-block:: text
+
+    C:\Web Server\sphinx_test_project>git init
+    Initialized empty Git repository in C:/Web Server/sphinx_test_project/.git/
+
+If you type ``git status`` you can see what isn't in the repository. Basically
+everything.
+
+.. code-block:: text
+
+    C:\Web Server\sphinx_test_project>git status
+    On branch master
+
+    No commits yet
+
+    Untracked files:
+      (use "git add <file>..." to include in what will be committed)
+
+            Makefile
+            build/
+            make.bat
+            source/
+
+    nothing added to commit but untracked files present (use "git add" to track)
+
+I could add everything with ``git add *``, but here's a problem. We aren't
+supposed to add "result" files to git. Just "source" files. That means the
+``build`` directory needs to **not** get added.
+
+We can cause git to ignore files or directories by adding these to a file
+called ``.gitignore``. Create this file and add ``build/`` to it. Then run
+``git status`` again to make sure it no longer shows the build directory.
+
+Then go ahead and add the files, and do a first commit.
+
+.. code-block:: text
+
+    C:\Web Server\sphinx_test_project>git status
+    On branch master
+
+    No commits yet
+
+    Untracked files:
+      (use "git add <file>..." to include in what will be committed)
+
+            .gitignore
+            Makefile
+            make.bat
+            source/
+
+    nothing added to commit but untracked files present (use "git add" to track)
+
+    C:\Web Server\sphinx_test_project>git add *
+    warning: LF will be replaced by CRLF in Makefile.
+    The file will have its original line endings in your working directory.
+
+    C:\Web Server\sphinx_test_project>git commit -m "First commit"
+    [master (root-commit) e76ba03] First commit
+     5 files changed, 252 insertions(+)
+     create mode 100644 .gitignore
+     create mode 100644 Makefile
+     create mode 100644 make.bat
+     create mode 100644 source/conf.py
+     create mode 100644 source/index.rst
+
+Next, we need to push our project to GitHub. But we can't, until we:
+
+* Create a project on GitHub
+* Link our computer with that new project.
+
+Create GitHub Project
+~~~~~~~~~~~~~~~~~~~~~
+
+
+
 Ok, now we've got the start of our project. We need to create a new project
 on GitHub and push our project there.
 
@@ -492,49 +572,24 @@ Give it a name:
     :width: 500px
     :align: center
 
+Link Local Project To GitHub
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
 Copy this URL:
 
 .. image:: create_github_project_3.png
     :width: 500px
     :align: center
 
-Then, go to SourceTree and create a repository in that directory we created:
+Type: ``git remote add origin`` followed by the stuff you just copied.
+Next we need to push. The commands should look something like:
 
-.. image:: create_github_project_4.png
-    :width: 640px
-    :align: center
 
-We *don't* want to add the output files to SourceTree. Version Control Systems
-are for source code, not output code. We need to ignore all the files in the
-``build`` directory. Right click on the first file in the build directory:
+.. code-block:: text
 
-.. image:: create_github_project_5.png
-    :width: 500px
-    :align: center
+    git remote add origin https://github.com/pvcraven/sphinx_test_project.git
+    git push -u origin master
 
-And then ignore that directory:
-
-.. image:: create_github_project_6.png
-    :width: 400px
-    :align: center
-
-Now we can add all the files we have to version control:
-
-.. image:: create_github_project_7.png
-    :width: 550px
-    :align: center
-
-Once the files are checked in, we need to tell SourceTree what GitHub project
-to push to. Select "Add Remote":
-
-.. image:: create_github_project_8.png
-    :width: 300px
-    :align: center
-
-Then paste in that URL we copied to the SECOND box.
-
-.. image:: create_github_project_9.png
-    :width: 550px
-    :align: center
-
-Then you should be able to "push" the "master" branch.
+After you have this done, confirm it got pushed up by looking on GitHub. At this point, you can add, commit, and push
+like your other projects.
