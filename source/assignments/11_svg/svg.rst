@@ -8,7 +8,11 @@ Create an a web page with an embedded SVG drawing. The drawing must be:
   is better.
 * Use multiple types of SVG drawing commands.
   See `SVG Intro at W3Schools <https://www.w3schools.com/graphics/svg_intro.asp>`_/
-* Be detailed. A ten-line drawing won't go far in the detail.
+* Be detailed. A ten-line drawing won't go far in the detail. The rubric category
+  for detail is only an estimate. 40 lines of code that only draw a grid of lines
+  isn't very complex, despite hitting the line count. Also, I'm only looking
+  at the number of lines for the image. Lines for the web page, blank lines,
+  comments, don't count.
 * Use color.
 
 .. image:: rubric.png
