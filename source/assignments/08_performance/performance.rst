@@ -32,3 +32,8 @@ take six pages.
 
 I'll do this in class with Hy-Vee. Your assignment is to do it with two more web
 pages.
+
+Feel free to use the 'snip' tool or similar to take and explain parts of the
+results. Your explanation should be about 3/4 of a page or more for each
+site and pull out exact examples of what is slow. For example, tell me how
+many requests were made, what the biggest image was, if there was a lot of JavaScript, etc.
