@@ -8,16 +8,25 @@ Getting together as a group
 
 First you should get together and meet.
 
-* Introduce yourself.
-* Make sure that you know everyone else's name. Get confident enough to
+* Introduce yourself. Also state what pronoun you prefer. Don't make it a joke.
+* Do another round where everyone states the other person's name.
+* Get confident enough to
   say "hi" to each group member when you see them. Remember - taking the time
-  to know a person's name is a sign of respect.
-* Pause. List three things about yourself that you are good at. Share with the
+  to know and use a person's name is a sign of respect.
+* Pause. Go around your group and list three things about yourself that you are
+  good at. It can be technical skill, or something completely different.
+  Share with the
   rest of the group. Remember what those three things are with the other people.
-  Later on, ask follow-up questions about these things. Remember - every person's
+* Break into conversation. In this conversation,
+  ask follow-up questions about the things the other people talked about.
+  Remember - every person's
   favorite subject is himself/herself. Show you are interested enough in the
   other people to remember what they are good at.
-* Pause. List one or two things related to this class you'd like to get better at.
+  With four people, work at keeping the discussion 25% about you, and 75%
+  about the other people. People tend to tilt towards talking only about themselves
+  or not talking about other people at all. Find the balance.
+* Pause. Go around and list one or two things related to this class you'd like
+  to get better at.
   Like HTML coding, or the ability to write for the web, or working as a group,
   or trying to remember when the lab is open. Share with the rest of the group.
   Pay attention to what other people would like to learn, and see if you can help
@@ -28,25 +37,44 @@ Figure out your topic
 ---------------------
 
 * Did you do the first part? If you didn't, go back and do that. I'll wait.
-* Choose a topic for the website. I'd suggest some kind of informational website.
+* Choose a topic for the website. I'd suggest some kind of informational website
+  that can be divided into parts. For example:
+
+
+  * Best hockey players in Canada
+  * World War II
+  * Kings and Queens of Russia
+  * Most popular music artists
+  * Most popular YouTubers
+  * Popular sitcoms
+  * Harry Potter
+  * Star Wars
+  * Important scientific figures in history
+  * Influential painters in the 20th century
+  * Walk-through for a popular video game
+
   You can choose a business, a hobby, a historical event or place, etc. This
-  will go on the web, at least temporarily, so I suggest making it fictional
-  or about a subject that won't care if you post information about it.
-  Like an information page on Catherine the Great. Don't make this a joke though,
+  will be publically available on the web, at least temporarily, so don't post
+  a subject where you will get people mad about you.
+  Don't make this a joke,
   treat it as something you'd be willing to show a prospective employer.
 * Double-check to make sure that everyone is ok with the topic. Don't create
   a page on knitting patterns when one of your group doesn't have an opinion if
   stitch markers should be used or not.
-* Each of you will need to create four pages on the website. Each with at least 180
-  words. You'll need to include images and tables. See if that seems feasable with
+* Each of you will need to create four pages on the website. Each page must have
+  at least 180
+  words. You'll need to include section headings, images, tables, and links.
+  See if that seems feasible with
   your topic.
 * Get approval of the topic from the professor.
-* Map out the website and what will be on it.
+* With a shared Google Docs or similar, outline the website and what will be on it.
+
 
 Collaborate
 -----------
 
 * Choose at least four pages for each person to create.
+* Select one person to start the project.
 * Create a template for your project.
 * Put the template in GitHub.
 * Add each person to the project in GitHub.
@@ -54,7 +82,8 @@ Collaborate
   to each person.
 * Choose (different) pages for each person to review and proof-read. Proof-read
   from different authors. It isn't unusual for to have someone that doesn't turn in
-  anything.
+  anything, so make sure you have different authors to proof-read or you'll have
+  problems with that part of the assignment.
 
 Make The Web Pages
 ------------------
