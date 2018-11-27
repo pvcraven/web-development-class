@@ -75,7 +75,7 @@ Collaborate
 
 * Go back to the Google doc, choose at least four pages for each person to create.
 * Select one person to start the project.
-* Create a template for your project.
+* Create a template for your project. `Follow the tutorial <https://web-development-class.readthedocs.io/en/latest/09_static/sphinx/sphinx.html>`_
 * Put the template in GitHub.
 * Add each person to the project in GitHub.
 * Use GitHub's issue manager. Create an issue for each page, and assign it
