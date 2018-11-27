@@ -73,7 +73,7 @@ Figure out your topic
 Collaborate
 -----------
 
-* Choose at least four pages for each person to create.
+* Go back to the Google doc, choose at least four pages for each person to create.
 * Select one person to start the project.
 * Create a template for your project.
 * Put the template in GitHub.
@@ -90,7 +90,11 @@ Make The Web Pages
 
 Create web pages that have:
 
-* Headings
+* Headings. Take a look at the outline generated when you create a document.
+  Each page should have one, and only one, level one heading. A page that doesn't
+  have any headings might not show up. A page with multiple top-level headings
+  will have each top-level heading show up like they are different pages. Be
+  very deliberate about your heading choices.
 * Images. Properly sized images. Do not squish a 4000 x 3000 pixel photo you took
   into a 400x300 spot. Change the image. You'll make a faster web page and save
   everyone money on bandwidth. Also, keep aspect ratios. Don't specify both
