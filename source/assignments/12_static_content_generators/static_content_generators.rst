@@ -52,6 +52,10 @@ Figure out your topic
   * Important scientific figures in history
   * Influential painters in the 20th century
   * Walk-through for a popular video game
+  * Video game consoles
+  * Overview of popular sports
+  * Movie reviews
+  * Profiles of different US States
 
   You can choose a business, a hobby, a historical event or place, etc. This
   will be publically available on the web, at least temporarily, so don't post
@@ -75,9 +79,11 @@ Collaborate
 
 * Go back to the Google doc, choose at least four pages for each person to create.
 * Select one person to start the project.
-* Create a template for your project. `Follow the tutorial <https://web-development-class.readthedocs.io/en/latest/09_static/sphinx/sphinx.html>`_
+* Create a template for your project by `following the tutorial <https://web-development-class.readthedocs.io/en/latest/09_static/sphinx/sphinx.html>`_
 * Put the template in GitHub.
 * Add each person to the project in GitHub.
+* Make sure each person has cloned the project on their computer.
+* Make sure each person can build the project.
 * Use GitHub's issue manager. Create an issue for each page, and assign it
   to each person.
 * Choose (different) pages for each person to review and proof-read. Proof-read
