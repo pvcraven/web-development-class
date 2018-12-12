@@ -107,7 +107,8 @@ Create web pages that have:
   width and height at a different ratio that stretches the image. I just specify
   width only and let the browser pick the right height.
 * Tables
-* Links
+* Links outside the document
+* Links inside the document (references)
 * A table of contents (don't put one on each page)
 * Paragraphs. Don't give me a wall of text.
 * Cite any images that you use that aren't your own.
@@ -120,6 +121,23 @@ Create web pages that have:
   work and your links. Amazon cares about the case of your file names, and if
   you've ignored my advice at making everything lower case, it may haunt you
   here.
+
+Citations
+^^^^^^^^^
+
+To cite an image, use `footnotes <http://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#footnotes>`_.
+
+.. figure:: milholland.jpg
+   :width: 350px
+
+   Inez Milholland [#f1]_
+
+The rest of your page would go here. Then finally at the end, have the footnotes:
+
+.. [#f1] "`Inez Milholland <http://vcencyclopedia.vassar.edu/alumni/inez-milholland.html>`_". Vassar College Encyclopedia. 2006. Retrieved 2012-07-21.
+
+Cite the *original* source. If you cite something like Google or Amazon, I'll not
+give any points. If you list a URL as a citation, same thing.
 
 Turn In
 -------
