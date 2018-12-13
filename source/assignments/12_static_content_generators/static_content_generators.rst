@@ -132,11 +132,13 @@ use `footnotes <http://www.sphinx-doc.org/en/master/usage/restructuredtext/basic
 Use the footnote in-text, or as a caption to the image, like so:
 
 .. figure:: milholland.jpg
-   :width: 350px
+   :width: 300px
 
    Inez Milholland [#f1]_
 
-The rest of your page would go here. Then finally at the end, have the footnotes:
+The rest of the text of your page would go here under your image.
+Then finally at the end of the page,
+you can list out your footnotes:
 
 .. [#f1] "`Inez Milholland <http://vcencyclopedia.vassar.edu/alumni/inez-milholland.html>`_". Vassar College Encyclopedia. 2006. Retrieved 2012-07-21.
 
@@ -154,9 +156,10 @@ the source isn't "wsj.com", the source is "Wall Street Journal." Sometimes the
 "about" page has this information. If you can't figure out who the publisher is,
 it probably isn't a good source.
 
-If using an auto-citation formatter, beware of "np" for no publisher and "nd" for
-no date. If I see a publisher immediately followed by "np", it indicates that not
-much thought was put into the citation.
+If using an auto-citation formatter, beware of "n.p." for no publisher and "n.d." for
+no date. If I see a publisher immediately followed by "n.p.", it indicates that not
+much thought was put into the citation. If you can't figure out the entire date,
+at least try to narrow it down to the month or year.
 
 I don't want to see the text of a URL, but please do use a link to reference the original source
 as shown in the example above.
