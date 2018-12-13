@@ -39,7 +39,9 @@ Then type in the following command:
 
     pip install sphinx sphinx_rtd_theme
 
-You'll see something like this, plus a lot more::
+You'll see something like this, plus a lot more:
+
+.. code-block:: text
 
     C:\Users\paul.craven>pip install sphinx
     Collecting sphinx
@@ -514,8 +516,18 @@ supposed to add "result" files to git. Just "source" files. That means the
 ``build`` directory needs to **not** get added.
 
 We can cause git to ignore files or directories by adding these to a file
-called ``.gitignore``. Create this file and add ``build/`` to it. Then run
+called ``.gitignore``.
+
+Go to your favorite text editor. Do a "file...new". Type ``build/`` into
+the new file.
+
+Then, do a "file...save as" and save the file as ``.gitignore``. The file
+must be in the base directory of your project. **Not** the ``source`` folder.
+One up from that.
+
+Then run
 ``git status`` again to make sure it no longer shows the build directory.
+It should show ``.gitignore`` though.
 
 Then go ahead and add the files, and do a first commit.
 
@@ -590,6 +602,13 @@ Next we need to push. The commands should look something like:
 
     git remote add origin https://github.com/pvcraven/sphinx_test_project.git
     git push -u origin master
+
+Replace ``pvcraven`` with the owner of our project, and ``sphinx_text_project`` with
+the name of your project.
+
+If you are just copying from the clone button on GitHub,
+make sure when you use the "HTTPS" version, and not the "SSH" version.
+
 
 After you have this done, confirm it got pushed up by looking on GitHub. At this point, you can add, commit, and push
 like your other projects.
