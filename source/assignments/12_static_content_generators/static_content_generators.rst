@@ -126,7 +126,7 @@ Create web pages that have:
 Citations
 ^^^^^^^^^
 
-To cite an image or information from an external source,
+To cite an image or information from an external source, you may
 use `footnotes <http://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#footnotes>`_.
 
 Use the footnote in-text, or as a caption to the image, like so:
@@ -140,6 +140,9 @@ The rest of your page would go here. Then finally at the end, have the footnotes
 
 .. [#f1] "`Inez Milholland <http://vcencyclopedia.vassar.edu/alumni/inez-milholland.html>`_". Vassar College Encyclopedia. 2006. Retrieved 2012-07-21.
 
+Alternatively, you can use `references <http://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#ref-role>`_
+in-text to link a citation, and format citation later in the document using `APA style <https://pitt.libguides.com/c.php?g=12108&p=64730>`_.
+
 Cite the *original* source. If you cite something like Google, Amazon, Wikipedia,
 or IMDB I'll not give any points. These companies rarely create images. You might find the
 image with their tools, but then use some detective work to find the
@@ -147,9 +150,15 @@ original source of the image. For example, a movie poster might be on IMDB.com, 
 the original source is Warner Brothers.
 
 Also, you might find yourself wanting to list a website as a source. Remember that
-the source isn't "wsj.com", the source is "Wall Street Journal."
+the source isn't "wsj.com", the source is "Wall Street Journal." Sometimes the
+"about" page has this information. If you can't figure out who the publisher is,
+it probably isn't a good source.
 
-I don't want to see a url, but please do use a link to reference the original source
+If using an auto-citation formatter, beware of "np" for no publisher and "nd" for
+no date. If I see a publisher immediately followed by "np", it indicates that not
+much thought was put into the citation.
+
+I don't want to see the text of a URL, but please do use a link to reference the original source
 as shown in the example above.
 
 Turn In
