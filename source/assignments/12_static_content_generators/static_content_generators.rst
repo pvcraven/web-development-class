@@ -127,9 +127,10 @@ Citations
 ^^^^^^^^^
 
 To cite an image or information from an external source, you may
-use `footnotes <http://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#footnotes>`_.
-
-Use the footnote in-text, or as a caption to the image, like so:
+use Restructured Text's
+`footnote <http://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#footnotes>`_.
+Use the footnote directly in the text where the information comes from,
+or as a caption an the image if you are using an image. For example:
 
 .. figure:: milholland.jpg
    :width: 300px
@@ -142,14 +143,18 @@ you can list out your footnotes:
 
 .. [#f1] "`Inez Milholland <http://vcencyclopedia.vassar.edu/alumni/inez-milholland.html>`_". Vassar College Encyclopedia. 2006. Retrieved 2012-07-21.
 
-Alternatively, you can use `references <http://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#ref-role>`_
-in-text to link a citation, and format citation later in the document using `APA style <https://pitt.libguides.com/c.php?g=12108&p=64730>`_.
+Alternatively, you can use
+Restructured Text's
+`references <http://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#ref-role>`_
+directive
+to link a citation, and at the end of the document format the citation using
+`APA style <https://pitt.libguides.com/c.php?g=12108&p=64730>`_.
 
 Cite the *original* source. If you cite something like Google, Amazon, Wikipedia,
-or IMDB I'll not give any points. These companies rarely create images. You might find the
-image with their tools, but then use some detective work to find the
-original source of the image. For example, a movie poster might be on IMDB.com, but
-the original source is Warner Brothers.
+or IMDB I'll not give any points. These companies rarely create content. You might find the
+image or information with their tools, but then use some detective work to find the
+original source. For example, a movie poster might be on IMDB.com, but
+the original source might really be Warner Brothers.
 
 Also, you might find yourself wanting to list a website as a source. Remember that
 the source isn't "wsj.com", the source is "Wall Street Journal." Sometimes the
@@ -163,6 +168,8 @@ at least try to narrow it down to the month or year.
 
 I don't want to see the text of a URL, but please do use a link to reference the original source
 as shown in the example above.
+
+Remember: A list of URLs is never ok for a bibliography.
 
 Turn In
 -------
