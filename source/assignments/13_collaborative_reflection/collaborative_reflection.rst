@@ -15,7 +15,9 @@ is easy to see what question you are answering.
 4. As different people have different strengths and weaknesses, describe how
    you used this knowledge to better collaborate.
 5. What skills and dispositions do you think are the most important for you to
-   improve on? How would you go about doing that?
+   improve on as they relate to working on a project? (I'm not looking for
+   technical skills, I'm looking for project skills.)
+   How would you go about doing that?
 6. In the case of group projects where the group does not work well together,
    explain your role in helping to improve the collaboration. What common
    mistakes to people make that hurt collaboration efforts?
