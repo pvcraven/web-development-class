@@ -111,8 +111,9 @@ Create web pages that have:
 * Links inside the document (references)
 * A table of contents (don't put one on each page)
 * Paragraphs. Don't give me a wall of text.
-* Cite any images that you use that aren't your own.
+* Cite an image that you use that is not your own. See below.
 * Multiple types of styles (Normally, don't change the style in a heading.)
+* Don't copy/paste curly quotes into your text. Use straight quotes.
 * Name your pages and directories according to their content. This helps their
   ranking in Google, as well as helping you keep things straight.
   So, for example, ``xbox_360.rst`` is a much better name for a page about the
@@ -125,19 +126,50 @@ Create web pages that have:
 Citations
 ^^^^^^^^^
 
-To cite an image, use `footnotes <http://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#footnotes>`_.
+To cite an image or information from an external source, you may
+use Restructured Text's
+`footnote <http://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#footnotes>`_.
+Use the footnote directly in the text where the information comes from,
+or as a caption an the image if you are using an image. For example:
 
 .. figure:: milholland.jpg
-   :width: 350px
+   :width: 300px
 
    Inez Milholland [#f1]_
 
-The rest of your page would go here. Then finally at the end, have the footnotes:
+The rest of the text of your page would go here under your image.
+Then finally at the end of the page,
+you can list out your footnotes:
 
 .. [#f1] "`Inez Milholland <http://vcencyclopedia.vassar.edu/alumni/inez-milholland.html>`_". Vassar College Encyclopedia. 2006. Retrieved 2012-07-21.
 
-Cite the *original* source. If you cite something like Google or Amazon, I'll not
-give any points. If you list a URL as a citation, same thing.
+Alternatively, you can use
+Restructured Text's
+`references <http://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#ref-role>`_
+directive
+to link a citation, and at the end of the document format the citation using
+`APA style <https://pitt.libguides.com/c.php?g=12108&p=64730>`_.
+
+Cite the *original* source. If you cite something like Google, Amazon, Wikipedia,
+or IMDB I'll not give any points. These companies rarely create content. You might find the
+image or information with their tools, but then use some detective work to find the
+original source. For example, a movie poster might be on IMDB.com, but
+the original source might really be Warner Brothers.
+
+Also, you might find yourself wanting to list a website as a source. Remember that
+the source isn't "wsj.com", the source is "Wall Street Journal." Sometimes the
+"about" page has this information. If you can't figure out who the publisher is,
+it probably isn't a good source.
+
+If using an auto-citation formatter, beware of "n.p." for no publisher and "n.d." for
+no date. If I see a publisher immediately followed by "n.p.", it indicates that not
+much thought was put into the citation. If you can't figure out the entire date,
+at least try to narrow it down to the month or year.
+
+I don't want to see the text of a URL, but please do use a link to reference the original source
+as shown in the example above.
+
+Remember: A list of URLs is never ok for a bibliography.
 
 Teamwork
 --------

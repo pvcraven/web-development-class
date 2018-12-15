@@ -612,3 +612,9 @@ make sure when you use the "HTTPS" version, and not the "SSH" version.
 
 After you have this done, confirm it got pushed up by looking on GitHub. At this point, you can add, commit, and push
 like your other projects.
+
+Spend time with the website and try getting some of the different document elements
+to work:
+
+http://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html
+
