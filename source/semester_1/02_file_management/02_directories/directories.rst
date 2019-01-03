@@ -14,17 +14,17 @@ folders.
 The simplest links are between HTML files in the same directory. Here is an
 example of linking between two files in the same directory:
 
-.. literalinclude:: ../../_static/directories/v1/page1.html
+.. literalinclude:: ../../../_static/directories/v1/page1.html
    :language: html
    :linenos:
    :caption: page1.html
 
-.. literalinclude:: ../../_static/directories/v1/page2.html
+.. literalinclude:: ../../../_static/directories/v1/page2.html
    :language: html
    :linenos:
    :caption: page2.html
 
-Try it out: `Example 1 <../../_static/directories/v1/page1.html>`_
+Try it out: `Example 1 <../../../../_static/directories/v1/page1.html>`_
 
 This next example adds a new page, named ``page3.html``
 in a new subdirectory, named ``subdir``. Note that the links in
@@ -33,42 +33,42 @@ has a link that goes up one directory. This is done by using ``../``
 in front of the file name. The two dots tell the comptuer to go "up" one
 directory.
 
-.. literalinclude:: ../../_static/directories/v2/page1.html
+.. literalinclude:: ../../../_static/directories/v2/page1.html
    :language: html
    :linenos:
    :caption: page1.html
 
-.. literalinclude:: ../../_static/directories/v2/page2.html
+.. literalinclude:: ../../../_static/directories/v2/page2.html
    :language: html
    :linenos:
    :caption: page2.html
 
-.. literalinclude:: ../../_static/directories/v2/subdir/page3.html
+.. literalinclude:: ../../../_static/directories/v2/subdir/page3.html
    :language: html
    :linenos:
    :caption: subdir/page3.html
 
-Try it out: `Example 2 <../../_static/directories/v2/page1.html>`_
+Try it out: `Example 2 <../../../_static/directories/v2/page1.html>`_
 
 The next example shows how to extend the same concept to link into
 nested directories:
 
-.. literalinclude:: ../../_static/directories/v3/page1.html
+.. literalinclude:: ../../../_static/directories/v3/page1.html
    :language: html
    :linenos:
    :caption: page1.html
 
-.. literalinclude:: ../../_static/directories/v3/subdir/page3.html
+.. literalinclude:: ../../../_static/directories/v3/subdir/page3.html
    :language: html
    :linenos:
    :caption: subdir/page3.html
 
-.. literalinclude:: ../../_static/directories/v3/subdir/supersub/page4.html
+.. literalinclude:: ../../../_static/directories/v3/subdir/supersub/page4.html
    :language: html
    :linenos:
    :caption: subdir/supersub/page4.html
 
-Try it out: `Example 3 <../../_static/directories/v3/page1.html>`_
+Try it out: `Example 3 <../../../_static/directories/v3/page1.html>`_
 
 Absolute vs. Relative References
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -93,12 +93,12 @@ an absolute path, and change the name of the website and still have the path wor
 The second also specifies the website name. It is not possible to update the website
 name and not have to also update the link.
 
-.. literalinclude:: ../../_static/directories/v4/page1.html
+.. literalinclude:: ../../../_static/directories/v4/page1.html
    :language: html
    :linenos:
    :caption: page1.html
 
-Try it out: `Example 4 <../../_static/directories/v4/page1.html>`_
+Try it out: `Example 4 <../../../_static/directories/v4/page1.html>`_
 
 Remember, if a website links to a directory but not a file, the web server will
 look for an index file, such as ``index.html`` or ``index.php``.
