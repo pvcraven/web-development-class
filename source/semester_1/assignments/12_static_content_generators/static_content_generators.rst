@@ -58,7 +58,7 @@ Figure out your topic
   * Profiles of different US States
 
   You can choose a business, a hobby, a historical event or place, etc. This
-  will be publically available on the web, at least temporarily, so don't post
+  will be publicly available on the web, at least temporarily, so don't post
   a subject where you will get people mad about you.
   Don't make this a joke,
   treat it as something you'd be willing to show a prospective employer.
@@ -66,7 +66,7 @@ Figure out your topic
   a page on knitting patterns when one of your group doesn't have an opinion if
   stitch markers should be used or not.
 * Each of you will need to create four pages on the website. Each page must have
-  at least 180
+  at least 200
   words. You'll need to include section headings, images, tables, and links.
   See if that seems feasible with
   your topic.
@@ -181,6 +181,23 @@ I don't want to see the text of a URL, but please do use a link to reference the
 as shown in the example above.
 
 Remember: A list of URLs is never ok for a bibliography.
+
+Teamwork
+--------
+
+If no one else is taking a lead in the project, don't hesitate to step up and do
+it yourself. If someone else is leading, step up and lead your own part of the
+project.
+
+It is not unusual for team members to fail and hold up their end of the project.
+This is a great time to practice your ability to encourage others to engage.
+Send people a reminder outside of class. But don't be a jerk about it, as we
+never really know what is going on with someone else's life. Help pull someone
+up. Never push someone down.
+
+Get as much work done outside of class as you can. It is disrespectful to your
+teammates if they come to class with a draft of their work, and you are busy
+trying to just get started writing it.
 
 Turn In
 -------
