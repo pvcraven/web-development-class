@@ -123,6 +123,17 @@ Create web pages that have:
   you've ignored my advice at making everything lower case, it may haunt you
   here.
 
+Tip
+~~~
+
+Avoid using 'bold' on headings, as they are already styled. Don't do this:
+
+.. code-block:: text
+
+    **My Heading**
+    --------------
+
+
 Citations
 ^^^^^^^^^
 
