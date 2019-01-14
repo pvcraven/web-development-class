@@ -7,6 +7,7 @@ Topics and Tutorials
 
 .. toctree::
    :maxdepth: 2
+   :numbered:
 
    01_crud_overview/crud_overview.rst
    02_stacks/stacks.rst
