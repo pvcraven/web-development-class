@@ -30,13 +30,15 @@ public class TestServlet extends HttpServlet {
     {
         // Set response content type.
         // It is possible to serve text, PDF, images, and other types of files
-        // too.
+        // too. For the more common JSON files you can use "application/json"
         response.setContentType("text/html");
 
         // Grab our output stream we can write to
         PrintWriter out = response.getWriter();
 
-
+        // Here we will print out some HTML. This will go to our client's web
+        // browser. Rarely do we output HTML anymore, usually we output JSON
+        // and the HTML is static.
         out.println("<html>");
         out.println("<h1>Hello World</h1>");
         out.println("</html>");

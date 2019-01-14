@@ -13,8 +13,8 @@ Topics and Tutorials
    02_stacks/stacks.rst
    03_java_environment/java_environment.rst
    04_java_remote_environment/java_remote_environment.rst
-   theory/javascript/javascript.rst
-   theory/jquery/jquery.rst
+   05_javascript/javascript.rst
+   06_jquery/jquery.rst
    theory/db_connections/managing_database_connections.rst
    theory/making_json_calls/making_json_calls.rst
    theory/build_process/build_process.rst

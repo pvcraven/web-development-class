@@ -209,7 +209,7 @@ html_static_path = ['_static']
 # 'zh' user can custom change `jieba` dictionary path.
 #html_search_options = {'type': 'default'}
 
-# The name of a javascript file (relative to the configuration directory) that
+# The name of a 05_javascript file (relative to the configuration directory) that
 # implements a search results scorer. If empty, the default will be used.
 #html_search_scorer = 'scorer.js'
 

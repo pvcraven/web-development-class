@@ -147,11 +147,8 @@ Install IntelliJ
 
 Ok! That was *too much work*. Let's deploy our web applications using an IDE.
 
-Download and install IntelliJ_.
-We (Simpson) have a link where you can quickly get a license.
-See the Scholar website for that link.
-Or, you can get a `student license`_ with an e-mail that ends in ``.edu``.
-Just in case we run out, or you aren't a Simpson student.
+Download and install IntelliJ_. The free version works fine, or
+you can get a `student license`_ with an e-mail that ends in ``.edu``.
 
 It is also possible to use Eclipse, but IntelliJ seems to be the better
 choice now.
