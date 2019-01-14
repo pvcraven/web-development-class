@@ -11,6 +11,7 @@ Topics and Tutorials
    01_crud_overview/crud_overview.rst
    02_stacks/stacks.rst
    03_java_environment/java_environment.rst
+   04_java_remote_environment/java_remote_environment.rst
    theory/javascript/javascript.rst
    theory/jquery/jquery.rst
    theory/db_connections/managing_database_connections.rst
@@ -22,7 +23,6 @@ Topics and Tutorials
    theory/sessions/sessions
    theory/local_storage/local_storage
    theory/encryption/encryption
-   tutorials/java_remote_environment/java_remote_environment.rst
    tutorials/setup_amazon_db/setup_amazon_db.rst
    tutorials/docker/docker.rst
 
