@@ -4,7 +4,6 @@ Assignment 1 - Full Stack Deployment
 Goal
 ----
 
-* Understand all the parts of "full-stack" development.
 * Set up both a local and a production application server.
 * Create a process for version control and deployment.
 

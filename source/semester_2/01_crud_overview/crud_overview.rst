@@ -21,6 +21,8 @@ Great acronym, right?
 
 .. image:: crud_app.png
 
+Our second goal is to add login and session management to our application.
+
 Let's take a quick overview of what technologies we'll need to learn to get
 there so you can see how everything will fit together.
 
@@ -50,25 +52,24 @@ Front-End Logic - JavaScript
 
 .. image:: javascript.png
 
-We'll gather up the form fields, and interact with the user by writing code
-in JavaScript. JavaScript is totally different than Java. It is run on the
-user's machine by the user's web browser.
+The front-end is everything that runs on the user's web browser. The back-end
+is everything that runs on the web server the user connects to.
 
-JavaScript doesn't add or delete the records, because the records exist on the
-server and JavaScript runs on the user's web browser. But JavaScript gets
+The front-end will gather up the form fields, and interact with the user by writing code
+using the language called JavaScript. Confusingly, JavaScript is totally different than the
+language called Java. JavaScript runs on the
+user's machine by the user's web browser. (In addition to front-end, JavaScript
+can run on the back-end by using projects like Node.js.)
+
+Front-end JavaScript doesn't add or delete the records, because the records exist on the
+back-end server and JavaScript runs on the user's front-end web browser. Totally
+different computers. But JavaScript gets
 things ready to send to the server and helps with the user interface (UI).
 
 But JavaScript by itself is kind of a pain. We'll use several JavaScript
 libraries, most notably jQuery. So we'll have libraries to learn. There are
-some incredibly cool libraries out there that do amazing things, way beyond
+some incredibly cool JavaScript libraries out there that do amazing things, way beyond
 CRUD applications.
-
-And the JavaScript language you are learning? It will soon be
-getting an overhaul. What you will eventually use will look different than
-what we teach now. For example, my pet peeve with JavaScript?
-You can't declare a class like
-you can in Java, C#, Python, or any other modern language. You can use classes,
-they're just weird. Eventually that will get better.
 
 JavaScript was initially a hack, and it has gone way beyond anything its inventors
 initially conceived of.
@@ -83,13 +84,29 @@ secures the website? What handles user sessions? The back-end code.
 
 There are three main technologies you can pick for the back-end. The top two
 are Java and .NET. Next in popularity is PHP. After those top three, there is
-a long list of less popular technologies.
+a long list of other technologies.
 
-The concepts between the technologies are the same, so if you learn to do
-things the Java way, there's no reason you can't learn .NET.
+We'll use Java. The concepts between the technologies are the same, so if you learn to do
+things the Java way, there's no reason you can't learn .NET or a different
+back-end tool. (Although Node.js is very different than the other technologies.)
 
-We'll use Java. We'll use a Java Application Server called Tomcat. Tomcat
-initially handles the web requests and passes them to Servlets that we create.
+On the back-end we use a web server. You've likely already worked with a web
+server called Apache in your projects. Web servers serve up static (unchanging)
+files.
+
+For data that is dynamic and changes, we use an *application server*. An application
+server is takes web requests, and figures out what code to pass the request to.
+It will then take the codes output, and send it back to the client computer's web
+browser.
+
+Application servers can serve static files too. But they usually aren't as
+fast at doing that as a web server. The definitely aren't as fast as serving from
+a distributed cloud platform. So usually we separate static and dynamic content.
+
+To use Java as a back-end language,
+work with a Java Application Server called Tomcat. Tomcat
+initially handles the web requests and passes them to little mini Java programs
+called *servlets* which we will write.
 
 Front-End / Back-End Glue - JSON
 --------------------------------
