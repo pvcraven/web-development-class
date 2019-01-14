@@ -19,7 +19,16 @@ import os
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these 02_directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
-#sys.path.insert(0, os.path.abspath('.'))
+sys.path.insert(0, os.path.abspath('../..'))
+
+# From http://stackoverflow.com/questions/12772927/specifying-an-online-image-in-sphinx-restructuredtext-format
+import sphinx.environment
+from docutils.utils import get_source_line
+
+
+def setup(app):
+    app.add_stylesheet('css/custom.css')
+
 
 # -- General configuration ------------------------------------------------
 
@@ -49,7 +58,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Web Development'
-copyright = '2018, Paul Vincent Craven'
+copyright = '2019, Paul Vincent Craven'
 author = 'Paul Vincent Craven'
 
 # The version info for the project you're documenting, acts as replacement for
