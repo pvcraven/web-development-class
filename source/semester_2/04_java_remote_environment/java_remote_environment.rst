@@ -11,7 +11,7 @@ This way of doing things seemed reasonably straight-forward to get started
 with.
 
 To begin with log into the `AWS Console`_. Then go to the "Elastic Beanstalk"
-panel. Select "Tomcat." **Don't** select "Java" like I did the first time.
+panel. Select "Get Started".
 
 .. image:: launch_java_ebs.png
 
@@ -22,22 +22,12 @@ panel. Select "Tomcat." **Don't** select "Java" like I did the first time.
   on load. Also, you don't have to maintain a full virtual machine, which is
   great.
 
-
-The computer will work for a while getting the environment set up.
-Next, you will see the screen shown below. AWS automatically deployed
-a sample application. You can click on the URL and see it. And we have a button to
-upload our application.
-
-.. image:: upload_our_app.png
-
-Since I messed up the first time while creating this tutorial, I noticed
-the next time I tried to deploy an application I was given the option to update
-to a new interface. I did that. It looked like this when I created the app:
+The next screen should look like this. Fill out the fields as indicated.
 
 .. image:: launch_java_ebs_2.png
+   :width: 75%
 
-Note that it is asking me to upload the application file right there, and didn't
-start with a sample application.
+Oh wait! What about Step 4? It wants us to upload a ZIP or WAR file?
 
 But we haven't yet created a deployment file to upload! How do we do that? We
 need to learn how to "Make WAR." This isn't a class for hippies.
@@ -68,7 +58,18 @@ After that, deploy our file. Click choose file, and paste in the war path.
 
 .. image:: paste_path.png
 
-There you go! You should have your deployed web application. Next step will
-be to start making it do something interesting.
+There you go! The computer will take some time getting everything set up. It can
+be fun watching it work. Or you can poke around on your phone instead. Whatever.
+
+.. image:: waiting.png
+   :width: 75%
+
+Once deployed, you'll see a screen like the following:
+
+.. image:: upload_our_app.png
+
+By clicking on the somewhat hidden URL pointed to by Item 1, you can go see your
+app working. You can update the app by uploading a new WAR file with the
+Upload and Deploy button.
 
 .. _AWS Console: http://console.aws.amazon.com

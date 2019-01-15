@@ -8,11 +8,14 @@ Install Java
 
 Download and install Java_. You want to download the "Standard Edition" (SE).
 There is also a "Java Runtime Environment" (JRE). This doesn't let you compile
-``.java`` files to ``.class``. So don't download that one.
+``.java`` files to ``.class``. So don't download that one. The SE will install
+both a Java Development Kit (JDK) and a Java Runtime Environment (JRE). We
+really only care about the JDK.
 
 .. note::
-    If you are using a lab computer, Java is already installed in
-    ``C:\Program Files\Java\jdk1.8.0_101``
+    If you already have Java installed, it may be in a path that looks something
+    like:
+    ``C:\Program Files\Java\jdk1.8.0_111``
 
 .. _Java: http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
 
@@ -43,7 +46,9 @@ Otherwise, when things break, you don't have the skills to fix it.
 Get the server running
 ^^^^^^^^^^^^^^^^^^^^^^
 
-Open up the XAMPP control panel and start Tomcat.
+Open up the XAMPP control panel and start Tomcat. It takes a while to start.
+There's a background window called ``catalina_start.bat`` you can watch if you
+get bored.
 
 .. image:: xampp.png
     :width: 500px
@@ -71,7 +76,11 @@ Serving static files
   find it in ``C:\xampp\tomcat\webapps``.
   Keep the directory name lower case and don't use spaces. Like
   ``test-app``.
+
+.. image:: create_folder.png
+
 * Create a test html file in that folder. I created ``webapps\test-app\test.html``
+* Enter some HTML, or just something like ``Hi There`` so you know it is working.
 * Go to ``http://localhost:8080/test-app/test.html`` and you should be able to
   see the static file you created. This is where your static images, css, and
   other files that don't change go.
@@ -109,21 +118,19 @@ Creating a "Hello World" servlet
   The "path" is a list of directories that Windows (or Linux or Mac)
   checks when you type in a command.
 
-* #1 Open up a file browser, and right-click on "Computer" and select
+* #1 Open a file browser and find where ``javac.exe`` is. For me it was in
+  ``C:\Program Files\Java\jdk1.8.0_111\bin``. You may have something different.
+  Search and be intelligent about it. Copy the path.
+* #2 Open up a file browser, and right-click on "This PC" and select
   "Properties".
-* #2 Select "Advanced System Settings".
-* #3 Select "Environment Variables".
-* #4 Select "Path".
-* #5 Select "Edit".
-* #6 The path is a huge long line, separated with semicolons ``;`` stuffed
-  into a little box. Unless you are on the current version of Windows, which
-  has a better editor. Add a ``;`` to the end of the line, taking care not
-  to destroy anything in the line. Then paste the path to your ``javac.exe``.
-  For lab computers, this is ``C:\Program Files\Java\jdk1.8.0_101\bin``.
-  Make sure not to use a path with ``jre`` in it, and only use one with
-  ``jdk``.
+* #3 Select "Advanced System Settings".
+* #4 Select "Environment Variables".
+* #5 Select "Path".
+* #6 Select "Edit".
+* #7 Add the path we just copied to the end.
 
-.. image:: edit_path.png
+
+.. image:: edit_path_variable.png
     :width: 640px
 
 * Open a **new** command prompt. The old one still has the old settings.
@@ -136,7 +143,7 @@ Creating a "Hello World" servlet
   ``javac -classpath ..\..\..\lib\servlet-api.jar TestServlet.java``
 * Well, darn. It created ``TestServlet.class`` in the current folder. Not the
   ``classes`` subfolder. That won't work. Move the file into that folder.
-* Restart Tomcat
+* Go to XAMPP and stop/start Tomcat
 * Try your servlet: ``http://localhost:8080/test-app/test``
 
 .. image:: hello_world.png
@@ -147,13 +154,11 @@ Install IntelliJ
 
 Ok! That was *too much work*. Let's deploy our web applications using an IDE.
 
-Download and install IntelliJ_. The free version works fine, or
-you can get a `student license`_ with an e-mail that ends in ``.edu``.
+Download and install IntelliJ_. The free version does NOT have the tools we need.
+You can get
+a `student license`_ with an e-mail that ends in ``.edu``. Please do this.
 
-It is also possible to use Eclipse, but IntelliJ seems to be the better
-choice now.
-
-Go ahead and enable these options while installing:
+The default tools are ok when installing.
 
 .. image:: intellij_plugins.png
     :width: 600px
@@ -166,7 +171,9 @@ Make a Java Servlet Project
 ---------------------------
 
 Now you have Java, and an Integrated Development Environment (IDE) installed.
-Let's use the IDE to set up our first web project.
+Let's use the IDE to set up our first web project. Select these options. If
+you do not have these options, you might have the free community edition. You
+need to get the other edition.
 
 .. image:: new_project.png
     :width: 600px
@@ -241,7 +248,33 @@ Then select our ``index.jsp`` page and run the application:
     :width: 600px
     :align: center
 
-Great! Now we see our super-exciting web page:
+If nothing happens, look for an error at the bottom. This means Tomcat is already
+running from XAMPP. So shutdown Tomcat from XAMPP so IntelliJ can run it instead.
+
+.. image:: tomcat_already_running_error.png
+
+What you are supposed to see is our web page. But what you probably see in
+reality is a 404 File Not Found error. Frustrating. And why? It isn't easy
+to find out. But a search on Google and/or Stack Overflow will lead us to the
+answer. It is because of the *Application Context*.
+
+.. image:: app_context.png
+
+The application context allows us to have several apps, and use a different
+directory for start-up. You can type in this box and change it. But the start-up
+page on the other tab should have a directory that matches:
+
+.. image:: app_context_2.png
+
+Make sure to apply your changes. And you should apply them when the app isn't
+running. Also, it is easy to have multiple configurations. Each time your right-click
+on a file to run it you get a new configuration. Get out of that habit and use
+the pull-down and start menu instead.
+
+If you have any configurations like ``index.jsp (1)`` go into the configuration
+editor and get rid of them.
+
+If you get it working we see our super-exciting web page:
 
 .. image:: run4.png
     :width: 400px
