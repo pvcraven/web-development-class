@@ -154,9 +154,17 @@ Install IntelliJ
 
 Ok! That was *too much work*. Let's deploy our web applications using an IDE.
 
-Download and install IntelliJ_. The free version does NOT have the tools we need.
-You can get
-a `student license`_ with an e-mail that ends in ``.edu``. Please do this.
+Download and install IntelliJ_. If you are on-campus, you can get a faster
+download an not kill our outside connection for everyone by downloading from
+here:
+
+http://cs.simpson.edu/ideaIU-2018.3.3.exe
+
+(You may get a warning on the download.)
+
+The free version does NOT have the tools we need.
+You can get a `student license`_ with an e-mail that ends in ``.edu``.
+Please do this.
 
 The default tools are ok when installing.
 
