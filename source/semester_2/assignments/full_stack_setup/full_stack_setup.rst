@@ -13,12 +13,19 @@ Complete
 * Follow the :ref:`java-environment-tutorial`. Make sure you can run Java
   servlets on your development computer.
 * Create a new project in GitHub
-* Add your project. Ignore all project files in the ``.idea`` folder. Don't check
-  those in. Don't check in anything in the ``out`` folder. Right-click on the
-  files to ignore the whole directory they are in.
+* Add your project. Create a ``.gitignore`` file to \iIgnore all project files
+  in the ``.idea`` folder. Don't check
+  those into git. Don't check in anything in the ``out`` folder. Your ``.gitignore``
+  should look like:
+
+.. code-block:: text
+
+    .idea/
+    out/
+
 * Follow the :ref:`java-remote-environment-tutorial`. Deploy your project to
   AWS.
-* Update your project so that is says something like "Paul C Project Page."
+* Update your project so that ``index.jsp`` says something like "Paul C Project Page."
   Obviously, put your name in there, not mine.
 * Make sure you can deploy the update, and push the changes to GitHub.
 
