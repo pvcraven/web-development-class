@@ -6,7 +6,7 @@ jQuery
 For detailed JavaScript tutorials, and as a great reference, see
 `W3Schools jQuery <http://www.w3schools.com/jquery/default.asp>`_ section.
 
-To get started fast, here are some samples.
+Go over the jQuery Tutorial, jQuery Effects, and jQuery HTML sections.
 
 Start with a web page ``test_javascript.html``:
 

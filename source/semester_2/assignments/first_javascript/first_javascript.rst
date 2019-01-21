@@ -44,21 +44,24 @@ them to numbers, and add them. Then put the result in the third field.
 Part 3
 ------
 
-Toggle the paragraph to be hidden and not hidden.
+Toggle the paragraph to be hidden and not hidden. Remember, most of
+the code you need is already in :ref:`jQuery` example code I showed.
 
 .. image:: part3.png
 
 Part 4
 ------
 
-User regular expressions to validate the following field:
+User regular expressions to validate the following field. Remember, most of
+the code you need is already in :ref:`jQuery` example code I showed.
 
 .. image:: part4.png
 
 Part 5
 ------
 
-Create a JSON string out of the following form fields:
+Create a JSON string out of the form fields below. Remember, most of
+the code you need is already in :ref:`jQuery` example code I showed.
 
 .. image:: part5.png
 
