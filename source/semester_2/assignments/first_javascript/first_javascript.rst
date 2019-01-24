@@ -11,13 +11,24 @@ To get set up and turn it in:
 * Create a file called ``javascript_assignment.html`` in the IntelliJ project
   you created from our last assignment.
   Put the HTML file in the "web" folder. **Don't** put it in the WEB-INF folder.
-* Copy the content below into the file.
-* Create a file called ``javascript_assignment.js`` in your IntelliJ project
+* Copy the HTML page I've got for you WAY at the end of this assignment into
+  ``javascript_assignment.html``.
+* Create a file called ``javascript_assignment.js`` in your IntelliJ project in
+  the same folder. Your setup should look like:
+
+.. image:: file_setup.png
+
+
 * Rather than go through the "redeploy" process, just open the original
-  source file in your web browser. When we working with the database we will
+  source file in your web browser. (Right click on the HTML file, hit "show
+  in explorer", then toss that file into your favorite web browser.)
+  When we working with the database we will
   have to go through the run/deploy process. But since we are just doing JavaScript
   we can skip that.
-* Write the JavaScript to solve all five parts.
+* Put a simple ``console.log.("Test");`` into the js file. Refresh your
+  web page and make sure you can see the test. If it works, then delete that
+  line and move on.
+* Write the JavaScript to solve all five parts descripted below.
 * Hover over the IntelliJ bar on the right side where there are little "suggestion"
   and error lines. See if there are any improvements in style to make.
 * Build a WAR file.
@@ -32,6 +43,21 @@ Write an application that will print out "Hello" to the console every time
 the user hits the button.
 
 .. image:: part1.png
+
+Do NOT modify the HTML file I'm giving you. Only put your JavaScript code in
+the JavaScript file. Do NOT use the ``onclick`` directive for hooking a function
+to a button. Instead pull from the example and do something like:
+
+.. code-block:: JavaScript
+
+    // Your Function
+    function myFunction(event) {
+        // Your code here
+    }
+
+    // Attach a button with the id of 'button1' the function above
+    var formButton1 = $('#button1');
+    formButton1.on("click", myFunction);
 
 Part 2
 ------
