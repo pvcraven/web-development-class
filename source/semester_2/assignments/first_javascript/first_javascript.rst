@@ -37,7 +37,7 @@ To get set up and turn it in:
 * Confirm it still works once deployed.
   You'll need to navigate directly to the file by adding
   ``/javascript_assignment.html`` to the end. For example:
-  ``http://cis320firstapp-env.pdaceubggu.us-east-2.elasticbeanstalk.com/javascript_assignment.html``
+  ``http://cis320firstapp-env.pjaceubggu.us-east-2.elasticbeanstalk.com/javascript_assignment.html``
 * Paste in a GitHub link to your JavaScript, and a link to your working application
   on Amazon.
 
