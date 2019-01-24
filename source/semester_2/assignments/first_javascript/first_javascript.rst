@@ -25,7 +25,7 @@ To get set up and turn it in:
   When we working with the database we will
   have to go through the run/deploy process. But since we are just doing JavaScript
   we can skip that.
-* Put a simple ``console.log.("Test");`` into the js file. Refresh your
+* Put a simple ``console.log("Test");`` into the js file. Refresh your
   web page and make sure you can see the test. If it works, then delete that
   line and move on.
 * Write the JavaScript to solve all five parts described below. Remember, the
