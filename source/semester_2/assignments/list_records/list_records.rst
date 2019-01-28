@@ -44,10 +44,10 @@ Complete
 * Add a static method to the PersonDAO object called ``getPeople()``.
   Use the database code and have it return
   a list of the people and all the fields.
-* Update the servlet to the example JSON code, and attempt call the DAO. Take things one
-  step at a time trying to pull from the database.
-* Have the servlet print out JSON for the fields in the database. Something
-  like::
+* Update the servlet to the example JSON code where we call the DAO and then
+  use GSON to convert it to JSON format for us.
+* Have the servlet print out JSON for the **all** fields in the database. Something
+  like this, but with more fields::
 
     [{"id":1,"first":"Paul","last":"Craven"},{"id":2,"first":"Sam","last":"Simpson"}]
 

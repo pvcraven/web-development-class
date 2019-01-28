@@ -329,8 +329,8 @@ The servlet itself will look like:
         }
     }
 
-Eventually, we will evolve this servlet to send JSON formatted data. Here's an
-example to get started when you are ready for that:
+Eventually, we will evolve this servlet to send JSON formatted data.
+Here's an example of manually creating the JSON format:
 
 .. code-block:: Java
    :caption: Sample JSON Java Servlet
@@ -379,6 +379,13 @@ Put the 'jar' file in the ``WEB-INF/lib`` folder for it to work.
 
    // serializes target to Json
    String json = gson.toJson(myObject);
+
+So, a full servlet example to get started (again):
+
+.. literalinclude:: NameListGet.java
+    :linenos:
+    :language: java
+    :caption: NameListGet.java
 
 List Records Lab
 ----------------
