@@ -25,15 +25,19 @@ To get set up and turn it in:
   When we working with the database we will
   have to go through the run/deploy process. But since we are just doing JavaScript
   we can skip that.
-* Put a simple ``console.log.("Test");`` into the js file. Refresh your
+* Put a simple ``console.log("Test");`` into the js file. Refresh your
   web page and make sure you can see the test. If it works, then delete that
   line and move on.
-* Write the JavaScript to solve all five parts descripted below.
+* Write the JavaScript to solve all five parts described below. Remember, the
+  example for :ref:`jquery` gets you part way there.
 * Hover over the IntelliJ bar on the right side where there are little "suggestion"
   and error lines. See if there are any improvements in style to make.
-* Build a WAR file.
+* Build a WAR file by the "Build Artifacts" menu option.
 * Deploy it.
-* Confirm it still works. (You'll need to navigate directly to the file.)
+* Confirm it still works once deployed.
+  You'll need to navigate directly to the file by adding
+  ``/javascript_assignment.html`` to the end. For example:
+  ``http://cis320firstapp-env.pjaceubggu.us-east-2.elasticbeanstalk.com/javascript_assignment.html``
 * Paste in a GitHub link to your JavaScript, and a link to your working application
   on Amazon.
 
