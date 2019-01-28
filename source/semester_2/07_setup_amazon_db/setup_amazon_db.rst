@@ -18,7 +18,7 @@ Launch a DB instance. NOT aurora.
 
 .. figure:: launch_instance.png
 
-    Launch a DB instance. NOT aurora.
+    Launch a DB instance.
 
 Select your engine.
 
@@ -26,23 +26,15 @@ Select your engine.
 
     Select your engine.
 
-Make it a test instance. Because those are free.
+Select MySQL as the engine. Also select 'free' so you can try to get by
+on no/little money.
 
-.. figure:: dev_test.png
-
-    Make it a test instance. Because those are free.
-
-Set the instance specifications.
+Set the instance specifications like this:
 
 .. figure:: instance_specifications.png
 
     Set the instance specifications.
 
-Set the username and password.
-
-.. figure:: advanced_settings.png
-
-    Set the username and password.
 
 .. important:: Use a Strong Password!
 
@@ -55,6 +47,29 @@ Set the username and password.
     like &, <, and >, then you'll have to encode those in your XML file. I'd
     recommend just not using those symbols.
 
+For "Configure Advanced Settings" keep the default settings.
+
+Then you'll get a screen where you can create the database. Afterwards, wait
+for it to be created:
+
+.. figure:: creating.png
+
+    Waiting for the database to be created.
+
+
+After it is created, you'll be able to get your database server name.
+
+ALSO, if
+you move what computer you access the DB from (or what NAT you go through) you
+won't be able to connect. The firewall won't allow a connection at all. You'll
+need to go modify your security connections and allow your IP to have an "inbound"
+connection.
+
+
+.. figure:: connectivity.png
+
+    Set the username and password.
+
 
 Administer Database
 -------------------
@@ -62,22 +77,44 @@ Administer Database
 Ok. Now we have a database. But no way to administer the database. You know,
 create tables, see what's in it, run ad-hoc SQL.
 
-Originally I was going to use MyPHPAdmin. Which is a great tool and built
-into XAMPP. It worked for me the first time I tried it, but not the second time.
-
-So instead we are going to
-connect via `MySQL Workbench`_. If you are working on a lab computer, you'll
-need to have me install it because of the whole permissions thing.
-There is also a copy on our class web page for
-faster download.
+We are going to
+connect via `MySQL Workbench`_. It requires registration and it is a pain
+to find the download link. Go to Scholar and download from the link I have
+at the top of that page so you don't have to go through that pain.
 
 .. _MySQL Workbench: https://www.mysql.com/products/workbench/
 
-Open up a new connection.
-You may need to create a database called "cis320".
+Open up a new connection by using the non-intuitive button:
 
-After that, run some SQL to
-create our table plus a couple records:
+.. figure:: add_sql_connection.png
+
+    Add connection in workbench
+
+Set it up like the screen below. Also hit "Test Connection". Save the password
+in the password vault so you don't have to keep redoing it.
+
+.. figure:: setup_connection.png
+
+    Setup connection in workbench
+
+After that, run some SQL to create our database:
+
+.. code-block:: sql
+
+    create database cis320;
+
+Do this by typing in the commands from the window, then hitting the lighting
+bolt to run. Like the image below:
+
+.. image:: type_commands.png
+
+Next, tell it you want to use the database you created:
+
+.. code-block:: sql
+
+    use database cis320;
+
+Now, create our table plus a couple records:
 
 .. code-block:: sql
 

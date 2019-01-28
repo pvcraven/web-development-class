@@ -71,7 +71,7 @@ Common Issues
   local server, or the AWS server.
 * IntelliJ can't import servlet classes - Go to file...project structure...libraries,
   add the library ``/xamp/tomcat/lib/servlet-api.jar``
-* Can't import gson classes - Download the ``gson-2.8.0.jar`` file from the class
+* Can't import gson classes - Download the ``gson-2.8.5.jar`` file from the class
   website. Put in
   ``WEB-INF/lib`` directory. Add it to project structure.
 * I just get ``[]`` - Look at your server log. The first error your server
@@ -79,7 +79,7 @@ Common Issues
   will have a long stack trace. Practice reading the stack trace to figure out
   the error.
 * Can't import mysql - Download the
-  ``mysql-connector-java-5.1.40-bin`` file. Put in
+  ``mysql-connector-java-5.1.47-bin`` file. Put in
   ``WEB-INF/lib`` directory. Also add it to ``xamp/tomcat/lib`` as well.
 * Doesn't work on AWS. - You can download the last 100 lines of your log to get
   a clue what is wrong. Search for the option.

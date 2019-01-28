@@ -15,7 +15,8 @@ Topics and Tutorials
    04_java_remote_environment/java_remote_environment.rst
    05_javascript/javascript.rst
    06_jquery/jquery.rst
-   theory/db_connections/managing_database_connections.rst
+   07_setup_amazon_db/setup_amazon_db.rst
+   08_db_connections/managing_database_connections.rst
    theory/making_json_calls/making_json_calls.rst
    theory/build_process/build_process.rst
    theory/getting_form_data/getting_form_data.rst
@@ -24,7 +25,6 @@ Topics and Tutorials
    theory/sessions/sessions
    theory/local_storage/local_storage
    theory/encryption/encryption
-   tutorials/setup_amazon_db/setup_amazon_db.rst
    tutorials/docker/docker.rst
 
 
