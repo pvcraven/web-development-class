@@ -34,36 +34,52 @@ In addition to the ``WEB-INF`` folder, we need a directory called
 Connection information is stored in
 a file called ``META-INF/context.xml``.
 
-Here is an example of what it should look like. Update as needed.
+.. figure:: directory_setup.png
+
+    How the directorie tree should look
+
+Here is an example of what it should look like. Update the file below with your
+server name and password. For example, my url looks like:
+
+
+``url="jdbc:mysql://cis320.cp6n5ccfdx2q.us-west-2.rds.amazonaws.com:3306/cis320"``
+
 
 .. code-block:: xml
+   :caption: META-INF/context.xml which MUST go in .gitignore
+   :linenos:
 
-  <?xml version="1.0" encoding="UTF-8"?>
-  <Context>
-      <Resource name="jdbc/cis320"
-                auth="Container"
-                type="javax.sql.DataSource"
-                maxTotal="50"
-                maxWaitMillis="-1"
-                username="cis320"
-                password="PUT_PASSWORD_HERE"
-                driverClassName="com.mysql.jdbc.Driver"
-                url="jdbc:mysql://PUT_SERVER_NAME_HERE:3306/cis320"
-                maxActive="15"
-                maxIdle="3"
-                testOnBorrow="true"
-                removeAbandoned="true"
-                removeAbandonedTimeout="55"
-                validationQuery="SELECT 1"
-                validationInterval="34000"
-                timeBetweenEvictionRunsMillis="34000"
-                minEvictableIdleTimeMillis="55000"
-                factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
-      />
-      <ResourceLink name="jdbc/cis320"
-                    global="jdbc/cis320"
-                    type="javax.sql.DataSource" />
-  </Context>
+    <?xml version="1.0" encoding="UTF-8"?>
+    <Context>
+        <Resource name="jdbc/cis320"
+                  auth="Container"
+                  type="javax.sql.DataSource"
+                  maxTotal="50"
+                  maxWaitMillis="-1"
+                  username="cis320"
+                  password="PUT_PASSWORD_HERE"
+                  driverClassName="com.mysql.jdbc.Driver"
+                  url="jdbc:mysql://PUT_SERVER_NAME_HERE:3306/cis320"
+                  maxActive="15"
+                  maxIdle="3"
+                  testOnBorrow="true"
+                  removeAbandoned="true"
+                  removeAbandonedTimeout="55"
+                  validationQuery="SELECT 1"
+                  validationInterval="34000"
+                  timeBetweenEvictionRunsMillis="34000"
+                  minEvictableIdleTimeMillis="55000"
+                  factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+        />
+        <ResourceLink name="jdbc/cis320"
+                      global="jdbc/cis320"
+                      type="javax.sql.DataSource" />
+    </Context>
+
+WAIT! This has our DB password in it. And server. We NEVER check this into a
+version control system. You have to add this to ``.gitignore``. If you fail
+to do this, then you've compromised every individual in your database and perhaps
+grabbed headline news. No pressure.
 
 Tomcat has built in classes to manage a `connection pool`_. It takes a long
 time to build a connection, so we reuse connections to the database between web
@@ -77,7 +93,7 @@ Connecting to the Database
 --------------------------
 
 The basic code to create a database connection in Java, using a connection pool,
-looks like this.
+looks like this. (Don't type in any code yet, we need to set up your project first.)
 
 .. code-block:: java
 
@@ -103,10 +119,10 @@ looks like this.
 
 What Java classes are we using here?
 
-* InitialContext - Used to get information from our context.xml file. Comes from
+* InitialContext - Used to get information from our ``context.xml`` file. Comes from
   the javax.naming package.
 * Context - This is a base class for InitialContext. It is just a more general
-  version of the InitalContext class.
+  version of the ``InitalContext`` class.
 * DataSource - This class manages our database connections. We get database
   connections from this class.
 * Connection - This class holds the information about our database connection.
@@ -118,11 +134,12 @@ password, and other items in ``context.xml``. We get connections from the
 I hate putting in all that code when I want a database connection. Plus what if
 I change a name? I don't want to go through my entire program replacing
 "jdbc/cis320" with something new. So I typically put this in a helper class
-that looks like:
+that looks like: (Don't type this in yet.)
 
 .. literalinclude:: DBHelper.java
     :linenos:
     :language: java
+    :caption: DBHelper.java
 
 Then in the code I can just do:
 
@@ -187,22 +204,24 @@ Querying the Database
 
 Typically, I created a "Data Access Object". Static methods for each action
 (Static - no need to create an instance of the object.) For example, here
-is a the PersonDAO class that gets a list of people:
+is a the ``PersonDAO`` class that gets a list of people: (Don't type in yet.)
 
 .. literalinclude:: PersonDAO.java
     :linenos:
     :language: java
+    :caption: PersonDAO.java
 
 
 Writing the Servlet
 -------------------
 
 Here's a code sample for a servlet that chucks the list of people out over
-JSON. I only print firstName and id, the other fields you can fill in:
+JSON. I only print ``firstName`` and ``id``, the other fields you can fill in: (Don't type in yet.)
 
 .. literalinclude:: NameListGet.java
     :linenos:
     :language: java
+    :caption: NameListGet.java
 
 Setting Up The Project
 ----------------------
@@ -264,6 +283,7 @@ You will also need to map the servlet to a URL. This maps
 ``/api/name_list_get``.
 
 .. code-block:: xml
+   :caption: Servlet Mapping in web.xml
 
     <?xml version="1.0" encoding="UTF-8"?>
     <web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
@@ -287,6 +307,34 @@ You will also need to map the servlet to a URL. This maps
 The servlet itself will look like:
 
 .. code-block:: Java
+   :caption: Hello World Servlet
+   :linenos:
+
+    package edu.simpson.craven;
+
+    import java.io.IOException;
+    import java.io.PrintWriter;
+
+    public class NameListGet extends javax.servlet.http.HttpServlet {
+        protected void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
+        }
+
+        protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
+            // Type of output (HTML, JSON, image, whatever
+            response.setContentType("text/plain");
+            // Get an object that can write to the network
+            PrintWriter out = response.getWriter();
+            // Write to the network
+            out.print("Hello");
+        }
+    }
+
+Eventually, we will evolve this servlet to send JSON formatted data. Here's an
+example to get started when you are ready for that:
+
+.. code-block:: Java
+   :caption: Sample JSON Java Servlet
+   :linenos:
 
     package edu.simpson.craven;
 
@@ -331,3 +379,8 @@ Put the 'jar' file in the ``WEB-INF/lib`` folder for it to work.
 
    // serializes target to Json
    String json = gson.toJson(myObject);
+
+List Records Lab
+----------------
+
+Now that you have an idea what to do, complete :ref:`list_records`.
