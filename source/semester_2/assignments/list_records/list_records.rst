@@ -101,8 +101,14 @@ Common Issues
   the error.
 * Doesn't work on AWS. - You can download the last 100 lines of your log to get
   a clue what is wrong. Search for the option.
+* AWS says something about a mis-match in class version. If you compile your project
+  with Java 10 and AWS expects Java 8, you'll get an error. You can select "Project Structure"
+  from IntelliJ and set your SDK to compile to an earlier version:
+
+.. image:: sdk_version.png
+
 * AWS says something about the connection pool - Copy ``tomcat-dbcp.jar`` from
-  ``/xamp/tomcat/lib`` to your ``WEB-INF/lib`` folder. Redeploy. That jar file
+  ``/wherever_tomcat_is/tomcat/lib`` to your ``WEB-INF/lib`` folder. Redeploy. That jar file
   has the connection pool code, which for some reason isn't included on Amazon.
 * Huge long pause when connecting - Can't get through your firewall. Just change
   your security to accept connections from anywhere. That's totally the wrong
