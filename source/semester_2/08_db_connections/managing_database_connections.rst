@@ -36,7 +36,7 @@ a file called ``META-INF/context.xml``.
 
 .. figure:: directory_setup.png
 
-    How the directorie tree should look
+    How the directory tree should look
 
 Here is an example of what it should look like. Update the file below with your
 server name and password. For example, my url looks like:
@@ -80,6 +80,16 @@ WAIT! This has our DB password in it. And server. We NEVER check this into a
 version control system. You have to add this to ``.gitignore``. If you fail
 to do this, then you've compromised every individual in your database and perhaps
 grabbed headline news. No pressure.
+
+You probably need this in the ``.gitignore``:
+
+``web/META-INF/context.xml``
+
+*Before* you commit, you can do a ``git status -u`` and make sure that the
+``context.xml`` nor ``META-INF`` directory is set as untracked (which would
+be picked up and added if you did a ``git add *``). If you fail to
+get this part right, you'll need to re-do a lot of things. And possibly
+expose your customer info.
 
 Tomcat has built in classes to manage a `connection pool`_. It takes a long
 time to build a connection, so we reuse connections to the database between web

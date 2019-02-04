@@ -66,12 +66,6 @@ There's another way you can do it. You can use an *anonymous function* instead.
 
 .. code-block:: javascript
 
-    // Define a function that will automatically be called when
-    // our request is done.
-    def my_callback(json_result) {
-        console.log("Done");
-    }
-
     // Define a URL
     var url = "api/name_list_get";
 
@@ -79,12 +73,13 @@ There's another way you can do it. You can use an *anonymous function* instead.
     // URL
     // Data to pass (nothing in this case)
     // Function to call when we are done
-    $.getJSON(url, null, function {
+    $.getJSON(url, null, function(json_result) {
         console.log("Done");
         }
     );
 
-Great! How do we do something with the result?
+Great! How do we do something with the result? This example will take the
+JSON object, which is automatically parsed for us, and print out the first name:
 
 .. code-block:: javascript
 
@@ -100,3 +95,11 @@ Great! How do we do something with the result?
             console.log("Done");
         }
     );
+
+Running through this example with a debugger and inspecting the variables is
+very educational. Make sure your instructor shows you how to do this.
+
+You can expand this example by replacing the console.log and instead manipulating
+the HTML of your document. For example, adding rows to a table.
+
+Now, it is time for you to work on the next assignment. Work on :ref:`list-records-final`.
