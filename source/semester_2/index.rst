@@ -18,8 +18,8 @@ Topics and Tutorials
    07_setup_amazon_db/setup_amazon_db.rst
    08_db_connections/managing_database_connections.rst
    09_making_json_calls/making_json_calls.rst
-   theory/build_process/build_process.rst
-   theory/getting_form_data/getting_form_data.rst
+   10_build_process/build_process.rst
+   11_getting_form_data/getting_form_data.rst
    theory/validate_backend/validate_backend.rst
    theory/cookies/cookies
    theory/sessions/sessions
