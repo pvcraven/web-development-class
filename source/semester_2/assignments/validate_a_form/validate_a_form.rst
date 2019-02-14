@@ -142,15 +142,8 @@ the first name field is valid:
 .. code-block:: javascript
 
         // Set style for outline of form field
-        $('#firstNameDiv').removeClass("has-error");
-        $('#firstNameDiv').addClass("has-success");
-
-        // Set the icon for the form field
-        $('#firstNameGlyph').removeClass("glyphicon-remove");
-        $('#firstNameGlyph').addClass("glyphicon-ok");
-
-        // Put in the field used by screen readers
-        $('firstNameStatus').val("(success)");
+        $('#firstNameDiv').removeClass("is-invalid");
+        $('#firstNameDiv').addClass("is-valid");
 
 Adjust this template for the other fields, both success and failure.
 
