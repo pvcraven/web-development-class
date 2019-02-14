@@ -142,8 +142,8 @@ the first name field is valid:
 .. code-block:: javascript
 
         // Set style for outline of form field
-        $('#firstNameDiv').removeClass("is-invalid");
-        $('#firstNameDiv').addClass("is-valid");
+        $('#firstName').removeClass("is-invalid");
+        $('#firstName').addClass("is-valid");
 
 Adjust this template for the other fields, both success and failure.
 
