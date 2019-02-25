@@ -1,10 +1,10 @@
 Assignment 7 - Security Report
 ==============================
 
-Goal
-----
-
 Write a report detailing application security.
+
+Pick a Topic
+------------
 
 Attack Vectors
 ^^^^^^^^^^^^^^
@@ -16,7 +16,8 @@ Attack Vectors
 * Distributed Denial-of-Service  (You can assume DOS is understood)
 * Dictionary attack, Brute Force Password Attack
 * Unvalidated Redirects and Forwards
-* Known Vulnerabilities (using known vulnerabilities, scanning sites for unpatched machines)
+* Known Vulnerabilities
+  See www.exploit-db.com (blocked on-campus)
 * Social Engineering
 * Buffer overflow
 * Trojan horses
@@ -36,6 +37,7 @@ How to Secure
 
 Timetable
 ---------
+
 This report will go through multiple phases:
 
 * Find sources
@@ -53,7 +55,8 @@ if you are citing them, look for something reputable. (With a publisher.)
 
 Construct a bibliography using MLA. A URL is not a citation! For example:
 
-* Wikipedia contributors. "Internet protocol suite." Wikipedia, *The Free Encyclopedia*. Wikipedia, The Free Encyclopedia, 21 Feb. 2019. Web. 25 Feb. 2019.
+* Wikipedia contributors. "Internet protocol suite." Wikipedia,
+  *The Free Encyclopedia*. Wikipedia, The Free Encyclopedia, 21 Feb. 2019. Web. 25 Feb. 2019.
 
 Outline
 ^^^^^^^
@@ -73,6 +76,7 @@ Write a Draft
 ^^^^^^^^^^^^^
 
 Write a draft of the report. 600+ words, a bit more that two pages, double-spaced.
+Don't forget to include the bibliography at the end. Use in-text citations as appropriate.
 
 Review
 ^^^^^^
