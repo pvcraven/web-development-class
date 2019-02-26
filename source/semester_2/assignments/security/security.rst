@@ -25,7 +25,6 @@ Attack Vectors
 How to Secure
 ^^^^^^^^^^^^^
 
-* Proper encoding of JSON data, HTML data, SQL data, URLs
 * Firewall
 * Authentication vs. Authorization
 * Server certificates

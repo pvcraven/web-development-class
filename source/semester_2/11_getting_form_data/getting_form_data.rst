@@ -99,6 +99,8 @@ JavaScript examples. It not handle the JSON example.
     :language: java
     :caption: FormTestServlet.java
 
+.. _json-requests:
+
 Java for JSON Requests
 ----------------------
 
