@@ -3,7 +3,24 @@
 How to Validate in Java
 =======================
 
+Validation on the front-end is done by the user's browser. Doing validation there
+is fast, and we can make a nice UI to highlight input that isn't quite right.
+
+However! Because it is on the client, the client can change anything that runs
+there. The JavaScript code can be edited, variables changed while the program
+is running, JS can be turned off entirely, or a completely different web page
+could be written to submit data to our app. We can trust NOTHING.
+
+Therefore our Java app must also validate. Running to different validations in
+two different languages is prone to cause a mismatch, but that's the best we've
+got to offer at this point in web development.
+
+Just like the front-end, we'll do validation on the back-end with regular
+expressions. See the highlighted code below:
+
 .. code-block:: java
+   :linenos:
+   :emphasize-lines: 17, 24, 45-46
 
     package edu.simpson.craven;
 
@@ -57,3 +74,9 @@ How to Validate in Java
             }
         }
     }
+
+If you pass validation, go ahead and perform the intended action. If you don't?
+You can pass a response back to your front-end and display something to the
+user. The front-end should have already caught the error, however. Sometimes I
+just silently fail, or display a very generic error message.
+
