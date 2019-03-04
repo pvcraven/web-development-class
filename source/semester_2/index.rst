@@ -20,12 +20,12 @@ Topics and Tutorials
    09_making_json_calls/making_json_calls.rst
    10_build_process/build_process.rst
    11_getting_form_data/getting_form_data.rst
-   theory/validate_backend/validate_backend.rst
-   theory/cookies/cookies
-   theory/sessions/sessions
-   theory/local_storage/local_storage
-   theory/encryption/encryption
-   tutorials/docker/docker.rst
+   12_validate_backend/validate_backend.rst
+   13_cookies/cookies
+   14_sessions/sessions
+   15_local_storage/local_storage
+   16_encryption/encryption
+   17_docker/docker.rst
 
 
 Assignments

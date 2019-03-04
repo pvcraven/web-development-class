@@ -1,5 +1,5 @@
 
-// This function uses JavaScript to print all our cookies.
+// This function uses JavaScript to print all our 13_cookies.
 // It does not use the back-end at all.
 function getCookiesJavaScript() {
     // Use a variable called "output" and keep adding things
@@ -12,8 +12,8 @@ function getCookiesJavaScript() {
     output += document.cookie;
     output += "\n";
 
-    // Wait, all those cookies are on one line! What if we want
-    // to list the cookies individually?
+    // Wait, all those 13_cookies are on one line! What if we want
+    // to list the 13_cookies individually?
     $.each(document.cookie.split(/; */), function()  {
         var splitCookie = this.split('=');
         var name = splitCookie[0];
@@ -35,7 +35,7 @@ function getByCookie(name) {
 }
 
 // This function will make an AJAX call to the servlet engine
-// which will then list all the cookies. We'll take what the
+// which will then list all the 13_cookies. We'll take what the
 // server returns and output it to the screen.
 function getCookiesJava() {
 
@@ -52,9 +52,9 @@ function setCookieJavascriptButton() {
     var cookieName = $("#cookieName").val();
     var cookieValue = $("#cookieValue").val();
 
-    // I know all the cookies are stored in "document.cookie" as one
+    // I know all the 13_cookies are stored in "document.cookie" as one
     // long string. So storing 1 cookie in this string clears all the
-    // old cookies? No! It doesn't. So this isn't really a string.
+    // old 13_cookies? No! It doesn't. So this isn't really a string.
     document.cookie = cookieName + "=" + cookieValue;
 
     // Clear the form fields.
