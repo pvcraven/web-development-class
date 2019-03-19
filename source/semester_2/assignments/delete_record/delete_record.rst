@@ -33,8 +33,8 @@ Step 3 - Add JavaScript
 .. code-block:: JavaScript
 
     function deleteItem(e) {
-        console.debug("Delete");
-        console.debug(e.target.value);
+        console.log("Delete");
+        console.log(e.target.value);
     }
 
 * Back in your update table function, after adding the rows to the table, hook
