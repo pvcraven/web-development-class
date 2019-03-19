@@ -21,7 +21,7 @@ Step 2 - Add a Button
 * Find where you update the table and add in the rows.
 * Create a string that will have the HTML for a "delete" button. It should look
   like:
-  ``<td><button type='button' name='delete' class='editButton btn' value='" + id + "'>Delete</button></td>``.
+  ``<td><button type='button' name='delete' class='deleteButton btn' value='" + id + "'>Delete</button></td>``.
   Note that you will need to replace ``id`` with whatever variable holds that id.
 * Test to make sure the button shows up
 
