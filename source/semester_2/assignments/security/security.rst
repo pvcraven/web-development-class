@@ -16,8 +16,9 @@ Attack Vectors
 * Distributed Denial-of-Service  (You can assume DOS is understood)
 * Dictionary attack, Brute Force Password Attack
 * Unvalidated Redirects and Forwards
-* Known Vulnerabilities
-  See www.exploit-db.com (blocked on-campus)
+* Known vulnerabilities databases, and how they can help both "good"
+  and "bad" system administrators.
+  See www.exploit-db.com for an example of a vulnerability database.
 * Social Engineering
 * Buffer overflow
 * Trojan horses
@@ -29,10 +30,10 @@ How to Secure
 * Authentication vs. Authorization
 * Server certificates
 * Data validation
-* Data encoding (SQL encoding, URL encoding, HTML encoding, JSON encoding)
+* Data encoding (SQL encoding, URL encoding, HTML encoding, JSON encoding. How to get weird characters like < and " to work.)
 * Two-Factor Authentication
 * Encryption
-* Hashing
+* Hashing (cryptographic hashing, particularly for password storage.)
 
 Timetable
 ---------
@@ -71,6 +72,9 @@ Don't just start writing! Make an outline. Your outline might have topics like:
 
 By outlining, you should have topic sentences for each of your paragraphs.
 
+Use in-text citations. Tie your bibliography entries to how you are using them.
+If you've forgotten, search up in-text MLA citatinons.
+
 Write a Draft
 ^^^^^^^^^^^^^
 
@@ -89,5 +93,12 @@ Final Copy
 ^^^^^^^^^^
 
 Take the feedback and update your paper.
+
+Present Topic
+^^^^^^^^^^^^^
+
+Present your topic in 1-2 minutes. Showing examples on-screen is encouraged.
+
+.. image:: rubric.png
 
 
