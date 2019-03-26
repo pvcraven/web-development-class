@@ -21,23 +21,37 @@ public class GetSessionServlet extends HttpServlet {
         // - This example uses a session to keep count of client requests.
         HttpSession session = request.getSession();
 
+        // At this point, you could grab something out of the session like:
+        // String loginId = (String)session.getAttribute("loginId");
+
+        // -- Example  1 --
+        // Use a session attribute called "Count" which we'll increase
+        // by one each time the user requests it.
         int myCount = 0;
 
+        // Get the count variable
         Integer countObject = (Integer)session.getAttribute("Count");
+
+        // If count is not null, we have a count. Counts have to be stored as
+        // objects, and an 'int' isn't an object. So we have to cast it too/from
+        // an Integer object.
         if(countObject != null)
             myCount = countObject.intValue();
 
+        // Add one to count, cast it to Integer, store it back into the session.
         Integer newCount = new Integer(myCount + 1);
         session.setAttribute("Count", newCount);
 
-        // - This example shows how to display the age of a session
+        // -- Example 2 --
+        // This example shows how to display the age of a session
         double ageInHours = (System.currentTimeMillis() - session.getCreationTime()) / (1000. * 60. * 60.);
         double lastAccessInHours = (System.currentTimeMillis() - session.getLastAccessedTime()) / (1000. * 60. * 60.);
 
         out.println(String.format("Session created %.3f hours ago.", ageInHours ));
         out.println(String.format("Last accessed   %.3f hours ago.", lastAccessInHours ));
 
-        // - This example lists every session variable
+        // -- Example 3 --
+        // This example lists every session variable
         out.println("Session Attributes:");
         Enumeration<String> attributes = session.getAttributeNames();
         while(attributes.hasMoreElements()) {

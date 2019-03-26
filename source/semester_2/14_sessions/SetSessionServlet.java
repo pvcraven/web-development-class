@@ -6,19 +6,26 @@ import javax.servlet.http.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-/**
- * Created by paul.craven on 3/20/2017.
- */
 @WebServlet(name = "SetSessionServlet")
 public class SetSessionServlet extends HttpServlet {
+
+    /** Method for posts */
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        // Set up our response
         response.setContentType("text/plain");
         PrintWriter out = response.getWriter();
 
+        // Get the data passed in from the request string
         String sessionKey = request.getParameter("sessionKey");
         String sessionValue = request.getParameter("sessionValue");
 
+        // Get a session object so we can get/set items in our session.
+        // This will automatically create a JSESSIONID cookie for us.
+        // It also must happen BEFORE we try writing output to the user.
         HttpSession session = request.getSession();
+
+        // Associate, in server memory, a key/value pair.
         session.setAttribute(sessionKey, sessionValue);
 
         out.println("Done setting the session variable");

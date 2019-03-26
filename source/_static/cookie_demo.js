@@ -1,5 +1,5 @@
 
-// This function uses JavaScript to print all our 13_cookies.
+// This function uses JavaScript to print all our cookies.
 // It does not use the back-end at all.
 function getCookiesJavaScript() {
     // Use a variable called "output" and keep adding things

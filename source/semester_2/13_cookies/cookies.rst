@@ -70,7 +70,8 @@ Here's a screen shot of our end application.
 
 .. image:: cookie_screen.png
 
-Here is the HTML. Nothing really special here.
+Here is the HTML. Nothing really special here. We have a form that takes in
+values for the cookie id, and the cookie value that we want to set.
 
 .. literalinclude:: cookie_demo.html
     :linenos:
@@ -92,15 +93,28 @@ Try it! Click `here <../../_static/cookie_demo.html>`_.
 Cookies in Java
 ~~~~~~~~~~~~~~~
 
+How do we get/set cookies on the server-side?
+The ``HttpServletRequest`` object pointed to by the ``request`` variable has
+a method called ``getCookies()``. This will return a list of the all the cookies.
+
+If there is only one that you want, you need to search the list for it.
+
 .. literalinclude:: GetCookiesServlet.java
     :linenos:
     :language: Java
     :caption: GetCookieServlet.java
+    :emphasize-lines: 18
+
+Setting a cookie is a two-step process. You create a ``Cookie`` object, then
+add it to the response with ``response.addCookie()``. You can also set a
+cookie age, so it will time out after being unused for a while, or when the
+browser closes.
 
 .. literalinclude:: SetCookieServlet.java
     :linenos:
     :language: Java
     :caption: SetCookieServlet.java
+    :emphasize-lines: 21, 26, 28
 
 Cookie Limits
 -------------
