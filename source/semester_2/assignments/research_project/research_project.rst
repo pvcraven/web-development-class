@@ -9,9 +9,15 @@ Goals
 * Show that you can review for content, structure, and grammar.
 * Be able to listen to feedback and revise your work.
 
-Work will be on-line at:
+The GitHub for our work will be at:
 
-http://2017-web-development.readthedocs.io/
+https://github.com/pvcraven/2019_spring_web_dev
+
+You can see the results at:
+
+https://2019-spring-web-dev.readthedocs.io/en/latest/
+
+
 
 Pick a Topic
 ------------

@@ -39,3 +39,11 @@ form, you don't lose your data.
     :emphasize-lines: 7, 22, 39, 48
 
 Try it out here: `here <../../_static/local_storage.html>`_.
+
+You can store about 10 meg of data combined for the local and session data. This
+is way more than the 4000 character limit you get with cookies.
+
+If you need something more structured than simple key/value pairs, you can
+create your own database using ``IndexedDB``. Think, you can download a database
+and then allow the user to interact with the data all locally. This is WAY faster
+than going back and forth from the server for everything.
