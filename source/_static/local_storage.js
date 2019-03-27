@@ -1,5 +1,7 @@
 // --- This code runs on start-up of the page.
 
+// -- Local Storage Example
+
 // First, see if there is any data stored in local storage
 // for the key "myLocalStorageKey".
 var textContent = localStorage.getItem("myLocalStorageKey", $('#htmlFormFieldForLocalStorage').val());
@@ -12,6 +14,8 @@ if(textContent){
 } else {
     console.log("No saved data.");
 }
+
+// -- Local Session Example
 
 // First, see if there is any data stored in local storage
 // for the key "myLocalStorageKey".
@@ -26,7 +30,7 @@ if(textContent){
     console.log("No saved data.");
 }
 
-// --- This runs when we change the text in the FIRST text field
+// --- This runs when we change the text in the FIRST (storage) text field
 $('#htmlFormFieldForLocalStorage').bind("input", function(e) {
     if (typeof(Storage) === "undefined") {
         console.log("Sorry, no local storage available.");
@@ -35,7 +39,7 @@ $('#htmlFormFieldForLocalStorage').bind("input", function(e) {
     localStorage.setItem("myLocalStorageKey", $('#htmlFormFieldForLocalStorage').val());
 });
 
-// --- This runs when we change the text in the FIRST text field
+// --- This runs when we change the text in the SECOND (session) text field
 $('#htmlFormFieldForSessionStorage').bind("input", function(e) {
     if (typeof(Storage) === "undefined") {
         console.log("Sorry, no local storage available.");
