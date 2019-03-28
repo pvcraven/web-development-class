@@ -1,10 +1,11 @@
 // --- This code runs on start-up of the page.
 
 // -- Local Storage Example
+// Local storage has no expiration, and stays if page closes.
 
 // First, see if there is any data stored in local storage
 // for the key "myLocalStorageKey".
-var textContent = localStorage.getItem("myLocalStorageKey", $('#htmlFormFieldForLocalStorage').val());
+var textContent = localStorage.getItem("myLocalStorageKey");
 
 // If there is data, initialize the form field with the data.
 // Otherwise, don't.
@@ -16,10 +17,12 @@ if(textContent){
 }
 
 // -- Local Session Example
+// Local session is just like local storage, but goes away
+// when the page session ends. (If page closes.)
 
 // First, see if there is any data stored in local storage
 // for the key "myLocalStorageKey".
-textContent = sessionStorage.getItem("mySessionStorageKey", $('#htmlFormFieldForSessionStorage').val());
+textContent = sessionStorage.getItem("mySessionStorageKey");
 
 // If there is data, initialize the form field with the data.
 // Otherwise, don't.

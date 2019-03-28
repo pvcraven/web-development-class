@@ -11,8 +11,9 @@ type it in followed by a period. You can see some of the options.
 Using it is easy, the object has ``setItem`` and ``getItem`` methods where
 we can store data in key/value pairs.
 
-Anything stored with ``localStorage`` goes away when the browser is closed.
-What if we want to keep something between browser sessions? We can use
+Anything stored with ``localStorage`` should stay around even when the
+browser window closes. Is your data more transient? Don't need it to
+stay when the web page closes? Use
 ``sesssionStorage``. It has the same interface.
 
 Screenshot of our sample app in use:
