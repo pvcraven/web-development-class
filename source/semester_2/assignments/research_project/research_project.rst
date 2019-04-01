@@ -28,19 +28,36 @@ My suggestion is to pick one of the following topics:
   great for creating multi-screen input dialogs. It can help with data-binding
   so that you aren't constantly messing around with the DOM trying to update
   stuff.
-* NodeJS_: A back-end framework. You can create your own web server with NodeJS.
-  Finally everything can be in JavaScript.
-* `New ES6 Features`_: What I've shown in class has been a version of JavaScript
-  called ES5. There are a lot of new features with ES6. Explore those new
-  features and report on them.
+* NodeJS_: A back-end framework. You can create your own web server with
+  JavaScript (instead of Java) with NodeJS.
 * `Continuous Integration`_: Show how to create a project that you can check
   into GitHub, have it automatically build. Run test scripts. Run coverage
-  reports. And automatically deploy to a testing environment.
+  reports. And automatically deploy to a testing environment. You don't have to
+  do this with a web app if you don't want to. Try getting any type of app working
+  with AppVeyor_.
+* Accessibility. Talk about how to make the web accessible. Show issues/solutions
+  with web sites where you use a screen reader. Try navigating a website without
+  a mouse. Try navigating with speech recognition software.
+* Responsive web. How can you write a website that looks good on mobile, print,
+  and 4k monitors? Dig into the details on how to come up with the CSS. Maybe
+  try using "Stylebot" plug-in for Chrome and find how to write CSS that will
+  allow degree Simpson's audits to print in a sane matter
+* `Google Accelerated Mobile Pages`_. Have your website load faster on the phone.
+* `Progressive Web App`_. Run web pages, even without a web connection?
+* ReactJS_. JavaScript library for user interfaces.
+* D3_. Graphs, graphs, and more graphs in JavaScript.
+* Vue_. JavaScript library for creating apps.
 
 .. _AngularJS: https://angularjs.org/
 .. _NodeJS: https://nodejs.org/en/
 .. _New ES6 Features: http://es6-features.org/
 .. _Continuous Integration: https://en.wikipedia.org/wiki/Continuous_integration
+.. _AppVeyor: https://www.appveyor.com/
+.. _Google Accelerated Mobile Pages: https://www.ampproject.org/
+.. _Progressive Web App: https://developers.google.com/web/progressive-web-apps/
+.. _ReactJS: https://reactjs.org/
+.. _D3: https://d3js.org/
+.. _Vue: https://vuejs.org/v2/guide/
 
 If you pick a different topic, please get pre-approval. I picked these topics
 because in talking with Simpson alumni, these have been the top suggested things
@@ -51,19 +68,12 @@ Angular
 
 Tutorial: https://www.w3schools.com/angular/default.asp
 
-I'll show a demo in class on how this works.
-
 NodeJS
 ^^^^^^
 
 You can download NodeJS_ and follow one of the tutorials on-line.
 
 Tutorial: http://www.tutorialspoint.com/nodejs/
-
-New ES6 Features
-^^^^^^^^^^^^^^^^
-
-Compatibility: https://kangax.github.io/compat-table/es6/
 
 Continuous Integration
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -152,13 +162,13 @@ Communicate
 Review
 ^^^^^^
 
-We will spend class on 4/18 doing review on each other's work.
+We will spend class on 4/23 doing review on each other's work.
 
 Revise
 ^^^^^^
 
-You can use the feedback from 4/18 and have more time to improve your paper.
-Final copy is due 4/25.
+You can use the feedback from 4/23 and have more time to improve your paper.
+Final copy is due Tues. April 30 at 10:00am
 
 Schedule
 --------
@@ -177,4 +187,7 @@ Grading
 50 points
 
 
-Rubric to be posted.
+Rubric
+------
+
+.. image:: rubric.png
