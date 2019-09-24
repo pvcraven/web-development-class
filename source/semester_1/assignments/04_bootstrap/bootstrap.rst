@@ -7,10 +7,10 @@ Getting set up:
 * Make sure you've got everything committed and pushed from the last assignment.
 * Create a new branch of your project called ``bootstrap_firstname_lastname``.
 
-Do the following:
+Cover the following things from the rubric:
 
 * Remove the CSS from the prior assignment.
-* Use the :ref:`bootstrap-template` tutorial to adapt
+* "Properly use template" Use the :ref:`bootstrap-template` tutorial to adapt
   all pages on the project to use Bootstrap. You will need to copy/paste out
   of the template into the pages to make sure that Bootstrap has been applied.
   **Also** make sure that the menu bar "hide" text on your page.
@@ -25,8 +25,9 @@ Do the following:
   the mistake of putting the whole page into the Jumbotron, just part of it.
 * "HTML and CSS are valid" Use HTML Validator to find and fix all errors.
 
-**Note:** A very common mistake is to not use the <div class="container">, or to
-not have the footer in that container. You should not have text running to the
+**Note:** A very common mistake is to not use the ``<div class="container">``, or to
+not have the footer _inside_ that container. Check your page to make sure it does
+not have text running to the
 edge of the screen.
 
 Also make sure you don't have blocks of text on a colored background. That is

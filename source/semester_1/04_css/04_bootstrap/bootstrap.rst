@@ -32,6 +32,9 @@ Here is the code behind that template:
 
 .. _bootstrap_template:
 
+Bootstrap Template
+^^^^^^^^^^^^^^^^^^
+
 .. literalinclude:: example_01.html
     :linenos:
     :language: html
