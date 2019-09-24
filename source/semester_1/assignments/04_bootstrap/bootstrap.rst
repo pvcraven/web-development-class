@@ -9,7 +9,8 @@ Getting set up:
 
 Do the following:
 
-* "Properly use template" Use the template in our Bootstrap tutorial to adapt
+* Remove the CSS from the prior assignment.
+* Use the :ref:`bootstrap-template` tutorial to adapt
   all pages on the project to use Bootstrap. You will need to copy/paste out
   of the template into the pages to make sure that Bootstrap has been applied.
   **Also** make sure that the menu bar "hide" text on your page.
