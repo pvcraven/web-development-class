@@ -102,6 +102,7 @@ Update the form to:
   below.
 * Understand what each line is doing. So if you have to write this yourself
   someday you know what to do.
+* Use a type of ``date`` for the birthday field, instead of ``text``.
 
 .. code-block:: html
 
@@ -132,6 +133,9 @@ Come up with reasonable regular expressions. Don't take empty fields. Don't
 take fields of 35 characters if your database field is 30 characters. But you
 do want to accept names like "O'Malley" and "José".
 
+The date field will send data in a YYYY-MM-DD format, even if you enter DD/MM/YYYY.
+So your regular expression will need to validate accordingly.
+
 Step 7 - Display validation results to the user
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -142,15 +146,8 @@ the first name field is valid:
 .. code-block:: javascript
 
         // Set style for outline of form field
-        $('#firstNameDiv').removeClass("has-error");
-        $('#firstNameDiv').addClass("has-success");
-
-        // Set the icon for the form field
-        $('#firstNameGlyph').removeClass("glyphicon-remove");
-        $('#firstNameGlyph').addClass("glyphicon-ok");
-
-        // Put in the field used by screen readers
-        $('firstNameStatus').val("(success)");
+        $('#firstName').removeClass("is-invalid");
+        $('#firstName').addClass("is-valid");
 
 Adjust this template for the other fields, both success and failure.
 

@@ -24,7 +24,7 @@ example of linking between two files in the same directory:
    :linenos:
    :caption: page2.html
 
-Try it out: `Example 1 <../../../../_static/directories/v1/page1.html>`_
+Try it out: `Example 1 <../../../_static/directories/v1/page1.html>`_
 
 This next example adds a new page, named ``page3.html``
 in a new subdirectory, named ``subdir``. Note that the links in

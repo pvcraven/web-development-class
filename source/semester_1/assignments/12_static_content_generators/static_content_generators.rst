@@ -8,7 +8,8 @@ Getting together as a group
 
 First you should get together and meet.
 
-* Introduce yourself. Also state what pronoun you prefer. Don't make it a joke.
+* Introduce yourself. It is also a good idea to state preferred pronoun,
+  even if it seems obvious.
 * Do another round where everyone states the other person's name.
 * Get confident enough to
   say "hi" to each group member when you see them. Remember - taking the time
@@ -25,6 +26,8 @@ First you should get together and meet.
   With four people, work at keeping the discussion 25% about you, and 75%
   about the other people. People tend to tilt towards talking only about themselves
   or not talking about other people at all. Find the balance.
+  Some people are introverted, ask questions and make sure everyone is included.
+  Your group will be stronger with everyone contributing.
 * Pause. Go around and list one or two things related to this class you'd like
   to get better at.
   Like HTML coding, or the ability to write for the web, or working as a group,
@@ -79,7 +82,6 @@ Collaborate
 
 * Go back to the Google doc, choose at least four pages for each person to create.
 * Select one person to start the project.
-* Create a template for your project by `following the tutorial <https://web-development-class.readthedocs.io/en/latest/09_static/sphinx/sphinx.html>`_
 * Put the template in GitHub.
 * Add each person to the project in GitHub.
 * Make sure each person has cloned the project on their computer.
@@ -112,7 +114,7 @@ Create web pages that have:
 * A table of contents (don't put one on each page)
 * Paragraphs. Don't give me a wall of text.
 * Cite an image that you use that is not your own. See below.
-* Multiple types of styles (Normally, don't change the style in a heading.)
+* Multiple types of styles. Don't change the style in a heading!
 * Don't copy/paste curly quotes into your text. Use straight quotes.
 * Name your pages and directories according to their content. This helps their
   ranking in Google, as well as helping you keep things straight.

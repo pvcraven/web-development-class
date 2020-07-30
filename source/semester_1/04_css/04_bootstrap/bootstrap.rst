@@ -30,6 +30,11 @@ a "hamburger" style pull-down menu.
 
 Here is the code behind that template:
 
+.. _bootstrap-template:
+
+Bootstrap Template
+^^^^^^^^^^^^^^^^^^
+
 .. literalinclude:: example_01.html
     :linenos:
     :language: html

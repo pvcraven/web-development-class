@@ -15,17 +15,17 @@ Topics and Tutorials
    04_java_remote_environment/java_remote_environment.rst
    05_javascript/javascript.rst
    06_jquery/jquery.rst
-   theory/db_connections/managing_database_connections.rst
-   theory/making_json_calls/making_json_calls.rst
-   theory/build_process/build_process.rst
-   theory/getting_form_data/getting_form_data.rst
-   theory/validate_backend/validate_backend.rst
-   theory/cookies/cookies
-   theory/sessions/sessions
-   theory/local_storage/local_storage
-   theory/encryption/encryption
-   tutorials/setup_amazon_db/setup_amazon_db.rst
-   tutorials/docker/docker.rst
+   07_setup_amazon_db/setup_amazon_db.rst
+   08_db_connections/managing_database_connections.rst
+   09_making_json_calls/making_json_calls.rst
+   10_build_process/build_process.rst
+   11_getting_form_data/getting_form_data.rst
+   12_validate_backend/validate_backend.rst
+   13_cookies/cookies
+   14_sessions/sessions
+   15_local_storage/local_storage
+   16_encryption/encryption
+   17_docker/docker.rst
 
 
 Assignments

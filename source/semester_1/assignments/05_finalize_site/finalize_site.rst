@@ -29,6 +29,8 @@ Also answer these questions, which will form the basis for part of your grade:
 
 * What strengths do you personally have when working in a group?
 * How did you apply your strengths in collaborating on this project?
+  List your strengths in working with the team, not the technical
+  strengths of the code.
 * What are your weaknesses when working in a group?
 * How did they affect your work in collaborating on this website?
 * Which of these methods (consensus, autocratic, democratic, delegation,
@@ -47,3 +49,4 @@ tagged with your name on GitHub.
     :width: 500px
     :align: center
     :alt: Rubric
+
