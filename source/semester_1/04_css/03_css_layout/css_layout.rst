@@ -162,4 +162,8 @@ There are many limitations to the original CSS's layout options. Version 3 of
 CSS (CSS3) includes `flex box`_ which is supposed to help. There are other
 CSS libraries that have their own method of layout.
 
+Flex-box playground:
+
+https://codepen.io/enxaneta/full/adLPwv/
+
 .. _flex box: http://www.w3schools.com/css/css3_flexbox.asp

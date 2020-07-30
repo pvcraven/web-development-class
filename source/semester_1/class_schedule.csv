@@ -1,0 +1,37 @@
+﻿Date,Topic,Assignments due,Quizzes due
+Tue - 8/25,Syllabus,,
+,Text Editors,,
+,Learn About HTML,,
+Thu - 8/27,HTML Tutorial,,
+Tue - 9/1,Showing File Extensions,,Quiz 1 - Web Concepts
+,Assignment 1 - HTML,,
+Thu - 9/3,Directory Tutorial,,
+,DVCS Concepts,,
+Tue - 9/8,Git tutorial,,Quiz 2
+Thu - 9/10,"Keep working on git, assign CSS tutorial",,
+Tue - 9/15,"DVCS Branching, CSS assignment",Assignment 1 - HTML,Quiz 3 - DVCS
+Thu - 9/17,"CSS Layout, work on CSS assignment",Assignment 2 - DVCS,Quiz 4 - CSS
+,CSS Menu: https://www.w3schools.com/css/css_navbar.asp,,
+Tue - 9/22,Bootstrap tutorial,,
+Thu - 9/24,Bootstrap Grid,Assignment 3 - CSS,
+Tue - 9/29,"Collaboration, github issues, brainstorm assignment 5",Assignment 4 - Bootstrap,
+Thu - 10/1,Work on assignment 5,,
+Tue - 10/6,Amazon Web Services - get account. Planning period for Assignment 5 presentation,Assignment 5 - Final Project Version,
+Thu - 10/8,"Present Assignment 5, AWS tutorial",Assignment 6 - AWS Setup,
+Tue - 10/13,Command line tutorial / AWS setup,,
+Thu - 10/15,AWS setup / Application servers,"Assignment 7 - Using PHP ""include""",Quiz 5 - CMD
+Tue - 10/20,Talk about application servers,,Quiz 6 AWS
+Thu - 10/22,Fall break,Assignment 8 - DNS and Web Site performance,Quiz 7 Cloud
+Tue - 10/27,Explain DNS,,
+Thu - 10/29,Content management systems,Assignment 9 - WordPress Install,
+Tue - 11/3,Work on WordPress,,
+Thu - 11/5,Work on WordPress,,
+Tue - 11/10,Scalable Vector Graphics,Assignment 10 - WordPress,
+Thu - 11/12,Google analytics / SVG work,,
+Tue - 11/17,Static Content Generators / Sphinx / RST,,
+Thu - 11/19,Get started on assignment 12,Assignment 11 - SVG,
+Tue - 11/24,Work on Assignment 12,,
+Thu - 11/26,Thanksgiving break,,
+Tue - 12/1,"Videos on Advanced DNS, Load Balancing,CDN. Work on S3",,
+Thu - 12/3,Polish final website,Collaborative Leadership Reflection,
+,Present projects,Assignment 12 - Static content website,

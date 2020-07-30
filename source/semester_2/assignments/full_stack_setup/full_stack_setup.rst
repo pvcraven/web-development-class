@@ -22,15 +22,18 @@ Complete
 
     .idea/
     out/
+    classes/
 
 * Follow the :ref:`java-remote-environment-tutorial`. Deploy your project to
   AWS.
 * Update your project so that ``index.jsp`` says something like "Paul C Project Page."
-  Obviously, put your name in there, not mine.
+  Obviously, put your name in there, not mine. (Don't forget this part, it is
+  the most frequent way people lose points.)
 * Make sure you can deploy the update, and push the changes to GitHub.
 
 Turn in
 -------
 
  * GitHub URL of your project
- * URL of your production server
+ * URL of your production server (If you send me a URL with ``localhost`` in
+   it, you aren't sending me the production server and you'll get no points.)
