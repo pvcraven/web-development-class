@@ -1,4 +1,4 @@
-.. _Directories:
+.. _directories:
 
 Managing Directories
 --------------------

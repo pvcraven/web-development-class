@@ -1,3 +1,5 @@
+.. _dvcs_tutorial:
+
 Distributed Version Control System Tutorial
 ===========================================
 

@@ -1,3 +1,5 @@
+.. _html_tutorial:
+
 HTML Tutorial
 =============
 

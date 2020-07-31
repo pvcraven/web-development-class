@@ -10,7 +10,7 @@ About
 * Website styling from `Read The Docs Theme`_.
 * Document hosting and automatic generation by `ReadTheDocs`_.
 
-.. _Paul Vincent Craven: http://simpson.edu/author/pcraven/
+.. _Paul Vincent Craven: https://simpson.edu/about-simpson-college/faculty-and-staff/paul-vincent-craven
 .. _Computer Science Department: http://simpson.edu/computer-science/
 .. _Simpson College: http://simpson.edu/
 .. _Indianola: https://www.google.com/maps/place/Indianola,+IA+50125

@@ -1,17 +1,17 @@
+.. _text_editors:
+
 Text Editors
 ============
 
-We will be using a **text editor** in class. A text editor is like a word
-processor, in that you can use it to type things up. But a text editor doesn't have features
-to center text, bold text, or do anything with style. What you type into
-a text editor is just that -- text.
-
-Text editors create text files. These are files that just have the letters
-you type in. Nothing else.
+We will be using a **text editor** in class.
+A text editor is like a word processor, but with no options for styling text.
+There's no ability center, bold, change font size, or anything else.
+What you type into a text editor is just that -- text. The files it saves are
+**text files** that just have the letters you type in.
 
 These text files will make up our web sites. Therefore we need to pick a text editor.
-There are two main varieties of text editors. Regular "text editors" and
-"Integrated Development Environments." (IDE for short.) An IDE is a text editor with
+There are two main varieties of text editors. Regular text editors and
+**Integrated Development Environments (IDE)** An IDE is a text editor with
 a lot of built-in tools to help development.
 
 There is a lot of gray area around what is a text editor vs. what is an IDE.
@@ -20,8 +20,13 @@ we call it a text editor. If the program is large, takes a while to start, and
 wants you to work in a "project" that manages lots of text files, it is
 an IDE.
 
+The TLDR: We need a text editor. I'm recommending a free program called Sublime,
+or a pay-for program called CSS HTML Validator.
+
 Text Editors
 ------------
+
+These are some of the most popular text-editors in use for web development.
 
 CSE Validator
 ^^^^^^^^^^^^^
@@ -120,15 +125,21 @@ No, don't use this to edit text files. Ever.
 Integrated Development Environments
 -----------------------------------
 
+Large, complex websites often require a lot of additional software, tools,
+and procedures to help development. Using an IDE can help access all of these
+in one environment. Here are some of the most popular IDEs for web development.
+
 JetBrains
 ^^^^^^^^^
 
 .. image:: intellij.png
     :width: 50%
 
-The company JetBrains makes an IDE, but it comes in many "flavors." In my opinion, they have the best IDE out
-there right now. As a student, you can get a `free student license <https://www.jetbrains.com/student/>`_ for all
-their products. Which product you pick will depend on what primary language you want to do development in:
+The company JetBrains makes an IDE, but it comes in many "flavors." In my
+opinion, they have the best IDE out there right now. As a student, you can get
+a `free student license <https://www.jetbrains.com/student/>`_ for all
+their products. Which product you pick will depend on what primary language you
+want to do development in:
 
 * WebStorm - JavaScript
 * PhpStorm - PHP
@@ -138,17 +149,19 @@ their products. Which product you pick will depend on what primary language you 
 
 For this class, if you want to use JetBrains, I'd recommend IntelliJ or WebStorm.
 
+Visual Studio
+^^^^^^^^^^^^^
+
+Microsoft's `Visual Studio`_ is very popular in places that standardize on a set
+of tools and languages called .NET. It is quite popular, and for good reason.
+Microsoft spends a lot of resources making it one of the best tools out there.
+
 Eclipse
 ^^^^^^^
 
 Eclipse_ used to be the standard IDE most people used. Unfortunately it has
 become kind of slow and bloated with too many features now. It is free and
 open-source however.
-
-Visual Studio
-^^^^^^^^^^^^^
-
-Microsoft's `Visual Studio`_ is very popular in places that standardize on a set of tools and languages called .NET.
 
 .. _Visual Studio: https://www.visualstudio.com/
 .. _Eclipse: http://www.eclipse.org/

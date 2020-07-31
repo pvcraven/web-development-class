@@ -1,3 +1,5 @@
+.. _dvcs_concepts:
+
 Distributed Version Control Systems
 -----------------------------------
 

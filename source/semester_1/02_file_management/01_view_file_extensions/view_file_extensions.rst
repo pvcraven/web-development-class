@@ -1,3 +1,5 @@
+.. _view_file_extensions:
+
 Viewing File Extensions
 =======================
 

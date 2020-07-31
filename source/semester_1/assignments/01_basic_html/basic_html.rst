@@ -1,6 +1,4 @@
-.. For next year
-   Have student identify <student> 'page 1', 'page 2', 'page 3' for grading
-   Are files and links lower case, have no spaces, and no ' characters
+.. _assignment_01_basic_html:
 
 Assignment 1 - Basic HTML
 =========================
@@ -174,7 +172,8 @@ To turn in assignment 1, copy the GitHub address for your project into the submi
 form on Scholar for assignment 1. This will require you to complete Assignment 2.
 
 * Make sure you submit your files, and your files only.
-* Make your your files are identified by a comment.
+* Make your your files (which files I should look at to give your grade)
+  are identified by a comment.
 * This is to be a serious website. Don't make it a joke. If someone hired you to create a website
   with this subject, do the best job that you can at it.
 * Make sure you submit any images that go with your files.
@@ -187,14 +186,14 @@ form on Scholar for assignment 1. This will require you to complete Assignment 2
 * File names should not have any spaces. Use underscores instead.
 * Don't check in any 'temp' file created by CSE Validator. These all start
   with a tilde: '~'.
-* The menu should be in an unordered list, and should appear on every page. 
-  Put the list at the top of the page because that's where the nav bar will go. 
+* The menu should be in an unordered list, and should appear on every page.
+  Put the list at the top of the page because that's where the nav bar will go.
   Don't try to make it fancy or in a table.
   We will add formatting in a later assignment.
 * Make sure to avoid extra spaces around tags. Don't do ``<title> About Page </title>`` instead do ``<title>About Page</title>``
-* Don't make your lines really long. If your paragraph is longer 
+* Don't make your lines really long. If your paragraph is longer
   than 80 characters, use a return and break it up. Yes, the
-  web page will ignore it, but it is hard to edit a file if 
+  web page will ignore it, but it is hard to edit a file if
   your text extends way off the screen to the right.
 * Include a character set in the ``<head>``.
 * Your ``<title>`` should be descriptive. It might mirror the ``<h1>`` content.
