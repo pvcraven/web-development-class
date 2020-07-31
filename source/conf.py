@@ -27,7 +27,7 @@ from docutils.utils import get_source_line
 
 
 def setup(app):
-    app.add_stylesheet('css/custom.css')
+    app.add_css_file('css/custom.css')
 
 
 # -- General configuration ------------------------------------------------

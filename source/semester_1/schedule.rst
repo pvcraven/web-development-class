@@ -8,5 +8,5 @@ these topics, and in this order. The exact days they land on might change.
 
 .. csv-table::
    :file: class_schedule.csv
-   :widths: 15, 60, 20, 5
+   :widths: 15, 65, 20
    :header-rows: 1
