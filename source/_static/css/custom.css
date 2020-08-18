@@ -94,6 +94,8 @@ div[class^='highlight'] pre {
 }
 .wy-table-responsive table td, .wy-table-responsive table th {
     white-space: normal;
+}
+.rst-content table.docutils td {
     padding: 4px;
 }
 .highlight .c1 {
