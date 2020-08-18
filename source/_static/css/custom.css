@@ -96,7 +96,10 @@ div[class^='highlight'] pre {
     white-space: normal;
 }
 .rst-content table.docutils td {
-    padding: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 0px;
+    padding-top: 0px;
 }
 .highlight .c1 {
     color: #28811f;
