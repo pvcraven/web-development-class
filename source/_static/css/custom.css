@@ -84,6 +84,9 @@ div[class^='highlight'] pre {
 .wy-menu-vertical {
     font-family: "Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
 }
+.wy-table-responsive table td, .wy-table-responsive table th {
+    white-space: normal;
+}
 .wy-plain-list-disc, .rst-content .section ul, .rst-content .toctree-wrapper ul, article ul {
     list-style: disc;
     line-height: 30px;
@@ -91,6 +94,7 @@ div[class^='highlight'] pre {
 }
 .wy-table-responsive table td, .wy-table-responsive table th {
     white-space: normal;
+    padding: 4px;
 }
 .highlight .c1 {
     color: #28811f;
