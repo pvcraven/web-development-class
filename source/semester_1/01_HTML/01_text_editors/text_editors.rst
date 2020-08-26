@@ -67,6 +67,9 @@ Sublime
 
 This is my favorite text editor. You can try it out for free, but to get rid
 of the nag-screens you need to pay money. The money is totally worth it.
+Sublime is available at:
+
+https://www.sublimetext.com/
 
 The most expensive investment is to learn how to use Sublime well.
 Sublime can be used
