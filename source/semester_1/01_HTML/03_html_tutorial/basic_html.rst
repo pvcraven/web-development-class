@@ -442,6 +442,8 @@ and then paste it into Introduce `W3C`_ for validation.
 This isn't as convenient, and you'll lose time compared to HTML Validator, but it does
 work if you are on a budget.
 
+.. _sample_html_doc:
+
 One Last HTML Sample Document
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

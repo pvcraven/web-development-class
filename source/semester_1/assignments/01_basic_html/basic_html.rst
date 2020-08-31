@@ -24,10 +24,10 @@ If done correctly, pair programming can:
 * Build team dynamics
 
 It is also possible to make pair programming a *bad* experience. Particularly
-if the observer pulls out his or her phone. Therefore, if someone pulls
-out their phone they will be asked to leave, and counted as absent.
+if the observer pulls out his or her phone. Keep your phone put away, and keep
+on task while working on this assignment.
 
-I will assign the pairs. It is my plan to keep switching pairs, so you'll
+I will assign the pairs for this assignment. I will keep switching pairs, so you'll
 get to work with several people in class.
 
 When pair programming, you have a "driver" who is at the keyboard. You also
@@ -105,12 +105,12 @@ Required Components
     and will be graded on.
   * Web site title and graphic. Put in its own ``<header>`` tag.
     (Many people also use the generic ``<div>`` tag instead, but please use
-    the ``<header>`` tag for this class.)
+    the ``<header>`` tag for this class.) For this an example of this
+    and the footer see :ref:`sample_html_doc`.
   * Web site footer. Put in its own ``<footer>`` tag. (Again, many people
     use ``<div>`` for this as well.) What might
     go in the footer? Anything that goes at the bottom of the page. For example,
-    the footer might have copyright information or contact information. See other
-    pages for ideas.
+    the footer might have copyright information or contact information.
   * Page names: All pages should end in ``.html``. Page names should be all lower
     case. Page names should not have spaces. You can use underscores instead.
   * Unordered list of all pages in the web site, that link to the web pages.
