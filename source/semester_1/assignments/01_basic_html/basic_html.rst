@@ -3,9 +3,6 @@
 Assignment 1 - Basic HTML
 =========================
 
-Project Overview
-----------------
-
 We will be working on building a website for a fictitious organization
 throughout the semester. We will learn how to work on a website in groups.
 This is the start of that website.
@@ -46,28 +43,29 @@ Schedule
 * Spend about 15 minutes picking the topic, and figuring what pages
   you will build.
 * Split the rest of the time for the day. One person navigates, one person
-  drives. Switch places
+  drives. Half-way through, switch places.
 * There may be ONE group of three. If you are in this group, please divide the time
   in thirds. Each person is still responsible for three pages.
 * Later we will cover how to turn in the assignment.
-
-If you are gone any of these days you will get half credit. If your phone is
-out, or you are on an unrelated website, you'll be counted as gone and asked
-to leave for the day.
 
 **Remember:** The goal of this assignment is to learn. Most people get this, but
 in the past I've had just a few students who "take over" a project and devalue
 other's contributions. If you consider yourself an expert already, then take this
 as an opportunity to learn how to help and instruct other people. It is a
-"teach someone to fish" type of thing. By yourself you can only catch so many
-fish. But if you teach someone else how to fish, then the two of you can catch
-twice as many fish. Same principal for web development.
+"teach someone to fish" type of thing.
+
+By yourself you can only get so much work done.
+If you teach someone else how to work, then the two of you can get twice as
+much done. Therefore if you already have some skills in technology, use
+this as an opportunity to lean how to mentor and develop another person's
+skills.
 
 Website Subject
 ---------------
 
 Pick a subject out of this list. I am open to ideas that are not on the list,
-but please see me first. The projects will be passed between groups, so keep
+but please double-check that it will work ok.
+The projects will be passed between groups, so keep
 the subjects to ones that any student could work on.
 
 * Selling BBQ sauce
