@@ -43,9 +43,9 @@ Schedule
   One person will direct. Each person should work to finish three pages. It is
   expected that some time will be spent outside of class to finish those pages.
   Do the hard parts first, and save the easy parts for outside of class.
-* Thursday, spend about 15 minutes picking the topic, and figuring what pages
+* Spend about 15 minutes picking the topic, and figuring what pages
   you will build.
-* Also on Thursday, split the rest of the time. One person navigates, one person
+* Split the rest of the time for the day. One person navigates, one person
   drives. Switch places
 * There may be ONE group of three. If you are in this group, please divide the time
   in thirds. Each person is still responsible for three pages.
