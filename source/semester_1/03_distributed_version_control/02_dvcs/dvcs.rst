@@ -47,25 +47,39 @@ Do this whenever you are done with a session of programming:
 
 If you get an error while pushing, see :ref:`cant-push`
 
-Creating And Committing To The Repository
------------------------------------------
 
-The Terminal
-^^^^^^^^^^^^
+Installing Git
+--------------
 
 First, if you are on your own computer, install ``git``. (Skip this step if you
-are on a lab computer.) The ``git`` program has a lot of dialog boxes that
-pop up asking questions. The defaults are fine, just keep hitting "next" or
-"ok." You can download the program from:
+are on a lab computer.)
 
-https://git-scm.com/downloads
+**Windows Installation:**
+You can download the program from https://git-scm.com/downloads
+
+The ``git`` program has a lot of dialog boxes that
+pop up asking questions. The defaults are fine, just keep hitting "next" or
+"ok."
+
+** Mac Installation:**
+If you are on a Mac, open up the "Terminal" program, which is in
+your Applications folder, and from there, inside the Utilities folder.
+Once open, type ``git`` at the command prompt and if the Mac doesn't have
+it installed, it will ask if you'd like to install it.
+
+
+Creating And Committing To The Repository
+-----------------------------------------
 
 Our repository commands will be typed in. There are graphical programs that
 let you run ``git`` commands, however in my experience it is *harder* to learn
 ``git`` this way.
 
+The Terminal
+^^^^^^^^^^^^
+
 If you are on a Mac, open up the "Terminal" program. If you are on Windows,
-open the command prompt.
+open the "command prompt".
 
 Directory
 ^^^^^^^^^
