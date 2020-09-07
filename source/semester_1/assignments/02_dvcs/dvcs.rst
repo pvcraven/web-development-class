@@ -24,15 +24,8 @@ example:
 .. image:: revision.png
 
 5. Each commit should have a descriptive comment.
-6. Add a form for each person
 
-   * Read the tutorial on forms: http://www.w3schools.com/html/html_forms.asp
-   * One person will create a login form and check it in.
-   * The other person will create a sign-up form.
-   * If you have three people, dream up a third form.
-   * The form doesn't have to *do* anything. Just be there.
-
-7.  Each person should do a "merge" where files have changed on the server, but
+6.  Each person should do a "merge" where files have changed on the server, but
     in different spots. For example, in the image below both Paul and Daniel
     made changes based on the copy that was checked in with "Progress with buffered
     draw commands." The work was merged by Paul with "Merge branch" check-in.
@@ -41,7 +34,7 @@ example:
 
 .. image:: merge.png
 
-8. Each person should do at least one merge where there are file conflicts.
+7. Each person should do at least one merge where there are file conflicts.
    Both of you start with the same updated copy. Then both make a different
    change to the same line. Try to commit, pull, and push. The last one
    will get an error like:
@@ -78,7 +71,7 @@ just leave those weird ``<<<<<`` lines in your file.
 When you check it in, please label it as a conflicting change so I can find
 it and easily give you credit.
 
-9. Paste the GitHub URL for the website and submit Assignment 2 on Scholar.
+8. Paste the GitHub URL for the website and submit Assignment 2 on Scholar.
 
 .. image:: rubric.png
     :width: 500px
