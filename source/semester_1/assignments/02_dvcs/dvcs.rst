@@ -1,6 +1,25 @@
 Assignment 2 - DVCS
 ===================
 
+The goal of this assignment is to
+gain experience working with a Distributed Version Control system.
+We'll do this by turning in Assignment 1, and practicing how to
+check in, update, pull, and merge changes.
+
+This is the most complex assignment in the class
+because tt is difficult
+to write a tutorial for it with all the different possibilities of
+what could go wrong, and even harder to lead 40 people through
+it at the same time.
+
+However, it is really *easy* to lead a group through it individually.
+If you get stuck, make sure to find time to have the instructor lead
+you through it. Even if it means you have to meet out of class.
+
+One-on-one this is not difficult. Don't panic if it is confusing, just work
+on the HTML part of Assignment 1 until you get a chance with the instructor to
+step through this part.
+
 Turn in Assignment 2
 ^^^^^^^^^^^^^^^^^^^^
 
@@ -15,7 +34,7 @@ example:
 
 .. image:: new_file_check_in.png
 
-2. You should have a proper directory layout. (From assignment one.)
+2. You should have a proper directory layout. (See :ref:`sample-directory-structure`.)
 3. At least one image should be added and used in your project.
 4. Each person should make at least two revisions to his/her own files.
    Here's an example of a revision. Red text was removed, green text was
