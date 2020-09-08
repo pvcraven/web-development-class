@@ -24,27 +24,38 @@ Turn in Assignment 2
 ^^^^^^^^^^^^^^^^^^^^
 
 1. Each person should be checking in at least three ``.html`` files.
-   (From assignment one.) If your partner checked in *all* the files, then
+   (From assignment one.) If your partner goofed checked in *all* the files,
+   including yours, then go back and
    delete your three files. Commit the deletion. Then add your three files
    back in.
 
-To grade, I'll be looking through your check-ins with ``gitk`` and that
-you have added three new files. Make sure you can find this yourself. Here's an
-example:
+How can you make sure you've gotten this part done correctly?
+To grade, I'll be looking through your check-ins with the
+:ref:`gitk` command that
+you have added three new files. You can type ``gitk`` and double-check
+yourself if you like.
+
+It looks confusing, but I've boxed in red the part that says who checked in a
+file, and that it was a new file:
 
 .. image:: new_file_check_in.png
 
 2. You should have a proper directory layout. (See :ref:`sample-directory-structure`.)
 3. At least one image should be added and used in your project.
-4. Each person should make at least two revisions to his/her own files.
+4. One person, and one person only, should :ref:`initialize-repository`.
+5. That person should :ref:`create-project-in-github`.
+6. Then :ref:`first-push`.
+7. The OTHER people in your project need :ref:`clone-repository`.
+8. Each person should make at least two revisions to his/her own files.
+   Add, commit, and upload the files as shown in :ref:`commit-and-upload`.
    Here's an example of a revision. Red text was removed, green text was
    added.
 
 .. image:: revision.png
 
-5. Each commit should have a descriptive comment.
+9. Each commit should have a descriptive comment.
 
-6.  Each person should do a "merge" where files have changed on the server, but
+10. Each person should do a "merge" where files have changed on the server, but
     in different spots. For example, in the image below both Paul and Daniel
     made changes based on the copy that was checked in with "Progress with buffered
     draw commands." The work was merged by Paul with "Merge branch" check-in.
@@ -53,10 +64,10 @@ example:
 
 .. image:: merge.png
 
-7. Each person should do at least one merge where there are file conflicts.
-   Both of you start with the same updated copy. Then both make a different
-   change to the same line. Try to commit, pull, and push. The last one
-   will get an error like:
+11. Each person should do at least one merge where there are file conflicts.
+    Both of you start with the same updated copy. Then both make a different
+    change to the same line. Try to commit, pull, and push. The last one
+    will get an error like:
 
 .. code-block:: text
 
@@ -90,7 +101,7 @@ just leave those weird ``<<<<<`` lines in your file.
 When you check it in, please label it as a conflicting change so I can find
 it and easily give you credit.
 
-8. Paste the GitHub URL for the website and submit Assignment 2 on Scholar.
+12. Paste the GitHub URL for the website and submit Assignment 2 on Scholar.
 
 .. image:: rubric.png
     :width: 500px

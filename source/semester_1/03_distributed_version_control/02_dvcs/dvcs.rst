@@ -30,14 +30,21 @@ in sync. To do this, we will use a program called ``git``.
 Quick Reference
 ---------------
 
+.. _commit-and-upload:
+
 Commit and Upload
 ^^^^^^^^^^^^^^^^^
 
 Do this whenever you are done with a session of programming:
 
 1. Open "command prompt" on Windows, or "terminal" on MacOS.
-2. Type ``cd mydirectoryname`` where the name of the directory will be the same as the name of your repository on
-   BitBucket. You can usually type in the first few letters and hit <tab> to fill in the rest of the directory name.
+2. Change directory to your project. If it is on your desktop, start by
+   typing ``cd Desktop``. (If you use OneDrive, you may need to ``cd OneDrive``
+   BEFORE changing to the Desktop.)
+   Then type ``cd mydirectoryname`` where the name of the directory will be the same
+   as the name of your repository on
+   GitHub. You can usually type in the first few letters and hit <tab> to fill
+   in the rest of the directory name.
 3. Type ``git pull`` to get all the latest changes.
 4. Do your changes.
 5. Type ``git add *``
@@ -136,6 +143,8 @@ rest for you.
 
 You can hit the "up" arrow to get commands you previously typed in.
 
+.. _initialize-repository:
+
 Initialize Repository
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -225,14 +234,19 @@ The ``git log`` command will list all the recent commits:
 .. image:: git_log.png
     :width: 550px
 
+.. _gitk:
+
 Gitk
 ^^^^
 
-The ``gitk`` commmand opens a window that has a nice graphical
-UI showing what is happening with the repository.
+If you type ``gitk`` at a command prompt, it will open a window that has a nice
+graphical UI showing what is happening with the repository.
 
 .. image:: gitk.png
     :width: 650px
+
+This is what I'll be using to confirm that check-ins with the projects are
+working well.
 
 Git Status
 ^^^^^^^^^^
@@ -288,6 +302,7 @@ In fact, if you are applying for jobs,
 some companies will ask your GitHub account name
 to see what kind of work you do.
 
+.. _create-project-in-github:
 
 Creating Your Project in GitHub
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -314,6 +329,8 @@ Creating Your Project in GitHub
 * Each user will receive an e-mail confirming he or she would like to be part
   of the project. Click the confirmation link sent.
 
+.. _first-push:
+
 Pushing Code To GitHub For The First Time
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -327,6 +344,8 @@ into the command prompt, one-by-one:
 
 .. image:: add_remote_2.png
     :width: 550px
+
+.. _clone-repository:
 
 Cloning Your GitHub Project on Your Computer
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
