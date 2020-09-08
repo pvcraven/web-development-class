@@ -387,23 +387,21 @@ Review:
 .. image:: git_commit.png
     :width: 550px
 
-Pushing
-^^^^^^^
+Pushing Changes
+^^^^^^^^^^^^^^^
 
 To get your changes onto the server, type ``git push``:
 
 .. image:: git_commit.png
     :width: 550px
 
-Pulling
-^^^^^^^
+Pulling Changes
+^^^^^^^^^^^^^^^
 
 To pull changes, type ``git pull``:
 
 .. image:: git_pull.png
     :width: 550px
-
-
 
 .. _cant-push:
 
