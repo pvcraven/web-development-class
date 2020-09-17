@@ -24,7 +24,8 @@ To complete this project:
 * Delete those comments saying who owns the file. You own all the files now.
 * Select a color scheme for your website.
 
-  * Use color theory and tools we talked about in class.
+  * Use color theory and tools we talked about in class. Perhaps use a
+    `color wheel <https://color.adobe.com/create/color-wheel>`_.
   * Perhaps search through Adobe's Kuler_.
 
 * For index.html:
