@@ -18,6 +18,8 @@ To complete this project:
   people's messes.
 * Make sure all the file names are lower case, and have no spaces. Underscores
   are ok. Go back and fix links to match the case.
+* Make sure the menu is there, at the top, and allows you to navigate
+  between all the pages.
 * Add a little bit more content to the site of your own creation. Seriously.
   You'll be graded on this. Add 5 or more items of new content. An item might
   be a new paragraph, a new image, or something similar.
