@@ -30,14 +30,21 @@ in sync. To do this, we will use a program called ``git``.
 Quick Reference
 ---------------
 
+.. _commit-and-upload:
+
 Commit and Upload
 ^^^^^^^^^^^^^^^^^
 
 Do this whenever you are done with a session of programming:
 
 1. Open "command prompt" on Windows, or "terminal" on MacOS.
-2. Type ``cd mydirectoryname`` where the name of the directory will be the same as the name of your repository on
-   BitBucket. You can usually type in the first few letters and hit <tab> to fill in the rest of the directory name.
+2. Change directory to your project. If it is on your desktop, start by
+   typing ``cd Desktop``. (If you use OneDrive, you may need to ``cd OneDrive``
+   BEFORE changing to the Desktop.)
+   Then type ``cd mydirectoryname`` where the name of the directory will be the same
+   as the name of your repository on
+   GitHub. You can usually type in the first few letters and hit <tab> to fill
+   in the rest of the directory name.
 3. Type ``git pull`` to get all the latest changes.
 4. Do your changes.
 5. Type ``git add *``
@@ -47,25 +54,39 @@ Do this whenever you are done with a session of programming:
 
 If you get an error while pushing, see :ref:`cant-push`
 
-Creating And Committing To The Repository
------------------------------------------
 
-The Terminal
-^^^^^^^^^^^^
+Installing Git
+--------------
 
 First, if you are on your own computer, install ``git``. (Skip this step if you
-are on a lab computer.) The ``git`` program has a lot of dialog boxes that
-pop up asking questions. The defaults are fine, just keep hitting "next" or
-"ok." You can download the program from:
+are on a lab computer.)
 
-https://git-scm.com/downloads
+**Windows Installation:**
+You can download the program from https://git-scm.com/downloads
+
+The ``git`` program has a lot of dialog boxes that
+pop up asking questions. The defaults are fine, just keep hitting "next" or
+"ok."
+
+** Mac Installation:**
+If you are on a Mac, open up the "Terminal" program, which is in
+your Applications folder, and from there, inside the Utilities folder.
+Once open, type ``git`` at the command prompt and if the Mac doesn't have
+it installed, it will ask if you'd like to install it.
+
+
+Creating And Committing To The Repository
+-----------------------------------------
 
 Our repository commands will be typed in. There are graphical programs that
 let you run ``git`` commands, however in my experience it is *harder* to learn
 ``git`` this way.
 
+The Terminal
+^^^^^^^^^^^^
+
 If you are on a Mac, open up the "Terminal" program. If you are on Windows,
-open the command prompt.
+open the "command prompt".
 
 Directory
 ^^^^^^^^^
@@ -121,6 +142,8 @@ hit the <tab> key. If you typed in enough letters, the computer will fill in the
 rest for you.
 
 You can hit the "up" arrow to get commands you previously typed in.
+
+.. _initialize-repository:
 
 Initialize Repository
 ^^^^^^^^^^^^^^^^^^^^^
@@ -211,14 +234,19 @@ The ``git log`` command will list all the recent commits:
 .. image:: git_log.png
     :width: 550px
 
+.. _gitk:
+
 Gitk
 ^^^^
 
-The ``gitk`` commmand opens a window that has a nice graphical
-UI showing what is happening with the repository.
+If you type ``gitk`` at a command prompt, it will open a window that has a nice
+graphical UI showing what is happening with the repository.
 
 .. image:: gitk.png
     :width: 650px
+
+This is what I'll be using to confirm that check-ins with the projects are
+working well.
 
 Git Status
 ^^^^^^^^^^
@@ -274,6 +302,7 @@ In fact, if you are applying for jobs,
 some companies will ask your GitHub account name
 to see what kind of work you do.
 
+.. _create-project-in-github:
 
 Creating Your Project in GitHub
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -300,6 +329,8 @@ Creating Your Project in GitHub
 * Each user will receive an e-mail confirming he or she would like to be part
   of the project. Click the confirmation link sent.
 
+.. _first-push:
+
 Pushing Code To GitHub For The First Time
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -313,6 +344,8 @@ into the command prompt, one-by-one:
 
 .. image:: add_remote_2.png
     :width: 550px
+
+.. _clone-repository:
 
 Cloning Your GitHub Project on Your Computer
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -354,23 +387,21 @@ Review:
 .. image:: git_commit.png
     :width: 550px
 
-Pushing
-^^^^^^^
+Pushing Changes
+^^^^^^^^^^^^^^^
 
 To get your changes onto the server, type ``git push``:
 
 .. image:: git_commit.png
     :width: 550px
 
-Pulling
-^^^^^^^
+Pulling Changes
+^^^^^^^^^^^^^^^
 
 To pull changes, type ``git pull``:
 
 .. image:: git_pull.png
     :width: 550px
-
-
 
 .. _cant-push:
 

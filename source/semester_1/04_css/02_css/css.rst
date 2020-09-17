@@ -1,3 +1,5 @@
+.. _css_tutorial:
+
 CSS Tutorial
 ------------
 

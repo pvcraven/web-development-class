@@ -38,3 +38,11 @@ Assignments
    assignments/11_svg/svg.rst
    assignments/12_static_content_generators/static_content_generators.rst
    assignments/13_collaborative_reflection/collaborative_reflection
+
+Schedule
+~~~~~~~~
+
+.. toctree::
+   :maxdepth: 1
+
+   schedule

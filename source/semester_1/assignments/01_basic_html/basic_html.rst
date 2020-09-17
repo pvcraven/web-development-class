@@ -3,9 +3,6 @@
 Assignment 1 - Basic HTML
 =========================
 
-Project Overview
-----------------
-
 We will be working on building a website for a fictitious organization
 throughout the semester. We will learn how to work on a website in groups.
 This is the start of that website.
@@ -24,10 +21,10 @@ If done correctly, pair programming can:
 * Build team dynamics
 
 It is also possible to make pair programming a *bad* experience. Particularly
-if the observer pulls out his or her phone. Therefore, if someone pulls
-out their phone they will be asked to leave, and counted as absent.
+if the observer pulls out his or her phone. Keep your phone put away, and keep
+on task while working on this assignment.
 
-I will assign the pairs. It is my plan to keep switching pairs, so you'll
+I will assign the pairs for this assignment. I will keep switching pairs, so you'll
 get to work with several people in class.
 
 When pair programming, you have a "driver" who is at the keyboard. You also
@@ -43,31 +40,32 @@ Schedule
   One person will direct. Each person should work to finish three pages. It is
   expected that some time will be spent outside of class to finish those pages.
   Do the hard parts first, and save the easy parts for outside of class.
-* Thursday, spend about 15 minutes picking the topic, and figuring what pages
+* Spend about 15 minutes picking the topic, and figuring what pages
   you will build.
-* Also on Thursday, split the rest of the time. One person navigates, one person
-  drives. Switch places
+* Split the rest of the time for the day. One person navigates, one person
+  drives. Half-way through, switch places.
 * There may be ONE group of three. If you are in this group, please divide the time
   in thirds. Each person is still responsible for three pages.
 * Later we will cover how to turn in the assignment.
-
-If you are gone any of these days you will get half credit. If your phone is
-out, or you are on an unrelated website, you'll be counted as gone and asked
-to leave for the day.
 
 **Remember:** The goal of this assignment is to learn. Most people get this, but
 in the past I've had just a few students who "take over" a project and devalue
 other's contributions. If you consider yourself an expert already, then take this
 as an opportunity to learn how to help and instruct other people. It is a
-"teach someone to fish" type of thing. By yourself you can only catch so many
-fish. But if you teach someone else how to fish, then the two of you can catch
-twice as many fish. Same principal for web development.
+"teach someone to fish" type of thing.
+
+By yourself you can only get so much work done.
+If you teach someone else how to work, then the two of you can get twice as
+much done. Therefore if you already have some skills in technology, use
+this as an opportunity to lean how to mentor and develop another person's
+skills.
 
 Website Subject
 ---------------
 
 Pick a subject out of this list. I am open to ideas that are not on the list,
-but please see me first. The projects will be passed between groups, so keep
+but please double-check that it will work ok.
+The projects will be passed between groups, so keep
 the subjects to ones that any student could work on.
 
 * Selling BBQ sauce
@@ -105,12 +103,12 @@ Required Components
     and will be graded on.
   * Web site title and graphic. Put in its own ``<header>`` tag.
     (Many people also use the generic ``<div>`` tag instead, but please use
-    the ``<header>`` tag for this class.)
+    the ``<header>`` tag for this class.) For this an example of this
+    and the footer see :ref:`sample_html_doc`.
   * Web site footer. Put in its own ``<footer>`` tag. (Again, many people
     use ``<div>`` for this as well.) What might
     go in the footer? Anything that goes at the bottom of the page. For example,
-    the footer might have copyright information or contact information. See other
-    pages for ideas.
+    the footer might have copyright information or contact information.
   * Page names: All pages should end in ``.html``. Page names should be all lower
     case. Page names should not have spaces. You can use underscores instead.
   * Unordered list of all pages in the web site, that link to the web pages.

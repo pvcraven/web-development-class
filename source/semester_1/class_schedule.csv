@@ -8,12 +8,13 @@ Thu - 8/27,:ref:`html_tutorial`,Have Sublime on your own computer by class
 ,:ref:`view_file_extensions`,"Optionally, purchase and install `CSS HTML Validator <https://www.htmlvalidator.com/buy/academic/>`_."
 ,Introduce :ref:`assignment_01_basic_html`,
 Tue - 9/1,:ref:`assignment_01_basic_html`,Make sure you have read :ref:`assignment_01_basic_html` and are ready to work with your partner in class. Come with topic ideas.
-,Meet via ZOOM ONLY,"After working with your partner in class today, continue work on your :ref:`assignment_01_basic_html` pages on your own."
+,Meet via DISCORD ONLY,"After working with your partner in class today, continue work on your :ref:`assignment_01_basic_html` pages on your own."
 Thu - 9/3,:ref:`directories`,
 ,:ref:`dvcs_concepts`,
-Tue - 9/8,:ref:`dvcs_tutorial`,
-Thu - 9/10,"Keep working on git, assign CSS tutorial",Assignment 1 - HTML
-Tue - 9/15,"DVCS Branching, CSS assignment",Assignment 2 - DVCS
+,:ref:`dvcs_tutorial`,
+Tue - 9/8,"Meet via DISCORD ONLY. Work on assignments 1 and 2.",
+Thu - 9/10,"Keep working on git, read :ref:`cascading_style_sheets_about`",Assignment 1 - HTML
+Tue - 9/15,"DVCS Branching, :ref:`css_tutorial`",Assignment 2 - DVCS
 Thu - 9/17,"CSS Layout, work on CSS assignment",
 ,CSS Menu: https://www.w3schools.com/css/css_navbar.asp,
 Tue - 9/22,Bootstrap tutorial,Assignment 3 - CSS

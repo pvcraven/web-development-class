@@ -149,6 +149,8 @@ We will talk more about links later when we set up servers, but hopefully this
 will keep you from making common mistakes before we get to our detailed discussion
 later.
 
+.. _sample-directory-structure:
+
 Sample Directory Structure
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
