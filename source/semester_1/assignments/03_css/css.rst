@@ -6,7 +6,7 @@ using CSS.
 
 To complete this project:
 
-* Find a project out of the list in the assignment page.
+* Find a different project out of the list in the assignment page.
 * Fork it using the "Fork" button on GitHub.
 * Clone the project onto your desktop using ``git clone <project url>``
 * You will be changing the files that are already there. Do NOT create your own folder with your
@@ -45,8 +45,8 @@ To complete this project:
 * Create styles with an id selector (feel free to update HTML with ids and classes as needed)
 * Create styles with a class selector
 * Create borders
-* Create a menu
-* Find the table in the website and style it
+* Create a menu using the `W3Schools CSS Navigation Bar tutorial <https://www.w3schools.com/css/css_navbar.asp>`_.
+* Find the table in the website and style it. Look at the `W3Schools table tutorial <https://www.w3schools.com/css/css_table.asp>`_.
 
 * Common problems to avoid:
 
