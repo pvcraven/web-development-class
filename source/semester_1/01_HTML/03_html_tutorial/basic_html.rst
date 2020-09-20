@@ -113,6 +113,10 @@ For example, the break-line tag does not have content.
     <p>This is a new tag that doesn't start a new
     paragraph, it just goes to a<br />new line.</p>
 
+.. _html-comments:
+
+HTML Comments
+^^^^^^^^^^^^^
 
 Like many languages, HTML has comments. Comments are created
 like the following:
@@ -123,6 +127,9 @@ like the following:
 can do a "View Source" in a web browser and see the comments. Therefore
 don't write comments that you wouldn't want everyone in the web to be
 able to read.
+
+Headings
+^^^^^^^^
 
 You can add headings. There are six "levels" to the headings, using tags h1...h6. For example:
 
@@ -265,12 +272,14 @@ Note that each image file requires a separate request to the
 server to get the image. Each image on a page slows down the
 web page load time.
 
-HTML Escape Characters
-----------------------
+.. _html-entities:
+
+HTML Entities and Escape Characters
+-----------------------------------
 
 What happens if we want to display a < and not have it
 be part of a tag? For this and many other characters, we use
-HTML Escape Characters. You can encode *any* character
+HTML Entities (Also known as HTML Escape Characters.) You can encode *any* character
 this way, but most of them don't need to be encoded.
 
 A full table of `HTML Escape Characters`_ can be found with
@@ -293,6 +302,83 @@ error using HTML Validator:
     :linenos:
     :language: html
 
+There are some new things in this structure, let's go through them.
+
+.. _html-doctype:
+
+HTML Document Type
+^^^^^^^^^^^^^^^^^^
+
+There have been several versions of HTML. Browsers need to know what version is
+being given to them. For HTML version 5, all documents start with the following:
+
+.. code-block:: html
+
+     <!DOCTYPE html>
+
+It seems odd that there's no "5" in there, but all your documents should
+start with that. You might have some comments above, but that's it.
+
+.. _html-tag:
+
+HTML Tag
+^^^^^^^^
+
+Around all your HTML code, should go an ``<html>`` tag. It will start right
+after the doctype, and the last tag in your document should be a close
+``</html>`` tag.
+
+HTML tags should also tell the browser what language the document is in.
+This tag says the document is in English:
+
+.. code-block:: html
+
+    <html lang="en">
+
+See below for the full list of languages and abbreviations:
+
+https://www.loc.gov/standards/iso639-2/php/code_list.php
+
+.. _head-tag:
+
+HTML Head Section
+^^^^^^^^^^^^^^^^^
+
+The ``<head>`` has meta-info about the document that doesn't show up on the
+document, but instead is *about* the document.
+
+Confusingly, many documents also have a ``<header>`` which is at the top of the
+document and totally different than ``<head>``.
+
+The head section contains a ``<meta>`` tag that specifies how the letters are
+encoded. For Cyrillic, Kanji, Spanish
+characters, etc. The world has mostly standardized on UTF-8, so
+you can use it for about anything.
+For more info on character sets, see:
+
+https://youtu.be/MijmeoH9LT4
+
+The ``<title>`` is what will be used when you bookmark a site, or the text
+that's on the tab. You *don't* see this on the main document at all.
+
+No images, no paragraphs can go in the head, as it is not displayed in the
+document.
+
+.. code-block:: html
+
+    <head>
+      <meta charset="utf-8">
+      <title>Sample HTML5 Document</title>
+    </head>
+
+.. _body-tag:
+
+HTML Body Section
+^^^^^^^^^^^^^^^^^
+
+HTML has a ``<body>`` tag that should contain all the document that you can
+see. It should go right below the ``<head>`` tag, and still inside the ``<html>``
+tag. Only one body is allowed. Do not put anything after the close of the body tag.
 
 Lists
 -----
@@ -444,8 +530,8 @@ work if you are on a budget.
 
 .. _sample_html_doc:
 
-One Last HTML Sample Document
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Final HTML Sample Document
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. literalinclude:: basic_html.html
     :linenos:

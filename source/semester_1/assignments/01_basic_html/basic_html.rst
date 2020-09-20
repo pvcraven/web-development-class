@@ -91,8 +91,35 @@ Images should be original as well, with a few exceptions. If you want
 an exception, please see me for information on how to cite and link it.
 Images that you took yourself with a phone or camera are ok.
 
+.. warning::
+
+   Copying text or images from other websites without citation is plagiarism.
+
 Required Components
 -------------------
+
+* You need to have three pages per person. Before starting, jot down the page
+  names you'll have. Make sure each person knows who is responsible for which page.
+
+  * Page names: All pages should end in ``.html``.
+  * Page names should be all lower case.
+  * Page names should not have spaces. You can use underscores instead.
+
+    * Two Required pages
+
+      * Main index page. The file name must be ``index.html``
+      * About page. This might have things like who created the website, or
+        info about your band, or your city, or company.
+
+    * Optional pages. Must have at least four.
+
+      * News page
+      * Items for sale page
+      * Hours, directions
+      * Page with video. Videos should be original. Please don't use other
+        people's videos. You can post on YouTube, Vimeo, etc. and link the video
+        in.
+      * Pages with info on a subject
 
 * Every page should have:
 
@@ -101,54 +128,66 @@ Required Components
     the typing and will *not* be primarily responsible for that page.
     Each person should have at least three pages they are responsible for,
     and will be graded on.
-  * Web site title and graphic. Put in its own ``<header>`` tag.
-    (Many people also use the generic ``<div>`` tag instead, but please use
-    the ``<header>`` tag for this class.) For this an example of this
-    and the footer see :ref:`sample_html_doc`.
-  * Web site footer. Put in its own ``<footer>`` tag. (Again, many people
-    use ``<div>`` for this as well.) What might
+    See :ref:`html-comments` as a reminder how to make comments.
+  * A doctype stating this is HTML 5. See :ref:`html-doctype`.
+  * An ``<html>`` tag around the entire document. See :ref:`html-tag`.
+  * A ``<head>`` section with title and charset. See :ref:`head-tag`.
+  * A ``<body>`` tag after the head that contains the main body of the document.
+    See :ref:`body-tag`.
+
+  * A ``<header>`` tag with:
+
+      * Unordered list of all pages in the web site, that link to the web pages.
+        The link will be the page name. For example: ``<a href="about.html">About</a>``
+        Links must be relative. See :ref:`sample_html_doc` for how the list
+        should look. It should be inside a ``<nav>`` tag just like the example.
+        **Note:** This will look terrible, and you might be tempted to put it in a
+        table. Don't. In the CSS assignment we will make it look
+        like a menu bar.
+      * The menu should appear on every page.
+        Put the list at the top of the page because that's where the nav bar will go.
+        Don't try to make it fancy or in a table.
+        We will add formatting in a later assignment. The menu will be the same
+        for every page, so once you have it, you can copy/paste it across.
+      * Web site title and graphic. Put in its own ``<header>`` tag.
+        For this an example of this
+        and the footer see :ref:`sample_html_doc`.
+
+  * Web site footer. Put in its own ``<footer>`` tag. What might
     go in the footer? Anything that goes at the bottom of the page. For example,
     the footer might have copyright information or contact information.
-  * Page names: All pages should end in ``.html``. Page names should be all lower
-    case. Page names should not have spaces. You can use underscores instead.
-  * Unordered list of all pages in the web site, that link to the web pages.
-    The link will be the page name. For example: ``<a href="about.html">About</a>``
-    Links must be relative. See the example out of the tutorial for how the list
-    should look. It should be inside a ``<nav>`` tag just like the example.
-    **Note:** This will look terrible, and you might be tempted to put it in a
-    table. Don't. In the CSS assignment we will make it look
-    like a menu bar.
+    Don't try to style the footer, we'll do that in Assignment 3.
+    The footer should look something like this:
 
-* Two Required pages
+    .. code-block:: html
 
-  * Main index page. The file name must be ``index.html``
-  * About page. This might have things like who created the website, or
-    info about your band, or your city, or company.
+      <footer>
+        Copyright 2021 by Pat
+      </footer>
 
-* Optional pages. Must have at least four.
+* Once you have this done on one page, you can save it. and use it as a template
+  for the other pages.
 
-  * News page
-  * Items for sale page
-  * Hours, directions
-  * Page with video. Videos should be original. Please don't use other
-    people's videos. You can post on YouTube, Vimeo, etc. and link the video
-    in.
-  * Pages with info on a subject
+* Additional required elements, required at least once for each person on
+  the project:
 
-* Required HTML elements
-
-  * HEAD section on all pages
-  * At least one table. You don't need a table in all the pages, but you need
-    a table on at least one page. The table may look "squished." We'll show
-    how to style the table later.
+  * Tags must be lower case
+  * Headings. Those ``<h1>`` to ``<h6>`` tags. Put a heading before things that
+    make sense to have a heading.
+  * Paragraphs
   * Linked in images. You may not copy the image off the web. Sketch something
     in MS Paint, or Inkscape. Or take your own photo. It doesn't have to look good.
-  * HTML entities. Toss at least a few on your pages. Try not to make them too
-    hard to find please.
-  * Headings. Those <h1...6> tags.
-  * Paragraphs
-  * Tags must be lower case
-  * Run a validation check on the HTML for each page. Make sure it is free of issues.
+  * At least one table. You don't need a table in all the pages, but you need
+    a table on at least one page you are responsible for.
+    The table may look "squished." We'll show how to style the table later.
+  * HTML entities. Toss at least a few on your pages. See :ref:`html-entities`.
+  * At least 150 words per page.
+
+Finally:
+
+  * Validate your files! Use HTML Validator or the
+    `W3C Online Validator <https://validator.w3.org/#validate_by_input>`_. Easy way
+    to catch mistakes.
   * Check for spelling and grammar. It counts as part of the grade.
 
 Directory Structure
@@ -161,7 +200,6 @@ For this assignment, create directories and set up your folders like this:
 
 .. image:: directory_structure.png
     :width: 350px
-
 
 Turn in Assignment 1
 --------------------
@@ -178,35 +216,18 @@ form on Scholar for assignment 1. This will require you to complete Assignment 2
 * Make sure to add descriptive comments when submitting. (You can't edit them
   later, so make sure you get them right the first time.)
 * Make sure your files have a comment with your name in them at the top.
-* Make sure HTML Validator returns all the files as free from errors or warnings.
-* When validating, make sure to check for errors in the 'Links' tab as well.
-* File names should be all lower case.
-* File names should not have any spaces. Use underscores instead.
-* Don't check in any 'temp' file created by CSE Validator. These all start
-  with a tilde: '~'.
-* The menu should be in an unordered list, and should appear on every page.
-  Put the list at the top of the page because that's where the nav bar will go.
-  Don't try to make it fancy or in a table.
-  We will add formatting in a later assignment.
-* Make sure to avoid extra spaces around tags. Don't do ``<title> About Page </title>`` instead do ``<title>About Page</title>``
+* Make sure to avoid extra spaces around tags. Don't
+  do ``<title> About Page </title>`` instead do ``<title>About Page</title>``
 * Don't make your lines really long. If your paragraph is longer
   than 80 characters, use a return and break it up. Yes, the
   web page will ignore it, but it is hard to edit a file if
   your text extends way off the screen to the right.
 * Include a character set in the ``<head>``.
 * Your ``<title>`` should be descriptive. It might mirror the ``<h1>`` content.
-* Make sure you have a ``<header>`` somewhere. That is easy to overlook. Also remember that ``<head>`` and ``<header>``
-  are completely different.
-* The footer should look something like this:
 
-.. code-block:: html
-
-  <footer>
-    Copyright 2018 by Pat
-  </footer>
 
 * Copy the GitHub project URL
-* Submit on Scholar
+* Submit on Moodle
 * Here's the rubric it will be graded on. Review.
 
 .. image:: rubric.png
