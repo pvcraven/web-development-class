@@ -1,33 +1,40 @@
 Assignment 3 - CSS
 ==================
 
-In this assignment, each individual person will style one of the project websites
-using CSS.
+In this assignment, each individual person will "style" one of the project websites.
+
+Most projects will have two people independently styling the project.
+To keep the work separate, everyone will have their own "branch" of the project.
+
+Eventually, each website will have about four different branches with independently
+created styles. We will select the best one hunger-games style.
 
 To complete this project:
 
-* Find a different project out of the list in the assignment page.
-* Fork it using the "Fork" button on GitHub.
-* Clone the project onto your desktop using ``git clone <project url>``
+* Find the project that you have been assigned.
+* Find the owner, get yourself added as a contributer.
+* Clone it.
+* Look at it.
+* Create a branch of the project in SourceTree. Follow the :ref:`branching-tutorial`.
+  Call your branch ``css_lastname_firstname``. (Obviously, use your name.)
 * You will be changing the files that are already there. Do NOT create your own folder with your
   own set of files. You can correct mistakenly named files. You can reorganize poorly organized
   files. But don't let there be two copies of the website in the project.
-* Double-check the project for HTML and link errors using the HTML Validator,
-  or the `W3 Validation Service <https://validator.w3.org/#validate_by_input>`_.
+* Double-check the project for HTML and link errors using HTML Validator.
   Fix any issues. This is like real life, where you get stuck cleaning up other
   people's messes.
+* Make sure no one checked in those temp files that CSE Validator creates. They
+  start with a tilde and look like ``~cse_wb_index.html``. Delete them if they
+  exist.
 * Make sure all the file names are lower case, and have no spaces. Underscores
   are ok. Go back and fix links to match the case.
-* Make sure the menu is there, at the top, and allows you to navigate
-  between all the pages.
 * Add a little bit more content to the site of your own creation. Seriously.
-  You'll be graded on this. Add 5 or more items of new content. An item might
+  You'll be graded on this. Add 10 or more items of new content. An item might
   be a new paragraph, a new image, or something similar.
 * Delete those comments saying who owns the file. You own all the files now.
 * Select a color scheme for your website.
 
-  * Use color theory and tools we talked about in class. Perhaps use a
-    `color wheel <https://color.adobe.com/create/color-wheel>`_.
+  * Use color theory and tools we talked about in class.
   * Perhaps search through Adobe's Kuler_.
 
 * For index.html:
@@ -37,9 +44,9 @@ To complete this project:
 
 * For all other pages:
 
-  * Apply a stylesheet that you've created.
-  * Make sure the stylesheet is a subdirectory named "css".
-  * Most of your styles should be in this page.
+  * Apply a stylesheet that you've created
+  * Make sure the stylesheet is a subdirectory named "css"
+  * Most of your styles should be in this page
   * Only create one stylesheet. Don't create a stylesheet for each html page. The idea
     of a stylesheet is to apply the same style across multiple pages.
 
@@ -47,8 +54,8 @@ To complete this project:
 * Create styles with an id selector (feel free to update HTML with ids and classes as needed)
 * Create styles with a class selector
 * Create borders
-* Create a menu using the `W3Schools CSS Navigation Bar tutorial <https://www.w3schools.com/css/css_navbar.asp>`_.
-* Find the table in the website and style it. Look at the `W3Schools table tutorial <https://www.w3schools.com/css/css_table.asp>`_.
+* Create a menu
+* Find the table in the website and style it
 
 * Common problems to avoid:
 
@@ -59,9 +66,8 @@ To complete this project:
   * Do not center blocks of text. That's very hard to read.
 
 * Spend some time doing detail work. Make it look good.
-* Revalidate the HTML.
-  Validate the CSS. You can do this on-line as well with the
-  `W3 CSS validation service <https://jigsaw.w3.org/css-validator/#validate_by_input>`_.
+* Revalidate with HTML Validator. Don't forget to validate your css file. I'll likely look at the main index
+  and the css file when I grade.
 * Commit
 * Push
 * Submit the assignment in Scholar. Paste in the link to the GitHub web site for the project.

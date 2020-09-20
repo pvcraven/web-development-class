@@ -48,17 +48,17 @@ file, and that it was a new file:
 
 .. image:: new_file_check_in.png
 
-8. Each person should make at least two revisions to his/her own files.
+9. Each person should make at least two revisions to his/her own files.
    Pull, add, commit, and upload the files as shown in :ref:`commit-and-upload`.
    Here's an example of a revision. Red text was removed, green text was
    added.
 
 .. image:: revision.png
 
-9. Each commit should have a descriptive comment.
-10. :ref:`cant-push` - You probably need to merge in your with someone else's
+10. Each commit should have a descriptive comment.
+11. :ref:`cant-push` - You probably need to merge in your with someone else's
     changes.
-11. Each person should do a "merge" where files have changed on the server, but
+12. Each person should do a "merge" where files have changed on the server, but
     in different spots. For example, in the image below both Paul and Daniel
     made changes based on the copy that was checked in with "Progress with buffered
     draw commands." The work was merged by Paul with "Merge branch" check-in.
@@ -67,7 +67,7 @@ file, and that it was a new file:
 
 .. image:: merge.png
 
-12. Each person should do at least one merge where there are file conflicts.
+13. Each person should do at least one merge where there are file conflicts.
     Both of you start with the same updated copy. Then both make a different
     change to the same line. Try to commit, pull, and push. The last one
     will get an error like:
@@ -89,11 +89,7 @@ The file will look something like:
 .. code-block:: text
 
     This is a revision of the test file.
-    <<<<<<< HEAD
     Here is a new line. Change by person 1.
-    =======
-    Here is a new line. Change by person 2.
-    >>>>>>> 834cdc1cf52768ebea4396b6b1c94221f7985eb2
 
 You can manually edit and fix the file. Or you can select which of the files to
 take. Yours, or the other persons. See :ref:`git_merging`.
@@ -104,7 +100,7 @@ just leave those weird ``<<<<<`` lines in your file.
 When you check it in, please label it as a conflicting change so I can find
 it and easily give you credit.
 
-13. Paste the GitHub URL for the website and submit Assignment 2 on Scholar.
+14. Paste the GitHub URL for the website and submit Assignment 2 on Scholar.
 
 .. image:: rubric.png
     :width: 500px
