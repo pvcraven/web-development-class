@@ -7,10 +7,13 @@ Getting set up:
 * Make sure you've got everything committed and pushed from the last assignment.
 * Create a new branch of your project called ``bootstrap_firstname_lastname``.
 
+  * Branch your code with ``git checkout -b bootstrap``
+  * Push your new branch ``git push -u origin bootstrap``
+
+* Remove the CSS from the prior assignment.
+
 Cover the following things from the rubric:
 
-* Branch your code with ``git checkout -b bootstrap``
-* Push your new branch ``git push -u origin bootstrap``
 * Remove the CSS from the prior assignment.
 * "Properly use template" Use the :ref:`bootstrap-template` tutorial to adapt
   all pages on the project to use Bootstrap. You will need to copy/paste out
