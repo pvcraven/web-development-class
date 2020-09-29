@@ -101,6 +101,8 @@ this out into one file.
 
 But we will show you the other two ways as well.
 
+.. _in-line-styles:
+
 In-line CSS
 ^^^^^^^^^^^
 
@@ -110,6 +112,8 @@ styles for the tag, separated by semi-colons. See below:
 .. code:: html
 
   <h1 style="text-align:center;font-size: 14px;">This is a heading.</h1>
+
+.. _internal-css:
 
 Internal CSS
 ^^^^^^^^^^^^
@@ -127,6 +131,7 @@ You can also specify the style in the ``<head>`` portion of a document:
       </style>
     </head>
 
+.. _external-css:
 
 External CSS
 ^^^^^^^^^^^^
@@ -164,6 +169,8 @@ criteria. Some examples:
 
 We use these selectors to "select" what elements get a new
 style.
+
+.. _tag-selector:
 
 CSS Tag Selector
 ^^^^^^^^^^^^^^^^

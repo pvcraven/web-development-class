@@ -32,18 +32,18 @@ To complete this project:
 
 * For index.html:
 
-  * Apply one or more in-line styles.
-  * Apply one or more styles in the ``<head>``
+  * Apply one or more in-line styles as shown in :ref:`in-line-styles`.
+  * Apply one or more styles in the ``<head>`` as shown in :ref:`internal-css`.
 
 * For all other pages:
 
-  * Apply a stylesheet that you've created.
+  * Apply a stylesheet that you've created as shown in :ref:`external-css`.
   * Make sure the stylesheet is a subdirectory named "css".
   * Most of your styles should be in this page.
   * Only create one stylesheet. Don't create a stylesheet for each html page. The idea
     of a stylesheet is to apply the same style across multiple pages.
 
-* Create styles with a tag selector
+* Create styles with a tag selector as shown in :ref:`tag-selector`.
 * Create styles with an id selector (feel free to update HTML with ids and classes as needed)
 * Create styles with a class selector
 * Create borders
