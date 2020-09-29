@@ -74,6 +74,20 @@ Required elements of the project
 * Find the table in the website and style it.
   Look at the `W3Schools table tutorial <https://www.w3schools.com/css/css_table.asp>`_.
 
+* Detail amount
+
+  * Spend some time doing detail work. Make it look good.
+  * Most people that get full points on this have at least 70 lines in their CSS
+    file.
+
+* Revalidate the HTML.
+  Validate the CSS. You can do this on-line as well with the
+  `W3 CSS validation service <https://jigsaw.w3.org/css-validator/#validate_by_input>`_.
+* ``git add *``
+* ``git commit -m "Update with CSS info"``
+* ``git push``
+* Submit the assignment in Scholar. Paste in the link to the GitHub web site for the project.
+
 
 
 Common problems to avoid
@@ -85,13 +99,6 @@ Common problems to avoid
     Use color for highlights or titles.
   * Do not center blocks of text. That's very hard to read.
 
-* Spend some time doing detail work. Make it look good.
-* Revalidate the HTML.
-  Validate the CSS. You can do this on-line as well with the
-  `W3 CSS validation service <https://jigsaw.w3.org/css-validator/#validate_by_input>`_.
-* Commit
-* Push
-* Submit the assignment in Scholar. Paste in the link to the GitHub web site for the project.
 
 .. image:: rubric.png
     :width: 500px
