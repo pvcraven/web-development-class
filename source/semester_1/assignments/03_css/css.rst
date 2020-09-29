@@ -99,6 +99,8 @@ Common problems to avoid
     Use color for highlights or titles.
   * Do not center blocks of text. That's very hard to read.
 
+Rubric
+------
 
 .. image:: rubric.png
     :width: 500px
