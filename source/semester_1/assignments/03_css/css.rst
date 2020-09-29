@@ -64,6 +64,8 @@ Required elements of the project
 * Borders
 
   * Add some borders around things
+  * Refer back to the walk-through of CSS we did at :ref:`example-css`.
+  * See the excellent examples at `W3Schools section on borders <https://www.w3schools.com/css/css_border.asp>`_.
 
 * Style the menu
 

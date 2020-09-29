@@ -29,6 +29,7 @@ When it is rendered without any CSS it looks like this:
     :align: center
     :alt: Mosaic Web Browser
 
+.. _example-css:
 
 Example CSS
 ^^^^^^^^^^^

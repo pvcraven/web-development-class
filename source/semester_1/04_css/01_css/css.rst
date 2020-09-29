@@ -183,7 +183,7 @@ all paragraph ``p`` tags will be set to have a font size of 14 pixels.
         font-size: 14px;
     }
 
-.. _id_selector:
+.. _id-selector:
 
 CSS ID Selector
 ^^^^^^^^^^^^^^^
