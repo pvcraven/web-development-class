@@ -39,7 +39,7 @@ Cover the following things from the rubric:
   the `W3 HTML Validator <https://validator.w3.org/#validate_by_input>`_ to find and fix all errors.
 
 **Note:** A very common mistake is to not use the ``<div class="container">``, or to
-not have the footer _inside_ that container. Check your page to make sure it does
+not have the footer *inside* that container. Check your page to make sure it does
 not have text running to the
 edge of the screen.
 
