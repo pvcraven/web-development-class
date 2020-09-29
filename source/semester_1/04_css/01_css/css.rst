@@ -166,7 +166,6 @@ criteria. Some examples:
 * Select the footer
 * Select the first paragraph in the first article
 
-
 We use these selectors to "select" what elements get a new
 style.
 
@@ -184,6 +183,7 @@ all paragraph ``p`` tags will be set to have a font size of 14 pixels.
         font-size: 14px;
     }
 
+.. _id_selector:
 
 CSS ID Selector
 ^^^^^^^^^^^^^^^
@@ -197,7 +197,6 @@ For example:
     <p id="summary">Specific summary paragraph.</p>
     <p>Generic paragraph</p>
 
-
 You can select a specific ID using the pound sign (#):
 
 .. code:: css
@@ -205,6 +204,8 @@ You can select a specific ID using the pound sign (#):
     #summary {
         font-size: 14px;
     }
+
+.. _class-selector:
 
 CSS Class Selector
 ^^^^^^^^^^^^^^^^^^
