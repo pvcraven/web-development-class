@@ -1,32 +1,107 @@
 Assignment 5 - Finalize Site
 ============================
 
+.. image:: under_construction.svg
+   :width: 50%
+
+In this project, we are going to take a project from a prior year, and improve
+on it.
+
+The goals here:
+
+* Practice teamwork
+* Practice working with code that already exists
+* Practice git
+* Practice HTML/CSS/Bootstrap
+* Reflect on teamwork
+
+Building Your Team
+------------------
+
 You will be assigned a team of people. As part of this team you need to:
 
-* Select a project. It can be one you worked on before, or not.
-* It is ok if someone else is working on the same project.
-* Look at all branches of the project and select the best one to start with
+.. image:: talking.svg
+    :width: 35%
+    :class: right-image
 
-  * ``git branch -a`` lists all branches
-  * ``git checkout the_branch_you_want`` will check out a particular branch. Explore all of them.
+* First, everyone introduce themselves.
+* Next, take turns talking a little about yourself:
 
-* Create a branch of the project to finalize. Call it something like ``finalize_first1_first2``
-* You can copy/paste material out of any other branch into your branch, even if you didn't create it.
-* Assign everyone parts of the site to improve.
-* Create GitHub issues for each thing you will improve.
+  * Give a piece of trivia about yourself.
+  * What are your strengths and weaknesses in working with a project like this?
+
+* Go around and have each person repeat the name and highlights of what
+    everyone else said.
+
+Getting Set Up
+--------------
+
+* Your team will be working off this base project: https://github.com/pvcraven/hauntings
+* Elect one person should 'fork' this project.
+* That one person should use GitHub
+  Settings...Manage Access...Invite a collaborator and send invites to the rest
+  of the team.
+* Everyone should go a ``git clone`` of the project and bring it up on their computer.
+* Work together as a team to make sure everyone has this done. Verify it is
+  working. Leave no person behind!
+
+Brainstorming Improvements
+--------------------------
+
+.. image:: brainstorm.svg
+    :width: 15%
+    :class: right-image
+
+* One person, Go to GitHub. Click on the Projects tab for your project.
+  Create a new project.
+* Create columns for:
+
+  * Ideas
+  * To-Do
+  * In Process
+  * Done
+
+* Everyone, brainstorm things to add, update, fix with the project. At least
+  three cards per person.
+
+Assigning Out Improvements
+--------------------------
+
+* As a team, pull out two cards for each person on your team, and move them
+  from "Ideas" to "To-Do" list.
+* Work to balance the conversation. Solicit input from people who aren't speaking.
+* Convert each To-Do item to an Issue (click on three dots)
+* Go to issues, assign two issues to each person. (Don't make them too difficult.)
+
+Do the Work
+-----------
+
+* Do the work
+* Check into GitHub with quality comments in the ``git commit -m "Issue #4. This should be a detailed explanation of what I did.".``
+
+Follow-Up
+---------
+
+.. image:: checklist.svg
+    :width: 15%
+    :class: right-image
+
+* In class, meet and check progress. Update each issue with a status update.
+  Close the issue when done, but only do this as a team when everyone agrees.
 * Follow up to make sure those assignments were done.
 * Feel free to set up a meeting time / text chat / discord / or something else to coordinate work through
-* Get the work done by Thursday.
+* Get the work done by the due date.
 
-Following this work (after Thursday), write up answers to these questions:
 
+Reflect on Teamwork
+-------------------
+
+Following this work, write up:
+
+* Put name, date, title on top.
 * Who was on your team?
 * What project did you work on? (Paste in URL)
-* Link at least one issue you created on GitHub
-* Link at least one issue you closed on GitHub (can be same issue)
-
-Also answer these questions, which will form the basis for part of your grade:
-
+* Link at two issues you worked on GitHub
 * What strengths do you personally have when working in a group?
 * How did you apply your strengths in collaborating on this project?
   List your strengths in working with the team, not the technical
@@ -40,7 +115,8 @@ Also answer these questions, which will form the basis for part of your grade:
 
 Note that a reasonable percent of your grade comes from your write-up. So
 don't do lots of work on the project, but short-change your grade by barely
-writing up anything. Check out the rubric. You'll likely need 500 words at least.
+writing up anything. Check out the rubric. You'll likely need 500 words
+(two pages, double-spaced) at least.
 
 The last part of your grade will come from issues and code check-ins that are
 tagged with your name on GitHub.
