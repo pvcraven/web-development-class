@@ -1,5 +1,7 @@
-Scalable Vector Graphics
-========================
+.. _svg-intro:
+
+Scalable Vector Graphics Introduction
+=====================================
 
 Scalable Vector Graphics save graphics differently than image formats like ``.jpg`` or ``.gif``.
 The SVG format is not good for photos, but it is great for graphic art.

@@ -8,35 +8,37 @@ Thu - 8/27,:ref:`html_tutorial`,Have Sublime on your own computer by class
 ,:ref:`view_file_extensions`,"Optionally, purchase and install `CSS HTML Validator <https://www.htmlvalidator.com/buy/academic/>`_."
 ,Introduce :ref:`assignment_01_basic_html`,
 Tue - 9/1,:ref:`assignment_01_basic_html`,Make sure you have read :ref:`assignment_01_basic_html` and are ready to work with your partner in class. Come with topic ideas.
-,Meet via DISCORD ONLY,"After working with your partner in class today, continue work on your :ref:`assignment_01_basic_html` pages on your own."
+,Meet via ZOOM ONLY,"After working with your partner in class today, continue work on your :ref:`assignment_01_basic_html` pages on your own."
 Thu - 9/3,:ref:`directories`,
 ,:ref:`dvcs_concepts`,
-,:ref:`dvcs_tutorial`,
-Tue - 9/8,"Meet via DISCORD ONLY. Work on assignments 1 and 2.",
-Thu - 9/10,"Keep working on git, read :ref:`cascading_style_sheets_about`",Assignment 1 - HTML
-Tue - 9/15,"DVCS Branching, :ref:`css_tutorial`",Assignment 2 - DVCS
+Tue - 9/8,:ref:`dvcs_tutorial`,
+Thu - 9/10,"Keep working on git, assign CSS tutorial",Assignment 1 - HTML
+Tue - 9/15,"DVCS Branching, CSS assignment",Assignment 2 - DVCS
 Thu - 9/17,"CSS Layout, work on CSS assignment",
 ,CSS Menu: https://www.w3schools.com/css/css_navbar.asp,
 Tue - 9/22,Bootstrap tutorial,Assignment 3 - CSS
 Thu - 9/24,Bootstrap Grid,Assignment 4 - Bootstrap
-Tue - 9/29,"Collaboration, github issues, brainstorm assignment 5",
-Thu - 10/1,Work on assignment 5,Assignment 5 - Final Project Version
-Tue - 10/6,Amazon Web Services - get account. Planning period for Assignment 5 presentation,Assignment 6 - AWS Setup
-Thu - 10/8,"Present Assignment 5, AWS tutorial",
-Tue - 10/13,Command line tutorial / AWS setup,"Assignment 7 - Using PHP ""include"""
-Thu - 10/15,AWS setup / Application servers,
-Tue - 10/20,Talk about application servers,Assignment 8 - DNS and Web Site performance
-Thu - 10/22,Explain DNS,
-Tue - 10/27,Content management systems,Assignment 9 - WordPress Install
-Thu - 10/29,Work on WordPress,
-Tue - 11/3,Work on WordPress,
-Thu - 11/5,Scalable Vector Graphics,Assignment 10 - WordPress
-Tue - 11/10,Google analytics / SVG work,
-Thu - 11/12,Static Content Generators / Sphinx / RST,
-Tue - 11/17,Get started on assignment 12,Assignment 11 - SVG
-Thu - 11/19,Work on Assignment 12,
-Tue - 11/24,"Videos on Advanced DNS, Load Balancing,CDN. Work on S3",Collaborative Leadership Reflection
-?,Polish final website,Assignment 12 - Static content website
-?,Present projects,
-,,
-,,
+Tue - 9/29,Work-day,
+Thu - 10/1,"Collaboration, github issues, brainstorm assignment 5",
+Tue - 10/6,Work on assignment 5 (remote) -- get AWS account,Assignment 5 - Final Project Version
+Thu - 10/8,:ref:`svg-intro` (in person),
+Tue - 10/13,"(in-person) :ref:`web-servers` - get account, work on assignment 5",
+Thu - 10/15,:ref:`web_server_setup`,
+Tue - 10/20,AWS setup / Application servers,Assignment 6 - AWS Setup
+Thu - 10/22,"Present Assignment 5, AWS tutorial",
+Tue - 10/27,"Work on assignment 5, command-line tutorial","Assignment 7 - Using PHP ""include"""
+Thu - 10/29,,
+Tue - 11/3,Talk about application servers,Assignment 8 - DNS and Web Site performance
+Thu - 11/5,Explain DNS,
+Tue - 11/10,Content management systems,Assignment 9 - WordPress Install
+Thu - 11/12,Work on WordPress,
+Tue - 11/17,Work on WordPress,
+Thu - 11/19,,Assignment 10 - WordPress
+Tue - 11/24,Google analytics / SVG work,
+?,Static Content Generators / Sphinx / RST,
+?,Get started on assignment 12,Assignment 11 - SVG
+,Work on Assignment 12,
+,"Videos on Advanced DNS, Load Balancing,CDN. Work on S3",Collaborative Leadership Reflection
+,Polish final website,Assignment 12 - Static content website
+,Present projects,
+,Command line tutorial / AWS setup,
