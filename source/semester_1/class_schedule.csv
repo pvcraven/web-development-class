@@ -20,23 +20,23 @@ Tue - 9/22,Bootstrap tutorial,Assignment 3 - CSS
 Thu - 9/24,Bootstrap Grid,Assignment 4 - Bootstrap
 Tue - 9/29,Work-day,
 Thu - 10/1,"Collaboration, github issues, brainstorm assignment 5",
-Tue - 10/6,Work on assignment 5 (remote) -- get AWS account,Assignment 5 - Final Project Version
+Tue - 10/6,Work on assignment 5 (remote) -- get AWS account,
 Thu - 10/8,:ref:`svg-intro` (in person),
 Tue - 10/13,"(in-person) :ref:`web-servers` - get account, work on assignment 5",
-Thu - 10/15,:ref:`web_server_setup`,
-Tue - 10/20,AWS setup / Application servers,Assignment 6 - AWS Setup
+Thu - 10/15,:ref:`web_server_setup`,"Assignment 5 - Final Project Version, Assignment 11 - SVG"
+Tue - 10/20,AWS setup / Application servers,
 Thu - 10/22,"Present Assignment 5, AWS tutorial",
-Tue - 10/27,"Work on assignment 5, command-line tutorial","Assignment 7 - Using PHP ""include"""
+Tue - 10/27,"Work on assignment 5, command-line tutorial",Assignment 6 - AWS Setup
 Thu - 10/29,,
-Tue - 11/3,Talk about application servers,Assignment 8 - DNS and Web Site performance
+Tue - 11/3,Talk about application servers,"Assignment 7 - Using PHP ""include"""
 Thu - 11/5,Explain DNS,
-Tue - 11/10,Content management systems,Assignment 9 - WordPress Install
+Tue - 11/10,Content management systems,Assignment 8 - DNS and Web Site performance
 Thu - 11/12,Work on WordPress,
-Tue - 11/17,Work on WordPress,
-Thu - 11/19,,Assignment 10 - WordPress
+Tue - 11/17,Work on WordPress,Assignment 9 - WordPress Install
+Thu - 11/19,,
 Tue - 11/24,Google analytics / SVG work,
-?,Static Content Generators / Sphinx / RST,
-?,Get started on assignment 12,Assignment 11 - SVG
+?,Static Content Generators / Sphinx / RST,Assignment 10 - WordPress
+?,Get started on assignment 12,
 ,Work on Assignment 12,
 ,"Videos on Advanced DNS, Load Balancing,CDN. Work on S3",Collaborative Leadership Reflection
 ,Polish final website,Assignment 12 - Static content website
