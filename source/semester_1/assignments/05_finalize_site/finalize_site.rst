@@ -58,6 +58,8 @@ Getting Set Up
 
 * Work together as a team to make sure everyone has this done. Verify it is
   working. Leave no person behind!
+* If someone from your team is missing, have the project owner send them an e-mail
+  asking for their GitHub ID, so they can be added.
 
 Brainstorming Improvements
 --------------------------
@@ -100,7 +102,6 @@ Assigning Out Improvements
 
 .. image:: assign_issue.png
     :width: 300px
-
 
 Do the Work
 -----------
