@@ -60,6 +60,7 @@ Getting Set Up
   working. Leave no person behind!
 * If someone from your team is missing, have the project owner send them an e-mail
   asking for their GitHub ID, so they can be added.
+* Take a look at the website in your browser.
 
 Brainstorming Improvements
 --------------------------
