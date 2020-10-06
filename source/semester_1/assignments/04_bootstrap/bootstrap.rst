@@ -1,7 +1,7 @@
 Assignment 4 - Bootstrap
 ========================
 
-Getting set up:
+**Get set up:**
 
 * Open the project you were assigned.
 * Make sure you've got everything committed and pushed from the last assignment.
@@ -12,7 +12,7 @@ Getting set up:
 
 * Remove the CSS from the prior assignment.
 
-Cover the following things from the rubric:
+**Cover the following things from the rubric:**
 
 * Remove the CSS from the prior assignment.
 * "Properly use template" Use the :ref:`bootstrap-template` tutorial to adapt
@@ -45,15 +45,17 @@ Cover the following things from the rubric:
 * "HTML and CSS are valid" Use
   the `W3 HTML Validator <https://validator.w3.org/#validate_by_input>`_ to find and fix all errors.
 
-**Note:** A very common mistake is to not use the ``<div class="container">``, or to
-not have the footer *inside* that container. Check your page to make sure it does
-not have text running to the
-edge of the screen.
+.. note::
+
+   A very common mistake is to not use the ``<div class="container">``, or to
+   not have the footer *inside* that container. Check your page to make sure it does
+   not have text running to the
+   edge of the screen.
 
 Also make sure you don't have blocks of text on a colored background. That is
 too hard to read.
 
 .. image:: rubric.png
-    :width: 500px
+    :width: 550px
     :align: center
     :alt: Rubric
