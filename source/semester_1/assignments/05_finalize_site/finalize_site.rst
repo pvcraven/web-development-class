@@ -30,18 +30,32 @@ You will be assigned a team of people. As part of this team you need to:
   * Give a piece of trivia about yourself.
   * What are your strengths and weaknesses in working with a project like this?
 
-* Go around and have each person repeat the name and highlights of what
-    everyone else said.
-
 Getting Set Up
 --------------
 
 * Your team will be working off this base project: https://github.com/pvcraven/hauntings
-* Elect one person should 'fork' this project.
+* Elect **one** person should 'fork' this project"
+
+.. image:: fork.png
+   :width: 280px
+
 * That one person should use GitHub
   Settings...Manage Access...Invite a collaborator and send invites to the rest
   of the team.
-* Everyone should go a ``git clone`` of the project and bring it up on their computer.
+
+.. image:: access.png
+   :width: 500px
+
+* Everyone should go a ``git clone`` of the project fork and bring it up on their computer.
+  Make sure to clone *your* team's fork of the project. My id should not be
+  part of the link.
+
+.. image:: clone1.png
+   :width: 300px
+
+.. image:: clone2.png
+   :width: 400px
+
 * Work together as a team to make sure everyone has this done. Verify it is
   working. Leave no person behind!
 
@@ -52,8 +66,12 @@ Brainstorming Improvements
     :width: 15%
     :class: right-image
 
-* One person, Go to GitHub. Click on the Projects tab for your project.
+* **One person**, Go to GitHub. Click on the Projects tab for your project.
   Create a new project.
+
+.. image:: project1.png
+    :width: 350px
+
 * Create columns for:
 
   * Ideas
@@ -61,8 +79,11 @@ Brainstorming Improvements
   * In Process
   * Done
 
-* Everyone, brainstorm things to add, update, fix with the project. At least
-  three cards per person.
+.. image:: project2.png
+    :width: 100%
+
+* **Everyone**, brainstorm things to add, update, fix with the project. At least
+  three cards per person. Each person enter their own ideas.
 
 Assigning Out Improvements
 --------------------------
@@ -71,13 +92,21 @@ Assigning Out Improvements
   from "Ideas" to "To-Do" list.
 * Work to balance the conversation. Solicit input from people who aren't speaking.
 * Convert each To-Do item to an Issue (click on three dots)
+
+.. image:: make_issue.png
+    :width: 300px
+
 * Go to issues, assign two issues to each person. (Don't make them too difficult.)
+
+.. image:: assign_issue.png
+    :width: 300px
+
 
 Do the Work
 -----------
 
 * Do the work
-* Check into GitHub with quality comments in the ``git commit -m "Issue #4. This should be a detailed explanation of what I did.".``
+* Check into GitHub with quality comments in like: ``git commit -m "Issue #4. This should be a detailed explanation of what I did.".``
 
 Follow-Up
 ---------
@@ -86,7 +115,7 @@ Follow-Up
     :width: 15%
     :class: right-image
 
-* In class, meet and check progress. Update each issue with a status update.
+* In class the following week, meet and check progress. Update each issue with a status update.
   Close the issue when done, but only do this as a team when everyone agrees.
 * Follow up to make sure those assignments were done.
 * Feel free to set up a meeting time / text chat / discord / or something else to coordinate work through
@@ -101,7 +130,7 @@ Following this work, write up:
 * Put name, date, title on top.
 * Who was on your team?
 * What project did you work on? (Paste in URL)
-* Link at two issues you worked on GitHub
+* Link at least two issues you worked on GitHub
 * What strengths do you personally have when working in a group?
 * How did you apply your strengths in collaborating on this project?
   List your strengths in working with the team, not the technical
