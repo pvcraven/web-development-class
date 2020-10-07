@@ -62,6 +62,22 @@ Getting Set Up
   asking for their GitHub ID, so they can be added.
 * Take a look at the website in your browser.
 
+.. _enabling-issues:
+
+Enabling Issues
+^^^^^^^^^^^^^^^
+
+It appears that forked projects have 'issues' disabled by default. We want
+to use this feature, so we need to enable it. The project owner needs to
+do the following steps:
+
+1. Select settings
+2. Select options
+3. Make sure the 'Issues' checkbox is checked.
+
+.. image:: enable_issues.png
+   :width: 600px
+
 Brainstorming Improvements
 --------------------------
 
