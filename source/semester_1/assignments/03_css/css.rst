@@ -56,6 +56,9 @@ Required elements of the project
 
   * Apply a stylesheet that you've created as shown in :ref:`external-css`
     to every page.
+  * Only create one css file, but put a link that one css file in every html page.
+  * Most of the styles you should create should go in here, since it applies
+    to every page.
 
 * Create styles with a tag selector as shown in :ref:`tag-selector`.
 * Create styles with an id selector as shown in :ref:`id-selector`.
@@ -71,7 +74,25 @@ Required elements of the project
 
   * See the step-by-step tutorial at
     `W3Schools CSS Navigation Bar tutorial <https://www.w3schools.com/css/css_navbar.asp>`_.
-  * I particularly like the styles from the `Horizontal Nav Bar <https://www.w3schools.com/css/css_navbar_horizontal.asp>`_.
+  * I particularly like the styles from the
+    `Horizontal Nav Bar <https://www.w3schools.com/css/css_navbar_horizontal.asp>`_.
+  * The W3Schools menu tutorials style tags like ``<li>`` which can mean your
+    bullet lists also pick up menu styles. Add a ``nav`` in front to only apply
+    it to the navigation bar. For example:
+
+.. code-block:: css
+
+    li {
+      float: left;
+    }
+
+Should become:
+
+.. code-block:: css
+
+    nav li {
+      float: left;
+    }
 
 * Find the table in the website and style it.
   Look at the `W3Schools table tutorial <https://www.w3schools.com/css/css_table.asp>`_.
