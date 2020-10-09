@@ -511,7 +511,7 @@ everything.
 
     nothing added to commit but untracked files present (use "git add" to track)
 
-I could add everything with ``git add *``, but here's a problem. We aren't
+I could add everything with ``git add -A``, but here's a problem. We aren't
 supposed to add "result" files to git. Just "source" files. That means the
 ``build`` directory needs to **not** get added.
 
@@ -548,7 +548,7 @@ Then go ahead and add the files, and do a first commit.
 
     nothing added to commit but untracked files present (use "git add" to track)
 
-    C:\Web Server\sphinx_test_project>git add *
+    C:\Web Server\sphinx_test_project>git add -A
     warning: LF will be replaced by CRLF in Makefile.
     The file will have its original line endings in your working directory.
 

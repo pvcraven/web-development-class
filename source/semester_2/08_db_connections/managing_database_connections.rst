@@ -87,7 +87,7 @@ You probably need this in the ``.gitignore``:
 
 *Before* you commit, you can do a ``git status -u`` and make sure that the
 ``context.xml`` nor ``META-INF`` directory is set as untracked (which would
-be picked up and added if you did a ``git add *``). If you fail to
+be picked up and added if you did a ``git add -A``). If you fail to
 get this part right, you'll need to re-do a lot of things. And possibly
 expose your customer info.
 

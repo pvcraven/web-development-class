@@ -106,7 +106,7 @@ Should become:
 * Revalidate the HTML.
   Validate the CSS. You can do this on-line as well with the
   `W3 CSS validation service <https://jigsaw.w3.org/css-validator/#validate_by_input>`_.
-* ``git add *``
+* ``git add -A``
 * ``git commit -m "Update with CSS info"``
 * ``git push``
 * Submit the assignment in Scholar. Paste in the link to the GitHub web site for the project.

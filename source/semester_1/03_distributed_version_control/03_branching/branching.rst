@@ -63,6 +63,6 @@ done that, type:
 
 .. code-block:: text
 
-    git add *
+    git add -A
     git commit -m 'merge test branch'
     git push

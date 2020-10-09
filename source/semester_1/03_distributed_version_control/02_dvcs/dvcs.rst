@@ -47,7 +47,7 @@ Do this whenever you are done with a session of programming:
    in the rest of the directory name.
 3. Type ``git pull`` to get all the latest changes.
 4. Do your changes.
-5. Type ``git add *``
+5. Type ``git add -A``
 6. Type ``git commit -m "Work on lab 1"`` Update the comment between the quotes
    to whatever you did.
 7. Type ``git push``
@@ -165,8 +165,8 @@ Add Changes
 
 Now that you've created the repository, we need to add all your files to it.
 You can add them individually by ``git add <filename>``. For example ``git add index.html``.
-But if you want *every* file. (And we do.) You can use the asterisk as
-a wild-card character. So type ``git add *``:
+But if you want *every* file - and we do - you can use the ``-A`` option for
+"all". So type ``git add -A``:
 
 .. image:: git_add.png
     :width: 550px
@@ -379,7 +379,7 @@ Adding and Committing
 
 When you are done making changes, commit by typeing:
 
-* ``git add *``
+* ``git add -A``
 * ``git commit -m "My comment goes here."``
 
 Review:
@@ -545,7 +545,7 @@ Then when you are all done with all merges, type:
 .. code-block:: text
 
     craven@DESKTOP-RAUFKMA MINGW64 ~/arcade-games-work2 (master|MERGING)
-    $ git add *
+    $ git add -A
 
     craven@DESKTOP-RAUFKMA MINGW64 ~/arcade-games-work2 (master|MERGING)
     $ git commit -m"Merged"

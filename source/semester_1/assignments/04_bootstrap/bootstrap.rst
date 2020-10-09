@@ -5,6 +5,13 @@ Assignment 4 - Bootstrap
 
 * Open the project you were assigned.
 * Make sure you've got everything committed and pushed from the last assignment.
+
+  * Type ``git status`` to make sure there's nothing to commit.
+  * If there is:
+  * ``git add -A``
+  * ``git commit -m "Work on CSS Project"``
+  * ``git push``
+
 * Create a new branch of your project:
 
   * Branch your code with ``git checkout -b bootstrap``
