@@ -69,7 +69,7 @@ When you start XAMPP, you'll get a control panel like this. Hit "Config"
     :width: 550px
     :align: center
 
-Select your favorite text editor. In the image belopw,
+Select your favorite text editor. In the image below,
 I've selected Sublime. Then have Apache and
 MySQL auto-start. This will save you clicks later. Then click "Save".
 

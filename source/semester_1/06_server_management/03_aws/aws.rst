@@ -201,7 +201,7 @@ only you can read it on the Mac. The command for this is:
 
 .. code-block:: text
 
-    chmod 400 my_key.pem
+    chmod 600 my_key.pem
 
 
 Connecting With Windows
