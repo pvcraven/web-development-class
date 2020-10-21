@@ -6,6 +6,10 @@ Amazon Web Services
 This chapter covers how to get a public web server up and running using
 Amazon Web Services (AWS).
 
+If you are on the Mac, please do these steps using the "Chrome" web
+browser rather than Safari. Safari does not download the "key" file
+correctly. (Aside from that one step, it works fine.)
+
 Create a Server Instance
 ------------------------
 
@@ -106,6 +110,8 @@ Save it somewhere safe. You can't download it again, so if you lose that
 file you lose access to your servers. You can use the same key/pair for
 many servers if you want.
 
+If you are using a Mac, you need to download this with Chrome, not Safari.
+
 .. attention::
 
     Do not save your PEM key into the HTML folder or allow it to be
@@ -177,21 +183,36 @@ instructor if he set up the server for you.
 
 Use that address and the key to get a command shell on the new server.
 
-Connecting With a Mac
-~~~~~~~~~~~~~~~~~~~~~
+Connecting With a Mac or Windows
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To use the Terminal on the Mac, search for and run the "Terminal" program.
-Copy your key to the Mac's desktop. What you will type will look *kind* of like:
+Copy your key to the Mac's desktop. For Windows, use the "Command Prompt"
+program instead.
+
+If you are on the Mac,
+we need to set 'permissions' on the key before it can be used.
+Windows users do not need to do this.
+Changing permissions is
+done with the ``chmod`` command, like this:
+
+.. code-block:: text
+
+    cd Desktop
+    chmod 600 my_key.pem
+
+Replace `my_key.pem` with the file name of the key that you downloaded from Amazon.
+
+After that, you can shell to your machine with the following:
 
 .. code-block:: text
 
     cd Desktop
     ssh -i my_key.pem ubuntu@myservername.com
 
-Replace `my_key.pem` with the file name of the key that you downloaded from Amazon.
-
 Replace `myservername.com` with the really long public DNS name of the server you copied from the
-Amazon console.
+Amazon console. Don't forget the ``ubuntu@`` that needs to appear
+right before the server name.
 
 You may get a question about the "authenticity" of the host. If so, just
 type "yes". You'll only get that question once.
@@ -204,8 +225,8 @@ only you can read it on the Mac. The command for this is:
     chmod 600 my_key.pem
 
 
-Connecting With Windows
-~~~~~~~~~~~~~~~~~~~~~~~
+Connecting With MobaXTerm
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. raw:: html
 
