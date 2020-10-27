@@ -20,13 +20,10 @@ Part 2
 ------
 
 Use `WebPageTest <https://www.webpagetest.org/>`_ on two different web pages.
-
-* Your web site you created with AWS
-* One other website that you found, which has performance issues. Do not pick
-  a fast website like Google's search page.
+Do not pick a fast website like Google's search page.
 
 Explain what WebPageTest shows, and also talk about how to improve the performance.
-Spend some time with this. Figure out what is making the website slow.
+Spend some time with this. Figure out *exactly* what is making the website slow.
 How would you improve it? It will probably take at least one page. I've had people
 take six pages.
 
@@ -36,4 +33,5 @@ pages.
 Feel free to use the 'snip' tool or similar to take and explain parts of the
 results. Your explanation should be about 3/4 of a page or more for each
 site and pull out exact examples of what is slow. For example, tell me how
-many requests were made, what the biggest image was, if there was a lot of JavaScript, etc.
+many requests were made, what the biggest image was, if there was a lot of
+JavaScript, etc.
