@@ -174,7 +174,7 @@ directory.
     # mess everything up. Try 'ls /var/www' and then keep going from there until
     # you find your public_html folder. Then use that path below instead of what
     # I have which is totally not what you want.
-    sudo mv wordpress /var/www/my_sample_project/public_html/wordpress
+    sudo mv wordpress /var/www/html/wordpress
 
     # If the command above didn't work, you probably moved out of the home
     # directory which is where "wordpress" is. Go back by typing "cd ~" and
