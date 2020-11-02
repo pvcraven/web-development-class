@@ -38,6 +38,15 @@ keep track of everything for us. Enter these commands one-by-one.
     # Install the database server
     sudo apt-get -y install mysql-server
 
+Next, install these software packages and restart the webserver::
+
+    # Make sure PHP application server has the code that can connect to a database
+    sudo apt-get -y install php libapache2-mod-php php-mysql
+
+    # Restart the web server to apply the changes
+    sudo service apache2 restart
+
+
 Next, we need to configure a password for the and the security
 for the **database server**.
 
@@ -67,20 +76,12 @@ see anything on the screen, but the computer is listening.
     Use an entire sentence as a password to protect that password database. I use KeePass, Google
     Drive, and an app on my phone so I can always get to these passwords and have them
     synchronized. Yes, I memorize a password with over 25 characters to it, but that is
-    the _only_ password I have to remember.
+    the *only* password I have to remember.
 
 
 
 .. _KeePass: https://keepass.info/
 .. _list of the 1000 most common passwords used at the Adobe site: https://github.com/danielmiessler/SecLists/blob/master/Passwords/darkweb2017-top1000.txt
-
-Next, install these software packages and restart the webserver::
-
-    # Make sure PHP application serverhas the code that can connect to a database
-    sudo apt-get -y install php libapache2-mod-php php-mysql
-
-    # Restart the web server to apply the changes
-    sudo service apache2 restart
 
 This next part creates the database and user for WordPress.
 You will see that there is a ``yourdbpassword``.
@@ -144,9 +145,7 @@ Next, we need to edit the configuration file:
 
 .. code-block:: bash
 
-    nano wp-config.php
-
-(Or use ``vim``.)
+    pico wp-config.php
 
 Replace the default with the database name ``wordpress-db`` and the database
 user, also ``wordpress-db``. Next, fill in the password ``yourdbpassword``.
