@@ -4,30 +4,33 @@ Sphinx Tutorial
 `Sphinx <http://www.sphinx-doc.org/>`_ is a static content generator. This tutorial covers how to
 get Sphinx up and running.
 
-Installation on Windows
------------------------
+Installation
+------------
 
-The lab computers have everything installed, so they are ready to go. If you are using a lab computer
-you can skip to the next step.
+The lab computers have everything installed, so they are ready to go. If you are
+using a lab computer you can skip to the next step.
 
-If you want to build the site on your personal Windows computer, you'll need to install Python and Sphinx.
+If you want to build the site on your personal computer, you'll need to
+install Python and Sphinx.
 
-This can also be installed on a Mac, but it is a bit more complex. I suggest using the lab computer or drop
-by my office.
-
-Sphinx relies on the computer language *Python*. You don't need to understand Python to use
-the tool. But it does need to be installed on the computer first.
+Sphinx relies on the computer language *Python*. You don't need to understand
+Python to use the tool. But it does need to be installed on the computer first.
 
 First, you'll need to install Python. Download Python from:
 
 https://www.python.org/downloads/
 
-When you do the installation, make sure to select "Add Python to PATH":
+
+Installation on Windows
+-----------------------
+
+When you do the installation, if you are on Windows
+make sure to select "Add Python to PATH":
 
 .. image:: python_install.png
     :width: 70%
 
-To install Sphinx, run the "Command Prompt" on your windows computer.
+To install Sphinx, run the "Command Prompt" on your Windows computer.
 You'll need to run it as an administrator:
 
 .. image:: command_as_admin.png
@@ -52,11 +55,21 @@ Did it work? Great! Now we are ready to start our site.
 
 Did it not work? Drop by and we can trouble-shoot it.
 
+Installation on Mac
+-------------------
+
+If you are on the Mac, after running through the Python installer, open
+up a Terminal window. Type:
+
+.. code-block:: text
+
+    pip3 install sphinx sphinx_rtd_theme
 
 Create the Initial Project
 --------------------------
 
 First, create a new directory inside of where your web server has its files.
+I suggest creating it on your desktop.
 
 Then, open a command prompt and navigate to that directory. Remember to use
 the ``cd`` command to change directories. Make sure you are in this new directory
@@ -88,11 +101,6 @@ hit "enter."
     "source" and "build" directories within the root path.
     > Separate source and build directories (y/n) [n]: y
 
-    Inside the root directory, two more directories will be created; "_templates"
-    for custom HTML templates and "_static" for custom stylesheets and other static
-    files. You can enter another prefix (such as ".") to replace the underscore.
-    > Name prefix for templates and static dir [_]:
-
     The project name will occur in several places in the built documentation.
     > Project name: My Test Project
     > Author name(s): Paul Craven
@@ -106,44 +114,12 @@ hit "enter."
     http://sphinx-doc.org/config.html#confval-language.
     > Project language [en]:
 
-    The file name suffix for source files. Commonly, this is either ".txt"
-    or ".rst".  Only files with this suffix are considered documents.
-    > Source file suffix [.rst]:
-
-    One document is special in that it is considered the top node of the
-    "contents tree", that is, it is the root of the hierarchical structure
-    of the documents. Normally, this is "index", but if your "index"
-    document is a custom template, you can also set this to another filename.
-    > Name of your master document (without suffix) [index]:
-    Indicate which of the following Sphinx extensions should be enabled:
-    > autodoc: automatically insert docstrings from modules (y/n) [n]:
-    > doctest: automatically test code snippets in doctest blocks (y/n) [n]:
-    > intersphinx: link between Sphinx documentation of different projects (y/n) [n]:
-    > todo: write "todo" entries that can be shown or hidden on build (y/n) [n]:
-    > coverage: checks for documentation coverage (y/n) [n]:
-    > imgmath: include math, rendered as PNG or SVG images (y/n) [n]:
-    > mathjax: include math, rendered in the browser by MathJax (y/n) [n]:
-    > ifconfig: conditional inclusion of content based on config values (y/n) [n]:
-    > viewcode: include links to the source code of documented Python objects (y/n) [n]:
-    > githubpages: create .nojekyll file to publish the document on GitHub pages (y/n) [n]:
-
-    A Makefile and a Windows command file can be generated for you so that you
-    only have to run e.g. `make html' instead of invoking sphinx-build
-    directly.
-    > Create Makefile? (y/n) [y]:
-    > Create Windows command file? (y/n) [y]:
-
     Creating file .\source\conf.py.
     Creating file .\source\index.rst.
     Creating file .\Makefile.
     Creating file .\make.bat.
 
     Finished: An initial directory structure has been created.
-
-    You should now populate your master file .\source\index.rst and create other documentation
-    source files. Use the Makefile to build the docs, like so:
-       make builder
-    where "builder" is one of the supported builders, e.g. html, latex or linkcheck.
 
 Great! Now we have an initial file setup.
 
@@ -189,8 +165,6 @@ your address bar.
 
 You will modify the files in the ``source`` directory, and then run ``make html``
 on the command prompt. Finally you'll see the results in the ``build`` directory.
-
-
 
 Adding Content
 --------------
@@ -378,7 +352,7 @@ Below I have a quick demo that gives some examples of what you can do:
     Fruit        Review
     ============ =================
     Apple        3 stars
-    Pomegranite  5 stars
+    Pomegranate  5 stars
     Grapes       3 stars
     Pears        4 stars
     Orange       2 stars
@@ -459,8 +433,9 @@ get messed up. Here is what I use:
     }
 
 
-If you don't want to open a command-prompt to build your documentation, you can create a new build-system
-in Sublime. This will allow you to just hit Ctrl-B to build your project. The build file is a bit confusing,
+If you don't want to open a command-prompt to build your documentation, you can
+create a new build-system in Sublime. This will allow you to just hit Ctrl-B to
+build your project. The build file is a bit confusing,
 and I have to look it up anytime I want to add it, but it looks like this:
 
 .. code-block:: JSON
@@ -569,8 +544,6 @@ Next, we need to push our project to GitHub. But we can't, until we:
 Create GitHub Project
 ~~~~~~~~~~~~~~~~~~~~~
 
-
-
 Ok, now we've got the start of our project. We need to create a new project
 on GitHub and push our project there.
 
@@ -586,7 +559,6 @@ Give it a name:
 
 Link Local Project To GitHub
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 
 Copy this URL:
 
