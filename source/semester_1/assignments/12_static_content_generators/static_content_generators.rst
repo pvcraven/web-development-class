@@ -87,15 +87,14 @@ Create web pages that have:
   you've ignored my advice at making everything lower case, it may haunt you
   here.
 
-Tip
-~~~
+.. warning::
 
-Avoid using 'bold' on headings, as they are already styled. Don't do this:
+    Avoid using 'bold' on headings, as they are already styled. Don't do this:
 
-.. code-block:: text
+    .. code-block:: text
 
-    **My Heading**
-    --------------
+        **My Heading**
+        --------------
 
 .. _citations:
 
@@ -135,8 +134,8 @@ And the code for that looks like:
     .. [#f1] "`Inez Milholland <http://vcencyclopedia.vassar.edu/alumni/inez-milholland.html>`_". Vassar College Encyclopedia. 2006. Retrieved 2012-07-21.
 
 Alternatively, you can use
-Restructured Text's
-`references <http://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#ref-role>`_
+`Restructured Text's
+references <http://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#ref-role>`_
 directive
 to link a citation, and at the end of the document format the citation using
 `APA style <https://pitt.libguides.com/c.php?g=12108&p=64730>`_.
