@@ -71,7 +71,7 @@ Create web pages that have:
   that made it.
 * `Tables <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#tables>`_
 * `Links outside the document <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#hyperlinks>`_
-* Links inside the document (references)
+* Links inside the document (`references <https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#ref-role>`_)
 * Update the table of contents with your pages
 * `Multiple types of in-line styles <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#inline-markup>`_.
   But don't change the style in a heading!
