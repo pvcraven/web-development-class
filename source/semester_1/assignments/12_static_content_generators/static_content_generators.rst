@@ -81,6 +81,7 @@ Create web pages that have:
   ranking in Google, as well as helping you keep things straight.
   So, for example, ``xbox_360.rst`` is a much better name for a page about the
   XBox 360 than a page named ``page4.rst``.
+* Try adding a `note or warnings <https://sublime-and-sphinx-guide.readthedocs.io/en/latest/notes_warnings.html>`_.
 * When you've deployed to S3 and CloudFront, check and make sure your images
   work and your links. Amazon cares about the case of your file names, and if
   you've ignored my advice at making everything lower case, it may haunt you
