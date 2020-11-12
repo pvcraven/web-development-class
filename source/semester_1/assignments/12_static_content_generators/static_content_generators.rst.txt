@@ -3,80 +3,119 @@ Assignment 12 - Static Content Generators
 
 This will be a group project. However, grades will be individual.
 
-Restructured Text Reference: https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html
+Getting together as a group
+---------------------------
 
-Getting Started
----------------
+First you should get together and meet.
 
-Here are the steps to get started:
+* Introduce yourself. It is also a good idea to state preferred pronoun,
+  even if it seems obvious.
+* Do another round where everyone states the other person's name.
+* Get confident enough to
+  say "hi" to each group member when you see them. Remember - taking the time
+  to know and use a person's name is a sign of respect.
+* Pause. Go around your group and list three things about yourself that you are
+  good at. It can be technical skill, or something completely different.
+  Share with the
+  rest of the group. Remember what those three things are with the other people.
+* Break into conversation. In this conversation,
+  ask follow-up questions about the things the other people talked about.
+  Remember - every person's
+  favorite subject is himself/herself. Show you are interested enough in the
+  other people to remember what they are good at.
+  With four people, work at keeping the discussion 25% about you, and 75%
+  about the other people. People tend to tilt towards talking only about themselves
+  or not talking about other people at all. Find the balance.
+  Some people are introverted, ask questions and make sure everyone is included.
+  Your group will be stronger with everyone contributing.
+* Pause. Go around and list one or two things related to this class you'd like
+  to get better at.
+  Like HTML coding, or the ability to write for the web, or working as a group,
+  or trying to remember when the lab is open. Share with the rest of the group.
+  Pay attention to what other people would like to learn, and see if you can help
+  them out.
 
-#. :ref:`install_python_and_sphinx`
-#. Select a project
-#. Notify the instructor and get invited to the project
-#. Accept the invitation.
-#. Use the "project" part of your GitHub project to brainstorm ideas
-#. Select two pages to create
-#. Clone the project
-#. Make sure you can build the project
-#. Write your pages (at least 300 words each)
 
-Projects
---------
+Figure out your topic
+---------------------
 
-Video Game Reviews
+* Did you do the first part? If you didn't, go back and do that. I'll wait.
+* Choose a topic for the website. I'd suggest some kind of informational website
+  that can be divided into parts. For example:
 
-* GitHub Website: https://github.com/pvcraven/2020-video-game-reviews
-* Accept Invite: https://github.com/pvcraven/2020-video-game-reviews/invitations
-* Clone on your computer: ``git clone https://github.com/pvcraven/2020-video-game-reviews.git``
 
-Movie Reviews
+  * Best hockey players in Canada
+  * World War II
+  * Kings and Queens of Russia
+  * Most popular music artists
+  * Most popular YouTubers
+  * Popular sitcoms
+  * Harry Potter
+  * Star Wars
+  * Important scientific figures in history
+  * Influential painters in the 20th century
+  * Walk-through for a popular video game
+  * Video game consoles
+  * Overview of popular sports
+  * Movie reviews
+  * Profiles of different US States
 
-* GitHub Website: https://github.com/pvcraven/2020-movie-reviews
-* Accept Invite: https://github.com/pvcraven/2020-movie-reviews/invitations
-* Clone on your computer: ``git clone https://github.com/pvcraven/2020-movie-reviews.git``
+  You can choose a business, a hobby, a historical event or place, etc. This
+  will be publicly available on the web, at least temporarily, so don't post
+  a subject where you will get people mad about you.
+  Don't make this a joke,
+  treat it as something you'd be willing to show a prospective employer.
+* Double-check to make sure that everyone is ok with the topic. Don't create
+  a page on knitting patterns when one of your group doesn't have an opinion if
+  stitch markers should be used or not.
+* Each of you will need to create four pages on the website. Each page must have
+  at least 200
+  words. You'll need to include section headings, images, tables, and links.
+  See if that seems feasible with
+  your topic.
+* Get approval of the topic from the professor.
+* With a shared Google Docs or similar, outline the website and what will be on it.
 
-Destinations in and Around Indianola
 
-* GitHub Website: https://github.com/pvcraven/2020-destinations
-* Accept Invite: https://github.com/pvcraven/2020-destinations/invitations
-* Clone on your computer: ``git clone https://github.com/pvcraven/2020-destinations.git``
+Collaborate
+-----------
 
-Common Internet Scams
-
-* GitHub Website: https://github.com/pvcraven/2020-scams
-* Accept Invite: https://github.com/pvcraven/2020-scams/invitations
-* Clone on your computer: ``git clone https://github.com/pvcraven/2020-scams.git``
+* Go back to the Google doc, choose at least four pages for each person to create.
+* Select one person to start the project.
+* Put the template in GitHub.
+* Add each person to the project in GitHub.
+* Make sure each person has cloned the project on their computer.
+* Make sure each person can build the project.
+* Use GitHub's issue manager. Create an issue for each page, and assign it
+  to each person.
+* Choose (different) pages for each person to review and proof-read. Proof-read
+  from different authors. It isn't unusual for to have someone that doesn't turn in
+  anything, so make sure you have different authors to proof-read or you'll have
+  problems with that part of the assignment.
 
 Make The Web Pages
 ------------------
 
 Create web pages that have:
 
-* `Paragraphs <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#paragraphs>`_. Don't give me a wall of text.
-* `Headings <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#sections>`_.
-  Take a look at the outline generated when you create a document.
+* Headings. Take a look at the outline generated when you create a document.
   Each page should have one, and only one, level one heading. A page that doesn't
   have any headings might not show up. A page with multiple top-level headings
   will have each top-level heading show up like they are different pages. Be
   very deliberate about your heading choices.
-* `Images <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#images>`_.
-  and/or `figures <https://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html#images-and-figures>`_.
-  Properly sized images. Do not squish a 4000 x 3000 pixel photo you took
+* Images. Properly sized images. Do not squish a 4000 x 3000 pixel photo you took
   into a 400x300 spot. Change the image. You'll make a faster web page and save
   everyone money on bandwidth. Also, keep aspect ratios. Don't specify both
   width and height at a different ratio that stretches the image. I just specify
   width only and let the browser pick the right height.
-* Cite an image that you use that is not your own. See :ref:`citations` below. Find the original
-  source. Don't cite IMDB or Google Images for a movie poster, cite the studio
-  that made it.
-* `Tables <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#tables>`_
-* `Links outside the document <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#hyperlinks>`_
+* Tables
+* Links outside the document
 * Links inside the document (references)
-* Update the table of contents with your pages
-* `Multiple types of in-line styles <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#inline-markup>`_.
-  But don't change the style in a heading!
-* Don't copy/paste curly quotes from a word processor
-  into your text. Use straight quotes.
+* A table of contents (don't put one on each page)
+* Paragraphs. Don't give me a wall of text.
+* Cite an image that you use that is not your own. See below.
+* Multiple types of styles. Don't change the style in a heading!
+* Don't copy/paste curly quotes into your text. Use straight quotes.
 * Name your pages and directories according to their content. This helps their
   ranking in Google, as well as helping you keep things straight.
   So, for example, ``xbox_360.rst`` is a much better name for a page about the
@@ -96,7 +135,6 @@ Avoid using 'bold' on headings, as they are already styled. Don't do this:
     **My Heading**
     --------------
 
-.. _citations:
 
 Citations
 ^^^^^^^^^
@@ -112,26 +150,11 @@ or as a caption an the image if you are using an image. For example:
 
    Inez Milholland [#f1]_
 
-The code for this looks like:
-
-.. code-block:: text
-
-    .. figure:: milholland.jpg
-       :width: 300px
-
-       Inez Milholland [#f1]_
-
 The rest of the text of your page would go here under your image.
 Then finally at the end of the page,
 you can list out your footnotes:
 
 .. [#f1] "`Inez Milholland <http://vcencyclopedia.vassar.edu/alumni/inez-milholland.html>`_". Vassar College Encyclopedia. 2006. Retrieved 2012-07-21.
-
-And the code for that looks like:
-
-.. code-block:: text
-
-    .. [#f1] "`Inez Milholland <http://vcencyclopedia.vassar.edu/alumni/inez-milholland.html>`_". Vassar College Encyclopedia. 2006. Retrieved 2012-07-21.
 
 Alternatively, you can use
 Restructured Text's
@@ -203,9 +226,6 @@ me the GitHub URL.
 
 Rubric
 ------
-
-.. warning::
-    This rubric will be updated soon.
 
 .. image:: rubric.png
     :width: 600px
