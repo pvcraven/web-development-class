@@ -50,8 +50,9 @@ Common Internet Scams
 Make The Web Pages
 ------------------
 
-Create web pages that have:
+Create two web pages that have:
 
+* 300 words that you wrote, each page. Quotes don't count towards the total.
 * `Paragraphs <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#paragraphs>`_. Don't give me a wall of text.
 * `Headings <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#sections>`_.
   Take a look at the outline generated when you create a document.
