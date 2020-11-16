@@ -203,12 +203,24 @@ done with the ``chmod`` command, like this:
 
 Replace `my_key.pem` with the file name of the key that you downloaded from Amazon.
 
+If you are on Windows and not using MobaXTerm, you *may* need to do this to set
+permissions.
+
+.. code-block:: text
+
+    Set Key="my_key.pem"
+    Cmd /c Icacls %Key% /c /t /Inheritance:d
+    Cmd /c Icacls %Key% /c /t /Grant %UserName%:F
+    Cmd /c Icacls %Key% /c /t /Remove Administrator "Authenticated Users" BUILTIN\Administrators BUILTIN Everyone System Users
+    Cmd /c Icacls %Key%
+
 After that, you can shell to your machine with the following:
 
 .. code-block:: text
 
     cd Desktop
     ssh -i my_key.pem ubuntu@myservername.com
+
 
 Replace `myservername.com` with the really long public DNS name of the server you copied from the
 Amazon console. Don't forget the ``ubuntu@`` that needs to appear
