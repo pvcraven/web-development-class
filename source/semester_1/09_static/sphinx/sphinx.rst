@@ -4,8 +4,10 @@ Sphinx Tutorial
 `Sphinx <http://www.sphinx-doc.org/>`_ is a static content generator. This tutorial covers how to
 get Sphinx up and running.
 
-Installation
-------------
+.. _install_python_and_sphinx:
+
+Install Python and Sphinx
+-------------------------
 
 The lab computers have everything installed, so they are ready to go. If you are
 using a lab computer you can skip to the next step.
