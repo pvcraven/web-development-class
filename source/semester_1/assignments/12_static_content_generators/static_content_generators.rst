@@ -18,7 +18,7 @@ Here are the steps to get started:
 #. Select two pages to create
 #. Clone the project
 #. Make sure you can build the project
-#. Write your pages (at least 300 words each)
+#. Write your pages (at least 700 words total)
 
 Projects
 --------
