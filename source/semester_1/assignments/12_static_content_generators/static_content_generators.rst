@@ -205,9 +205,6 @@ me the GitHub URL.
 Rubric
 ------
 
-.. warning::
-    This rubric will be updated soon.
-
 .. image:: rubric.png
     :width: 600px
 
