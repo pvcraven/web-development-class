@@ -194,13 +194,8 @@ me the GitHub URL.
   Do not link pages that show someone else checking in this page.
   Please link to the source file, not the commit.
 * GitHub URLs of GitHub issues you worked on.
-* Cloud/S3/or GitHub URL of your page with a working image
-* Cloud/S3/or GitHub URL of your page with a table
-* Cloud/S3/or GitHub URL of your page with a link
-* Cloud/S3/or GitHub URL of your page with a bullet list
-* Cloud/S3/or GitHub URL of your page with a multiple styles
-* Link to your group's S3 bucket website
-* Link to your group's Cloud page
+* Link to your S3 bucket website
+* Link to your Cloud page
 
 Rubric
 ------
