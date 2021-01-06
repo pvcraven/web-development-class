@@ -47,6 +47,10 @@ My suggestion is to pick one of the following topics:
 * ReactJS_. JavaScript library for user interfaces.
 * D3_. Graphs, graphs, and more graphs in JavaScript.
 * Vue_. JavaScript library for creating apps.
+* TypeScript
+* .NET
+* Drupal
+* Data presentation (Lambdas, Jupyter notebook)
 
 .. _AngularJS: https://angularjs.org/
 .. _NodeJS: https://nodejs.org/en/

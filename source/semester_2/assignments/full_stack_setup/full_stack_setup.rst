@@ -1,8 +1,7 @@
-Assignment 1 - Full Stack Deployment
-====================================
+Assignment 1 - Programming Environment Setup
+============================================
 
-Goal
-----
+Our goal with this assignment is to:
 
 * Set up both a local and a production application server.
 * Create a process for version control and deployment.

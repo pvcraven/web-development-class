@@ -1,5 +1,5 @@
-Assignment 2 - First JavaScript Assignment
-==========================================
+Assignment 2 - Introduction to JavaScript
+=========================================
 
 Take the HTML code at the end of this assignment, and then write a JavaScript
 file to complete the five parts. Please use jQuery where appropriate.

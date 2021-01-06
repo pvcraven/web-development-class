@@ -1,7 +1,7 @@
 .. _list-records-final:
 
-Assignment 4 - List Records - Final
-===================================
+Assignment 4 - List Records Part 2
+==================================
 
 Ok, this is probably past due, but let's make a decent landing page. Here is
 a simple Bootstrap index page. Remember we covered Bootstrap last semester?
