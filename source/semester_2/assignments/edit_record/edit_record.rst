@@ -1,4 +1,4 @@
-Assignment 9 - Edit a Record
+Assignment 8 - Edit a Record
 ============================
 
 Our goal with this assignment is to create an "edit" button that lets us edit

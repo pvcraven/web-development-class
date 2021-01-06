@@ -40,8 +40,6 @@ Assignments
    assignments/list_records_final/list_records_final.rst
    assignments/validate_a_form/validate_a_form
    assignments/save_form_data/save_form_data
-   assignments/security/security
    assignments/delete_record/delete_record.rst
    assignments/edit_record/edit_record.rst
    assignments/login_lab/login_lab
-   assignments/research_project/research_project

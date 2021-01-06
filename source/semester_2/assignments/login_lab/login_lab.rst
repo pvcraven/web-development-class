@@ -1,5 +1,5 @@
-Assignment 10 - Login Lab
-=========================
+Assignment 9 - Login Lab
+========================
 
 1.  Start with the Session demo page. See :ref:`session_demo_html`.
 2.  Instead of naming the file ``session_demo.html``, use ``login.html`` as
