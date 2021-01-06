@@ -27,7 +27,6 @@ Topics and Tutorials
    16_encryption/encryption
    17_docker/docker.rst
 
-
 Assignments
 ~~~~~~~~~~~
 
