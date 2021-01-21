@@ -30,12 +30,12 @@ We call these tool choices **stacks**. Here are some of the things that go into
 a stack, along with examples of what choices you might have:
 
 * Operating System - Linux, Windows, Mac
-* Web server - Apache, Internet Information Server (IIS)
-* Application server / programming language
+* Web server - nginx, Apache, Microsoft Internet Information Server (IIS)
+* Application server / programming language (PHP, Web Logic, WebSphere,  Tomcat, Microsoft .NET, Django, cloud on-demand)
 * Database - MySQL, MS SQL Server, Oracle DB, IBM DB2
-* Language frameworks - Hibernate
+* Language frameworks - Hibernate, grails, struts, Apache Wicket, Java Server Faces
 * Front-end frameworks - AngularJS, jQuery, React, D3
-* Build environment - Maven, Git, SourceTree, GitHub
+* Build environment - Maven, Git, GitHub, Travis-CI, AppVeyor
 
 Some stacks have fancy names. Like **LAMP** stands for Linux, Apache, MySQL,
 and PHP. A developer that is an expert in all those parts will call herself
@@ -121,6 +121,15 @@ that we can put on a "container ship."
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/Q5POuMHxW-0" frameborder="0" allowfullscreen></iframe>
 
 .. _Docker: https://www.docker.com/
+
+Serverless Stack
+----------------
+
+With a serverless architecture, you don't set up your own real or virtual server.
+You deploy your application and pay only when the app is called. This is great
+for low-volume apps, or apps that might need to scale up/down a lot.
+
+After developing our applications, we'll develop out applications this way.
 
 Web Application Servers
 -----------------------

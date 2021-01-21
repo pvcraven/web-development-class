@@ -20,8 +20,7 @@ Complete
 .. code-block:: text
 
     .idea/
-    out/
-    classes/
+    target/
 
 * Follow the :ref:`java-remote-environment-tutorial`. Deploy your project to
   AWS.
