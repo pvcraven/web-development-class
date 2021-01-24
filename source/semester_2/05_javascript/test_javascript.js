@@ -41,18 +41,48 @@ var anotherAddNumberFunction = addNumbers;
 functionResult = anotherAddNumberFunction(40, 50);
 console.log("Function result: " + functionResult);
 
-// Simple objects:
-var personA = {name: "Paul", email: "paul.craven@simpson.edu"};
+// Simple objects using JSON JavaScript Object Notation:
+var personA = {name: "Paul",
+               email: "paul.craven@simpson.edu"};
 console.log("personA.name: " + personA.name);
 console.log("person['name']: " + personA['name']);
 
 // This doesn't print much:
 console.log("personA: " + personA);
+
 // But check out this print:
 console.log(personA);
 
-// Objects with methods:
-var personB =
+// Class creation using 'class' keyword. New in ES6
+class PersonB {
+    constructor() {
+        this.firstName = "";
+        this.lastName = "";
+    }
+}
+
+personB = new PersonB();
+personB.firstName = "Paul";
+personB.lastName = "Craven";
+
+console.log("personB.firstName: " + personB.firstName);
+
+// Another example, with a method and using parameters
+class PersonC {
+    constructor(first, last) {
+        this.firstName = first;
+        this.lastName = last;
+    }
+    fullName() {
+        return this.firstName + " " + this.lastName;
+    }
+}
+
+personC = new PersonC("Paul", "Craven");
+console.log("personC.fullName: " + personC.fullName());
+
+// Old-school pre-ES6 objects with methods:
+var personD=
     {
         firstName: "Paul",
         lastName: "Craven",
@@ -61,7 +91,7 @@ var personB =
         },
         email: "paul.craven@simpson.edu"
     };
-console.log("personB.name: " + personB.fullName());
+console.log("personD.name: " + personD.fullName());
 
 // Loop
 for (var i = 0; i < 10; i++) {
@@ -75,9 +105,9 @@ for (i = 0; i < colors.length; i++) {
 }
 
 // Loop through fields in an object
-var personC = {name: "Paul", email: "paul.craven@simpson.edu"};
-for (var field in personC) {
-    console.log(field + " = " + personC[field]);
+var personE = {name: "Paul", email: "paul.craven@simpson.edu"};
+for (var field in personE) {
+    console.log(field + " = " + personE[field]);
 }
 
 // Testing numbers
