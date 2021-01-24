@@ -40,6 +40,7 @@ def setup(app):
 # ones.
 extensions = [
     'sphinx.ext.mathjax',
+    'sphinx_copybutton',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -58,7 +59,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Web Development'
-copyright = '2020, Paul Vincent Craven'
+copyright = '2021, Paul Vincent Craven'
 author = 'Paul Vincent Craven'
 
 # The version info for the project you're documenting, acts as replacement for
