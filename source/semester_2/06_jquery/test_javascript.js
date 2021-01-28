@@ -2,19 +2,20 @@
  * A few jQuery examples
  */
 
-// Grab a list of all tags that match
-var paragraphs = $("p");
+// Grab a list of all tags that match (jQuery selector)
+// The $ is actually a function name! Wacky, but legal.
+let paragraphs = $("p");
 
-// See:
-// http://www.w3schools.com/jquery/jquery_ref_selectors.asp
+// See: http://www.w3schools.com/jquery/jquery_ref_selectors.asp
 // to get an idea of how we can have a lot of powerful selectors.
 
-// How many tags match?
+// How many tags match? Use the array 'length' attribute.
 console.log("There are " + paragraphs.length + " paragraphs in this page.");
 
 // Print the text in each one.
-for(var i = 0; i < paragraphs.length; i++) {
-    var paragraphText = paragraphs[i].textContent;
+// jQuery items have a 'textContent' attribute
+for(let i = 0; i < paragraphs.length; i++) {
+    let paragraphText = paragraphs[i].textContent;
     console.log(paragraphText);
 }
 
@@ -22,13 +23,19 @@ for(var i = 0; i < paragraphs.length; i++) {
 
 // Create a function to add a row to the table
 function myUpdateFunction(event) {
-    var fieldValue = $('#myTextField').val();
+    // Grab field with id=myTextField and get teh value out of the form field
+    // using the val() function:
+    let fieldValue = $('#myTextField').val();
+    // Select the tbody in a table with id=tableName
+    // Append to that tbody the following html (a row)
     $("#tableName tbody").append("<tr><td>"+fieldValue+"</td></tr>");
+    // Log for debuf info
     console.log(fieldValue);
 }
 
-// Attach an the function to a button click
-var formButton1 = $('#button1');
+// Attach an the function to a button click. This is a callback. Will run when
+// we click.
+let formButton1 = $('#button1');
 formButton1.on("click", myUpdateFunction);
 
 // -- How to hide an item based on a button click
@@ -39,7 +46,7 @@ function hideFunction(event) {
 }
 
 // Attach an action to a button click
-var formButton2 = $('#button2');
+let formButton2 = $('#button2');
 formButton2.on("click", hideFunction);
 
 // -- How to validate an item
@@ -47,10 +54,10 @@ formButton2.on("click", hideFunction);
 // Function to validate
 function validateFunction(event) {
     // Get the field
-    var v1 = $('#validateMe').val();
+    let v1 = $('#validateMe').val();
 
     // Create the regular expression
-    var reg = /^[A-Za-z]{1,10}$/;
+    let reg = /^[A-Za-z]{1,10}$/;
 
     // Test the regular expression to see if there is a match
     if (reg.test(v1)) {
@@ -60,7 +67,7 @@ function validateFunction(event) {
     }}
 
 // Attach an action to a button click
-var formButton3 = $('#button3');
+let formButton3 = $('#button3');
 formButton3.on("click", validateFunction);
 
 // -- JSON'ify a form
@@ -70,18 +77,18 @@ formButton3.on("click", validateFunction);
 function jsonFunction(event) {
 
     // Create an empty object
-    var formObject = {};
+    let formObject = {};
 
     // Set a field in the object to the value in this form field
     formObject.myName = $('#myName').val();
 
     // Build the JSON string based on that object's fields
-    var jsonString = JSON.stringify(formObject);
+    let jsonString = JSON.stringify(formObject);
 
     // Set a field to the JSON result so we can see it.
     $('#jsonResult').text(jsonString);
 }
 
 // Attach an action to a button click
-var formButton4 = $('#button4');
+let formButton4 = $('#button4');
 formButton4.on("click", jsonFunction);

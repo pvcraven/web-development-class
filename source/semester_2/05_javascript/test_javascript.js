@@ -23,6 +23,11 @@ console.log("This is a test message that will print on the console.");
 // Before you use a variable, you should declare it.For example:
 var variableOne, variableTwo;
 
+// New with ES6, you can use either 'let' or 'const':
+let variableThree;
+const variableFour = 3.14;
+
+
 // After that you can use it:
 variableOne = 5;
 variableTwo = variableOne + 2;
@@ -82,7 +87,7 @@ personC = new PersonC("Paul", "Craven");
 console.log("personC.fullName: " + personC.fullName());
 
 // Old-school pre-ES6 objects with methods:
-var personD=
+var personD =
     {
         firstName: "Paul",
         lastName: "Craven",
@@ -94,18 +99,18 @@ var personD=
 console.log("personD.name: " + personD.fullName());
 
 // Loop
-for (var i = 0; i < 10; i++) {
+for (let i = 0; i < 10; i++) {
     console.log(i);
 }
 
 // Loop through an array
-var colors = ["Red", "Blue", "Green"];
+let colors = ["Red", "Blue", "Green"];
 for (i = 0; i < colors.length; i++) {
     console.log(colors[i]);
 }
 
 // Loop through fields in an object
-var personE = {name: "Paul", email: "paul.craven@simpson.edu"};
+let personE = {name: "Paul", email: "paul.craven@simpson.edu"};
 for (var field in personE) {
     console.log(field + " = " + personE[field]);
 }
@@ -148,5 +153,6 @@ y = "6";
 z = x + y;
 console.log("z = " + z);
 
+// Use Number to convert to a number. You can also use parseInt() as well.
 z = Number(x) + Number(y);
 console.log("z = " + z);
