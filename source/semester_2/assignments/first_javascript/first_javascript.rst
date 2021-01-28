@@ -98,3 +98,14 @@ the code you need is already in :ref:`jQuery` example code I showed.
 .. literalinclude:: javascript_assignment.html
     :linenos:
     :language: html
+
+Turn In
+-------
+
+Please turn in:
+
+* Link to your html file in GitHub
+* Link to your JavaScript file in GitHub
+* Build your app to a WAR file, then link to directly to your page on Amazon.
+  (Note the name of your HTML file, you'll likely need to type it in to bring
+  it up.)
