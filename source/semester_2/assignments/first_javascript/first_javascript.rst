@@ -38,8 +38,8 @@ To get set up and turn it in:
   You'll need to navigate directly to the file by adding
   ``/javascript_assignment.html`` to the end. For example:
   ``http://cis320firstapp-env.pjaceubggu.us-east-2.elasticbeanstalk.com/javascript_assignment.html``
-* Paste in a GitHub link to your JavaScript, and a link to your working application
-  on Amazon.
+* Paste in a GitHub link to your JavaScript (one for html, one for js),
+  and a link to your working application on Amazon.
 
 Part 1
 ------
@@ -84,6 +84,9 @@ Part 4
 
 User regular expressions to validate the following field. Remember, most of
 the code you need is already in :ref:`jQuery` example code I showed.
+
+Don't understand regular expressions? Run through this tutorial:
+https://regexone.com/
 
 .. image:: part4.png
 
