@@ -112,3 +112,22 @@ I don't want to see the text of a URL, but please do use a link to reference the
 as shown in the example above.
 
 Remember: A list of URLs is never ok for a bibliography.
+
+Step 5: Check Restructured Text
+-------------------------------
+
+Make sure your project builds without warnings.
+
+Make sure you don't type beyond 80 characters or so per line. While this isn't
+a hard-and-fast rule, it is a guideline. You can set up visible guidelines in
+File...settings...editor...code style...visual guides.
+
+Check spelling and grammar. PyCharm can be configured to spell-check so pay
+attention to that.
+
+Make sure your landing page and table of contents look correct.
+
+Step 6: Turn In
+---------------
+
+Turn in a link to your GitHub, and a link to your Read-The-Docs page.
