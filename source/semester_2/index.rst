@@ -42,3 +42,11 @@ Assignments
    assignments/delete_record/delete_record.rst
    assignments/edit_record/edit_record.rst
    assignments/login_lab/login_lab
+
+Technical Writing
+~~~~~~~~~~~~~~~~~
+
+.. toctree::
+   :maxdepth: 1
+
+   assignments/technical_writing_annotated_bibliography/index.rst

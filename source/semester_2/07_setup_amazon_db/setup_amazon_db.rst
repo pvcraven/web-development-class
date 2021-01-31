@@ -14,29 +14,31 @@ Go into the RDS section of AWS.
 
     Go into the RDS section of AWS
 
-Launch a DB instance. NOT aurora.
+Launch a DB instance.
 
 .. figure:: launch_instance.png
 
     Launch a DB instance.
 
-Select your engine.
+Select your engine. We'll use the standard creation, MySQL (not Aurora) and
+select only free-tier options. (Important!)
 
 .. figure:: select_engine.png
 
     Select your engine.
 
-Select MySQL as the engine. Also select 'free' so you can try to get by
-on no/little money.
-
-Set the instance specifications like this:
+Set the instance specifications. Change the default username to something different
+to make the login harder to guess. You can use letters and underscores for
+the name, no dashes. Store username and password OUTSIDE your github
+folder. Password should be 20-25 random letters and numbers. Avoid special symbols.
+Use something like https://passwordsgenerator.net/
 
 .. figure:: instance_specifications.png
 
     Set the instance specifications.
 
 
-.. important:: Use a Strong Password!
+.. important:: Use a Strong Password! Don't store it in GitHub!
 
     There will people trying to guess the password of your database. Create a
     long random password and make it secure!!! Also, don't re-use a password
@@ -47,7 +49,14 @@ Set the instance specifications like this:
     like &, <, and >, then you'll have to encode those in your XML file. I'd
     recommend just not using those symbols.
 
-For "Configure Advanced Settings" keep the default settings.
+Next up, set up the connectivity. Ideally we'd only access the database through
+our app server for extra security. We're not going to do that, and open it up
+so we can access it remotely.
+
+.. figure:: connectivity.png
+
+    Set the connectivity.
+
 
 Then you'll get a screen where you can create the database. Afterwards, wait
 for it to be created:
@@ -56,8 +65,12 @@ for it to be created:
 
     Waiting for the database to be created.
 
+...and wait. And wait.
+Finally, after it is created, you'll be able to get your database server name:
 
-After it is created, you'll be able to get your database server name.
+.. figure:: endpoint.png
+
+    Get the address for our new DB server.
 
 ALSO, if
 you move what computer you access the DB from (or what NAT you go through) you
@@ -65,10 +78,9 @@ won't be able to connect. The firewall won't allow a connection at all. You'll
 need to go modify your security connections and allow your IP to have an "inbound"
 connection.
 
+.. figure:: security.png
 
-.. figure:: connectivity.png
-
-    Set the username and password.
+    This will only allow your current address to connect.
 
 
 Administer Database
@@ -78,9 +90,10 @@ Ok. Now we have a database. But no way to administer the database. You know,
 create tables, see what's in it, run ad-hoc SQL.
 
 We are going to
-connect via `MySQL Workbench`_. It requires registration and it is a pain
-to find the download link. Go to Scholar and download from the link I have
-at the top of that page so you don't have to go through that pain.
+connect via `MySQL Workbench`_. You can download it from the site or go to
+Scholar and download from the link on resources.
+The site is a bit confusing. Download the 64-bit version, and don't bother to
+register.
 
 .. _MySQL Workbench: https://www.mysql.com/products/workbench/
 
@@ -101,7 +114,7 @@ After that, run some SQL to create our database:
 
 .. code-block:: sql
 
-    create database cis320;
+    create cis320;
 
 Do this by typing in the commands from the window, then hitting the lighting
 bolt to run. Like the image below:
@@ -127,9 +140,14 @@ Now, create our table plus a couple records:
       `birthday` DATE NULL,
       PRIMARY KEY (`id`));
 
-    INSERT INTO `cis320`.`person` (`first`, `last`, `email`, `phone`, `birthday`) VALUES ('Paul', 'Craven', 'paul@simpson.edu', '5159611834', '1954-01-02');
+    INSERT INTO `cis320`.`person` (`first`, `last`, `email`, `phone`, `birthday`) VALUES ('Paul', 'Craven', 'paul.craven@simpson.edu', '5159611834', '1954-01-02');
     INSERT INTO `cis320`.`person` (`first`, `last`, `email`, `phone`, `birthday`) VALUES ('Sam', 'Simpson', 'sam@simpson.edu', '5159611212', '1903-01-01');
 
+Try inserting your own records. You can view the records by:
 
-Yay! We are done with that setup. Next, time to learn how to do DB
-connections in Java.
+.. code-block:: sql
+
+    select * from `cis320`.`person`;
+
+Yay! We are done with that setup. Next chapter we'll learn how to do DB
+connections in Java and pull this data out.
