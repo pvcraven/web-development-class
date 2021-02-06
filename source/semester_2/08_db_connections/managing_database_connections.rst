@@ -432,6 +432,9 @@ build tool called "Maven" and the integration IntelliJ has, allows us to go
 to File...Project Structure and find/download these libraries. The search button allows
 you to type some of the name, then get the rest of the library.
 
+We want to install the latest ``com.google.code.gson:gson`` library and
+the ``mysql:mysql-connector-java`` library:
+
 .. figure:: mysql_driver.png
 
    Installing the MySQL JDBC library
@@ -449,7 +452,7 @@ war artifact:
 
 Finally go to your ``pom.xml`` file and add them as a dependency:
 
-.. code-block::
+.. code-block:: xml
 
         <dependency>
             <groupId>com.google.code.gson</groupId>
