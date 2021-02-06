@@ -11,8 +11,9 @@ import java.util.List;
 import com.google.gson.Gson;
 
 @WebServlet(name = "NameListGet")
-public class NameListGet extends HttpServlet {
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+public class NameListGetServlet extends HttpServlet {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
 
         // Get setup up to output JSON text
         response.setContentType("application/json");

@@ -35,6 +35,7 @@ Connection information is stored in
 a file called ``META-INF/context.xml``.
 
 .. figure:: directory_setup.png
+    :width: 50%
 
     How the directory tree should look
 
@@ -58,7 +59,7 @@ server name and password. For example, my url looks like:
                   maxWaitMillis="-1"
                   username="cis320"
                   password="PUT_PASSWORD_HERE"
-                  driverClassName="com.mysql.jdbc.Driver"
+                  driverClassName="com.mysql.cj.jdbc.Driver"
                   url="jdbc:mysql://PUT_SERVER_NAME_HERE:3306/cis320"
                   maxActive="15"
                   maxIdle="3"
@@ -83,7 +84,7 @@ grabbed headline news. No pressure.
 
 You probably need this in the ``.gitignore``:
 
-``web/META-INF/context.xml``
+``src/main/webapp/META-INF/context.xml``
 
 *Before* you commit, you can do a ``git status -u`` and make sure that the
 ``context.xml`` nor ``META-INF`` directory is set as untracked (which would
@@ -145,6 +146,8 @@ I hate putting in all that code when I want a database connection. Plus what if
 I change a name? I don't want to go through my entire program replacing
 "jdbc/cis320" with something new. So I typically put this in a helper class
 that looks like: (Don't type this in yet.)
+
+.. _db-helper:
 
 .. literalinclude:: DBHelper.java
     :linenos:
@@ -216,10 +219,13 @@ Typically, I created a "Data Access Object". Static methods for each action
 (Static - no need to create an instance of the object.) For example, here
 is a the ``PersonDAO`` class that gets a list of people: (Don't type in yet.)
 
+.. _person-dao:
+
 .. literalinclude:: PersonDAO.java
     :linenos:
     :language: java
     :caption: PersonDAO.java
+    :emphasize-lines: 41, 66
 
 
 Writing the Servlet
@@ -228,10 +234,12 @@ Writing the Servlet
 Here's a code sample for a servlet that chucks the list of people out over
 JSON. I only print ``firstName`` and ``id``, the other fields you can fill in: (Don't type in yet.)
 
-.. literalinclude:: NameListGet.java
+.. _name-list-get-servlet:
+
+.. literalinclude:: NameListGetServlet.java
     :linenos:
     :language: java
-    :caption: NameListGet.java
+    :caption: NameListGetServlet.java
 
 Setting Up The Project
 ----------------------
@@ -246,7 +254,12 @@ doesn't *force* you to put classes in a package.
 With smaller assignments there isn't a reason to. But there's nothing small
 about web development, so we need to use packages.
 
-All our source goes into the ``src`` folder. So right-click on the ``src``
+.. note::
+
+   As we are just adapting out original website, you likely already have a package
+   set up. This is just a FYI.
+
+All our source goes into the ``src/main/java`` folder. So right-click on the ``src``
 folder and create a new package.
 
 .. image:: new_package.png
@@ -268,7 +281,7 @@ set of directories.
 Creating a Class
 ^^^^^^^^^^^^^^^^
 
-Once you have a package, create a new Java class. Right-click on the package
+It is easy to create a new Java class inside a package. Right-click on the package
 and select a new Java class.
 
 .. image:: new_class.png
@@ -280,6 +293,10 @@ Furthermore, if ``DBHelper`` is in a package called
 ``edu.simpson.computerscience.webdevelopment`` it must be stored in a
 directory path of:
 ``edu/simpson/computerscience/webdevelopment``.
+The IDE will take care of the file naming and directory structure for
+you.
+
+.. _create_servlet:
 
 Creating a Servlet
 ^^^^^^^^^^^^^^^^^^
@@ -339,6 +356,9 @@ The servlet itself will look like:
         }
     }
 
+Convert Java Object to JSON Object
+----------------------------------
+
 Eventually, we will evolve this servlet to send JSON formatted data.
 Here's an example of manually creating the JSON format:
 
@@ -392,10 +412,63 @@ Put the 'jar' file in the ``WEB-INF/lib`` folder for it to work.
 
 So, a full servlet example to get started (again):
 
-.. literalinclude:: NameListGet.java
+.. literalinclude:: NameListGetServlet.java
     :linenos:
     :language: java
-    :caption: NameListGet.java
+    :caption: NameListGetServlet.java
+
+.. _importing-libraries:
+
+Importing Libraries
+-------------------
+
+We'll need two libraries as part of our project. One library to manage our
+connection to MySQL. This uses an open protocol called Java DataBase Connection
+(JDBC) that can hook to many types of databases. We'll also use a library that
+can make it easy to move from JSON to Java classes and back.
+
+Life is supposed to have gotten easier to install and manage libraries. The combination of a
+build tool called "Maven" and the integration IntelliJ has, allows us to go
+to File...Project Structure and find/download these libraries. The search button allows
+you to type some of the name, then get the rest of the library.
+
+.. figure:: mysql_driver.png
+
+   Installing the MySQL JDBC library
+
+.. figure:: gson_driver.png
+
+   Installing the GSON library
+
+Now you've added the library. You next need to make that 'element' part of the
+war artifact:
+
+.. figure:: put_in_web_lib.png
+
+   Putting the library in the artifact
+
+Finally go to your ``pom.xml`` file and add them as a dependency:
+
+.. code-block::
+
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.8.6</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.23</version>
+        </dependency>
+
+The idea is that Maven manages your library files, which are held in ``.jar`` files.
+
+Unfortunately, this doesn't work and there's a step missing I can't figure out.
+If you run the app, you'll probably get a 'class not found' error.
+As an alternative,
+you can download the ``.jar`` files from the class website, and place them in
+a ``WEB-INF/lib`` directory and it should work.
 
 List Records Lab
 ----------------

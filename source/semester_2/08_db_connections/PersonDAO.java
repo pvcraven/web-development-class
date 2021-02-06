@@ -23,7 +23,8 @@ public class PersonDAO {
     public static List<Person> getPeople() {
         log.log(Level.FINE, "Get people");
 
-        // Create an empty linked list to put the people we get from the database into.
+        // Create an empty linked list to put the people we get from the
+        // database into.
         List<Person> list = new LinkedList<Person>();
 
         // Declare our variables
@@ -54,14 +55,15 @@ public class PersonDAO {
             // Loop through each record
             while(rs.next()) {
                 // Create a new instance of the Person object.
-                // You'll need to define that somewhere. Just a simple class with getters and setters on the
-                // fields.
+                // You'll need to define that somewhere. Just a simple class
+                // with getters and setters on the fields.
                 Person person = new Person();
 
-                // Get the data from the result set, and copy it to the Person object
+                // Get the data from the result set, and copy it to the Person
+                // object.
                 person.setId(rs.getInt("id"));
                 person.setFirst(rs.getString("first"));
-                person.setLast(rs.getString("last"));
+                /* FILL IN THE REST HERE */
 
                 // Add this person to the list so we can return it.
                 list.add(person);
@@ -72,9 +74,14 @@ public class PersonDAO {
             log.log(Level.SEVERE, "Error", e );
         } finally {
             // Ok, close our result set, statement, and connection
-            try { rs.close(); } catch (Exception e) { log.log(Level.SEVERE, "Error", e ); }
-            try { stmt.close(); } catch (Exception e) { log.log(Level.SEVERE, "Error", e ); }
-            try { conn.close(); } catch (Exception e) { log.log(Level.SEVERE, "Error", e ); }
+            try { rs.close(); }
+            catch (Exception e) { log.log(Level.SEVERE, "Error", e ); }
+
+            try { stmt.close(); }
+            catch (Exception e) { log.log(Level.SEVERE, "Error", e ); }
+
+            try { conn.close(); }
+            catch (Exception e) { log.log(Level.SEVERE, "Error", e ); }
         }
         // Done! Return the results
         return list;

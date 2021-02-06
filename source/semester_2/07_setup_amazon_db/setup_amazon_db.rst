@@ -82,7 +82,6 @@ connection.
 
     This will only allow your current address to connect.
 
-
 Administer Database
 -------------------
 
@@ -114,7 +113,7 @@ After that, run some SQL to create our database:
 
 .. code-block:: sql
 
-    create cis320;
+    create database cis320;
 
 Do this by typing in the commands from the window, then hitting the lighting
 bolt to run. Like the image below:
@@ -125,7 +124,7 @@ Next, tell it you want to use the database you created:
 
 .. code-block:: sql
 
-    use database cis320;
+    use cis320;
 
 Now, create our table plus a couple records:
 
