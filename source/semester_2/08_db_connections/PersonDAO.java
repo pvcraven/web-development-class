@@ -1,9 +1,8 @@
-package edu.simpson.craven;
+package edu.simpson.cis320.crud.cis320_crud_app;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.List;
@@ -38,7 +37,8 @@ public class PersonDAO {
             conn = DBHelper.getConnection();
 
             // This is a string that is our SQL query.
-            String sql = "select id, first, last from person";
+            // Update for all our fields
+            String sql = "select id, first from person";
 
             // If you had parameters, it would look something like
             // String sql = "select id, first, last, phone from person where id = ?";
@@ -65,6 +65,7 @@ public class PersonDAO {
                 person.setFirst(rs.getString("first"));
                 /* FILL IN THE REST HERE */
 
+
                 // Add this person to the list so we can return it.
                 list.add(person);
             }
@@ -74,13 +75,13 @@ public class PersonDAO {
             log.log(Level.SEVERE, "Error", e );
         } finally {
             // Ok, close our result set, statement, and connection
-            try { rs.close(); }
+            try { if (rs != null) rs.close(); }
             catch (Exception e) { log.log(Level.SEVERE, "Error", e ); }
 
-            try { stmt.close(); }
+            try { if(stmt != null) stmt.close(); }
             catch (Exception e) { log.log(Level.SEVERE, "Error", e ); }
 
-            try { conn.close(); }
+            try { if(conn != null) conn.close(); }
             catch (Exception e) { log.log(Level.SEVERE, "Error", e ); }
         }
         // Done! Return the results

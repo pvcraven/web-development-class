@@ -1,4 +1,4 @@
-package edu.simpson.craven;
+package edu.simpson.cis320.crud.cis320_crud_app;
 
 import javax.naming.Context;
 import java.sql.Connection;

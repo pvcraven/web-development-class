@@ -1,27 +1,104 @@
 .. _manage-connections:
 
-Managing Database Connections
-=============================
+Query the Database and Output JSON
+==================================
 
-Ok! How do we specify, connect, and query the database?
+How do we specify, connect, and query the database? Then convert that data to
+a JSON string to send?
 
-Overview: Usually takes three classes per table where we are doing a simple
-CRUD app.
+To do this we'll need to:
 
-* Business Object: Simple Java class that mirrors the table. One private
-  variable for each field. Getters and setters for each variable. We just
-  use this to store the data. I usually match the name, so if you have "car"
-  table I call this object "Car".
-* Data Access Object: A class that will use SQL to access the database. I
-  usually match each table with a DAO. So for the "car" table I'd create a
-  class called CarDAO. Then you'd have static methods like ``getCar``,
-  ``updateCar``, ``deleteCar``, etc.
-* Servlet: A servlet to interface the web with your DAO. You might have one
-  servlet control multiple DAO functions, or create multiple servlets, for each
-  DAO function.
+* Use the :ref:`gradle2` to help build the project and manage libraries.
+* Get some :ref:`helper-libraries` for JSON and database connections
+  so we don't write everything from scratch.
+* Create a configuration file to specify our :ref:`db-info`.
+* Create a class that will use that file to get a :ref:`dbhelper`.
+* Create a Java object to hold our data. :ref:`business-objects`
+* Create a database access object (DAO) to retrieve information from the database and
+  populate our Java object. :ref:`dao_object`
+* :ref:`write-the-servlet` that uses all these items to output our data in JSON format
+  over the web.
 
-Specifying the DB Connection Pool
----------------------------------
+.. _gradle2:
+
+Gradle Build Tool
+-----------------
+
+Any large project involving multiple files needs some way to specify how it will
+be built. Starting around 2000, Java projects started using a scripting tool called
+`Ant <https://ant.apache.org/>`_. A few years later, a tool called
+`Maven <https://maven.apache.org/>`_ was built using Ant, that helped standardize
+how apps were built.
+Ant and Maven are still popular, although another tool called
+`Gradle <https://gradle.org/>`_
+is gaining in popularity.
+
+For this next project, we'll be using Gradle.
+By default, IntelliJ will set up new projects in Maven. We'll create a new
+project and specify Gradle instead:
+
+.. figure:: new_gradle_project.png
+   :width: 75%
+
+   Creating a new gradle project
+
+We will also use a library to bind our Java object to JSON. We can check that
+on the next screen:
+
+.. figure:: binding.png
+   :width: 75%
+
+Then finally create the app with your own name and package:
+
+.. figure:: create_app.png
+   :width: 50%
+
+Finally, you'll need to create a new GitHub project for this, and set up
+a Git repository. Just like any other project, we don't want to check in
+every file, so create a ``.gitignore`` file in the root of the project and add
+these to filter things out:
+
+.. code-block:: text
+   :caption: `.gitignore` file
+
+   /.gradle/
+   /.idea/
+   /build/
+   /src/main/webapp/META-INF/context.xml
+   .DS_Store
+
+
+.. _helper-libraries:
+
+Helper Libraries
+----------------
+
+In our Gradle project, you'll find a file named ``build.gradle``. It specifies
+all the libraries we'll use in our project. We don't have to find or download
+the libraries, Gradle will take care of this for us. We just tell Gradle
+what libraries we need. In our case, we'll use JSON-Bind for creating
+JSON notation, and MySQL-Connector for hooking up to the database.
+
+Update ``build.gradle`` to have this for a dependency section:
+
+.. code-block:: text
+
+   dependencies {
+       implementation('javax.json.bind:javax.json.bind-api:1.0')
+       implementation('org.glassfish:jakarta.json:1.1.5')
+       implementation('org.eclipse:yasson:1.0.3')
+       compileOnly('javax.servlet:javax.servlet-api:4.0.1')
+       implementation('mysql:mysql-connector-java:8.0.23')
+
+       testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
+       testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+   }
+
+
+.. _db-info:
+
+DB Connection Pool Information
+------------------------------
 
 Now, we need to set up the the connection. We don't want to hard-code the
 connection information into our code. That would make updates too difficult, and
@@ -49,6 +126,7 @@ server name and password. For example, my url looks like:
 .. code-block:: xml
    :caption: META-INF/context.xml which MUST go in .gitignore
    :linenos:
+   :emphasize-lines: 9, 11
 
     <?xml version="1.0" encoding="UTF-8"?>
     <Context>
@@ -100,8 +178,33 @@ when it starts up. If it exists, it will read
 
 .. _connection pool: https://en.wikipedia.org/wiki/Connection_pool
 
+.. _dbhelper:
+
 Connecting to the Database
 --------------------------
+
+We need to create a class that will manage our database connections.
+
+Creating a Class
+^^^^^^^^^^^^^^^^
+
+It is easy to create a new Java class inside a package. Right-click on the package
+and select a new Java class.
+
+.. image:: new_class.png
+
+If your class is called ``DBHelper``, then it *must* go into a file called
+``DBHelper.java``. If you rename the class, you have to rename the file.
+
+Furthermore, if ``DBHelper`` is in a package called
+``edu.simpson.computerscience.webdevelopment`` it must be stored in a
+directory path of:
+``edu/simpson/computerscience/webdevelopment``.
+The IDE will take care of the file naming and directory structure for
+you.
+
+Understanding DB Connection Code
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The basic code to create a database connection in Java, using a connection pool,
 looks like this. (Don't type in any code yet, we need to set up your project first.)
@@ -142,10 +245,13 @@ So, ``InitialContext``/``Context`` is used to figure out our ``DataSource``,
 password, and other items in ``context.xml``. We get connections from the
 ``DataSource``, and the connection itself is managed by ``Connection``.
 
+The DBHelper Class
+^^^^^^^^^^^^^^^^^^
+
 I hate putting in all that code when I want a database connection. Plus what if
 I change a name? I don't want to go through my entire program replacing
 "jdbc/cis320" with something new. So I typically put this in a helper class
-that looks like: (Don't type this in yet.)
+that looks like:
 
 .. _db-helper:
 
@@ -159,6 +265,9 @@ Then in the code I can just do:
 .. code-block:: java
 
     conn = DBHelper.getConnection();
+
+Refresher on Static Classes
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Oh wait! This might have something you don't know, or forgot.
 
@@ -211,13 +320,48 @@ How do you create such a method? Use the ``static`` keyword.
 
     public static double sin(double angle) {
 
+.. _business-objects:
+
+Business Objects
+----------------
+
+You'll need a simple Java class with getters and setters to represent objects
+in your program. Often each object represents a row on the table, and
+each field is a column in that table.
+
+Here's a ``Person`` class to get started with:
+
+.. code-block:: java
+
+   public class Person {
+
+       private int id;
+       private String first;
+       private String last;
+       private String phone;
+       private String birthday;
+
+       public int getId() {return id; }
+       public void setId(int id) { this.id = id; }
+
+       public String getFirst() { return first; }
+       public void setFirst(String first) { this.first = first; }
+
+       /* Add additional getters and setters for each field.
+          Just follow the same pattern. */
+   }
+
+.. _dao_object:
 
 Querying the Database
 ---------------------
 
-Typically, I created a "Data Access Object". Static methods for each action
-(Static - no need to create an instance of the object.) For example, here
-is a the ``PersonDAO`` class that gets a list of people: (Don't type in yet.)
+Typically, I create a "Data Access Object". This object has
+static methods for each action, and each action is a query or update I
+want to run on the database.
+(Remember, static - no need to create an instance of the object.)
+For example, here
+is a the ``PersonDAO`` class that gets a list of people:
 
 .. _person-dao:
 
@@ -227,12 +371,132 @@ is a the ``PersonDAO`` class that gets a list of people: (Don't type in yet.)
     :caption: PersonDAO.java
     :emphasize-lines: 41, 66
 
+.. _write-the-servlet:
 
-Writing the Servlet
--------------------
+Write the Servlet
+-----------------
 
-Here's a code sample for a servlet that chucks the list of people out over
-JSON. I only print ``firstName`` and ``id``, the other fields you can fill in: (Don't type in yet.)
+Then we need to create a new servlet. The servlet will output tie everything
+together. Query the database, output the JSON result.
+
+.. _create_servlet:
+
+Creating a Servlet
+^^^^^^^^^^^^^^^^^^
+
+We can create servlets similar to the way we create classes:
+
+.. image:: new_servlet.png
+
+We want to update the application so that the URL is ``/api/name_list_get``
+and print a simple Hello to see if it works.
+
+The servlet itself will look like:
+
+.. code-block:: Java
+   :caption: Hello World Servlet
+   :linenos:
+   :emphasize-lines: 12, 24
+
+   package edu.simpson.cis320.crud.cis320_crud_app;
+
+   import javax.servlet.*;
+   import javax.servlet.http.*;
+   import javax.servlet.annotation.*;
+   import java.io.IOException;
+   import java.io.PrintWriter;
+   import java.util.logging.Level;
+   import java.util.logging.Logger;
+
+
+   @WebServlet(name = "NameListGetServlet", value = "/api/name_list_get")
+   public class NameListGetServlet extends HttpServlet {
+       @Override
+       protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+           // Type of output (HTML, JSON, image, whatever
+           response.setContentType("text/plain");
+
+           // Get an object that can write to the network
+           PrintWriter out = response.getWriter();
+
+           // Write to the network
+           out.print("Hello");
+       }
+   }
+
+Try the servlet out. You'll need to manually change ``index.jsp`` to
+``/api/name_list_get``.
+
+Debug Logging
+^^^^^^^^^^^^^
+
+Let's add a "logger" that will output to our log file and help us debug later:
+
+.. code-block:: Java
+
+   package edu.simpson.cis320.crud.cis320_crud_app;
+
+   import javax.json.bind.Jsonb;
+   import javax.json.bind.JsonbBuilder;
+   import javax.servlet.*;
+   import javax.servlet.http.*;
+   import javax.servlet.annotation.*;
+   import java.io.IOException;
+   import java.io.PrintWriter;
+   import java.util.List;
+   import java.util.logging.Level;
+   import java.util.logging.Logger;
+
+
+   @WebServlet(name = "NameListGetServlet", value = "/api/name_list_get")
+   public class NameListGetServlet extends HttpServlet {
+       private final static Logger log = Logger.getLogger(PersonDAO.class.getName());
+
+       @Override
+       protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+           log.log(Level.FINE, "Get people servlet");
+
+           // Get setup up to output JSON text
+           response.setContentType("text/plain");
+           PrintWriter out = response.getWriter();
+
+           // Write out that string
+           out.println("Hello");
+       }
+   }
+
+
+If that works ok, try getting a list of people from the DAO:
+
+.. code-block:: Java
+
+     // Use our DAO to get a list of people
+     List <Person> peopleList = PersonDAO.getPeople();
+
+     // Write out that string
+     out.println("Hello, got " + peopleList.size() + " records.");
+
+If that works, we need to convert that list to JSON format. We change the
+content type of our output to ``application/json`` and then use a class
+called ``JsonbBuilder`` to make our JSON string.
+
+.. code-block:: Java
+
+     // Get setup up to output JSON text
+     response.setContentType("application/json");
+     PrintWriter out = response.getWriter();
+
+     // Use our DAO to get a list of people
+     List <Person> peopleList = PersonDAO.getPeople();
+
+     Jsonb jsonb = JsonbBuilder.create();
+     String jsonString = jsonb.toJson(peopleList);
+
+     // Write out that string
+     out.println(jsonString);
+
+Out final program looks like:
 
 .. _name-list-get-servlet:
 
@@ -241,239 +505,8 @@ JSON. I only print ``firstName`` and ``id``, the other fields you can fill in: (
     :language: java
     :caption: NameListGetServlet.java
 
-Setting Up The Project
-----------------------
-
-Ok! You want to create these classes. How?
-
-Creating a Package
-^^^^^^^^^^^^^^^^^^
-
-To start with, we normally put Java files into a package. Yes, Java
-doesn't *force* you to put classes in a package.
-With smaller assignments there isn't a reason to. But there's nothing small
-about web development, so we need to use packages.
-
-.. note::
-
-   As we are just adapting out original website, you likely already have a package
-   set up. This is just a FYI.
-
-All our source goes into the ``src/main/java`` folder. So right-click on the ``src``
-folder and create a new package.
-
-.. image:: new_package.png
-
-Packages normally have a broad-to-specific format. Here are a couple examples:
-
-* ``edu.simpson.computerscience.datastructures.linkedlistproject``
-* ``com.wellsfargo.mortgage.coreproject.userinterface``
-
-Get the idea? This will define a folder structure for our files. So class files
-have to go in the following directories:
-
-* ``edu/simpson/computerscience/datastructures/linkedlistproject``
-* ``com/wellsfargo/mortgage/coreproject/userinterface``
-
-Simple and effective. When you create a package, you are just creating a
-set of directories.
-
-Creating a Class
-^^^^^^^^^^^^^^^^
-
-It is easy to create a new Java class inside a package. Right-click on the package
-and select a new Java class.
-
-.. image:: new_class.png
-
-If your class is called ``DBHelper``, then it *must* go into a file called
-``DBHelper.java``. If you rename the class, you have to rename the file.
-
-Furthermore, if ``DBHelper`` is in a package called
-``edu.simpson.computerscience.webdevelopment`` it must be stored in a
-directory path of:
-``edu/simpson/computerscience/webdevelopment``.
-The IDE will take care of the file naming and directory structure for
-you.
-
-.. _create_servlet:
-
-Creating a Servlet
-^^^^^^^^^^^^^^^^^^
-
-Ok, we can create servlets the same way:
-
-.. image:: new_servlet.png
-
-You will also need to map the servlet to a URL. This maps
-``edu.simpson.webdevelopment.NameListGet`` to
-``/api/name_list_get``.
-
-.. code-block:: xml
-   :caption: Servlet Mapping in web.xml
-
-    <?xml version="1.0" encoding="UTF-8"?>
-    <web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
-             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
-             version="3.1">
-
-        <servlet>
-            <servlet-name>NameListGet</servlet-name>
-            <servlet-class>edu.simpson.webdevelopment.NameListGet</servlet-class>
-        </servlet>
-
-        <servlet-mapping>
-            <servlet-name>NameListGet</servlet-name>
-            <url-pattern>/api/name_list_get</url-pattern>
-        </servlet-mapping>
-
-    </web-app>
-
-
-The servlet itself will look like:
-
-.. code-block:: Java
-   :caption: Hello World Servlet
-   :linenos:
-
-    package edu.simpson.craven;
-
-    import java.io.IOException;
-    import java.io.PrintWriter;
-
-    public class NameListGet extends javax.servlet.http.HttpServlet {
-        protected void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
-        }
-
-        protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
-            // Type of output (HTML, JSON, image, whatever
-            response.setContentType("text/plain");
-            // Get an object that can write to the network
-            PrintWriter out = response.getWriter();
-            // Write to the network
-            out.print("Hello");
-        }
-    }
-
-Convert Java Object to JSON Object
-----------------------------------
-
-Eventually, we will evolve this servlet to send JSON formatted data.
-Here's an example of manually creating the JSON format:
-
-.. code-block:: Java
-   :caption: Sample JSON Java Servlet
-   :linenos:
-
-    package edu.simpson.craven;
-
-    import javax.servlet.ServletException;
-    import javax.servlet.annotation.WebServlet;
-    import javax.servlet.http.HttpServlet;
-    import javax.servlet.http.HttpServletRequest;
-    import javax.servlet.http.HttpServletResponse;
-    import java.io.IOException;
-    import java.io.PrintWriter;
-    import java.util.List;
-
-    @WebServlet(name = "NameListGet")
-    public class NameListGet extends HttpServlet {
-
-        protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-            response.setContentType("application/json");
-            PrintWriter out = response.getWriter();
-
-            // Replace the line below with your database code that will
-            // write out your JSON file.
-            out.print("{ \"Field\":\"Value\"}");
-
-        }
-    }
-
-Creating a JSON object manually can be a pain. Particularly with putting
-the commas in the right spot. You can use the `Google GSON library` to do it for
-you. I have a link to download the 'jar' file at the top of our Scholar website.
-Put the 'jar' file in the ``WEB-INF/lib`` folder for it to work.
-
-.. _Google GSON library: https://github.com/google/gson
-
-.. code-block:: Java
-
-   import com.google.gson.Gson;
-
-   // Blah, blah
-
-   Gson gson = new Gson();
-
-   // serializes target to Json
-   String json = gson.toJson(myObject);
-
-So, a full servlet example to get started (again):
-
-.. literalinclude:: NameListGetServlet.java
-    :linenos:
-    :language: java
-    :caption: NameListGetServlet.java
-
-.. _importing-libraries:
-
-Importing Libraries
--------------------
-
-We'll need two libraries as part of our project. One library to manage our
-connection to MySQL. This uses an open protocol called Java DataBase Connection
-(JDBC) that can hook to many types of databases. We'll also use a library that
-can make it easy to move from JSON to Java classes and back.
-
-Life is supposed to have gotten easier to install and manage libraries. The combination of a
-build tool called "Maven" and the integration IntelliJ has, allows us to go
-to File...Project Structure and find/download these libraries. The search button allows
-you to type some of the name, then get the rest of the library.
-
-We want to install the latest ``com.google.code.gson:gson`` library and
-the ``mysql:mysql-connector-java`` library:
-
-.. figure:: mysql_driver.png
-
-   Installing the MySQL JDBC library
-
-.. figure:: gson_driver.png
-
-   Installing the GSON library
-
-Now you've added the library. You next need to make that 'element' part of the
-war artifact:
-
-.. figure:: put_in_web_lib.png
-
-   Putting the library in the artifact
-
-Finally go to your ``pom.xml`` file and add them as a dependency:
-
-.. code-block:: xml
-
-        <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-            <version>2.8.6</version>
-        </dependency>
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.23</version>
-        </dependency>
-
-The idea is that Maven manages your library files, which are held in ``.jar`` files.
-
-Unfortunately, this doesn't work and there's a step missing I can't figure out.
-If you run the app, you'll probably get a 'class not found' error.
-As an alternative,
-you can download the ``.jar`` files from the class website, and place them in
-a ``WEB-INF/lib`` directory and it should work.
 
 List Records Lab
 ----------------
 
-Now that you have an idea what to do, complete :ref:`list_records`.
+Once through this, complete :ref:`list_records`.
