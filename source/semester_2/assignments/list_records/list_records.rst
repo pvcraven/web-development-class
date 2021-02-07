@@ -9,27 +9,19 @@ content of a database table in JSON format.
 Complete
 --------
 * Create a database with a Person table as outlined in :ref:`setup-amazon-db`.
-* :ref:`manage-connections`
+* Next, follow the :ref:`manage-connections` tutorial.
+* Make sure you list out for each record:
 
-Your program output should look like:
+    * id
+    * First name
+    * Last name
+    * E-mail address
+    * Phone number
+    * Birthday
 
-.. code-block:: JSON
+* Copy over your index.jsp, and javascript files from the prior project.
+* Build the .WAR file. Upload to AWS, replacing the original project.
 
-    [{"id":1,"first":"Paul","last":"Craven"},{"id":2,"first":"Sam","last":"Simpson"}]
-
-Your browser may format the output nicely, but the raw output should look
-like that text.
-
-Make sure you list out for each record:
-
-* id
-* First name
-* Last name
-* E-mail address
-* Phone number
-* Birthday
-
-Build the .WAR file. Upload to AWS, replacing the original project.
 
 Turn in
 -------
