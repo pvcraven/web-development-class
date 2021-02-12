@@ -505,6 +505,27 @@ Out final program looks like:
     :language: java
     :caption: NameListGetServlet.java
 
+Deploying the WAR File
+----------------------
+
+The ``.war`` file can be uploaded to our java bean server, but you'll likely
+run into two issues:
+
+* Where is the war file in Gradle?
+* The DB can't connect and I just get a spinney web page.
+
+The ``.war`` file is in the ``build/libs`` directory.
+
+As our DB is only allowed to connect to our own computer, we need it to also
+connect to our server. Click into the RDS section and select your database. Then
+click on the link to your security group:
+
+.. image:: select_db_security.png
+
+Next, select MySQL for the port, then custom for the computer, and then click
+the 'search' which opens a list of stuff. Select your environment. If you aren't
+sure which environment is yours, try selecting one, save, see if it works, then
+keep trying if it doesn't.
 
 List Records Lab
 ----------------
