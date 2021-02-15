@@ -63,6 +63,8 @@ done. We do that by giving it a function pointer. Remember, don't call the
 function, just use the function name:
 
 .. code-block:: javascript
+    :linenos:
+    :caption: Right and wrong way to do a callback.
 
     // Totally wrong. Don't call the function:
     $.getJSON(url, null, my_callback());
@@ -73,6 +75,8 @@ function, just use the function name:
 So our full JavaScript will look like this:
 
 .. code-block:: javascript
+    :linenos:
+    :caption: Full callback example
 
     // Define a function that will automatically be called when
     // our request is done.
@@ -109,6 +113,8 @@ the function right in the function call itself! It makes for some whacky
 looking code if you aren't used to it:
 
 .. code-block:: javascript
+    :linenos:
+    :caption: Callback using an "anonymous" function
 
     // Define a URL
     var url = "api/name_list_get";
@@ -138,8 +144,10 @@ In our example case from the prior chapter, we are returning a list of objects,
 not just one. To loop through each object, we'll need a ``for`` loop:
 
 .. code-block:: javascript
+    :linenos:
+    :caption: Iterating through a result-list
 
-    var url = "api/name_list_get";
+    let url = "api/name_list_get";
 
     $.getJSON(url, null, function(json_result) {
             // json_result is an object. You can set a breakpoint, or print
