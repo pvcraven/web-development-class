@@ -18,7 +18,11 @@ Create a Landing Page
 ---------------------
 
 Ok, this is probably past due, but let's make a decent landing page.
-Here is a simple Bootstrap index page. Remember we covered Bootstrap last semester?
+Delete the ``index.jsp`` file that comes with your default servlet.
+Create a new ``index.html``.
+
+Inside the page, use this simple Bootstrap index page.
+(We covered Bootstrap last semester.)
 
 .. image:: landing_page.png
     :width: 60%
