@@ -3,6 +3,10 @@
 Making JSON Calls Over AJAX
 ===========================
 
+.. image:: telephone.svg
+    :width: 35%
+    :class: right-image
+
 Great! We have as servlet that makes JSON-formatted text. How do we get that
 and put it in a web page?
 
@@ -17,6 +21,10 @@ the JavaScript updates the page.
 
 What is Asynchronous?
 ---------------------
+
+.. image:: time.svg
+    :width: 20%
+    :class: right-image
 
 So what is "Asynchronous" thing? How does that change the equation?
 The opposite of "asynchronous" is "synchronous." That's what we are used to
@@ -33,11 +41,36 @@ call like this:
 1. Make a request, and tell the computer what to do when it is done.
 2. Carry on without waiting.
 
+We'll do this by using function pointers again, just like we did to hook an
+action to a button on our web page.
+
 Make an Asynchronous Call
 -------------------------
 
-How do we make an asynchronous call? We can do it two ways.
-Method one looks like this:
+.. image:: loading.svg
+    :width: 25%
+    :class: right-image
+
+To make asynchronous calls easier, we are going to use jQuery again. It is
+possible to do it without jQuery, but with a bit more code.
+
+Remember with jQuery how everything is contained in its big class called
+``$``? There's a static method in there called ``getJSON`` which will go
+and get our JSON data.
+
+The asynchronous part? We'll give ``getJSON`` a function to call when it is
+done. We do that by giving it a function pointer. Remember, don't call the
+function, just use the function name:
+
+.. code-block:: javascript
+
+    // Totally wrong. Don't call the function:
+    $.getJSON(url, null, my_callback());
+
+    // Correct, pass as a function pointer:
+    $.getJSON(url, null, my_callback);
+
+So our full JavaScript will look like this:
 
 .. code-block:: javascript
 
@@ -56,13 +89,24 @@ Method one looks like this:
     // Function to call when we are done
     $.getJSON(url, null, my_callback);
 
-What happens above? We use the function ``getJSON`` that is built into
-jQuery. You can read about the command by looking at teh getJSON_ API
+    // Any code after this runs IMMEDIATELY and we
+    // do not wait for the JSON call to complete!
+
+A frequent mistake when learning to code asynchronously is to assume after
+you call ``getJSON`` that you have, in fact, got the JSON. This is not the
+case. The computer will not wait for that call to complete. You must put
+any code you want executed after the call to in the callback.
+
+You can read about this by looking at the getJSON_ API
 documentation.
 
 .. _getJSON: http://api.jquery.com/jquery.getjson/
 
-There's another way you can do it. You can use an *anonymous function* instead.
+Eventually, defining functions and coming up with new function names all the
+time can be repetitive. We can shorted an simplify our code using
+**anonymous functions**. A function *without a name*. We do this by defining
+the function right in the function call itself! It makes for some whacky
+looking code if you aren't used to it:
 
 .. code-block:: javascript
 
@@ -74,12 +118,24 @@ There's another way you can do it. You can use an *anonymous function* instead.
     // Data to pass (nothing in this case)
     // Function to call when we are done
     $.getJSON(url, null, function(json_result) {
-        console.log("Done");
+            console.log("Done");
         }
     );
 
-Great! How do we do something with the result? This example will take the
-JSON object, which is automatically parsed for us, and print out the first name:
+Processing JSON Results
+-----------------------
+
+.. image:: cloud.svg
+    :width: 25%
+    :class: right-image
+
+Great! How do we do something with the result? In the first parameter for our
+function we get the object as a result. In the prior examples I named it
+``json_result``. For a simple object, you can just pull out each field
+using the dot operator, like ``json_result.my_field``.
+
+In our example case from the prior chapter, we are returning a list of objects,
+not just one. To loop through each object, we'll need a ``for`` loop:
 
 .. code-block:: javascript
 
@@ -89,7 +145,8 @@ JSON object, which is automatically parsed for us, and print out the first name:
             // json_result is an object. You can set a breakpoint, or print
             // it to see the fields. Specifically, it is an array of objects.
             // Here we loop the array and print the first name.
-            for (var i = 0; i < json_result.length; i++) {
+            for (let i = 0; i < json_result.length; i++) {
+                // Print the first name
                 console.log(json_result[i].first);
             }
             console.log("Done");
@@ -99,7 +156,7 @@ JSON object, which is automatically parsed for us, and print out the first name:
 Running through this example with a debugger and inspecting the variables is
 very educational. Make sure your instructor shows you how to do this.
 
-You can expand this example by replacing the console.log and instead manipulating
+You can expand this example by replacing the ``console.log`` and instead manipulating
 the HTML of your document. For example, adding rows to a table.
 
 Now, it is time for you to work on the next assignment. Work on :ref:`list-records-final`.
