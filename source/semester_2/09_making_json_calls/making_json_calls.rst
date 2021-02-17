@@ -167,4 +167,72 @@ very educational. Make sure your instructor shows you how to do this.
 You can expand this example by replacing the ``console.log`` and instead manipulating
 the HTML of your document. For example, adding rows to a table.
 
+Security Alert - Encoding Results
+---------------------------------
+
+You might be tempted to add data that comes back from JSON using
+a command like this:
+
+.. code-block::
+
+              $('#mytable tbody').append('<tr><td>'
+                +json_result[i].first
+                +'</td><td>'
+                +json_result[i].last
+                +'</td></tr>');
+
+Danger! Danger! In this case you are TRUSTING the data. What if
+someone's first name was:
+
+.. code-block: html
+
+   <script>alert('hi');</script>
+
+This won't show that data, it will pop up a script! Any JavaScript can
+then be run on a user's browser. That is NO GOOD AT ALL.
+
+We need to change the special characters like < and > and & to
+HTML entities. We can create function to do that, then run our
+data through it:
+
+.. code-bloc:: JavaScript
+
+    function htmlSafe(data) {
+        return data.replace(/&/g, "&amp;").replace(/>/g, "&gt;").replace(/</g, "&lt;");
+    }
+
+.. code-block:: JSON
+
+    [
+       {
+          "email":"paul@simpson.edu",
+          "first":"Paul",
+          "id":1,
+          "last":"Craven",
+          "phone":"5159611834"
+       },
+       {
+          "email":"sam@simpson.edu",
+          "first":"Sam",
+          "id":2,
+          "last":"Simpson",
+          "phone":"5159611212"
+       },
+       {
+          "email":"<script>alert('hi');</script>",
+          "first":"Bob",
+          "id":3,
+          "last":"Smith",
+          "phone":"5155555555"
+       },
+       {
+          "email":"\" \" ' ' ' \" : < < > > ` ",
+          "first":"Jane",
+          "id":4,
+          "last":"Smith",
+          "phone":"5155555555"
+       }
+    ]
+
+
 Now, it is time for you to work on the next assignment. Work on :ref:`list-records-final`.
