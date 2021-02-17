@@ -182,7 +182,7 @@ a command like this:
                 +'</td></tr>');
 
 Danger! Danger! In this case you are TRUSTING the data. What if
-someone's first name was:
+someone's first name entry was:
 
 .. code-block: html
 
@@ -200,6 +200,10 @@ data through it:
     function htmlSafe(data) {
         return data.replace(/&/g, "&amp;").replace(/>/g, "&gt;").replace(/</g, "&lt;");
     }
+
+There's some other encoding that's happening behing the scenes for us when we
+send the JSON data. What if our data has a " in it? Thankfully our library is
+auto handling that:
 
 .. code-block:: JSON
 
@@ -234,5 +238,6 @@ data through it:
        }
     ]
 
-
+Next Steps
+----------
 Now, it is time for you to work on the next assignment. Work on :ref:`list-records-final`.
