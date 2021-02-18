@@ -184,7 +184,7 @@ a command like this:
 Danger! Danger! In this case you are TRUSTING the data. What if
 someone's first name entry was:
 
-.. code-block: html
+.. code-block:: html
 
    <script>alert('hi');</script>
 
