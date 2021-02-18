@@ -10,6 +10,7 @@ Making JSON Calls Over AJAX
 Great! We have as servlet that makes JSON-formatted text. How do we get that
 and put it in a web page?
 
+
 We are going to make an AJAX call. Kind of.
 AJAX means Asynchronous JavaScript And XML. Except we aren't using XML, because
 that's out of style. We are using JSON. But we still call it AJAX anyway.
@@ -173,7 +174,7 @@ Security Alert - Encoding Results
 You might be tempted to add data that comes back from JSON using
 a command like this:
 
-.. code-block::
+.. code-block:: javascript
 
               $('#mytable tbody').append('<tr><td>'
                 +json_result[i].first
@@ -184,7 +185,7 @@ a command like this:
 Danger! Danger! In this case you are TRUSTING the data. What if
 someone's first name entry was:
 
-.. code-block: html
+.. code-block:: html
 
    <script>alert('hi');</script>
 
@@ -195,17 +196,19 @@ We need to change the special characters like < and > and & to
 HTML entities. We can create function to do that, then run our
 data through it:
 
-.. code-bloc:: JavaScript
+.. code-block:: JavaScript
 
     function htmlSafe(data) {
         return data.replace(/&/g, "&amp;").replace(/>/g, "&gt;").replace(/</g, "&lt;");
     }
 
-There's some other encoding that's happening behing the scenes for us when we
+There's some other encoding that's happening behind the scenes for us when we
 send the JSON data. What if our data has a " in it? Thankfully our library is
 auto handling that:
 
 .. code-block:: JSON
+    :linenos:
+    :emphasize-lines: 24
 
     [
        {
