@@ -171,16 +171,27 @@ the HTML of your document. For example, adding rows to a table.
 Security Alert - Encoding Results
 ---------------------------------
 
+.. image:: badge.svg
+    :width: 15%
+    :class: right-image
+
+There are three spots we are moving data into and out of. Our database using
+SQL, over the network using JSON, and displaying it with HTML. The SQL we'll
+cover more when we insert data. The other two we'll talk about now.
+
+HTML Encoding
+^^^^^^^^^^^^^
+
 You might be tempted to add data that comes back from JSON using
 a command like this:
 
-.. code-block:: javascript
+.. code-block:: JavaScript
 
-              $('#mytable tbody').append('<tr><td>'
-                +json_result[i].first
-                +'</td><td>'
-                +json_result[i].last
-                +'</td></tr>');
+    $('#mytable tbody').append('<tr><td>'
+      +json_result[i].first
+      +'</td><td>'
+      +json_result[i].last
+      +'</td></tr>');
 
 Danger! Danger! In this case you are TRUSTING the data. What if
 someone's first name entry was:
@@ -190,21 +201,48 @@ someone's first name entry was:
    <script>alert('hi');</script>
 
 This won't show that data, it will pop up a script! Any JavaScript can
-then be run on a user's browser. That is NO GOOD AT ALL.
+then be run on a user's browser. It can be used for a fake log-in, or to
+grab info off the page and send it somewhere. That is NO GOOD AT ALL.
 
 We need to change the special characters like < and > and & to
-HTML entities. We can create function to do that, then run our
+`HTML entities <https://www.w3schools.com/html/html_entities.asp>`_.
+We can create function to do that, then run our
 data through it:
 
 .. code-block:: JavaScript
+    :caption: Function to encode data
 
     function htmlSafe(data) {
         return data.replace(/&/g, "&amp;").replace(/>/g, "&gt;").replace(/</g, "&lt;");
     }
 
+Then run your data through it:
+
+.. code-block:: JavaScript
+
+    $('#mytable tbody').append('<tr><td>'
+      +htmlSave(json_result[i].first)
+      +'</td><td>'
+      +htmlSave(json_result[i].last)
+      +'</td></tr>');
+
+Depending on how you coded your application, you may be returning
+``id`` and even ``birthday`` in the JSON as a string, or as an integer number.
+If you return the ``id`` as a number,
+then you can't do search/replace on that field like it is a string.
+But it also can't hold symbols like < or >, so we don't need to.
+It will error out if you try, just make sure to do the replace on
+the other fields.
+
+JSON Encoding
+^^^^^^^^^^^^^
+
 There's some other encoding that's happening behind the scenes for us when we
 send the JSON data. What if our data has a " in it? Thankfully our library is
-auto handling that:
+auto handling that. This is the JSON response from my program, with the addition
+of an 'evil' record. (I've also run the JSON response through a 'pretty print'
+formatter so it is easier to read.) Notice all the quotes ``"`` are escaped out
+with a backslash ``\"``:
 
 .. code-block:: JSON
     :linenos:
@@ -240,6 +278,86 @@ auto handling that:
           "phone":"5155555555"
        }
     ]
+
+So we don't have to do anything with the JSON data, as it is automatically
+handled for us.
+
+.. note::
+
+    It is a great idea when testing to add records with hard-to-handle
+    characters. You can catch errors early-on if you test this way.
+
+Format Output
+-------------
+
+The output of our phone number, and the birthdate for our people
+could use some improved formatting.
+
+Phone Number
+^^^^^^^^^^^^
+
+Phone numbers outputted like ``5155551212`` are hard
+to read, while ``(515) 555-1212`` is easier. We can use JavaScript
+to fix this up for us.
+
+Here's a script. Don't just copy/paste, but take time to read and understand.
+
+.. code-block:: JavaScript
+    :linenos:
+    :caption: Function to format a phone number
+
+    function formatPhoneNumber(phoneNumberString) {
+        // Strip all non-digits
+        // Use a regular expression. Match all non-digits \D
+        // and replace with an empty string.
+        let cleaned = phoneNumberString.replace(/\D/g, '');
+
+        // Are we left with 10 digits? This will return them in
+        // three groups. This: (\d{3}) grabs the first three digits \d
+        // The 'match' variable is an array. First is the entire match
+        // the next locations are each group, which are surrounded by
+        // () in the parenthesis.
+        let match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/);
+        if (match) {
+            return '(' + match[1] + ') ' + match[2] + '-' + match[3];
+        }
+        return phoneNumberString;
+    }
+
+Birthdate
+^^^^^^^^^
+
+Dates are a bit complex, because how we display them depends on the country.
+We are used to MM/DD/YYYY. Moset of the rest of the world uses DD/MM/YYYY.
+JavaScript can auto-select the right one depending on the user's country!
+
+This takes our date from the SQL server and returns it as a JavaScript ``Date``
+object:
+
+.. code-block:: JavaScript
+    :caption: Function to take SQL date and convert to JavaScript date
+    :linenos:
+
+    function getJSDateFromSQLDate(sqlDate) {
+        // Strip non-digits
+        let cleaned = sqlDate.replace(/\D/g, '');
+        // Match and group
+        let match = cleaned.match(/^(\d{4})(\d{2})(\d{2})$/);
+        // Create a new Date object
+        let resultDate = new Date(match[1], match[2], match[3]);
+        return resultDate;
+    }
+
+This code will take that date, and convert it using the ``toLocaleDateString()``
+to a format that fits with the user's preferences:
+
+.. code-block:: JavaScript
+    :linenos:
+    :caption: Convert JavaScript date to local date format
+
+    birthdayDate = getJSDateFromSQLDate(json_result[i].birthday);
+    birthdayString = birthdayDate.toLocaleDateString();
+
 
 Next Steps
 ----------
