@@ -272,10 +272,15 @@ with a backslash:
 Format Output
 -------------
 
+The output of our phone number, and the birthdate for our people
+could use some improved formatting.
+
 Phone Number
 ^^^^^^^^^^^^
 
-.. code-block::
+To output the phone number, let's try this script:
+
+.. code-block:: JavaScript
 
     function formatPhoneNumber(phoneNumberString) {
         // Strip all non-digits
@@ -292,6 +297,8 @@ Phone Number
 
 Birthdate
 ^^^^^^^^^
+
+Dates are
 
 .. code-block:: JavaScript
 
