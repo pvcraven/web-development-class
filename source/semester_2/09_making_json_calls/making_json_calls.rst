@@ -195,13 +195,24 @@ We need to change the special characters like < and > and & to
 HTML entities. We can create function to do that, then run our
 data through it:
 
-.. code-bloc:: JavaScript
+.. code-block:: JavaScript
+    :caption: Function to encode data
 
     function htmlSafe(data) {
         return data.replace(/&/g, "&amp;").replace(/>/g, "&gt;").replace(/</g, "&lt;");
     }
 
-There's some other encoding that's happening behing the scenes for us when we
+Then run your data through it:
+
+.. code-block:: JavaScript
+
+    $('#mytable tbody').append('<tr><td>'
+      +htmlSave(json_result[i].first)
+      +'</td><td>'
+      +htmlSave(json_result[i].last)
+      +'</td></tr>');
+
+There's some other encoding that's happening behind the scenes for us when we
 send the JSON data. What if our data has a " in it? Thankfully our library is
 auto handling that:
 
