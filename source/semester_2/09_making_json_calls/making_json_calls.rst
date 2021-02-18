@@ -170,6 +170,10 @@ the HTML of your document. For example, adding rows to a table.
 Security Alert - Encoding Results
 ---------------------------------
 
+.. image:: badge.svg
+    :width: 25%
+    :class: right-image
+
 You might be tempted to add data that comes back from JSON using
 a command like this:
 
