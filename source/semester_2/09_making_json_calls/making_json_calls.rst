@@ -224,7 +224,6 @@ But it also can't hold symbols like < or >, so we don't need to.
 It will error out if you try, just make sure to do the replace on
 the other fields.
 
-
 JSON Encoding
 -------------
 
@@ -269,6 +268,47 @@ with a backslash:
           "phone":"5155555555"
        }
     ]
+
+Format Output
+-------------
+
+Phone Number
+^^^^^^^^^^^^
+
+.. code-block::
+
+    function formatPhoneNumber(phoneNumberString) {
+        // Strip all non-digits
+        let cleaned = phoneNumberString.replace(/\D/g, '');
+
+        // Are we left with 10 digits? This will return them in
+        // three groups
+        let match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/);
+        if (match) {
+            return '(' + match[1] + ') ' + match[2] + '-' + match[3];
+        }
+        return phoneNumberString;
+    }
+
+Birthdate
+^^^^^^^^^
+
+.. code-block:: JavaScript
+
+    function getJSDateFromSQLDate(sqlDate) {
+        let cleaned = sqlDate.replace(/\D/g, '');
+        let match = cleaned.match(/^(\d{4})(\d{2})(\d{2})$/);
+        let resultDate = new Date(match[1], match[2], match[3]);
+        return resultDate;
+    }
+
+lorum
+
+.. code-block:: JavaScript
+
+    birthdayDate = getJSDateFromSQLDate(json_result[i].birthday);
+    birthdayString = birthdayDate.toLocaleDateString();
+
 
 Next Steps
 ----------
