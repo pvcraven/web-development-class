@@ -212,11 +212,28 @@ Then run your data through it:
       +htmlSave(json_result[i].last)
       +'</td></tr>');
 
+Depending on how you coded your application, you may be returning
+``id`` in the JSON as a string, or as an integer number.
+If you return the ``id`` as a number,
+then you can't do search/replace on that field like it is a string.
+But it also can't hold symbols like < or >, so we don't need to.
+It will error out if you try, just make sure to do the replace on
+the other fields.
+
+
+JSON Encoding
+-------------
+
 There's some other encoding that's happening behind the scenes for us when we
 send the JSON data. What if our data has a " in it? Thankfully our library is
-auto handling that:
+auto handling that. This is the JSON response from my program, with the addition
+of an 'evil' record. (I've also run the JSON response through a 'pretty print'
+formatter so it is easier to read.) Notice all the quotes are escaped out
+with a backslash:
 
 .. code-block:: JSON
+   :linenos:
+   :emphasize-lines: 24
 
     [
        {
