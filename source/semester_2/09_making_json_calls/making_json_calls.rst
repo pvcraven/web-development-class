@@ -173,13 +173,13 @@ Security Alert - Encoding Results
 You might be tempted to add data that comes back from JSON using
 a command like this:
 
-.. code-block::
+.. code-block:: JavaScript
 
-              $('#mytable tbody').append('<tr><td>'
-                +json_result[i].first
-                +'</td><td>'
-                +json_result[i].last
-                +'</td></tr>');
+    $('#mytable tbody').append('<tr><td>'
+      +json_result[i].first
+      +'</td><td>'
+      +json_result[i].last
+      +'</td></tr>');
 
 Danger! Danger! In this case you are TRUSTING the data. What if
 someone's first name entry was:
