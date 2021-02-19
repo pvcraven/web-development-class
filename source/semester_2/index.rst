@@ -50,3 +50,4 @@ Technical Writing
    :maxdepth: 1
 
    assignments/technical_writing_annotated_bibliography/index.rst
+   assignments/technical_writing_outline/index.rst
