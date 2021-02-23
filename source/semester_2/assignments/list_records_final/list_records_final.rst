@@ -94,7 +94,7 @@ Call JSON Servlet
 -----------------
 
 Now, go back to :ref:`make-json-calls` and adapt that code so you call your
-``get_name_list`` and output the names to the console.
+``name_list_get`` and output the names to the console.
 
 Add Records to Table
 --------------------

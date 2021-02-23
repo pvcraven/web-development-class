@@ -61,35 +61,8 @@ to do classic form submission with no JavaScript.
     :language: javascript
     :caption: js/form_demo.js
 
-web.xml Mapping
----------------
-
-Mappings for URLs to Servlets
-
-.. code-block:: xml
-
-    <servlet>
-        <servlet-name>FormTestServlet</servlet-name>
-        <servlet-class>edu.simpson.craven.FormTestServlet</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>FormTestServlet</servlet-name>
-        <url-pattern>/api/form_test_servlet</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>FormTestJSONServlet</servlet-name>
-        <servlet-class>edu.simpson.craven.FormTestJSONServlet</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>FormTestJSONServlet</servlet-name>
-        <url-pattern>/api/form_test_json_servlet</url-pattern>
-    </servlet-mapping>
-
-Java for Classic Requests
--------------------------
+Java for Non-JSON Requests
+--------------------------
 
 This servlet handles the first two non-JavaScript examples, and the next two
 JavaScript examples. It not handle the JSON example.
