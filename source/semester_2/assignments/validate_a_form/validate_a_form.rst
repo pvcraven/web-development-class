@@ -1,62 +1,63 @@
 Assignment 5 - Validate a Form
 ==============================
 
-Goal
-----
+.. image:: clipboard.svg
+    :width: 15%
+    :class: right-image
 
-Learn to do front-side validation of a form using JavaScript.
+Our goal with this assignment is to learn to do front-side validation of a form
+using JavaScript.
 
-Steps
------
+This will get us ready to actually send the data to the server.
 
-Step 1 - Clean-up Phone Numbers
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Prep
+^^^^
+
+Things have updated, so let's fix some outdated stuff in the pop-up window.
+Replace in ``name_list.html`` the modal window with this new updated code:
+
+.. code-block:: html
+
+    <!-- This is a hidden "pop up" window that we'll use to enter new data -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- Window Title -->
+                    <h4 class="modal-title">Update Name List</h4>
+                    <!-- Close button -->
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Form -->
+                    <form id="my-form" name="my-form">
+                        <div class="form-group">
+                            <input type="hidden" id="id" name="id" class="form-control"><br>
+                            <label for="firstName">First Name:</label>
+                            <input type="text" id="firstName" name="firstName" class="form-control"
+                                   placeholder="First name"><br>
+                            <input type="email" id="email" name="email" class="form-control"
+                                   placeholder="Email address"><br>
+                        </div>
+                    </form>
+                </div>
+                <!-- Footer where we put our save/close buttons -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button id="saveChanges" type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 
 
-Our last lab had the phone numbers listed like ``5159611212``. That
-doesn't look good. Write JavaScript to format the numbers like
-``515-961-1212``. You can use the JavaScript substring command::
-
-    mysting = mystring.substring(0,3) + "-" + ...
-
-Step 2 - Clean-up Database Connections
+Step 1 - Get the hidden form to pop up
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Our database connections kept timing out. Through a lot of research, I think
-I've got a better ``context.xml`` file. Try this on your local and remote server.
-
-.. code-block:: xml
-
-  <?xml version="1.0" encoding="UTF-8"?>
-  <Context>
-      <Resource name="jdbc/cis320"
-                auth="Container"
-                type="javax.sql.DataSource"
-                maxTotal="50"
-                maxWaitMillis="-1"
-                username="cis320"
-                password="PUT_PASSWORD_HERE"
-                driverClassName="com.mysql.jdbc.Driver"
-                url="jdbc:mysql://PUT_SERVER_NAME_HERE:3306/cis320"
-                maxActive="15"
-                maxIdle="3"
-                testOnBorrow="true"
-                removeAbandoned="true"
-                removeAbandonedTimeout="55"
-                validationQuery="SELECT 1"
-                validationInterval="34000"
-                timeBetweenEvictionRunsMillis="34000"
-                minEvictableIdleTimeMillis="55000"
-                factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
-      />
-      <ResourceLink name="jdbc/cis320"
-                    global="jdbc/cis320"
-                    type="javax.sql.DataSource" />
-  </Context>
-
-Step 3 - Get the hidden form to pop up
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
+Remember how our ``name_list.html`` file has a ``js/name_list.js`` JavaScript
+file it loads? We'll be adding to that.
 
 First, we need something to happen when we click the "Add Item" button on
 the form. Let's have it call a JavaScript function:
@@ -65,7 +66,7 @@ the form. Let's have it call a JavaScript function:
 
     // There's a button in the form with the ID "addItem"
     // Associate the function showDialogAdd with it.
-    var addItemButton = $('#addItem');
+    let addItemButton = $('#addItem');
     addItemButton.on("click", showDialogAdd);
 
 Ok, now let's create that function. Have it pop up the hidden Bootstrap form
@@ -92,29 +93,22 @@ we have.
 
 Test it out. You should click on the Add Item button and see the form pop up.
 
-Step 4 - Update form fields
+.. image:: form_popup.png
+    :width: 60%
+
+Step 2 - Update form fields
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Update the form to:
 
 * Have fields for all everything
-* Make your fields (except for the hidden id) look something like the example
-  below.
-* Understand what each line is doing. So if you have to write this yourself
-  someday you know what to do.
+* Use labels
 * Use a type of ``date`` for the birthday field, instead of ``text``.
 
-.. code-block:: html
+.. image:: full_form_popup.png
+    :width: 60%
 
-  <!-- See http://getbootstrap.com/css/#forms-control-validation for styling info. -->
-  <div id="firstNameDiv" class="form-group has-feedback">
-    <label class="control-label" for="firstName">First Name:</label>
-    <input type="text" id="firstName" name="firstName" class="form-control" placeholder="First name" aria-describedby="firstNameStatus"/>
-    <span id="firstNameGlyph" class="glyphicon form-control-feedback" aria-hidden="true"></span>
-    <span id="firstNameStatus" class="sr-only"></span> <!-- Text goes in firstNameStatus for screen readers that can't see our icons. -->
-  </div>
-
-Step 5 - Associate a function with the "Save Changes" button
+Step 3 - Associate a function with the "Save Changes" button
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Next, in that hidden form is a button with the id of "saveChanges". Associate
@@ -122,21 +116,30 @@ a new JavaScript function called ``saveChanges`` with that button.
 
 Have the function print something, and test it.
 
-Step 6 - Validate the fields using regular expressions
+.. image:: save_changes_test.png
+    :width: 70%
+
+Step 4 - Validate the fields using regular expressions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Use jQuery to grab the form fields, and then regular expressions to validate
 them. Print on the console if it validates or not.
-See :ref:`jquery` to remember how to validate.
+See :ref:`jquery` to remember how to validate. There's a ``validateFunction`` there.
+
+For now, just print "Ok first name" or "Bad first name" to the console.
+(Not the result field from the example, that doesn't exist here.)
 
 Come up with reasonable regular expressions. Don't take empty fields. Don't
 take fields of 35 characters if your database field is 30 characters. But you
 do want to accept names like "O'Malley" and "José".
 
+.. image:: ok_first_name.png
+    :width: 70%
+
 The date field will send data in a YYYY-MM-DD format, even if you enter DD/MM/YYYY.
 So your regular expression will need to validate accordingly.
 
-Step 7 - Display validation results to the user
+Step 5 - Display validation results to the user
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Now we need to get the user to see what fields are ok, and what fields aren't.
@@ -146,12 +149,23 @@ the first name field is valid:
 .. code-block:: javascript
 
         // Set style for outline of form field
+        // This is a VALID field
         $('#firstName').removeClass("is-invalid");
         $('#firstName').addClass("is-valid");
 
+        /* etc. */
+
+        // This is an INVALID field
+        $('#firstName').removeClass("is-valid");
+        $('#firstName').addClass("is-invalid");
+
+
 Adjust this template for the other fields, both success and failure.
 
-Step 8 - Clear Form
+.. image:: bad_first_name.png
+    :width: 70%
+
+Step 6 - Clear Form
 ^^^^^^^^^^^^^^^^^^^
 
 Make sure that if you close the window, and then re-open it, the form is
@@ -160,5 +174,5 @@ cleared and doesn't show green or red fields.
 Tip
 ---
 
-Learn how to use `AutoHotKey <https://autohotkey.com/>`_ so you don't have to type in your form over and
-over.
+Learn how to use `AutoHotKey <https://autohotkey.com/>`_ so you don't have to
+type in your form over and over.
