@@ -1,8 +1,9 @@
 .. _get_form_data:
 
-
 Getting Data From a Form
 ========================
+
+.. image:: web-forms.webp
 
 How do we get data that the user has filled out on the front-end, to the back-end?
 Turns out there are a lot of ways. I have some examples below. What these examples
