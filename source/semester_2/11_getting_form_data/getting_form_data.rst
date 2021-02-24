@@ -320,8 +320,9 @@ Files
 -----
 
 File handling requires a multi-part upload. Not only do you have to write
-servlet code to handle it, you need to specify this in your ``web.xml`` servlet
-mapping.
+servlet code to handle it, you need to specify that your code can take the
+file. We'll add a ``@MultipartConfig`` directive right before we declare the
+servlet. It takes the following parameters:
 
 * location: An absolute path to a directory on the file system. The location
   attribute does not support a path relative to the application context. This
@@ -337,21 +338,18 @@ mapping.
   in bytes. The web container will throw an exception if the overall size of
   all uploaded files exceeds this threshold. The default size is unlimited.
 
-.. code-block:: xml
+Finally, it will look like:
 
-    <servlet>
-        <servlet-name>FormTestFileServlet</servlet-name>
-        <servlet-class>edu.simpson.craven.FormTestFileServlet</servlet-class>
-        <multipart-config>
-            <max-file-size>50000</max-file-size>
-            <max-request-size>50000</max-request-size>
-            <file-size-threshold>0</file-size-threshold>
-        </multipart-config>
-    </servlet>
+.. code-block:: text
+
+    @MultipartConfig(fileSizeThreshold = 1024 * 1024,
+            maxFileSize = 1024 * 1024 * 5,
+            maxRequestSize = 1024 * 1024 * 5 * 5)
 
 If you don't add this to your servlet, you'll find that you can't pull the fields
-and you'll get no error. It is an annoying error to chase down. Here's how to
-get the file:
+and you'll get no error. It is an annoying error to chase down.
+
+Here's the full servlet:
 
 .. literalinclude:: FormTestFileServlet.java
     :linenos:
@@ -362,5 +360,6 @@ Drag and Drop
 ^^^^^^^^^^^^^
 
 If you use a library, making your website support drag/drop uploading isn't
-hard. In the example I use the same servlet, but use a "DropZone" library I
+hard. In the example I use the same servlet, but use a
+`DropZone <https://www.dropzonejs.com/>`_ library I
 found (and CSS) to help process the request.
