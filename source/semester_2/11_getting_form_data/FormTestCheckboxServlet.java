@@ -1,21 +1,22 @@
-/*
-This is test code to show how to get something posted via Java
- */
-package edu.simpson.craven;
+package edu.simpson.cis320.crud_app;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+@WebServlet(name = "FormTestCheckboxServlet", value = "/api/form_test_checkbox_servlet")
 public class FormTestCheckboxServlet extends HttpServlet {
-    /*
-     Handle Post requests
-     */
 
-    private void processPost(HttpServletRequest request, HttpServletResponse response, PrintWriter out) throws ServletException, IOException {
+    /* Handle Post or Get requests */
+    private void processPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        response.setContentType("text/plain");
+        PrintWriter out = response.getWriter();
+
         // Grab the data we got via a parameter
         String [] vehicles = request.getParameterValues("vehicle");
 
@@ -35,25 +36,14 @@ public class FormTestCheckboxServlet extends HttpServlet {
         }
     }
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // You can output in any format, text/JSON, text/HTML, etc. We'll keep it simple
-        response.setContentType("text/plain");
-        PrintWriter out = response.getWriter();
-
-        // Print that this is a post
-        out.println("Post");
-
-        this.processPost(request, response, out);
+    /* I don't care if it is a get or a post, do the same for both. */
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        this.processPost(request, response);
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // You can output in any format, text/JSON, text/HTML, etc. We'll keep it simple
-        response.setContentType("text/plain");
-        PrintWriter out = response.getWriter();
-
-        // Print that this is a get, not a post
-        out.println("Get");
-
-        this.processPost(request, response, out);
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        this.processPost(request, response);
     }
 }
