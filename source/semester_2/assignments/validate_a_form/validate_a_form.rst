@@ -1,5 +1,5 @@
-Assignment 5 - Validate a Form
-==============================
+Assignment 5 - Validate a Form via JavaScript
+=============================================
 
 .. image:: clipboard.svg
     :width: 15%
