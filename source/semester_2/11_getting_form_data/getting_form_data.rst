@@ -36,6 +36,10 @@ the navigation, like a menu selection. If in doubt, use POST.
 Form Tags
 ---------
 
+.. image:: tag.svg
+    :width: 15%
+    :class: right-image
+
 If we are sending data via a form, we need to understand how to use the
 ``<form>`` tag. The older way:
 
