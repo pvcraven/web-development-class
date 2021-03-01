@@ -264,6 +264,8 @@ Here's how we get the JSON data.
     :language: java
     :caption: FormTestJSONServlet.java
 
+.. _json-form-request:
+
 JavaScript for JSON Requests
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

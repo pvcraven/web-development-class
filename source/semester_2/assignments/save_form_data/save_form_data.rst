@@ -1,27 +1,30 @@
 Assignment 6 - Insert a Record
 ==============================
 
-Goal
-----
+**Goal:** Learn to insert a new record into the database.
 
-Learn to insert a new record into the database.
+With :ref:`validate_form_assignment` we created a nice user interface to validate
+our data on the front-end. Now we need to:
 
-.. danger::
+* Have the front-end package up our form data into a JSON object.
+* Send the JSON object to the server using a new URL.
+* Create a servlet at the new URL.
+* Unpack the JSON object in the servlet.
+* Do an SQL insert.
+* Have the front-end refresh the table.
 
-    I have not yet mentioned security. This is like
-    handing you gasoline and matches, then saying we'll talk about fire safety
-    *next* week.
+.. note::
 
-Steps
------
+    As we can't trust the data the front-end sends us, we need to validate on the
+    back-end. We'll be doing that as part of the next assignment.
 
 Step 1 - Prepare Data for Submission
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Refer back to :ref:`get_form_data`. We talked about several form submission
 methods. We will be using the
-"JavaScript/AJAX/jQuery/GSON form submission by posting parameterless JSON"
-method.
+:ref:`json-form-request`
+form submission by posting parameterless JSON method.
 
 If all your form fields are valid, create a JSON object form the data and output
 it to the console. Make sure it looks right. Find an on-line page to validate
@@ -30,7 +33,7 @@ the JSON data.
 Step 2 - Submit the Data
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-* Find the proper "JavaScript/AJAX/jQuery/GSON" example from "getting data from a form."
+* Find the proper :ref:`json-form-request` example from "getting data from a form."
 * Figure out how to take the important code from ``jqueryPostJSONButtonAction`` and
   put it in the code you already have for validating, so it tries to send the JSON
   data we made in step 1.
@@ -44,7 +47,7 @@ Step 2 - Submit the Data
 Step 3 - Connect a Servlet
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Create a new servlet called ``NameListEdit``.
-* Update web.xml to map a new servlet ``NameListEdit`` to ``/api/name_list_edit``
+* Update servlet to map the URL ``/api/name_list_edit``
 * Have your servlet log "hello world" or something. Test to make sure it runs.
 
 Step 4 - Receive the Data
@@ -89,7 +92,8 @@ Step 6 - Refresh the Table Automatically
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * Forcing the user to hit refresh is a bad idea. Write JavaScript to clear
-  the table and load our new data automatically after the insert.
+  to load our new data automatically after the insert. (Make sure the old
+  data is cleared out.)
 * Test.
 
 Turn it in

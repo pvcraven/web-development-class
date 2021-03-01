@@ -1,3 +1,5 @@
+.. _validate_form_assignment:
+
 Assignment 5 - Validate a Form via JavaScript
 =============================================
 
