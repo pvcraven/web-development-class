@@ -30,6 +30,9 @@ create a JSON object using the ``dataToServer`` variable as an example in
 output the JSON object to the console using ``console.log``.
 Make sure you get this far ok.
 
+Strip all extra characters from the phone number. If the user enters
+``515-555-1212`` then change it to ``5155551212``.
+
 Try validating your JSON data and seeing it in a nice formatted manner,
 by using an on-line tool like this one: https://jsonlint.com/
 
