@@ -7,4 +7,3 @@ Simpson College's Web Development Classes
    semester_1/index
    semester_2/index
    about
-

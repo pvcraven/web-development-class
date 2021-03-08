@@ -21,20 +21,22 @@ our data on the front-end. Now we need to:
 Step 1 - Prepare Data for Submission
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Refer back to :ref:`get_form_data`. We talked about several form submission
-methods. We will be using the
-:ref:`json-form-request`
-form submission by posting parameterless JSON method.
+Refer back to :ref:`get_form_data`. Make sure you have each data field in
+a variable. (You might already have this from the validation step.)
 
-If all your form fields are valid, create a JSON object form the data and output
-it to the console. Make sure it looks right. Find an on-line page to validate
-the JSON data.
+If all your form fields are valid,
+create a JSON object using the ``dataToServer`` variable as an example in
+:ref:`json-form-request`. Don't do the ``.ajax`` call yet, just
+output the JSON object to the console using ``console.log``.
+Make sure you get this far ok.
+
+Try validating your JSON data and seeing it in a nice formatted manner,
+by using an on-line tool like this one: https://jsonlint.com/
 
 Step 2 - Submit the Data
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-* Find the proper :ref:`json-form-request` example from "getting data from a form."
-* Figure out how to take the important code from ``jqueryPostJSONButtonAction`` and
+* Figure out how to take the ``.ajax`` code from ``jqueryPostJSONButtonAction`` and
   put it in the code you already have for validating, so it tries to send the JSON
   data we made in step 1.
 * Adjust the URL to say ``api/name_list_edit`` instead of ``api/form_test_json_servlet``
@@ -52,20 +54,30 @@ Step 3 - Connect a Servlet
 
 Step 4 - Receive the Data
 ^^^^^^^^^^^^^^^^^^^^^^^^^
-* Update your new servlet to fetch the data, and then log it via ``System.out.println``
-  or similar. The code should be similar to that in :ref:`json-requests`. Keep
-  in mind you don't need to create a new business object, as you already have
-  ``Person`` created. Make sure the JSON object field names map exactly to
-  the Person object. That is, if your JSON object has ``first`` as a field name,
-  and the ``Person`` class has ``firstName``, those aren't the same so it won't
-  work.
+
+* Update your new servlet to fetch the data
+
+  * The code should be similar to that in :ref:`json-requests`.
+  * Keep in mind you don't need to create a new business object, as you already
+    have ``Person`` created.
+  * Make sure the JSON object field names map exactly to
+    the Person object. That is, if your JSON object has ``first`` as a field name,
+    and the ``Person`` class has ``firstName``, those aren't the same so it won't
+    work.
+
+* Log it via ``System.out.println`` or use the logging library (better choice).
+* Validate you got this far successfully.
 
 Step 5 - Insert the Data
 ^^^^^^^^^^^^^^^^^^^^^^^^
 * Find and update your ``PersonDAO`` class.
-* Look at the code you have to get the records from the database. Adapt it to
-  insert a new record. You'll return ``void`` and take in a ``Person`` class
-  as a parameter.
+* Look at the code you have to get the records from the database.
+  That code should be in the ``getPeople()`` function of ``PersonDAO``.
+* Create a new method in that class called ``addPerson()``.
+* You'll return ``void`` and take in a ``Person`` class as a parameter.
+* Copy the database code from ``getPeople()`` to get started with the body of the
+  ``addPerson()`` method.
+* Adjust the code to insert a record.
 * You will need to know how to set fields in a SQL statement. It looks
   something like:
 
@@ -94,6 +106,9 @@ Step 6 - Refresh the Table Automatically
 * Forcing the user to hit refresh is a bad idea. Write JavaScript to clear
   to load our new data automatically after the insert. (Make sure the old
   data is cleared out.)
+* Remember, you need to put that code inside the anonymous function, not after
+  it. The code after the ``ajax`` call is run immediately, and does not wait for
+  the ``ajax`` call to finish.
 * Test.
 
 Turn it in
