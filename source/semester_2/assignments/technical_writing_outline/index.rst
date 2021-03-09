@@ -105,7 +105,8 @@ Creating the thesis statement
 Create an outline
 -----------------
 
-* Create a broad outline:
+* Create a broad outline. Below is an example. (Note, don't put 'Step 1' in yours
+  unless you actually have steps.)
 
     .. code-block:: rst
 
@@ -163,6 +164,20 @@ Revise the outline
 Do some reading and research! Get your main ideas, then
 start to break it down.
 
+Do not leave items like:
+
+.. code-block:: rst
+
+   * Introduction
+
+     * Brief history of basket weaving
+     * Who invented it and when
+     * What is basket weaving?
+
+Fill in with the info. Put in some history facts. Put in who invented it. Put
+in what it is. Also, think of the order. Shouldn't 'What is basket weaving?'
+come first?
+
 Content
 ^^^^^^^
 
@@ -202,6 +217,7 @@ Technical
 * Ctrl-Shift-J will join your current line with the next one.
 * Build with the command-prompt and proof the output in your web browser. Ignore
   the 'preview pane' in PyCharm.
+* You need a blank line between each 'level' change of bullet lists.
 
 Grading
 -------

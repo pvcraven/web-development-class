@@ -18,17 +18,53 @@ our data on the front-end. Now we need to:
     As we can't trust the data the front-end sends us, we need to validate on the
     back-end. We'll be doing that as part of the next assignment.
 
-Step 1 - Prepare Data for Submission
+Step 1 - Find If Form Is Valid
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+We need to submit our form -- but only if it is valid.
+
+Right now you have
+a ``saveChanges`` function from the prior lab that does does the validation.
+Let's add to that. If all the fields are valid, we want to run our form
+submission process.
+
+To do this:
+
+* Create a variable at the start of ``saveChanges`` called ``isValid`` and set
+  to ``true``.
+* Add to your already-existing ``if`` statements that detect an invalid field.
+  If a field is invalid, set ``isValid`` to ``false``.
+* Add an ``if`` statement at the end:
+
+    .. code-block:: javascript
+
+      if (isValid) {
+        console.log("Valid form");
+        // Code to submit your form will go here.
+      }
+
+* Test and make sure it works.
+
+.. warning::
+
+   You'll likely need to hold the shift key as you reload this page, or you'll
+   get the old version of your JavaScript and none of this new code will run.
+
+Step 2 - Prepare Data for Submission
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Refer back to :ref:`get_form_data`. Make sure you have each data field in
 a variable. (You might already have this from the validation step.)
 
-If all your form fields are valid,
-create a JSON object using the ``dataToServer`` variable as an example in
+Inside the ``if`` statement that checks for a valid form,
+create a JSON object using the ``dataToServer`` variable as the example in
 :ref:`json-form-request`. Don't do the ``.ajax`` call yet, just
 output the JSON object to the console using ``console.log``.
-Make sure you get this far ok.
+Make sure you get this far ok. Should look kind of like:
+
+    .. code-block:: javascript
+
+      let my_data = {firstName: firstName, lastName: lastName}
 
 Strip all extra characters from the phone number. If the user enters
 ``515-555-1212`` then change it to ``5155551212``.
@@ -36,7 +72,7 @@ Strip all extra characters from the phone number. If the user enters
 Try validating your JSON data and seeing it in a nice formatted manner,
 by using an on-line tool like this one: https://jsonlint.com/
 
-Step 2 - Submit the Data
+Step 3 - Submit the Data
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 * Figure out how to take the ``.ajax`` code from ``jqueryPostJSONButtonAction`` and
@@ -49,13 +85,13 @@ Step 2 - Submit the Data
   of your browser
   and you should be able to see the submission. You'll get a 404, but that's ok.
 
-Step 3 - Connect a Servlet
+Step 4 - Connect a Servlet
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Create a new servlet called ``NameListEdit``.
 * Update servlet to map the URL ``/api/name_list_edit``
 * Have your servlet log "hello world" or something. Test to make sure it runs.
 
-Step 4 - Receive the Data
+Step 5 - Receive the Data
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * Update your new servlet to fetch the data
@@ -71,7 +107,7 @@ Step 4 - Receive the Data
 * Log it via ``System.out.println`` or use the logging library (better choice).
 * Validate you got this far successfully.
 
-Step 5 - Insert the Data
+Step 6 - Insert the Data
 ^^^^^^^^^^^^^^^^^^^^^^^^
 * Find and update your ``PersonDAO`` class.
 * Look at the code you have to get the records from the database.
@@ -103,7 +139,7 @@ Step 5 - Insert the Data
 * Make sure your code inserts the record doesn't log any errors. You should be
   able to refresh the page and see the new record after it is inserted.
 
-Step 6 - Refresh the Table Automatically
+Step 7 - Refresh the Table Automatically
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * Forcing the user to hit refresh is a bad idea. Write JavaScript to clear
