@@ -20,6 +20,7 @@ Topics and Tutorials
    09_making_json_calls/making_json_calls.rst
    10_build_process/build_process.rst
    11_getting_form_data/getting_form_data.rst
+   11b_meme_generator/index.rst
    12_validate_backend/validate_backend.rst
    13_cookies/cookies
    14_sessions/sessions
