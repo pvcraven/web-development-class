@@ -20,7 +20,7 @@ expressions. See the highlighted code below:
 
 .. code-block:: java
    :linenos:
-   :emphasize-lines: 17, 24, 45-46
+   :emphasize-lines: 7-8, 17, 24, 45-46
 
     package edu.simpson.craven;
 
@@ -68,15 +68,110 @@ expressions. See the highlighted code below:
             // Now create matcher object.
             Matcher m = fieldnameValidationPattern.matcher(fieldname);
             if (m.find( )) {
-                out.println("Passed validation");
+                out.println("success");
             } else {
-                out.println("Did not pass validation");
+                out.println("error");
             }
         }
     }
 
+To begin with, we variable to hold our regular expression as a field/instance
+variable in our class:
+
+.. code-block:: text
+
+    private Pattern fieldnameValidationPattern;
+
+You'll need one of these for each different regular expression you have. So you
+might have ones for ``namePattern`` and ``ssnPattern`` and ``phonePattern``
+for example.
+
+In your constructor, you need to create each regular expression and "compile"
+it:
+
+.. code-block:: text
+
+    fieldnameValidationPattern = Pattern.compile("^[A-Za-z]{1,10}$");
+
+Then in your ``doPost`` and/or ``doGet`` you can test the data, in this case
+stored in ``fieldname``. (You might have this in a JSON object, and need
+to do something like ``my_json_object.getPhone()`` or whatever.)
+
+.. code-block:: text
+
+    Matcher m = fieldnameValidationPattern.matcher(fieldname);
+
+Finally, you can test to see if the pattern matches:
+
+.. code-block:: text
+
+    if (m.find()) {
+
 If you pass validation, go ahead and perform the intended action. If you don't?
 You can pass a response back to your front-end and display something to the
-user. The front-end should have already caught the error, however. Sometimes I
-just silently fail, or display a very generic error message.
+user.
 
+If you are only interested in performing an action if you *didn't* pass
+validation, you can use the **not operator**.
+For Java (and JavaScript) this operator is the ``!``. So you can do:
+
+.. code-block:: text
+
+    if (!m.find()) {
+        out.println("error message goes here.");
+        return;
+    }
+
+You can also output the message in JSON because it's the cool thing:
+
+.. code-block:: text
+
+    protected void doPost( ....
+
+    response.setContentType("application/json");
+
+    // ...
+
+    if (!m.find()) {
+        out.println("{\"error\" : \"Error validating first name.\"}");
+        return;
+    }
+
+    // ... after the other validation ...
+
+    out.println("{\"success\": \"Successful insert.\"}");
+
+Handling Back-End Errors
+------------------------
+
+The front-end should have already caught the before the back-end.
+You can choose to fail silently, display a very generic error message,
+or go ahead and spend the time/effort in printing a detailed error message.
+
+For example, this will just pop up a JavaScript alert message:
+
+.. code-block:: JavaScript
+
+     $.ajax({
+         type: 'POST',
+         url: url,
+         data: JSON.stringify(dataToServer),
+         success: function(dataFromServer) {
+             // Parse text to JSON
+             let result = JSON.parse(dataFromServer);
+             // See if result has a kee called 'error'
+             if ('error' in result) {
+                 // JavaScript alert the error.
+                 alert(result.error);
+             } else {
+                 // Do whatever you'd do if successful
+             }
+         },
+         contentType: "application/json",
+         dataType: 'text'
+     });
+
+Conclusion
+----------
+
+And that's it! Now take a look at :ref:`assignment_7`.
