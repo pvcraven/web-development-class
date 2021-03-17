@@ -171,3 +171,15 @@ Turn in
 
 * A GitHub URL to the source code for where your back-end validation happens.
 * An Amazon URL to your code where I can confirm that records are deleted.
+
+Extra Info
+----------
+
+For safety sake, we could implement a pop-up confirmation before deleting a record.
+That wouldn't be a bad idea at all, but it is more than what we have time for.
+
+Another option besides a full table refresh, upon confirmation from the server that
+the record was deleted, we could just remove that record from the table. Right
+now we aren't confirming the server deleted the record, and we already have
+the function to update the table, so this is easiest on the developer. But with
+a high-volume website, we could save a call to the server by doing it the other way.
