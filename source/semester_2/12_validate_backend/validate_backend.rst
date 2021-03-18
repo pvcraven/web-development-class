@@ -20,7 +20,7 @@ expressions. See the highlighted code below:
 
 .. code-block:: java
    :linenos:
-   :emphasize-lines: 7-8, 17, 24, 45-46
+   :emphasize-lines: 9-10, 17, 24, 45-46
 
     package edu.simpson.craven;
 
