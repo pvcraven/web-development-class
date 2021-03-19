@@ -61,25 +61,25 @@ console.log(personA);
 // Class creation using 'class' keyword. New in ES6
 class PersonB {
     constructor() {
-        this.firstName = "";
-        this.lastName = "";
+        this.first = "";
+        this.last = "";
     }
 }
 
 personB = new PersonB();
-personB.firstName = "Paul";
-personB.lastName = "Craven";
+personB.first = "Paul";
+personB.last = "Craven";
 
-console.log("personB.firstName: " + personB.firstName);
+console.log("personB.first: " + personB.first);
 
 // Another example, with a method and using parameters
 class PersonC {
     constructor(first, last) {
-        this.firstName = first;
-        this.lastName = last;
+        this.first = first;
+        this.last = last;
     }
     fullName() {
-        return this.firstName + " " + this.lastName;
+        return this.first + " " + this.last;
     }
 }
 
@@ -89,10 +89,10 @@ console.log("personC.fullName: " + personC.fullName());
 // Old-school pre-ES6 objects with methods:
 var personD =
     {
-        firstName: "Paul",
-        lastName: "Craven",
+        first: "Paul",
+        last: "Craven",
         fullName: function() {
-            return this.firstName + " " + this.lastName;
+            return this.first + " " + this.last;
         },
         email: "paul.craven@simpson.edu"
     };

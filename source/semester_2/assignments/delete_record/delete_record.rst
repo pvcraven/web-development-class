@@ -45,8 +45,8 @@ Also, our validation is repetitive. We can move our validation into a function.
 
     function saveChanges() {
         // etc
-        let firstNameField = $('#firstName');
-        valid = fieldValidate(firstNameField, /^[^0-9]{1,10}$/);
+        let firstField = $('#first');
+        valid = fieldValidate(firstField, /^[^0-9]{1,10}$/);
         if (!valid) success = false;
 
 

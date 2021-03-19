@@ -37,8 +37,8 @@ Replace in ``name_list.html`` the modal window with this new updated code:
                     <form id="my-form" name="my-form">
                         <div class="form-group">
                             <input type="hidden" id="id" name="id" class="form-control"><br>
-                            <label for="firstName">First Name:</label>
-                            <input type="text" id="firstName" name="firstName" class="form-control"
+                            <label for="first">First Name:</label>
+                            <input type="text" id="first" name="first" class="form-control"
                                    placeholder="First name"><br>
                             <input type="email" id="email" name="email" class="form-control"
                                    placeholder="Email address"><br>
@@ -87,7 +87,7 @@ we have.
         // opened or hit edit.
         // I'm getting it started, you can finish.
         $('#id').val("");
-        $('#firstName').val("");
+        $('#first').val("");
 
         // Show the hidden dialog
         $('#myModal').modal('show');
@@ -152,14 +152,14 @@ the first name field is valid:
 
         // Set style for outline of form field
         // This is a VALID field
-        $('#firstName').removeClass("is-invalid");
-        $('#firstName').addClass("is-valid");
+        $('#first').removeClass("is-invalid");
+        $('#first').addClass("is-valid");
 
         /* etc. */
 
         // This is an INVALID field
-        $('#firstName').removeClass("is-valid");
-        $('#firstName').addClass("is-invalid");
+        $('#first').removeClass("is-valid");
+        $('#first').addClass("is-invalid");
 
 
 Adjust this template for the other fields, both success and failure.

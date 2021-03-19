@@ -81,10 +81,10 @@ Next, pop up the "edit" dialog, and fill it in with all the data values.
     // "e.target.parentNode.parentNode.querySelectorAll("td")[0]" is the first cell. (You can grab cells 0, 1, 2, etc.)
     // "e.target.parentNode.parentNode.querySelectorAll("td")[0].innerHTML" is content of that cell. Like "Sam" for example.
     // How did I find this long chain? Just by setting a breakpoint and using the interactive shell in my browser.
-    var firstName = e.target.parentNode.parentNode.querySelectorAll("td")[0].innerHTML;
+    var first = e.target.parentNode.parentNode.querySelectorAll("td")[0].innerHTML;
 
     $('#id').val(id); // Yes, now we set and use the hidden ID field
-    $('#firstName').val(firstName);
+    $('#first').val(first);
     // Etc
     $('#myModal').modal('show');
 

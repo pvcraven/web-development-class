@@ -64,7 +64,7 @@ Make sure you get this far ok. Should look kind of like:
 
     .. code-block:: javascript
 
-      let my_data = {firstName: firstName, lastName: lastName}
+      let my_data = {first: first, last: last}
 
 Strip all extra characters from the phone number. If the user enters
 ``515-555-1212`` then change it to ``5155551212``.
