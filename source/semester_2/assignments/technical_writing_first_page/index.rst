@@ -1,11 +1,16 @@
 Technical Writing 3: First Page
 ===============================
 
+.. image:: page.svg
+    :width: 25%
+    :class: right-image
+
 * Take your outline and copy it to a new page. This will be the page your
   expanded report goes.
 * Select one of the major sections to expand out. Shoot for more than 300 words in
   the expanded section.
-* Make sure to include at least one of: figure, citation, sample code.
+* Make sure to include at least one of: figure, citation, sample code. More
+  if you can. Figure out the tech stuff before getting too far into the paper.
 * Use at least one sub-heading for your section.
   For your headings, use something more that "Chapter 1".
   What is the purpose of this section? People skim web pages and papers.
