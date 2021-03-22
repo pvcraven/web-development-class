@@ -140,7 +140,7 @@ Next, update the "VM Options."
 Java specifies environment variables with the ``-D`` option. So it our
 specification might look like:
 
-.. code-block:: plain
+.. code-block:: text
 
     -Duser=my_login_name -Dpassword=passwordhere -Djdbc=jdbc:mysql://cis-320-database.cp6n5ccfdx2q.us-west-2.rds.amazonaws.com:3306/cis320
 

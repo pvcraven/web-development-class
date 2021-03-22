@@ -22,6 +22,7 @@ Topics and Tutorials
    11_getting_form_data/getting_form_data.rst
    11b_meme_generator/index.rst
    12_validate_backend/validate_backend.rst
+   12b_speed_things/index.rst
    13_cookies/cookies
    14_sessions/sessions
    15_local_storage/local_storage
