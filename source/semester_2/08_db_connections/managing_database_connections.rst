@@ -371,6 +371,13 @@ is a the ``PersonDAO`` class that gets a list of people:
     :caption: PersonDAO.java
     :emphasize-lines: 41, 66
 
+Prepared Statements
+-------------------
+
+What are prepared statements?
+
+https://www.youtube.com/watch?v=_jKylhJtPmI
+
 .. _write-the-servlet:
 
 Write the Servlet
