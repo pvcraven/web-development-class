@@ -16,14 +16,6 @@ def main():
     # Create API object
     api = tweepy.API(auth)
 
-    # Make sure we are logged in
-    try:
-        api.verify_credentials()
-        print("Authentication OK")
-    except:
-        print("Error ")
-        return
-
     api.update_status("WooHoo! Iowa is the best.")
     print("Done tweeting.")
 

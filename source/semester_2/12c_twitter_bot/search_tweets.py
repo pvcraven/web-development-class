@@ -16,14 +16,6 @@ def main():
     # Create API object
     api = tweepy.API(auth)
 
-    # Make sure we are logged in
-    try:
-        api.verify_credentials()
-        print("Authentication OK")
-    except:
-        print("Error ")
-        return
-
     # Get tweets from timeline
     timeline = api.search("\"Simpson College\"")
 

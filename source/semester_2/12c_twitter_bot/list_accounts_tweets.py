@@ -17,6 +17,7 @@ def main():
     api = tweepy.API(auth)
 
     # Make sure we are logged in
+    # Not really needed
     try:
         api.verify_credentials()
         print("Authentication OK")
