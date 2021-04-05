@@ -9,7 +9,8 @@ import java.util.Enumeration;
 
 @WebServlet(name = "GetCookiesServlet")
 public class GetCookiesServlet extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
         response.setContentType("text/plain");
         PrintWriter out = response.getWriter();
 

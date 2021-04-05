@@ -1,31 +1,33 @@
-package edu.simpson.craven;
+package edu.simpson.cis320.crud_app;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.*;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Enumeration;
 
-@WebServlet(name = "SetCookieServlet")
-public class SetCookieServlet extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+@WebServlet(name = "GetCookieServlet", value = "/api/get_cookies_servlet")
+public class GetCookiesServlet extends HttpServlet {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
         response.setContentType("text/plain");
         PrintWriter out = response.getWriter();
 
-        String cookieName = request.getParameter("cookieName");
-        String cookieValue = request.getParameter("cookieValue");
+        // --- Cookies ---
+        // Get all the cookies
+        Cookie [] cookies = request.getCookies();
 
-        Cookie userCookie = new Cookie(cookieName, cookieValue);
+        // Print how many cookies we have
+        out.println(String.format("%d cookies:", cookies.length));
 
-        // Positive number - Cookie stored for that many seconds
-        // Zero - Delete cookie
-        // Negative number - Cookie is only stored while the browser is open
-        userCookie.setMaxAge(60*60*24*365); //Store cookie for 1 year
-
-        response.addCookie(userCookie);
-        out.println("Done setting the cookie");
+        // Print all the cookies
+        for(Cookie cookie: cookies) {
+            out.println(String.format("  %s = %s",cookie.getName(), cookie.getValue()));
+            out.println(String.format("    Domain  = %s",cookie.getDomain()));
+            out.println(String.format("    Path    = %s",cookie.getPath()));
+            out.println(String.format("    MaxAge  = %s",cookie.getMaxAge()));
+            out.println(String.format("    Secure? = %s",cookie.getSecure()));
+        }
     }
 }

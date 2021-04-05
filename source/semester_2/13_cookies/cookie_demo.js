@@ -1,4 +1,3 @@
-
 // This function uses JavaScript to print all our cookies.
 // It does not use the back-end at all.
 function getCookiesJavaScript() {
@@ -55,7 +54,7 @@ function setCookieJavascriptButton() {
     // I know all the cookies are stored in "document.cookie" as one
     // long string. So storing 1 cookie in this string clears all the
     // old cookies? No! It doesn't. So this isn't really a string.
-    document.cookie = cookieName + "=" + cookieValue;
+    document.cookie = cookieName + "=" + cookieValue + "; SameSite=Lax";
 
     // Clear the form fields.
     $("#cookieName").val("");
@@ -95,4 +94,3 @@ button.on("click", setCookieJavascriptButton);
 
 button = $('#setCookieJava');
 button.on("click", setCookieJava);
-

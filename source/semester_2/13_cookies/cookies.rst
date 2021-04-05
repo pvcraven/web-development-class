@@ -1,5 +1,5 @@
-Cookies
-=======
+Cookies and Local Storage
+=========================
 
 You make have heard about cookies and web pages. What is a cookie, and what
 is it used for?
@@ -32,12 +32,82 @@ It is important that if we use a session id, we also use https for our
 communications. That will help prevent a person from "sniffing" the session
 id and pretending to be a different person.
 
+HTML5 Local Storage
+-------------------
 
-How do you look at cookies from the browser
--------------------------------------------
+Starting with HTML5, web browsers added three new kinds of storage
+in addition to cookies:
 
++------------+-----------+-----------------+-----------------+
+| Storage    | Format    | Scope           | Persistence     |
++============+===========+=================+=================+
+| Session    | Key/value | Session only	   | Session only    |
++------------+-----------+-----------------+-----------------+
+| Local      | Key/value | Across sessions | Across sessions |
++------------+-----------+-----------------+-----------------+
+| Database   | Structured| Across sessions | Across sessions |
++------------+-----------+-----------------+-----------------+
+
+
+What websites are storing cookies?
+----------------------------------
+
+Web browsers store the data on your computer. Typically the data will be buried
+in a spot like:
+
+``C:\Users\myusername\AppData\Local\Google\Chrome\User Data\Default``
+
+However, there are a couple spots in the web browser where you can look at the
+sites that are storing data.
+
+Firefox
+^^^^^^^
+
+Click the drop down menu and hit "Options"
+
+.. image:: all_cookies_1.png
+    :width: 40%
+
+Then select Privacy and Security, find the "Cookies and Site Data" section, and
+finally "Manage Data."
+
+.. image:: all_cookies_2.png
+
+Then you can see what sites have stored data. Unfortunately with Firefox
+you can't quickly browse that data without a browser plug-in.
+
+.. image:: all_cookies_3.png
+    :width: 80%
+
+Chrome
+^^^^^^
+
+For Chrome, select the drop-down menu in the upper right and click "Settings."
+
+.. image:: chrome_all_cookies_1.png
+    :width: 35%
+
+Then find "Privacy and security", followed by "Cookies and other site data."
+
+.. image:: chrome_all_cookies_2.png
+
+Finally "See all cookies and site data."
+
+.. image:: chrome_all_cookies_3.png
+
+Finally, find some cookies, expand them out and see the content.
+
+.. image:: chrome_all_cookies_4.png
+
+
+How do you look at cookies from the developer console?
+------------------------------------------------------
+
+* Firefox: F12, find "Storage" tab. Look on left side for cookies.
 * Chrome: F12, find "Application" tab. Look on left side for cookies.
 * Edge: F12, find "Debugger" tab. Look on left side for cookies.
+
+.. image:: dev_cookies.png
 
 How are cookies really set and transmitted?
 -------------------------------------------
@@ -46,12 +116,25 @@ Remember how HTML has a "head" section? Confusingly, so does HTTP.
 So if we use HTTP to transfer HTML, the HTTP has a head, and the HTML has
 a head. They are totally different things.
 
-Cookies are set and passed back in the HEAD section of HTTP. See below
-for a trace of setting a cookie:
+In the image below, we use the packet tracing tool called Wireshark to see the
+data. The "red" data is what comes from the web browser. The "blue" data is what
+comes from the web server. It doesn't look like HTML because it is
+compressed/zipped.
+
+There are two major parts to a request from the client, and a response from
+the server. There's a request head, and a request body. THen there's a response
+head and a response body. The body is optional in some cases, such as this
+request for a page. There might be a request body if I was sending form data
+to the server.
 
 .. image:: cookie_trace_1.png
 
-See below for a trace of getting a cookie back:
+Cookies are set and passed back in the HEAD section of the HTTP response.
+
+It is up to the client browser to get that cookie, then send it for every subsequent
+HTTP request head.
+
+See below for a trace of setting a cookie:
 
 .. image:: cookie_trace_2.png
 
@@ -103,7 +186,7 @@ If there is only one that you want, you need to search the list for it.
     :linenos:
     :language: Java
     :caption: GetCookieServlet.java
-    :emphasize-lines: 18
+    :emphasize-lines: 19
 
 Setting a cookie is a two-step process. You create a ``Cookie`` object, then
 add it to the response with ``response.addCookie()``. You can also set a
@@ -114,7 +197,7 @@ browser closes.
     :linenos:
     :language: Java
     :caption: SetCookieServlet.java
-    :emphasize-lines: 21, 26, 28
+    :emphasize-lines: 22, 27, 29
 
 Cookie Limits
 -------------
