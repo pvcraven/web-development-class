@@ -55,3 +55,4 @@ Technical Writing
    assignments/technical_writing_annotated_bibliography/index.rst
    assignments/technical_writing_outline/index.rst
    assignments/technical_writing_first_page/index.rst
+   assignments/technical_writing_first_draft/index.rst

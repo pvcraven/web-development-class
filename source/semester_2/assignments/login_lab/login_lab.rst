@@ -1,20 +1,33 @@
 Assignment 9 - Login Lab
 ========================
 
+.. image:: login.svg
+    :width: 15%
+    :class: right-image
+
+The goal of this lab is to use cookies and sessions to run the basics of
+managing login and logout. If we had just a *bit* more time we'd create
+a full system. But even with this short assignment, you can learn a lot
+of what you need.
+
+Login Lab Steps
+---------------
+
 1.  Start with the Session demo page. See :ref:`session_demo_html`.
-2.  Instead of naming the file ``session_demo.html``, use ``login.html`` as
-    the name.
+2.  This is going to be our login page, so let's name it that way.
+    Rename the file from ``session_demo.html``, to ``login.html``.
 3.  Create a JavaScript page. See :ref:`session_demo_js` as it can be a good
     starting template for our page.
     But instead of ``session_demo.js`` call it ``login.js``. Make sure you update
     the HTML document from step 1 to import this file.
 4.  Create a ``GetLoginServlet`` class in Java. Pattern it off the
     :ref:`GetSessionServlet`.
-5.  Map a ``get_login_servlet`` in ``web.xml`` to the class you just created.
+5.  Update the servlet name and the URL link. A URL such as ``get_login_servlet``
+    would be good.
 6.  Create a ``LoginServlet`` class in Java. Use the code out of
     :ref:`SetSessionServlet` to start.
-7.  Create ``login_servlet`` in ``web.xml`` and map it to the
-    ``LoginServlet`` class you just created.
+7.  Map the ``LoginServlet`` to a URL of ``login_servlet`` and make sure the
+    servlet has a unique name.
 8.  Update the JavaScript file to use these new names. Use ``login`` instead
     of ``setSessionJava`` and ``getLogin`` instead of ``getSessionJava``. Update
     button names to something that matches as well.
@@ -54,3 +67,6 @@ Assignment 9 - Login Lab
     not the value ``null``. Also, the string may have extra carriage returns
     and/or spaces so you really get back ``null[space][cr]``. You might need
     to trim the string.
+
+.. image:: graduation.svg
+    :width: 100%
