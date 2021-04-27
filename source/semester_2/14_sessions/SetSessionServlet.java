@@ -1,4 +1,4 @@
-package edu.simpson.craven;
+package edu.simpson.cis320.crud_app;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -6,7 +6,7 @@ import javax.servlet.http.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "SetSessionServlet")
+@WebServlet(name = "SetSessionServlet", value = "/api/set_session_servlet")
 public class SetSessionServlet extends HttpServlet {
 
     /** Method for posts */

@@ -1,4 +1,4 @@
-package edu.simpson.craven;
+package edu.simpson.cis320.crud_app;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Enumeration;
 
-@WebServlet(name = "GetSessionServlet")
+@WebServlet(name = "GetSessionServlet", value = "/api/get_session_servlet")
 public class GetSessionServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/plain");
