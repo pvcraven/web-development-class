@@ -1,3 +1,5 @@
+.. _assignment_bootstrap:
+
 Assignment 4 - Bootstrap
 ========================
 

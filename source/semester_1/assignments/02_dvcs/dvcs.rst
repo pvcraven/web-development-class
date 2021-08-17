@@ -1,3 +1,5 @@
+.. _assignment_dvcs:
+
 Assignment 2 - DVCS
 ===================
 

@@ -1,4 +1,4 @@
-Assignment 12 - Static Content Generators
+Assignment 11 - Static Content Generators
 =========================================
 
 This will be a group project. However, grades will be individual.
@@ -205,7 +205,7 @@ Rubric
 
 
 Important End of Term Reminder
-==============================
+------------------------------
 
 After grades are posted for this class, remember to:
 

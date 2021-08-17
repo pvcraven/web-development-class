@@ -1,4 +1,4 @@
-Assignment 6 - AWS Deployment
+Assignment 7 - AWS Deployment
 =============================
 
 Deploy your project onto your own server.

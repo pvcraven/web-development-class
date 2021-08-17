@@ -147,7 +147,7 @@ We want to show how to read and set cookies two different ways.
 * With Java on the back-end.
 
 Cookies In Javascript
-~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^
 
 Here's a screen shot of our end application.
 
@@ -174,7 +174,7 @@ Here is our example JavaScript
 Try it! Click `here <../../_static/cookie_demo.html>`_.
 
 Cookies in Java
-~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^
 
 How do we get/set cookies on the server-side?
 The ``HttpServletRequest`` object pointed to by the ``request`` variable has

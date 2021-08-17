@@ -1,3 +1,5 @@
+.. _css_assignment:
+
 Assignment 3 - CSS
 ==================
 

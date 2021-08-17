@@ -1,3 +1,5 @@
+.. _assignment_finalize_site:
+
 Assignment 5 - Finalize Site
 ============================
 

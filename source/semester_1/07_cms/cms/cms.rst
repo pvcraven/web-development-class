@@ -1,3 +1,5 @@
+.. _cms:
+
 Content Management Systems
 ==========================
 

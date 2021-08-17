@@ -1,4 +1,4 @@
-Assignment 7 - PHP Include
+Assignment 8 - PHP Include
 ==========================
 
 Take the project you have on your own web server, and modify it to use the PHP

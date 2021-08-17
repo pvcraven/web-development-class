@@ -1,5 +1,7 @@
-Assignment 11 - SVG
-===================
+.. _assignment_svg:
+
+Assignment 6 - SVG
+==================
 
 Create an a web page with an embedded SVG drawing.
 
