@@ -1,7 +1,7 @@
 .. _aws_setup:
 
-Amazon Web Services
-===================
+Amazon Web Services EC2 Tutorial
+================================
 
 This chapter covers how to get a public web server up and running using
 Amazon Web Services (AWS).

@@ -1,3 +1,5 @@
+.. _sphinx_tutorial:
+
 Sphinx Tutorial
 ===============
 

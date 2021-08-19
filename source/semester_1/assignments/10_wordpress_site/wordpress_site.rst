@@ -1,3 +1,5 @@
+.. _assignment_wordpress:
+
 Assignment 10 - WordPress Site
 ==============================
 

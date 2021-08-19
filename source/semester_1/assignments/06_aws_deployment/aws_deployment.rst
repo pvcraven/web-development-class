@@ -1,3 +1,5 @@
+.. _assignment_aws_deploy:
+
 Assignment 7 - AWS Deployment
 =============================
 

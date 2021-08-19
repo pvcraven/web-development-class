@@ -1,3 +1,5 @@
+.. _assignment_static:
+
 Assignment 11 - Static Content Generators
 =========================================
 

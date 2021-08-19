@@ -1,3 +1,5 @@
+.. _static_content_generators:
+
 Static Content Generators
 =========================
 

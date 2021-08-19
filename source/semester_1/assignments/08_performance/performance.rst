@@ -1,3 +1,5 @@
+.. _assignment_dns_performance:
+
 Assignment 8 - DNS and Performance
 ==================================
 

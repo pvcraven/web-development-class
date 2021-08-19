@@ -1,3 +1,5 @@
+.. _assignment_install_wordpress:
+
 Assignment 9 - Install WordPress
 ================================
 
