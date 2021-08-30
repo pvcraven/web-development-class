@@ -1,11 +1,12 @@
-﻿Date,Topic,Work due
+Date,Topic,Work due
 Tue - 8/31,Syllabus,
 ,:ref:`text_editors`,
 ,:ref:`html`,
 Thu - 9/2,:ref:`html_tutorial`,Have Sublime on your own computer by class
 ,:ref:`view_file_extensions`,
 ,Introduce :ref:`assignment_01_basic_html`,
-Tue - 9/7,:ref:`assignment_01_basic_html`,Quiz 1 - HTML
+Tue - 9/7,Work on :ref:`assignment_01_basic_html` in class,Quiz 1 - HTML @ 9:40 am
+,,Before class read through `W3School HTML tutorial <https://www.w3schools.com/html/>`_
 Thu - 9/9,:ref:`directories`,
 ,:ref:`dvcs_concepts`,
 Tue - 9/14,:ref:`dvcs_tutorial`,Quiz 2 - DVCS
