@@ -1,8 +1,8 @@
-Date,Topic,Work due
+﻿Date,Topic,Work due
 Tue - 8/31,Syllabus,
 ,:ref:`text_editors`,
 ,:ref:`html`,
-Thu - 9/2,:ref:`html_tutorial`,Have Sublime on your own computer by class
+Thu - 9/2,:ref:`html_tutorial`,"If you are using your own computer, install `Sublime <https://www.sublimetext.com/>`_ before class."
 ,:ref:`view_file_extensions`,
 ,Introduce :ref:`assignment_01_basic_html`,
 Tue - 9/7,Work on :ref:`assignment_01_basic_html` in class,Quiz 1 - HTML @ 9:40 am
