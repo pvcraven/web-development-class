@@ -3,17 +3,32 @@
 HTML Tutorial
 =============
 
-First HTML Document
--------------------
+Let's get started with our own HTML document.
 
-*Note:* It is possible to do all the HTML and CSS experimentation on-line
-with live editors like liveweave_. For this book I will show development using
-a workflow that also works for more advanced development, which isn't easy to do live.
-However, don't hesitate to experiment with HTML and CSS using websites like
-LiveWeave because you can save a lot of time that way.
+.. sidebar:: Live Coding Options
+
+    It is possible to do all the HTML and CSS experimentation on-line
+    with live editors like liveweave_. For this book I will show development using
+    a workflow that also works for more advanced development, which isn't easy to do live.
+    However, don't hesitate to experiment with HTML and CSS using websites like
+    LiveWeave because you can save a lot of time that way.
 
 Create a directory on your computer called ``chapter01``.
+You can create this directory on your desktop so it is easy to find.
+
+.. image:: new_folder.png
+   :width: 50%
+
 Inside of that, create a file named ``index.html``.
+All web files should end in ``.html`` so the computer knows it is a web page.
+If you are on Windows, make sure you have gone through the :ref:`view_file_extensions`
+section. Otherwise you will end up with a file named ``index.html.txt`` where the ``.txt``
+is hidden.
+
+.. image:: new_text_document.png
+   :width: 50%
+
+When creating web sites, use all lower case, and no spaces for your file names.
 
 Inside that document type a simple phrase like:
 
@@ -21,7 +36,7 @@ Inside that document type a simple phrase like:
 
     Hello there
 
-Use a file browser to find the file. Then drag it to your web browser to open
+Open a web browser and drag the file to the web browser window to open
 it up. You should see something like:
 
 .. image:: hello_there_1.png
@@ -30,7 +45,9 @@ it up. You should see something like:
     :alt: First Web Page
 
 
-Now try the following code:
+Now try the following code with all the weird spaces and blank lines.
+(In the upper right, there's an icon that will appear allowing you to quickly copy
+the code.)
 
 .. code:: html
 
@@ -71,11 +88,14 @@ In this case, ``<p>`` is the paragraph tag. The p stands
 for paragraph.
 
 The content for the tag goes in between the open and close tags. All close
-tags have a ``/`` before the tag name. In this case, we used ``</p>`` to
+tags have a ``/`` before the tag name. This is a *forward slash* because
+it leans forward. It is the slash under the question mark on your keyboard.
+In this case, we used ``</p>`` to
 close the paragraph.
 
 Tags can be nested. But you have to close inside tags before closing
-outside tags. For example:
+outside tags. For example, here we use the ``<em>`` tag. This is the
+*emphasis* tag. It will cause the text to be italicized by default.
 
 .. code-block:: html
 
@@ -97,7 +117,9 @@ Running this, you won't see errors:
     :align: center
     :alt: First Web Page
 
-But if you validate the document using CSE Validator, it
+But if you validate the document using CSE Validator,
+or the `W3C Markup Validation Service <https://validator.w3.org/#validate_by_input>`_
+it
 will tell you what is wrong:
 
 .. image:: html_validator.png
@@ -105,8 +127,11 @@ will tell you what is wrong:
     :align: center
     :alt: HTML Validator
 
+You'll also get some errors saying we are missing other important elements in our
+document. We'll show you how to fix those errors soon.
+
 Some tags don't have content. They begin and end at the same time.
-For example, the break-line tag does not have content.
+For example, the break-line tag ``<br />`` does not have content.
 
 .. code-block:: html
 
@@ -118,7 +143,10 @@ For example, the break-line tag does not have content.
 HTML Comments
 ^^^^^^^^^^^^^
 
-Like many languages, HTML has comments. Comments are created
+Like many languages, HTML has **comments**.
+Comments are just for the developer and not displayed to the user. They are
+a nice way of documenting your code, or disabling sections of code.
+Comments are created
 like the following:
 
 ``<!-- This is my comment -->``
@@ -131,7 +159,7 @@ able to read.
 Headings
 ^^^^^^^^
 
-You can add headings. There are six "levels" to the headings, using tags h1...h6. For example:
+You can add **headings**. There are six "levels" to the headings, using tags h1...h6. For example:
 
 .. code-block:: html
 
@@ -199,18 +227,19 @@ in a box. Even other boxes. Because ``<div>`` is so generic, HTML5 added
 common elements like ``<article>`` ``<footer>`` ``<section>`` and ``<summary>``. They act like
 ``<div>`` tags, but give a better description of their content.
 
-Tag Attributes
---------------
+Links and Tag Attributes
+^^^^^^^^^^^^^^^^^^^^^^^^
 
-Links
-^^^^^
-
-HTML tags can have attributes. For example, the <a> tag
-allows us to create links to other pages and websites:
+HTML tags can have **attributes** which give the web browser additional
+information ab out the tag.
+For example, the ``<a>`` tag allows us to create links to other pages and websites:
 
 ``<a>My link</a>``
 
-We can specify not only the link text, but where the link goes:
+But, what does that link to? As we haven't told the browser, that ``<a>`` tag
+won't do much yet.
+We specify where the the link goes by using an attribute name ``href``. That's
+short for hyperlink reference.
 
 ``<a href="http://webdev.training">My link</a>``
 
@@ -275,7 +304,7 @@ web page load time.
 .. _html-entities:
 
 HTML Entities and Escape Characters
------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 What happens if we want to display a < and not have it
 be part of a tag? For this and many other characters, we use
@@ -293,7 +322,7 @@ need to be encoded. Check the end of the w3schools HTML Escape Character
 table to find the URL escape character table.
 
 Example Document Structure
---------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 What does a bare-bones HTML5 document look like? Here is an example that will validate without
 error using HTML Validator:
@@ -307,7 +336,7 @@ There are some new things in this structure, let's go through them.
 .. _html-doctype:
 
 HTML Document Type
-^^^^^^^^^^^^^^^^^^
+------------------
 
 There have been several versions of HTML. Browsers need to know what version is
 being given to them. For HTML version 5, all documents start with the following:
@@ -321,8 +350,8 @@ start with that. You might have some comments above, but that's it.
 
 .. _html-tag:
 
-HTML Tag
-^^^^^^^^
+The HTML Tag
+------------
 
 Around all your HTML code, should go an ``<html>`` tag. It will start right
 after the doctype, and the last tag in your document should be a close
@@ -342,7 +371,7 @@ https://www.loc.gov/standards/iso639-2/php/code_list.php
 .. _head-tag:
 
 HTML Head Section
-^^^^^^^^^^^^^^^^^
+-----------------
 
 The ``<head>`` has meta-info about the document that doesn't show up on the
 document, but instead is *about* the document.
@@ -374,14 +403,14 @@ document.
 .. _body-tag:
 
 HTML Body Section
-^^^^^^^^^^^^^^^^^
+-----------------
 
 HTML has a ``<body>`` tag that should contain all the document that you can
 see. It should go right below the ``<head>`` tag, and still inside the ``<html>``
 tag. Only one body is allowed. Do not put anything after the close of the body tag.
 
 Lists
------
+^^^^^
 
 Lists can be used for representing any hierarchical data. With CSS formatting, they can
 look very different than what you might think of as a classic list. For example, drop down
@@ -439,7 +468,7 @@ Here is a slightly more complex HTML5 example that has some lists:
     :language: html
 
 Tables
-------
+^^^^^^
 
 ============ =============
 Tag          Description
@@ -480,12 +509,13 @@ Tag          Description
       </tfoot>
     </table>
 
-
 More Information
-----------------
+^^^^^^^^^^^^^^^^
+
+How do you learn more?
 
 Books, Books, and More Books
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+----------------------------
 
 What we will learn in this class only scratches the surface of what there is to
 learn. Take time to look at the resources that are available at `Dunn Library`_.
@@ -493,7 +523,7 @@ Search for HTML, HTML5, CSS, CSS3, and PHP. Spend some time in the library and
 bookstores to see what is available.
 
 Websites
-^^^^^^^^
+--------
 
 I really like `W3Schools`_ for tutorials and as a reference on HTML and many
 other web technologies. Do note that

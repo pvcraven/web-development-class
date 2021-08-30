@@ -1,7 +1,7 @@
 .. _html:
 
-What Is HTML?
--------------
+HTML History
+------------
 
 .. image:: mosaic.jpg
     :width: 500px
@@ -22,7 +22,6 @@ After that, Internet Explorer became the most popular web browser. It helped
 that Microsoft included IE with Microsoft Windows. A fact that was the subject
 of many long-running `anti-trust lawsuits`_. During that time, Microsoft let IE
 languish for many years while Netscape became bankrupt.
-
 
 Out of the ashes of the Netscape code, Dave Hyatt and Blake Ross created Firefox.
 Once IE had some competition, the browser race was back on. Soon both Google's Chrome
