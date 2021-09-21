@@ -45,7 +45,7 @@ Here's the result:
 .. image:: rendered_webpage.png
     :width: 500px
     :align: center
-    :alt: Mosaic Web Browser
+    :alt: Rendered Web Page
 
 We will go through this example in class.
 Outside of class, go through this tutorial:
