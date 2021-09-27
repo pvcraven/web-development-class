@@ -24,17 +24,17 @@ Assignment 4 - Bootstrap
 **Cover the following things from the rubric:**
 
 * Remove the CSS from the prior assignment.
-* "Properly use template" Use the :ref:`bootstrap-template` tutorial to adapt
-  all pages on the project to use Bootstrap. You will need to copy/paste out
-  of the template into the pages to make sure that Bootstrap has been applied.
-  **Also** make sure that the menu bar "hide" text on your page.
+* "Properly use template" Use the :ref:`bootstrap-tutorial` to adapt
+  all pages on the project to use Bootstrap.
+  Link in Bootstrap CSS, optional theme, add in a "container" div, and
+  link in the JavaScript near the bottom of your document.
+* "`Use Bootstrap menu bar <https://getbootstrap.com/docs/4.0/components/navbar/>`_"
+  Put a Bootstrap menu bar on all your pages.
 * "`Style buttons with Bootstrap <https://getbootstrap.com/docs/4.0/components/buttons/>`_"
   Style all the buttons (there has to be at
   least one) with Bootstrap. Leave no button unstyled. You can apply the
   button style type to more than just buttons, you can apply it to a link. So you
   can make a link into a button that leads you to a web page.
-* "`Use Bootstrap menu bar <https://getbootstrap.com/docs/4.0/components/navbar/>`_"
-  Put a Bootstrap menu bar on all your pages.
 * "Use Bootstrap Table Styling" -
   The most basic thing you can do here is to make ``<table>`` into ``<table class="table">``
   to use basic Bootstrap styling.

@@ -15,6 +15,8 @@ Let's get started with a simple web document.
     :linenos:
     :language: html
 
+.. _bootstrap_setup:
+
 Bootstrap Setup
 ^^^^^^^^^^^^^^^
 
