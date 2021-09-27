@@ -174,7 +174,7 @@ Buttons
 Buttons are great!
 
 .. image:: button.png
-   :width: 100%
+   :width: 129px
 
 You can create buttons with Bootstrap:
 
