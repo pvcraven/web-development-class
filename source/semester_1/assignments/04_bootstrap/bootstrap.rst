@@ -42,9 +42,8 @@ Assignment 4 - Bootstrap
   for examples on all the types of things you can do.
 * "`Use a Bootstrap alert <https://getbootstrap.com/docs/4.0/components/alerts/>`_"
   Put at least one Bootstrap alert somewhere on your page.
-* "`Use a Bootstrap Jumbotron <https://getbootstrap.com/docs/4.0/components/jumbotron/>`_"
-  Properly use a Jumbotron at least once. Don't make
-  the mistake of putting the whole page into the Jumbotron, just part of it.
+* "`Use a Bootstrap Card <https://getbootstrap.com/docs/5.1/components/card/>`_"
+  Properly use a card at least once.
 * "Use 12 column layout"
   Pick at least page, and make it into a responsive multi-column
   layout using Bootstrap. Don't simply make a container with just one column, it

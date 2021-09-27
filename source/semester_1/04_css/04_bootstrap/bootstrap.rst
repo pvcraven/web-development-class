@@ -44,20 +44,22 @@ For the first three, we need to modify our HTML head to include these tags:
           integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
           crossorigin="anonymous">
 
-    <!-- If you don't like the default theme, go here and see other themes
-         you can add on:
-         https://bootswatch.com/
-
-         You can replace the 'optional theme' below with the links you can find at:
-         https://www.bootstrapcdn.com/bootswatch/
-    -->
-
     <!-- Optional theme add-on -->
     <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/darkly/bootstrap.min.css"
-          integrity="sha384-nNK9n28pDUDDgIiIqZ/MiyO3F4/9vsMtReZK39klb/MtkZI3/LtjSjlmyVPS3KdN"
+          href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/darkly/bootstrap.min.css" integrity="sha384-nNK9n28pDUDDgIiIqZ/MiyO3F4/9vsMtReZK39klb/MtkZI3/LtjSjlmyVPS3KdN"
           crossorigin="anonymous">
 
+    <!-- If you don't like how sandstone looks, go here and see other themes
+         that are available:
+         https://bootswatch.com/
+
+         You can replace the 'optional theme' with links from the page below
+         to get that theme:
+         https://www.bootstrapcdn.com/bootswatch/
+    -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/flatly/bootstrap.min.css" integrity="sha384-qF/QmIAj5ZaYFAeQcrQ6bfVMAh4zZlrGwTPY7T/M+iTTLJqJBJjwwnsE5Y0mV7QK"
+          crossorigin="anonymous">
   </head>
 
 For the last one, we need to add the following line just before the close of the body tag:
@@ -73,6 +75,9 @@ Where did I get this info? Bootstrap has great docs, and this is from the
 `getting started guide <https://getbootstrap.com/docs/5.1/getting-started/introduction/>`_.
 
 At this point, you might notice some slight changes to your document. Mainly font changes.
+
+You should also get introduced to the idea of using a CDN, what the "integrity" and "crossorigin" mean.
+Your instructor will explain.
 
 Bootstrap Menu
 ^^^^^^^^^^^^^^
