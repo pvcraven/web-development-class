@@ -227,29 +227,14 @@ https://getbootstrap.com/docs/5.1/components/card/
     </div>
   </div>
 
-Bootstrap Template
-^^^^^^^^^^^^^^^^^^
+Full Bootstrap Example
+^^^^^^^^^^^^^^^^^^^^^^
+
+This is a full example with working code from above.
 
 .. literalinclude:: example_01.html
     :linenos:
     :language: html
 
-
-To lean more about how to use Bootstrap:
-
-* Look at the
-  `Bootstrap Examples <https://getbootstrap.com/docs/4.0/examples/>`_
-  to see what is possible.
-* Get started by using their
-  `Bootstrap Quick Start <https://getbootstrap.com/docs/4.1/getting-started/introduction/>`_,
-  or the example above.
-* Then look at their section on
-  `Components <https://getbootstrap.com/docs/4.1/components/alerts/>`_
-  to know how to use it for components. Try those out.
-* Do you want an image with a caption? Checkout `Content...Figures <http://getbootstrap.com/docs/4.1/content/figures/>`_
-* Need to style a table? Check out `Content...Tables <http://getbootstrap.com/docs/4.1/content/tables/>`_
-* Finally, look at their
-  `grid system <http://getbootstrap.com/docs/4.1/layout/grid/>`_. It is a very important
-  tool for layout.
 
 .. _Bootstrap: http://getbootstrap.com/
