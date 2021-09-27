@@ -169,6 +169,11 @@ Now it will look better:
 Buttons
 ^^^^^^^
 
+Buttons are great!
+
+.. image:: button.png
+   :width: 100%
+
 You can create buttons with Bootstrap:
 
 .. code-block:: html
@@ -184,15 +189,14 @@ can be links:
 
 There are many styles of buttons. See: https://getbootstrap.com/docs/4.0/components/buttons/
 
-.. image:: content2.png
-   :width: 50%
-
-.. _bootstrap-template:
 
 Tables
 ^^^^^^
 
-Say you have a boring table you want to make look better.
+Say you have a boring table you want to make look better:
+
+.. image:: table
+
 Simply adding the ``table`` class to the table tab will make it look better:
 
 .. code-block:: html
@@ -207,6 +211,9 @@ Bootstrap Alert
 
 Want to grab someone's attention? Use a
 `Bootstrap Alert <https://getbootstrap.com/docs/5.0/components/alerts/>`_.
+
+.. image:: alert.png
+
 Check the linked docs for different styles.
 
 .. code-block:: html
@@ -220,7 +227,7 @@ Cards
 
 You can create cool looking cards with images and text below.
 
-https://getbootstrap.com/docs/5.1/components/card/
+.. image:: card.png
 
 .. code-block:: html
 
@@ -231,6 +238,13 @@ https://getbootstrap.com/docs/5.1/components/card/
       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     </div>
   </div>
+
+For more info, see:
+
+https://getbootstrap.com/docs/5.1/components/card/
+
+
+.. _bootstrap-template:
 
 Full Bootstrap Example
 ^^^^^^^^^^^^^^^^^^^^^^
