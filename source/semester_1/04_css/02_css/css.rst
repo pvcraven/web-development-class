@@ -52,6 +52,29 @@ A red background looks terrible, so let's just update it to an off-white color:
        background-color: #ece3d7;
    }
 
+We can change fonts as well. This changes the font of every paragraph.
+See `W3Schools section on specifying fonts <https://www.w3schools.com/css/css_font.asp>`_.
+
+.. code-block:: css
+
+    p {
+        font-family: arial, sans-serif;
+    }
+
+A bit more work and we can specify font size, color, and alignment of our ``<h1>`` headings:
+
+.. code-block:: css
+
+    h1 {
+      font-size: 24px;
+      font-family: arial,sans-serif;
+      color: rgb(147, 26, 42);
+      text-align: center;
+    }
+
+
+Here's a longer example your instructor will step through. Don't forget you can use
+`W3Schools CSS Reference <https://www.w3schools.com/css/>`_ to look up additional info on any of these attributes.
 
 .. literalinclude:: css_test.css
     :linenos:
