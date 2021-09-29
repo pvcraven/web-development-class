@@ -6,16 +6,16 @@
 By now you should have:
 
 * Look at the
-  `Bootstrap Examples <https://getbootstrap.com/docs/4.0/examples/>`_
+  `Bootstrap Examples <https://getbootstrap.com/docs/5.1/examples/>`_
   to see what is possible.
 * Get started by using their
-  `Bootstrap Quick Start <https://getbootstrap.com/docs/4.1/getting-started/introduction/>`_,
+  `Bootstrap Quick Start <https://getbootstrap.com/docs/5.1/getting-started/introduction/#quick-start>`_,
   or the example above.
 * Then look at their section on
-  `Components <https://getbootstrap.com/docs/4.1/components/alerts/>`_
+  `Components <https://getbootstrap.com/docs/5.1/components/alerts/>`_
   to know how to use it for components. Try those out.
 * Finally, look at their
-  `grid system <http://getbootstrap.com/docs/4.1/layout/grid/>`_. It is a very important
+  `grid system <https://getbootstrap.com/docs/5.1/layout/grid/>`_. It is a very important
   tool for layout.
 
 However those grid examples are complex.
