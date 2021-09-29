@@ -3,9 +3,6 @@
 Cascading Style Sheets
 ----------------------
 
-Introduction to CSS
-^^^^^^^^^^^^^^^^^^^
-
 CSS stands for *Cascading Style Sheets*. The "look and feel" of a website
 is specified by the CSS language. CSS takes the HTML and transforms it to
 look the way the designer would like.
@@ -269,6 +266,13 @@ http://www.w3schools.com/cssref/default.asp
 
 Color Theory
 ------------
+
+Follow this W3Schools tutorial on how to specify colors:
+
+http://www.w3schools.com/colors/default.asp
+
+**Additionally:** You can also do three digit colors.
+``#FFF`` is the same as ``#FFFFFF``.
 
 * `Color Theory: Overview <http://www.worqx.com/color/index.htm>`_
 * `Hue <http://en.wikipedia.org/wiki/Hue>`_

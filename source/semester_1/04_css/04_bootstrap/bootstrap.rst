@@ -197,7 +197,7 @@ Tables
 
 Say you have a boring table you want to make look better:
 
-.. image:: table
+.. image:: table.png
 
 Simply adding the ``table`` class to the table tab will make it look better:
 

@@ -1,16 +1,22 @@
 body {
-  background: #ece3d7;
+  background-color: #ece3d7;
 }
 
-header {
-  background-color: #931a2a;
-  background-image: url("header.png");
-  background-repeat: no-repeat;
-  color: #f9e5af;
-  font-family: Georgia, Palatino, serif;
-  font-size: 60px;
-  height: 75px;
-  padding: 10px;
+p {
+    font-family: arial,sans-serif;
+}
+
+h1 {
+  font-size: 24px;
+  font-family: arial,sans-serif;
+  color: rgb(147, 26, 42);
+  text-align: center;
+}
+
+h2 {
+  font-size: 20px;
+  font-family: arial,sans-serif;
+  color: rgb(147, 26, 42);
 }
 
 section {
@@ -25,24 +31,6 @@ article {
   border-radius: 5px;
   margin: 5px;
   padding: 5px;
-}
-
-p {
-    font-family: arial,sans-serif;
-}
-
-
-h1 {
-  font-size: 24px;
-  font-family: arial,sans-serif;
-  color: rgb(147, 26, 42);
-  text-align: center;
-}
-
-h2 {
-  font-size: 20px;
-  font-family: arial,sans-serif;
-  color: rgb(147, 26, 42);
 }
 
 .prerequisite {
@@ -64,6 +52,18 @@ h2 {
   display: inline;
   color: #000080;
 }
+
+header {
+  background-color: #931a2a;
+  background-image: url("header.png");
+  background-repeat: no-repeat;
+  color: #f9e5af;
+  font-family: Georgia, Palatino, serif;
+  font-size: 60px;
+  height: 75px;
+  padding: 10px;
+}
+
 
 /* --- Nav Bar --- */
 nav ul {
