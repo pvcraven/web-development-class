@@ -61,7 +61,7 @@ See `W3Schools section on specifying fonts <https://www.w3schools.com/css/css_fo
         font-family: arial, sans-serif;
     }
 
-A bit more work and we can specify font size, color, and alignment of our ``<h1>`` headings:
+A bit more work and we can specify font size, color, and alignment of our ``<h1>`` and ``<h2>`` headings:
 
 .. code-block:: css
 
@@ -71,6 +71,30 @@ A bit more work and we can specify font size, color, and alignment of our ``<h1>
       color: rgb(147, 26, 42);
       text-align: center;
     }
+
+    h2 {
+      font-size: 20px;
+      font-family: arial,sans-serif;
+      color: rgb(147, 26, 42);
+    }
+
+You can specify the ``width``, or the ``max-width`` of an element to keep the text from getting too long.
+
+You can enforce spacing by specifying **padding** and **margin**. See
+`W3Schools article on the box model <https://www.w3schools.com/css/css_boxmodel.asp>`_.
+In addition to specifying ``padding`` you can also specify ``top-padding`` or ``left-padding`` for example.
+
+.. image:: box_model.png
+
+.. code-block:: css
+
+    section {
+      background: #FFFFFF;
+      max-width: 800px;
+      padding: 5px;
+    }
+
+You can put borders around things:
 
 
 Here's a longer example your instructor will step through. Don't forget you can use
