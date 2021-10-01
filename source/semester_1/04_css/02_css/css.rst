@@ -96,8 +96,17 @@ In addition to specifying ``padding`` you can also specify ``top-padding`` or ``
 
 You can put borders around things:
 
+.. code-block:: css
 
-Here's a longer example your instructor will step through. Don't forget you can use
+    article {
+      border-style: solid;
+      border-width: 5px;
+      border-radius: 5px;
+      margin: 5px;
+      padding: 5px;
+    }
+
+Here's the full example. Don't forget you can use
 `W3Schools CSS Reference <https://www.w3schools.com/css/>`_ to look up additional info on any of these attributes.
 
 .. literalinclude:: css_test.css
