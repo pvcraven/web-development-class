@@ -125,8 +125,12 @@ Assigning Out Improvements
 Do the Work
 -----------
 
+* Make sure to do a a``git pull`` before starting the work. It will make your life easier.
 * Do the work
-* Check into GitHub with quality comments in like: ``git commit -m "Issue #4. This should be a detailed explanation of what I did.".``
+* Check into GitHub with quality comments in like:
+  ``git commit -m "Issue #4. This should be a detailed explanation of what I did.".``
+  If you include the issue number it will automatically link your change into the comments on that issue.
+* Watch for conflicts if you need to ``pull`` before ``push``.
 
 Follow-Up
 ---------
