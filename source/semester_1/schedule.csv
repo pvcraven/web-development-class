@@ -20,16 +20,16 @@ Tue - 10/5,Work-day,
 Thu - 10/7,"Show how to use github issues, brainstorm introduce and start :ref:`assignment_finalize_site`",:ref:`assignment_bootstrap`
 Tue - 10/12,Work on :ref:`assignment_finalize_site` -- get AWS account,
 Thu - 10/14,Fall Break,
-Tue - 10/19,:ref:`svg-intro` (in person),:ref:`assignment_finalize_site`
-Thu - 10/21,"(in-person) :ref:`web-servers` - get account, work on :ref:`assignment_finalize_site`",:ref:`assignment_svg`
+Tue - 10/19,:ref:`svg-intro`,:ref:`assignment_finalize_site`
+Thu - 10/21,Talk about :ref:`web-servers` - get account. Work on :ref:`assignment_svg`,:ref:`assignment_svg`
 Tue - 10/26,:ref:`web_server_setup`,
 Thu - 10/28,:ref:`web-servers` - :ref:`aws_setup`,
 Tue - 11/2,"Present :ref:`assignment_finalize_site`, :ref:`aws_setup`",:ref:`assignment_aws_deploy`
-Thu - 11/4,"Work on assignment 5, do :ref:`command_line_tutorial`",
-Tue - 11/9,,Quiz 4 - Amazon Web Services
-Thu - 11/11,Talk about :ref:`application_servers`,
-Tue - 11/16,Explain DNS,:ref:`assignment_dns_performance`
-Thu - 11/18,:ref:`cms` - :ref:`InstallWordpress`,Quiz 5 - DNS and Cloud Hosting Quiz
+Thu - 11/4,Do :ref:`command_line_tutorial`,
+Tue - 11/9,Talk about :ref:`application_servers`,Quiz 4 - Amazon Web Services
+Thu - 11/11,Explain DNS,
+Tue - 11/16,:ref:`cms` - :ref:`InstallWordpress`,:ref:`assignment_dns_performance`
+Thu - 11/18,No class,Quiz 5 - DNS and Cloud Hosting Quiz
 Tue - 11/23,Work on :ref:`assignment_wordpress`,:ref:`assignment_install_wordpress`
 Thu - 11/25,Thanksgiving Break,
 Tue - 11/30,Work on :ref:`assignment_wordpress`,
