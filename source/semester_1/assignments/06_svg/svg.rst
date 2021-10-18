@@ -3,28 +3,41 @@
 Assignment 6 - SVG
 ==================
 
-Create an a web page with an embedded SVG drawing.
+Create an a web page with an embedded SVG drawing, as shown in the
+:ref:`svg-intro`.
 
-* Use just one pair of `<svg>` tags. If you use more than one, your drawing will
-  eventually get messed up enough you'll probably have to start over. This is
-  the most common mistake in doing this project. So one `<svg>` and one `</svg>`,
-  no more.
-* Generated the drawing by hand. Do **not** use Illustrator or Inkscape or similar.
-* A cohesive image. Abstract circles and rectangles won't score well. A house
-  is better.
+Requirements
+------------
+
+* Generate the drawing by hand. Do **not** use Illustrator or Inkscape or similar.
+* Create a cohesive image. For example, a house.
+  Abstract circles and rectangles won't score well.
 * Use multiple types of SVG drawing commands.
+  If you use nine different SVG commands, you'll score full points.
   See `SVG Intro at W3Schools <https://www.w3schools.com/graphics/svg_intro.asp>`_
-* Be detailed. A ten-line drawing won't go far in the detail. The rubric category
-  for detail is only an estimate. 40 lines of code that only draw a grid of lines
-  isn't very complex, despite hitting the line count. Also, I'm only looking
-  at the number of lines for the image. Lines for the web page, blank lines,
-  comments, don't count.
+  for a full list of commands.
 * Use color.
+* Be detailed.
 
-Again, a common mistake people make when doing this assignment is to not realize you
-put the ``<svg>`` around the *entire image*. So, as you are only creating one
-image, you should only have one pair of SVG tags. You put all your drawing
-commands in between those SVG tags.
+  * At least 40 lines of SVG code.
+  * When counting lines, I'm only looking at the number of lines for the image.
+    Lines for the web page, blank lines, comments, don't count.
+  * 40 lines of code that only draw a grid of lines won't score well, as
+    it isn't very complex, despite hitting the line count.
+
+
+Common Issue
+------------
+
+Use just *only one* pair of ``<svg>`` tags.
+You put all your drawing commands in between those SVG tags.
+If you use more than one, your drawing will
+eventually get messed up enough you'll probably have to start over. This is
+the most common mistake in doing this project. So one ``<svg>`` and one ``</svg>``,
+no more.
+
+Rubric
+------
 
 .. image:: rubric.png
     :width: 550px
@@ -452,11 +465,6 @@ Examples
       <circle cx="120" cy="402" r="7" stroke="black" stroke-width="1" fill="yellow" />
 
     </svg>
-
-
-
-Example
-~~~~~~~
 
 .. raw:: html
 

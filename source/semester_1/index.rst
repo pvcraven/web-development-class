@@ -30,13 +30,13 @@ Assignments
    assignments/03_css/css.rst
    assignments/04_bootstrap/bootstrap.rst
    assignments/05_finalize_site/finalize_site.rst
-   assignments/05b_svg/svg.rst
-   assignments/06_aws_deployment/aws_deployment.rst
+   assignments/06_svg/svg.rst
+   assignments/07_aws_deployment/aws_deployment.rst
    assignments/08_performance/performance.rst
    assignments/09_install_wordpress/install_wordpress.rst
    assignments/10_wordpress_site/wordpress_site.rst
-   assignments/12_static_content_generators/static_content_generators.rst
-   assignments/13_collaborative_reflection/collaborative_reflection
+   assignments/11_static_content_generators/static_content_generators.rst
+   assignments/12_collaborative_reflection/collaborative_reflection
 
 Schedule
 ~~~~~~~~
