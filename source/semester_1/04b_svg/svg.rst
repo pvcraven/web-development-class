@@ -14,7 +14,6 @@ For a more complete reference on SVG than these examples, see:
 
 Advanced users might want to check out:
 
-* `SVG Pocket Guide <http://svgpocketguide.com/book/#section-2>`_
 * `SVG On The Web <https://svgontheweb.com/>`_
 
 SVG images can be stored in their own file, or they can be "embedded" in the HTML file.
