@@ -75,9 +75,17 @@ pages dynamic and interface with the database.
 How Do I Set Up My Own Web Server?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-We will use the Apache web server for this class. For the machines we program
-on, we'll use XAMPP. XAMPP will install both Apache, a database, an application
+We will use the Apache web server for this class.
+
+First, we'll demo using XAMPP on a local lab computer. XAMPP will install both Apache, a database, an application
 server, and help us manage them.
+
+Next, we'll use Apache on an Amazon hosted web server.
+
+We'll also explore using "simplified" hosting where we don't have to manage our own server.
+In our case, we'll look at Amazon S3 hosting.
+For some websites,
+this is easier, faster, and cheaper.
 
 The next section, :ref:`web_server_setup`, will get a server set up on your
 local machine.

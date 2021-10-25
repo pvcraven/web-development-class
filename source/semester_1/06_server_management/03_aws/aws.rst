@@ -3,6 +3,13 @@
 Amazon Web Services EC2 Tutorial
 ================================
 
+Creating a web server is easy. Keeping it up all the time isn't.
+You should have backup power. Backup internet connections. Backup
+locations in case you get hit with a tornado or flood. For this reason,
+many servers are hosted at data centers run by another company.
+Amazon hosts many data centers. In fact, this branch of the company
+is the most profitable branch they have.
+
 This chapter covers how to get a public web server up and running using
 Amazon Web Services (AWS).
 

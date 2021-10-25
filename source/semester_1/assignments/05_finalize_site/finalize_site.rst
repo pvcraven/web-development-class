@@ -154,7 +154,8 @@ Following this work, write up:
 * Put name, date, title on top.
 * Who was on your team?
 * What project did you work on? (Paste in URL)
-* Link at least two issues you worked on GitHub
+* Link at least two issues you worked on GitHub. Include the issue numbers,
+  and maybe even the links.
 * What strengths do you personally have when working in a group?
 * How did you apply your strengths in collaborating on this project?
   List your strengths in working with the team, not the technical

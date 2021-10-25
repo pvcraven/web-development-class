@@ -3,8 +3,6 @@
 XAMPP Web Server Setup
 ----------------------
 
-Installing XAMPP
-^^^^^^^^^^^^^^^^
 
 We are going to use a software program called "XAMPP". XAMPP is a bundle of free software that contains
 the Apache Web Server, and some other applications. The name comes from:
@@ -14,6 +12,9 @@ the Apache Web Server, and some other applications. The name comes from:
 * M - MariaDB (Database, they used to use MySQL)
 * P - PHP (Back-end server language)
 * P - Perl (Back-end server language)
+
+Installing XAMPP
+^^^^^^^^^^^^^^^^
 
 Download XAMPP from here:
 
@@ -69,6 +70,9 @@ When you start XAMPP, you'll get a control panel like this. Hit "Config"
     :width: 550px
     :align: center
 
+Changing the default text editor
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 Select your favorite text editor. In the image below,
 I've selected Sublime. Then have Apache and
 MySQL auto-start. This will save you clicks later. Then click "Save".
@@ -76,6 +80,9 @@ MySQL auto-start. This will save you clicks later. Then click "Save".
 .. image:: configure_1.png
     :width: 370px
     :align: center
+
+Changing the default directory
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Next, we need to tell Apache what directory all our web files are saved in.
 Back at the control panel, hit the "Config" button for Apache.
@@ -131,8 +138,8 @@ On a "production" setup, you would not lead people to this page with all
 your projects. You would instead direct users straight to the web site.
 
 With some more work setting up servers, you can have one server manage
-multiple web sites. Such as I have a web server that manages both
-"http://programarcadegames.com" and "http://stats.support". Same web server,
+multiple web sites. Such as I could have a web server that manages both
+"http://cars-for-sale.example" and "http://service-department.example". Same web server,
 but it just pulls files from different directories depending on what site the
 user asks for.
 
@@ -153,6 +160,9 @@ Do the following:
 There's your web address. Now have another person type in the web address on
 their browser bar, and they should see your web server.
 
-Outside of your local network, you probably can't have anyone see your new
-web server. This is because of a thing called "Network Address Translation"
-and also company or school firewalls.
+.. note::
+
+   Outside of your local network, you probably can't have anyone see your new
+   web server. Or even your computer. This is because the firewall is using
+   something called "Network Address Translation." All traffic goes to the firewall,
+   and the firewall does not route that traffic to your computer by default.
