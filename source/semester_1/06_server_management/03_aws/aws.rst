@@ -3,19 +3,70 @@
 Amazon Web Services EC2 Tutorial
 ================================
 
+We are going to get a virtual server up and going using Amazon Web Services.
+But why is AWS so popular? What is it? And what is a virtual server?
+
+Data Centers
+------------
 Creating a web server is easy. Keeping it up all the time isn't.
-You should have backup power. Backup internet connections. Backup
-locations in case you get hit with a tornado or flood. For this reason,
-many servers are hosted at data centers run by another company.
-Amazon hosts many data centers. In fact, this branch of the company
-is the most profitable branch they have.
+If you want to have a server on the web, it needs to be up 24/7.
+What are the risks in doing that?
+
+* Power outage
+* ISP outage
+* Someone accidentally bumping the machine
+* Fire / Flood / Tornado / Hurricane / Earthquake
+* Data line gets cut
+* Physical theft of server
+* Physical access can leave data vulnerable
+* Need ability to monitor computer, so you get alerted when down
+* AC goes out, things get too hot
+* Computer fails (bad drive, components)
+
+To protect against this, you need a **data center**. Ideally, data centers are:
+
+* Located in a place not prone to natural disaster
+* Reliable power provider
+* Back up battery power
+* Back up generator
+* Multiple data lines, from different providers, coming in from different directions
+* Physical security. Locked doors. Logged access. Guards. Fences.
+* Fire suppression system.
+* Support systems for monitoring
+* Climate control that can handle server heat
+* A completely different data center in a different location
+* Ability to run server on multiple computers
+* Equipment that can "fail over" from one machine/location to another
+
+This is expensive! What if you are a small company just starting out?
+How do you get all of this?
+
+There are multiple options, one of which is to *rent* a server with a
+company that specializes in doing this. There are many companies  that
+do this. Amazon, Microsoft, and smaller providers too.
+
+Virtual Machines
+----------------
+
+How do you remotely control a machine that is in a data center? How
+do we install a new operating system on a machine we normally would
+need physical access to? How do you reboot it? And machines are all
+different, with different drivers and things we need to install, right?
+
+A computer can host multiple **virtual machines** using specialized software
+that runs a "virtual" computer on another computer. For all the
+virtual computer knows, it is its own machine:
+
+.. image:: containers-vs-virtual-machines.jpg
 
 This chapter covers how to get a public web server up and running using
 Amazon Web Services (AWS).
 
-If you are on the Mac, please do these steps using the "Chrome" web
-browser rather than Safari. Safari does not download the "key" file
-correctly. (Aside from that one step, it works fine.)
+.. warning:: Mac Users
+
+   If you are on the Mac, please do these steps using the "Chrome" web
+   browser rather than Safari. Safari does not download the "key" file
+   correctly. (Aside from that one step, it works fine.)
 
 Create a Server Instance
 ------------------------
