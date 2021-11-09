@@ -25,16 +25,16 @@ Thu - 10/21,Talk about :ref:`web-servers` - get account. Work on :ref:`assignmen
 Tue - 10/26,Talk about :ref:`web-servers`. Do :ref:`web_server_setup` demo.,
 Thu - 10/28,"Review :ref:`web-servers`. :ref:`aws_setup`, work on :ref:`command_line_tutorial`",
 Tue - 11/2,Review/finish :ref:`command_line_tutorial`. Do :ref:`assignment_aws_deploy` in class.,
-Thu - 11/4,Talk about :ref:`application_servers`,:ref:`assignment_aws_deploy`
-Tue - 11/9,Explain DNS,Quiz 4 - Amazon Web Services
+Thu - 11/4,Talk about :ref:`application_servers`. Explain DNS.,:ref:`assignment_aws_deploy` / Quiz 4 -Command Line
+Tue - 11/9,Talk about web site performance. Start on :ref:`InstallWordpress`.,Quiz 5 AWS
 Thu - 11/11,:ref:`cms` - :ref:`InstallWordpress`,:ref:`assignment_dns_performance`
-Tue - 11/16,,
+Tue - 11/16,Work on :ref:`assignment_wordpress`,
 Thu - 11/18,No class,Quiz 5 - DNS and Cloud Hosting Quiz
 Tue - 11/23,Work on :ref:`assignment_wordpress`,:ref:`assignment_install_wordpress`
 Thu - 11/25,Thanksgiving Break,
-Tue - 11/30,Work on :ref:`assignment_wordpress`,
-Thu - 12/2,Google analytics,:ref:`assignment_wordpress`
-Tue - 12/7,"Cover :ref:`static_content_generators`, :ref:`sphinx_tutorial`",
+Tue - 11/30,Google analytics,
+Thu - 12/2,"Cover :ref:`static_content_generators`, :ref:`sphinx_tutorial`",:ref:`assignment_wordpress`
+Tue - 12/7,,
 Thu - 12/9,Last day of class,
 ,Work on :ref:`assignment_reflection`,
 Tue - 12/14,8 am final - present projects,:ref:`assignment_static`
