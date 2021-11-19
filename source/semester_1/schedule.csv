@@ -30,11 +30,11 @@ Tue - 11/9,Talk about web site performance. Start on :ref:`InstallWordpress`.,Qu
 Thu - 11/11,:ref:`cms` - :ref:`InstallWordpress`,:ref:`assignment_dns_performance`
 Tue - 11/16,Work on :ref:`assignment_wordpress`,
 Thu - 11/18,No class,Quiz 5 - DNS and Cloud Hosting Quiz
-Tue - 11/23,Work on :ref:`assignment_wordpress`,:ref:`assignment_install_wordpress`
+Tue - 11/23,Talk about Google Analytics. Work on :ref:`assignment_wordpress`,:ref:`assignment_install_wordpress`
 Thu - 11/25,Thanksgiving Break,
-Tue - 11/30,Google analytics,
-Thu - 12/2,"Cover :ref:`static_content_generators`, :ref:`sphinx_tutorial`",:ref:`assignment_wordpress`
-Tue - 12/7,,
+Tue - 11/30,"Cover :ref:`static_content_generators`, :ref:`sphinx_tutorial`",
+Thu - 12/2,Work on :ref:`assignment_static`,:ref:`assignment_wordpress`
+Tue - 12/7,Show how to host with S3 and CDN,
 Thu - 12/9,Last day of class,
 ,Work on :ref:`assignment_reflection`,
 Tue - 12/14,8 am final - present projects,:ref:`assignment_static`

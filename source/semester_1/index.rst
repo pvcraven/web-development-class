@@ -16,6 +16,7 @@ Topics and Tutorials
    05_collaboration/collaboration
    06_server_management/server_management
    07_cms/cms
+   08_analytics/index
    09_static/static
    10_cloud/cloud
 
