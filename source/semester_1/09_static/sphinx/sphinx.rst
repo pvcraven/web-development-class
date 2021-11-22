@@ -6,6 +6,10 @@ Sphinx Tutorial
 `Sphinx <http://www.sphinx-doc.org/>`_ is a static content generator. This tutorial covers how to
 get Sphinx up and running.
 
+Here is a link to the template:
+
+https://github.com/pvcraven/sphinx_template
+
 .. _install_python_and_sphinx:
 
 Install Python and Sphinx
