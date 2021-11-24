@@ -13,7 +13,7 @@ Part 1
 ------
 
 Summarize what the DNS is, how to register a domain, and how a domain name
-is resolved.
+is resolved. You must list all the steps required for DNS resolution for credit.
 
 I'll go over this in class, so if you take good notes, you'll have part 1 done.
 A good explanation will likely run about one page, double-spaced.
