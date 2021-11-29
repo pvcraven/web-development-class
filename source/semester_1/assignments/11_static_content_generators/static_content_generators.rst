@@ -12,42 +12,19 @@ Getting Started
 
 Here are the steps to get started:
 
-#. :ref:`install_python_and_sphinx`
-#. Select a project
-#. Notify the instructor and get invited to the project
+#. Get together with your group.
+#. Select a project idea. Last year's topics were video game reviews, movie reviews,
+   Indianola destinations, and common internet scams.
+#. Notify the instructor of your idea.
+#. Elect one person to create a new project from the template.
+#. Send out invites to the project.
 #. Accept the invitation.
 #. Use the "project" part of your GitHub project to brainstorm ideas
+   for what pages to create.
 #. Select two pages to create
 #. Clone the project
 #. Make sure you can build the project
 #. Write your pages (at least 700 words total)
-
-Projects
---------
-
-Video Game Reviews
-
-* GitHub Website: https://github.com/pvcraven/2020-video-game-reviews
-* Accept Invite: https://github.com/pvcraven/2020-video-game-reviews/invitations
-* Clone on your computer: ``git clone https://github.com/pvcraven/2020-video-game-reviews.git``
-
-Movie Reviews
-
-* GitHub Website: https://github.com/pvcraven/2020-movie-reviews
-* Accept Invite: https://github.com/pvcraven/2020-movie-reviews/invitations
-* Clone on your computer: ``git clone https://github.com/pvcraven/2020-movie-reviews.git``
-
-Destinations in and Around Indianola
-
-* GitHub Website: https://github.com/pvcraven/2020-destinations
-* Accept Invite: https://github.com/pvcraven/2020-destinations/invitations
-* Clone on your computer: ``git clone https://github.com/pvcraven/2020-destinations.git``
-
-Common Internet Scams
-
-* GitHub Website: https://github.com/pvcraven/2020-scams
-* Accept Invite: https://github.com/pvcraven/2020-scams/invitations
-* Clone on your computer: ``git clone https://github.com/pvcraven/2020-scams.git``
 
 Make The Web Pages
 ------------------
@@ -55,7 +32,9 @@ Make The Web Pages
 Create two web pages that have:
 
 * 700 words that you wrote, total. Quotes don't count towards the total. Don't copy from other websites, it is too easy to find.
-* `Paragraphs <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#paragraphs>`_. Don't give me a wall of text.
+* `Paragraphs <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#paragraphs>`_.
+  Don't give me a wall of text.
+  `Review how to write a paragraph <https://writingcenter.unc.edu/tips-and-tools/paragraphs/>`_.
 * `Headings <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#sections>`_.
   Take a look at the outline generated when you create a document.
   Each page should have one, and only one, level one heading. A page that doesn't
@@ -128,13 +107,15 @@ The rest of the text of your page would go here under your image.
 Then finally at the end of the page,
 you can list out your footnotes:
 
-.. [#f1] "`Inez Milholland <http://vcencyclopedia.vassar.edu/alumni/inez-milholland.html>`_". Vassar College Encyclopedia. 2006. Retrieved 2012-07-21.
+.. [#f1] "`Inez Milholland <http://vcencyclopedia.vassar.edu/alumni/inez-milholland.html>`_".
+         Vassar College Encyclopedia. 2006. Retrieved 2012-07-21.
 
 And the code for that looks like:
 
 .. code-block:: text
 
-    .. [#f1] "`Inez Milholland <http://vcencyclopedia.vassar.edu/alumni/inez-milholland.html>`_". Vassar College Encyclopedia. 2006. Retrieved 2012-07-21.
+    .. [#f1] "`Inez Milholland <http://vcencyclopedia.vassar.edu/alumni/inez-milholland.html>`_".
+       Vassar College Encyclopedia. 2006. Retrieved 2012-07-21.
 
 Alternatively, you can use
 `Restructured Text's
@@ -203,7 +184,7 @@ Rubric
 ------
 
 .. image:: rubric.png
-    :width: 600px
+    :width: 700px
 
 
 Important End of Term Reminder
