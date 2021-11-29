@@ -100,6 +100,11 @@ everything with ``make html``.
    make clean
    make html
 
+Visual Guides
+-------------
+
+.. image:: visual_guides.png
+
 Learn Restructured Text
 -----------------------
 
