@@ -12,7 +12,8 @@ There are two steps you need:
 Hosting on S3
 -------------
 
-First, select Amazon's S3 service:
+First, select Amazon's S3 service. You might need to search it up if
+it isn't in your "recent" list:
 
 .. image:: s3.png
    :width: 75%
@@ -23,8 +24,8 @@ Then, select "Create Bucket":
 
 You need to come up with a unique bucket name (1) that no one else has used.
 Here I used ``cis-120-test``.
-You can also select where you want the files served from. I'm just using
-the default.
+You can also select where you want geographical region you want the files served
+from. I'm just using the default.
 
 Next, uncheck the option to block all public access (2). Otherwise the public won't
 be able to see your website. You get a lot of warnings (3) because everything you
@@ -38,11 +39,9 @@ Click on your bucket to get a screen with the bucket info:
 
 .. image:: click_on_bucket.png
 
-Click the "upload" button:
-
-.. image:: upload_button.png
-
-Drag the files, then click "Upload"
+Next, find your HTML files in the file browser. Go in the directory like
+I am here. Put the windows side-by-side.
+Drag the files over, then click "Upload"
 
 .. image:: drag_files.png
 
@@ -66,12 +65,16 @@ documents:
 
 .. image:: static_hosting_edit.png
 
+Scroll back down to find your new website link:
+
+.. image:: find_link.png
+
 Open the link in a new tab. Ah! It is forbidden:
 
 .. image:: forbidden.png
 
-We have to give public access to everything in your bucket. Copy this and change
-the ``cis-120-test`` to your own bucket name:
+We have to give public access to everything in your bucket. **Copy this and change
+the ``cis-120-test`` to your own bucket name**:
 
 .. code-block:: JSON
 
@@ -92,7 +95,12 @@ the ``cis-120-test`` to your own bucket name:
        ]
    }
 
-Then put it in your own bucket access.
+Looks complicated, right? I agree.
+This should be *way easier*. But
+`according to their website <https://docs.aws.amazon.com/AmazonS3/latest/userguide/WebsiteAccessPermissionsReqd.html>`_
+this is how you do it.
+
+Put it in your own bucket access policy, found here:
 
 .. image:: bucket_access.png
 
