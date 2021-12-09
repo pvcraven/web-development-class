@@ -29,6 +29,10 @@ Here are the steps to get started:
 Make The Web Pages
 ------------------
 
+.. image:: website.svg
+    :width: 35%
+    :class: right-image
+
 Create two web pages that have:
 
 * 700 words that you wrote, total. Quotes don't count towards the total. Don't copy from other websites, it is too easy to find.
