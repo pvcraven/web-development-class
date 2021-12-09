@@ -9,6 +9,8 @@ There are two steps you need:
 * Host the files on S3
 * Create a CloudFront to your S3 files
 
+.. _s3_hosting:
+
 Hosting on S3
 -------------
 
@@ -105,6 +107,8 @@ Put it in your own bucket access policy, found here:
 .. image:: bucket_access.png
 
 If successful, your website should work and no long be forbidden.
+
+.. _cloudfront_tutorial:
 
 CloudFront
 ----------
