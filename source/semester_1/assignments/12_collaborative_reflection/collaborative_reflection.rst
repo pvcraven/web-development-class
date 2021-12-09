@@ -3,8 +3,15 @@
 Assignment 12 - Collaborative Leadership Reflection
 ===================================================
 
+.. image:: leadership.svg
+    :width: 40%
+    :class: right-image
+
 Please include name, date, and title at the top. Label your answers so that it
 is easy to see what question you are answering.
+
+This should be at least two pages, double-spaced. Turn in an MS Word or PDF
+document.
 
 1. What skills are often required to achieve a team's shared goal? Explain why
    those skills are important and how they add value. Don't just list out skills
