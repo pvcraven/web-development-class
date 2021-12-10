@@ -14,9 +14,11 @@ This should be at least two pages, double-spaced. Turn in an MS Word or PDF
 document.
 
 1. What skills are often required to achieve a team's shared goal? Explain why
-   those skills are important and how they add value. Don't just list out skills
-   like "teamwork" and "communication" without explaining exactly what skills help
-   foster teamwork and communication, and how exactly it helps.
+   those skills are important and how they add value.
+   Don't just list out skills like "teamwork" and "communication." That's too
+   generic and can mean anything.
+   Be specific. Tell me exactly what skills help help support a shared goal,
+   and how.
 2. What dispositions (qualities of mind and character) help achieve a shared
    goal? Why? How do dispositions differ from skills?
 3. For your project, describe how these skills were applied as part of the
