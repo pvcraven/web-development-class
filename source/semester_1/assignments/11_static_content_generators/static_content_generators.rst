@@ -179,8 +179,9 @@ Clearly label and turn in the following links. Do **not** just give me a list of
   Please link to the source file, not the commit.
 * GitHub URLs of GitHub issues you worked on. There should be one issue for each page.
 * Link to your S3 bucket website. This is the link that shows your website, not the
-  AWS management page, which I can't see.
-* Link to your Cloud page
+  AWS management page, which I can't see. Double-check that it has your latest code, as
+  I'll look at this when I grade.
+* Link to your Cloud page.
 
 Rubric
 ------
