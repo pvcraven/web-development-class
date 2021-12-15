@@ -50,7 +50,7 @@ Assignment 10 - WordPress Site
 * Turn in a document:
 
     * Name, date, title for the document
-    * A URL/link to your website. Don't link  the admin page, because I don't have
+    * A URL/link to your website. Don't link the admin page, because I don't have
       access to that.
     * Detail what you did with selecting a theme.
     * Summarize theme customization you did. Give me enough info that I can
@@ -62,8 +62,9 @@ Assignment 10 - WordPress Site
     * Tell me where you have an example of a table. A link to it would be
       great.
 
-The write-up is important. Please don't give me just a sentence or two. "A" work usually involves at least 3/4
-of a page showing me how you hit all the points of the rubric.
+The write-up is important. Please don't give me just a sentence or two. "A" level work usually involves at least 3/4
+of a page showing me how you hit all the points of the rubric. It isn't unusual for people to turn in 2-3 double-spaced
+pages.
 
 Use paragraphs. Use topic sentences. Organize it. Don't give me a wall of text.
 
@@ -73,8 +74,6 @@ Working with a CMS is a very useful skill.
 .. image:: rubric.png
     :width: 550px
 
-..
-
 Example Write-Up
 ----------------
 
@@ -82,7 +81,7 @@ This is an example of one student's write-up:
 
 1.    WordPress URL:
 
-http://ec2-13-59-221-249.us-east-2.compute.amazonaws.com/wordpress/
+http://ec2-13-59-921-249.us-east-2.compute.amazonaws.com/wordpress/
 
 
 

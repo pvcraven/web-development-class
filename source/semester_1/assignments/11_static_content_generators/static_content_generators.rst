@@ -170,18 +170,14 @@ trying to just get started writing it.
 Turn In
 -------
 
-Clearly label and turn in the following links.
-
-By saying "Cloud/S3/Github URL" I mean that I prefer the cloud URL. If you
-can't get that working give me the S3 URL. If you can't get that working, get
-me the GitHub URL.
+Clearly label and turn in the following links. Do **not** just give me a list of links.
 
 * Link to the GitHub project page.
   This should be the same for every person in the group.
 * Link to each GitHub page that you created.
   Do not link pages that show someone else checking in this page.
   Please link to the source file, not the commit.
-* GitHub URLs of GitHub issues you worked on.
+* GitHub URLs of GitHub issues you worked on. There should be one issue for each page.
 * Link to your S3 bucket website
 * Link to your Cloud page
 
