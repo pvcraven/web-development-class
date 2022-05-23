@@ -1,5 +1,5 @@
-Simpson College's Web Development Classes
-=========================================
+Dr. Craven's Web Development Course
+===================================
 
 .. toctree::
    :maxdepth: 1
